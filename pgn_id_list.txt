@@ -1,0 +1,85 @@
+126992 System Time
+127245 Rudder
+127250 Vessel Heading
+127251 Rate of Turn
+127257 Attitude
+127258 Magnetic Variation
+128259 Speed
+128267 Water Depth
+128275 Distance Log
+129025 Position, Rapid Update
+129026 COG & SOG, Rapid Update
+129029 GNSS Position Data
+129283 Cross Track Error
+129284 Navigation Data
+129285 Navigation - Route/WP Information
+129539 GNSS DOPs
+129540 GNSS Sats in View
+130306 Wind Data
+130824 B&G: Wind data
+
+
+59904 ISO Request
+59904 ISO Request
+59904 ISO Request
+59904 ISO Request
+59904 ISO Request
+60928 ISO Address Claim
+60928 ISO Address Claim
+60928 ISO Address Claim
+60928 ISO Address Claim
+60928 ISO Address Claim
+65280 Manufacturer Proprietary single-frame non-addressed
+126992 System Time
+126992 System Time
+127245 Rudder
+127250 Vessel Heading
+127250 Vessel Heading
+127251 Rate of Turn
+127251 Rate of Turn
+127257 Attitude
+127258 Magnetic Variation
+127258 Magnetic Variation
+127258 Magnetic Variation
+127258 Magnetic Variation
+127258 Magnetic Variation
+127258 Magnetic Variation
+127258 Magnetic Variation
+127258 Magnetic Variation
+128259 Speed
+128267 Water Depth
+128275 Distance Log
+129025 Position, Rapid Update
+129025 Position, Rapid Update
+129026 COG & SOG, Rapid Update
+129026 COG & SOG, Rapid Update
+129029 GNSS Position Data
+129029 GNSS Position Data
+129038 AIS Class A Position Report
+129039 AIS Class B Position Report
+129041 AIS Aids to Navigation (AtoN) Report
+129283 Cross Track Error
+129284 Navigation Data
+129285 Navigation - Route/WP Information
+129539 GNSS DOPs
+129539 GNSS DOPs
+129540 GNSS Sats in View
+129540 GNSS Sats in View
+129793 AIS UTC and Date Report
+129794 AIS Class A Static and Voyage Related Data
+129799 Radio Frequency/Mode/Power
+129809 AIS Class B static data (msg 24 Part A)
+129810 AIS Class B static data (msg 24 Part B)
+130306 Wind Data
+130311 Environmental Parameters
+130822 Manufacturer Proprietary fast-packet non-addressed
+130824 B&G: Wind data
+130842 Simnet: AIS Class B static data (msg 24 Part B)
+130845 Simnet: Parameter Handle
+130845 Simnet: Parameter Handle
+130845 Simnet: Parameter Handle
+130845 Simnet: Parameter Handle
+130845 Simnet: Parameter Handle
+262161 Actisense: Operating mode
+262384 Actisense: Startup status
+262386 Actisense: System status

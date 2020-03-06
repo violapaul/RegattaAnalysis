@@ -1,0 +1,512 @@
+(4, 127250)
+    timestamp        : 2019-10-19T03:47:31.205Z
+    prio             : 2
+    src              : 4
+    dst              : 255
+    pgn              : 127250
+    description      : Vessel Heading
+    fields           : {'Heading': 339.1, 'Reference': 'Magnetic', 'timestamp': '2019-10-19T03:47:31.205Z', 'description': 'Vessel Heading'}
+(0, 262161)
+    timestamp        : 2019-10-19T03:38:04.639Z
+    prio             : 0
+    src              : 0
+    dst              : 0
+    pgn              : 262161
+    description      : Actisense: Operating mode
+    fields           : {'SID': 1, 'Model ID': 14, 'Serial ID': 218878, 'Error ID': 0, 'Operating Mode': 2, 'timestamp': '2019-10-19T03:38:04.639Z', 'description': 'Actisense: Operating mode'}
+(0, 262384)
+    timestamp        : 2019-10-19T03:38:04.639Z
+    prio             : 0
+    src              : 0
+    dst              : 0
+    pgn              : 262384
+    description      : Actisense: Startup status
+    fields           : {'SID': 1, 'Model ID': 14, 'Serial ID': 218878, 'Error ID': 0, 'Firmware version': 2.21, 'Reset status': 0, 'timestamp': '2019-10-19T03:38:04.639Z', 'description': 'Actisense: Startup status'}
+(14, 130306)
+    timestamp        : 2019-10-19T03:47:31.128Z
+    prio             : 2
+    src              : 14
+    dst              : 255
+    pgn              : 130306
+    description      : Wind Data
+    fields           : {'SID': 0, 'Wind Speed': 1.4, 'Wind Angle': 128.7, 'Reference': 'Apparent', 'timestamp': '2019-10-19T03:47:31.128Z', 'description': 'Wind Data'}
+(8, 129041)
+    timestamp        : 2019-10-19T03:47:30.922Z
+    prio             : 4
+    src              : 8
+    dst              : 255
+    pgn              : 129041
+    description      : AIS Aids to Navigation (AtoN) Report
+    fields           : {'Message ID': 21, 'Repeat Indicator': 'First retransmission', 'User ID': 993692021, 'Longitude': -122.4045715, 'Latitude': 47.4478759, 'Position Accuracy': 'Low', 'AIS RAIM Flag': 'not in use', 'Time Stamp': 'Manual input mode', 'Length/Diameter': 0.0, 'Beam/Diameter': 0.0, 'Position Reference from Starboard Edge': 0.0, 'AtoN Type': 'Fixed beacon: safe water', 'Off Position Indicator': 'No', 'Virtual AtoN Flag': 'No', 'Assigned Mode Flag': 'Autonomous and continuous', 'AIS Spare': '0', 'Position Fixing Device Type': 'Surveyed', 'AIS Transceiver information': 'Channel B VDL reception', 'AtoN Name': 'PUGET SOUND TSL TA  ', 'timestamp': '2019-10-19T03:47:30.922Z', 'description': 'AIS Aids to Navigation (AtoN) Report'}
+(4, 127251)
+    timestamp        : 2019-10-19T03:47:31.128Z
+    prio             : 2
+    src              : 4
+    dst              : 255
+    pgn              : 127251
+    description      : Rate of Turn
+    fields           : {'Rate': -0.00038, 'timestamp': '2019-10-19T03:47:31.128Z', 'description': 'Rate of Turn'}
+(127, 129026)
+    timestamp        : 2019-10-19T03:47:31.128Z
+    prio             : 2
+    src              : 127
+    dst              : 255
+    pgn              : 129026
+    description      : COG & SOG, Rapid Update
+    fields           : {'SID': 0, 'COG Reference': 'True', 'COG': 0.9, 'SOG': 1.72, 'timestamp': '2019-10-19T03:47:31.128Z', 'description': 'COG & SOG, Rapid Update'}
+(127, 129025)
+    timestamp        : 2019-10-19T03:47:31.128Z
+    prio             : 2
+    src              : 127
+    dst              : 255
+    pgn              : 129025
+    description      : Position, Rapid Update
+    fields           : {'Latitude': 47.6865886, 'Longitude': -122.4080981, 'timestamp': '2019-10-19T03:47:31.128Z', 'description': 'Position, Rapid Update'}
+(128, 127250)
+    timestamp        : 2019-10-19T03:47:31.128Z
+    prio             : 2
+    src              : 128
+    dst              : 255
+    pgn              : 127250
+    description      : Vessel Heading
+    fields           : {'SID': 0, 'Heading': 330.1, 'Variation': 15.3, 'Reference': 'Magnetic', 'timestamp': '2019-10-19T03:47:31.128Z', 'description': 'Vessel Heading'}
+(128, 127251)
+    timestamp        : 2019-10-19T03:47:31.128Z
+    prio             : 3
+    src              : 128
+    dst              : 255
+    pgn              : 127251
+    description      : Rate of Turn
+    fields           : {'SID': 0, 'Rate': 0.1126, 'timestamp': '2019-10-19T03:47:31.128Z', 'description': 'Rate of Turn'}
+(8, 129799)
+    timestamp        : 2019-10-19T03:47:31.128Z
+    prio             : 3
+    src              : 8
+    dst              : 255
+    pgn              : 129799
+    description      : Radio Frequency/Mode/Power
+    fields           : {'Rx Frequency': 156800000, 'Tx Frequency': 156800000, 'Radio Channel': 49, 'Tx Power': 54, 'Mode': 0, 'Channel Bandwidth': 0, 'timestamp': '2019-10-19T03:47:31.128Z', 'description': 'Radio Frequency/Mode/Power'}
+(15, 127245)
+    timestamp        : 2019-10-19T03:47:31.205Z
+    prio             : 2
+    src              : 15
+    dst              : 255
+    pgn              : 127245
+    description      : Rudder
+    fields           : {'Position': 0.5, 'timestamp': '2019-10-19T03:47:31.205Z', 'description': 'Rudder'}
+(5, 129025)
+    timestamp        : 2019-10-19T03:47:31.205Z
+    prio             : 2
+    src              : 5
+    dst              : 255
+    pgn              : 129025
+    description      : Position, Rapid Update
+    fields           : {'Latitude': 47.6866103, 'Longitude': -122.4080946, 'timestamp': '2019-10-19T03:47:31.205Z', 'description': 'Position, Rapid Update'}
+(5, 126992)
+    timestamp        : 2019-10-19T03:47:30.353Z
+    prio             : 3
+    src              : 5
+    dst              : 255
+    pgn              : 126992
+    description      : System Time
+    fields           : {'SID': 177, 'Source': 'GPS', 'Date': '2019.10.19', 'Time': '16:55:03', 'timestamp': '2019-10-19T03:47:30.353Z', 'description': 'System Time'}
+(16, 65280)
+    timestamp        : 2019-10-19T03:47:30.922Z
+    prio             : 2
+    src              : 16
+    dst              : 255
+    pgn              : 65280
+    description      : Manufacturer Proprietary single-frame non-addressed
+    fields           : {'Manufacturer Code': 'Navico', 'Industry Code': 'Marine', 'Data': '8589935876', 'timestamp': '2019-10-19T03:47:30.922Z', 'description': 'Manufacturer Proprietary single-frame non-addressed'}
+(8, 129038)
+    timestamp        : 2019-10-19T03:47:30.825Z
+    prio             : 4
+    src              : 8
+    dst              : 255
+    pgn              : 129038
+    description      : AIS Class A Position Report
+    fields           : {'Message ID': 1, 'User ID': 367346510, 'Longitude': -122.409233, 'Latitude': 47.6767997, 'Position Accuracy': 'High', 'RAIM': 'not in use', 'Time Stamp': '5', 'COG': 221.5, 'SOG': 0.0, 'Communication State': '0', 'AIS Transceiver information': 'Channel A VDL reception', 'Heading': 341.0, 'Rate of Turn': 0.0, 'Nav Status': 'Under way using engine', 'Regional Application': 0, 'timestamp': '2019-10-19T03:47:30.825Z', 'description': 'AIS Class A Position Report'}
+(5, 129026)
+    timestamp        : 2019-10-19T03:47:31.070Z
+    prio             : 2
+    src              : 5
+    dst              : 255
+    pgn              : 129026
+    description      : COG & SOG, Rapid Update
+    fields           : {'SID': 178, 'COG Reference': 'True', 'COG': 0.5, 'SOG': 1.74, 'timestamp': '2019-10-19T03:47:31.070Z', 'description': 'COG & SOG, Rapid Update'}
+(9, 127258)
+    timestamp        : 2019-10-19T03:47:31.070Z
+    prio             : 7
+    src              : 9
+    dst              : 255
+    pgn              : 127258
+    description      : Magnetic Variation
+    fields           : {'SID': 22, 'Variation': 15.3, 'timestamp': '2019-10-19T03:47:31.070Z', 'description': 'Magnetic Variation'}
+(11, 127258)
+    timestamp        : 2019-10-19T03:47:31.128Z
+    prio             : 7
+    src              : 11
+    dst              : 255
+    pgn              : 127258
+    description      : Magnetic Variation
+    fields           : {'SID': 22, 'Variation': 15.3, 'timestamp': '2019-10-19T03:47:31.128Z', 'description': 'Magnetic Variation'}
+(10, 127258)
+    timestamp        : 2019-10-19T03:47:31.205Z
+    prio             : 7
+    src              : 10
+    dst              : 255
+    pgn              : 127258
+    description      : Magnetic Variation
+    fields           : {'SID': 22, 'Variation': 15.3, 'timestamp': '2019-10-19T03:47:31.205Z', 'description': 'Magnetic Variation'}
+(12, 127258)
+    timestamp        : 2019-10-19T03:47:30.158Z
+    prio             : 7
+    src              : 12
+    dst              : 255
+    pgn              : 127258
+    description      : Magnetic Variation
+    fields           : {'SID': 22, 'Variation': 15.3, 'timestamp': '2019-10-19T03:47:30.158Z', 'description': 'Magnetic Variation'}
+(5, 129029)
+    timestamp        : 2019-10-19T03:47:31.070Z
+    prio             : 3
+    src              : 5
+    dst              : 255
+    pgn              : 129029
+    description      : GNSS Position Data
+    fields           : {'SID': 178, 'Date': '2019.10.19', 'Time': '16:55:04', 'Latitude': 47.6866096, 'Longitude': -122.408097, 'Altitude': -16.820061, 'GNSS type': 'GPS', 'Method': 'GNSS fix', 'Integrity': 'No integrity checking', 'Number of SVs': 12, 'HDOP': 0.7, 'PDOP': 1.2, 'Geoidal Separation': -17.29, 'timestamp': '2019-10-19T03:47:31.070Z', 'description': 'GNSS Position Data'}
+(7, 130824)
+    timestamp        : 2019-10-19T03:47:30.424Z
+    prio             : 3
+    src              : 7
+    dst              : 255
+    pgn              : 130824
+    description      : B&G: Wind data
+    fields           : {'Manufacturer Code': 'B&G', 'Industry Code': 'Marine Industry', 'timestamp': '2019-10-19T03:47:30.424Z', 'description': 'B&G: Wind data'}
+(0, 262386)
+    timestamp        : 2019-10-19T03:47:30.353Z
+    prio             : 0
+    src              : 0
+    dst              : 0
+    pgn              : 262386
+    description      : Actisense: System status
+    fields           : {'SID': 1, 'Model ID': 14, 'Serial ID': 218878, 'Error ID': 0, 'Indi channel count': 2, 'Ch1 Rx Bandwidth': 18, 'Ch1 Rx Load': 4, 'Ch1 Rx Filtered': 0, 'Ch1 Rx Dropped': 0, 'Ch1 Tx Bandwidth': 0, 'Ch1 Tx Load': 0, 'Ch2 Rx Bandwidth': 0, 'Ch2 Rx Load': 0, 'Ch2 Rx Filtered': 0, 'Ch2 Rx Dropped': 0, 'Ch2 Tx Bandwidth': 43, 'Ch2 Tx Load': 98, 'Uni channel count': 2, 'Ch1 Bandwidth': 10, 'Ch1 Deleted': 0, 'Ch1 BufferLoading': 0, 'Ch1 PointerLoading': 0, 'Ch2 Bandwidth': 15, 'Ch2 Deleted': 0, 'Ch2 BufferLoading': 0, 'Ch2 PointerLoading': 0, 'timestamp': '2019-10-19T03:47:30.353Z', 'description': 'Actisense: System status'}
+(35, 128259)
+    timestamp        : 2019-10-19T03:47:30.424Z
+    prio             : 2
+    src              : 35
+    dst              : 255
+    pgn              : 128259
+    description      : Speed
+    fields           : {'SID': 218, 'Speed Water Referenced': 1.33, 'Speed Water Referenced Type': 'Paddle wheel', 'timestamp': '2019-10-19T03:47:30.424Z', 'description': 'Speed'}
+(35, 130311)
+    timestamp        : 2019-10-19T03:47:30.424Z
+    prio             : 5
+    src              : 35
+    dst              : 255
+    pgn              : 130311
+    description      : Environmental Parameters
+    fields           : {'SID': 218, 'timestamp': '2019-10-19T03:47:30.424Z', 'description': 'Environmental Parameters'}
+(35, 128267)
+    timestamp        : 2019-10-19T03:47:30.424Z
+    prio             : 3
+    src              : 35
+    dst              : 255
+    pgn              : 128267
+    description      : Water Depth
+    fields           : {'SID': 216, 'Depth': 19.8, 'Offset': 0.0, 'timestamp': '2019-10-19T03:47:30.424Z', 'description': 'Water Depth'}
+(35, 128275)
+    timestamp        : 2019-10-19T03:47:30.467Z
+    prio             : 6
+    src              : 35
+    dst              : 255
+    pgn              : 128275
+    description      : Distance Log
+    fields           : {'Log': 2961020, 'Trip Log': 2961020, 'timestamp': '2019-10-19T03:47:30.467Z', 'description': 'Distance Log'}
+(5, 127258)
+    timestamp        : 2019-10-19T03:47:30.353Z
+    prio             : 7
+    src              : 5
+    dst              : 255
+    pgn              : 127258
+    description      : Magnetic Variation
+    fields           : {'SID': 178, 'Variation': 15.5, 'timestamp': '2019-10-19T03:47:30.353Z', 'description': 'Magnetic Variation'}
+(7, 127258)
+    timestamp        : 2019-10-19T03:47:30.467Z
+    prio             : 7
+    src              : 7
+    dst              : 255
+    pgn              : 127258
+    description      : Magnetic Variation
+    fields           : {'SID': 177, 'Variation': 15.5, 'timestamp': '2019-10-19T03:47:30.467Z', 'description': 'Magnetic Variation'}
+(7, 129283)
+    timestamp        : 2019-10-19T03:47:30.467Z
+    prio             : 3
+    src              : 7
+    dst              : 255
+    pgn              : 129283
+    description      : Cross Track Error
+    fields           : {'SID': 177, 'XTE mode': 'Autonomous', 'Navigation Terminated': 'No', 'timestamp': '2019-10-19T03:47:30.467Z', 'description': 'Cross Track Error'}
+(7, 129284)
+    timestamp        : 2019-10-19T03:47:30.467Z
+    prio             : 3
+    src              : 7
+    dst              : 255
+    pgn              : 129284
+    description      : Navigation Data
+    fields           : {'SID': 177, 'timestamp': '2019-10-19T03:47:30.467Z', 'description': 'Navigation Data'}
+(5, 129539)
+    timestamp        : 2019-10-19T03:47:30.353Z
+    prio             : 6
+    src              : 5
+    dst              : 255
+    pgn              : 129539
+    description      : GNSS DOPs
+    fields           : {'SID': 178, 'Desired Mode': '1D', 'Actual Mode': '3D', 'HDOP': 0.7, 'VDOP': 1.0, 'TDOP': 327.67, 'timestamp': '2019-10-19T03:47:30.353Z', 'description': 'GNSS DOPs'}
+(127, 129029)
+    timestamp        : 2019-10-19T03:47:30.423Z
+    prio             : 3
+    src              : 127
+    dst              : 255
+    pgn              : 129029
+    description      : GNSS Position Data
+    fields           : {'SID': 0, 'Date': '2019.10.19', 'Time': '16:55:03.08000', 'Latitude': 47.6865765, 'Longitude': -122.4080993, 'Altitude': -0.037197, 'GNSS type': 'GPS+GLONASS', 'Method': 'GNSS fix', 'Integrity': 'No integrity checking', 'Number of SVs': 12, 'HDOP': 0.5, 'PDOP': 0.9, 'Geoidal Separation': -17.29, 'Reference Stations': 0, 'timestamp': '2019-10-19T03:47:30.423Z', 'description': 'GNSS Position Data'}
+(127, 129540)
+    timestamp        : 2019-10-19T03:47:30.467Z
+    prio             : 6
+    src              : 127
+    dst              : 255
+    pgn              : 129540
+    description      : GNSS Sats in View
+    fields           : {'SID': 0, 'Sats in View': 12, 'list': [{}], 'timestamp': '2019-10-19T03:47:30.467Z', 'description': 'GNSS Sats in View'}
+(127, 126992)
+    timestamp        : 2019-10-19T03:47:30.467Z
+    prio             : 3
+    src              : 127
+    dst              : 255
+    pgn              : 126992
+    description      : System Time
+    fields           : {'SID': 0, 'Source': 'GPS', 'Date': '2019.10.19', 'Time': '16:55:03.08000', 'timestamp': '2019-10-19T03:47:30.467Z', 'description': 'System Time'}
+(127, 129539)
+    timestamp        : 2019-10-19T03:47:30.467Z
+    prio             : 6
+    src              : 127
+    dst              : 255
+    pgn              : 129539
+    description      : GNSS DOPs
+    fields           : {'SID': 0, 'Desired Mode': 'Auto', 'Actual Mode': '3D', 'HDOP': 0.5, 'VDOP': 0.8, 'TDOP': 327.67, 'timestamp': '2019-10-19T03:47:30.467Z', 'description': 'GNSS DOPs'}
+(127, 127258)
+    timestamp        : 2019-10-19T03:47:30.467Z
+    prio             : 7
+    src              : 127
+    dst              : 255
+    pgn              : 127258
+    description      : Magnetic Variation
+    fields           : {'SID': 0, 'Source': 'WMM 2010', 'Variation': 15.3, 'timestamp': '2019-10-19T03:47:30.467Z', 'description': 'Magnetic Variation'}
+(128, 127257)
+    timestamp        : 2019-10-19T03:47:30.467Z
+    prio             : 3
+    src              : 128
+    dst              : 255
+    pgn              : 127257
+    description      : Attitude
+    fields           : {'SID': 0, 'Pitch': 2.3, 'Roll': -3.8, 'timestamp': '2019-10-19T03:47:30.467Z', 'description': 'Attitude'}
+(5, 129540)
+    timestamp        : 2019-10-19T03:47:30.424Z
+    prio             : 6
+    src              : 5
+    dst              : 255
+    pgn              : 129540
+    description      : GNSS Sats in View
+    fields           : {'SID': 178, 'Mode': '2', 'Sats in View': 12, 'list': [{}], 'timestamp': '2019-10-19T03:47:30.424Z', 'description': 'GNSS Sats in View'}
+(8, 129039)
+    timestamp        : 2019-10-19T03:47:29.628Z
+    prio             : 4
+    src              : 8
+    dst              : 255
+    pgn              : 129039
+    description      : AIS Class B Position Report
+    fields           : {'Message ID': 18, 'Repeat Indicator': 'Initial', 'User ID': 368049820, 'Longitude': -122.3428955, 'Latitude': 47.6440429, 'Position Accuracy': 'Low', 'RAIM': 'not in use', 'Time Stamp': '2', 'COG': 325.1, 'SOG': 0.0, 'Communication State': '3', 'AIS Transceiver information': 'Channel B VDL reception', 'Regional Application': 0, 'Unit type': 'CS', 'Integrated Display': 'Yes', 'DSC': 'Yes', 'Band': 'entire marine band', 'Can handle Msg 22': 'Yes', 'AIS mode': 'Assigned', 'AIS communication state': 'ITDMA', 'timestamp': '2019-10-19T03:47:29.628Z', 'description': 'AIS Class B Position Report'}
+(11, 130845)
+    timestamp        : 2019-10-19T03:47:05.639Z
+    prio             : 3
+    src              : 11
+    dst              : 255
+    pgn              : 130845
+    description      : Simnet: Parameter Handle
+    fields           : {'Manufacturer Code': 'Simrad', 'Industry Code': 'Marine Industry', 'G': 2, 'H': 0, 'I': 0, 'J': 1, 'Backlight': '102', 'L': 10, 'timestamp': '2019-10-19T03:47:05.639Z', 'description': 'Simnet: Parameter Handle'}
+(10, 130845)
+    timestamp        : 2019-10-19T03:47:05.639Z
+    prio             : 3
+    src              : 10
+    dst              : 255
+    pgn              : 130845
+    description      : Simnet: Parameter Handle
+    fields           : {'Manufacturer Code': 'Simrad', 'Industry Code': 'Marine Industry', 'G': 2, 'H': 0, 'I': 0, 'J': 1, 'Backlight': '102', 'L': 10, 'timestamp': '2019-10-19T03:47:05.639Z', 'description': 'Simnet: Parameter Handle'}
+(13, 127258)
+    timestamp        : 2019-10-19T03:47:30.158Z
+    prio             : 7
+    src              : 13
+    dst              : 255
+    pgn              : 127258
+    description      : Magnetic Variation
+    fields           : {'SID': 22, 'Variation': 15.3, 'timestamp': '2019-10-19T03:47:30.158Z', 'description': 'Magnetic Variation'}
+(7, 129285)
+    timestamp        : 2019-10-19T03:47:27.467Z
+    prio             : 7
+    src              : 7
+    dst              : 255
+    pgn              : 129285
+    description      : Navigation - Route/WP Information
+    fields           : {'nItems': 2, 'Supplementary Route/WP data available': 1, 'list': [{}], 'timestamp': '2019-10-19T03:47:27.467Z', 'description': 'Navigation - Route/WP Information'}
+(8, 129809)
+    timestamp        : 2019-10-19T03:47:22.320Z
+    prio             : 6
+    src              : 8
+    dst              : 255
+    pgn              : 129809
+    description      : AIS Class B static data (msg 24 Part A)
+    fields           : {'Message ID': 24, 'Repeat indicator': 'Initial', 'User ID': 367498580, 'Name': 'R & R', 'timestamp': '2019-10-19T03:47:22.320Z', 'description': 'AIS Class B static data (msg 24 Part A)'}
+(8, 130842)
+    timestamp        : 2019-10-19T03:47:27.224Z
+    prio             : 6
+    src              : 8
+    dst              : 255
+    pgn              : 130842
+    description      : Simnet: AIS Class B static data (msg 24 Part B)
+    fields           : {'Manufacturer Code': 'Simrad', 'Industry Code': 'Marine Industry', 'Message ID': 'Msg 24 Part B', 'Repeat indicator': 'Initial', 'D': 0, 'E': 0, 'User ID': 368002320, 'Type of ship': 'unavailable', 'Vendor ID': '0 SO', 'Callsign': 'WDJ7004', 'Length': 17.0, 'Beam': 4.0, 'Position reference from Starboard': 1.0, 'Position reference from Bow': 4.0, 'Mothership User ID': 0, 'timestamp': '2019-10-19T03:47:27.224Z', 'description': 'Simnet: AIS Class B static data (msg 24 Part B)'}
+(8, 129793)
+    timestamp        : 2019-10-19T03:47:28.820Z
+    prio             : 7
+    src              : 8
+    dst              : 255
+    pgn              : 129793
+    description      : AIS UTC and Date Report
+    fields           : {'Message ID': 4, 'Repeat Indicator': 'Initial', 'User ID': 3669152, 'Longitude': -122.7854156, 'Latitude': 47.5489006, 'Position Accuracy': 'High', 'RAIM': 'in use', 'Position Time': '16:55:02', 'Communication State': '0', 'AIS Transceiver information': 'Channel A VDL reception', 'Position Date': '2019.10.19', 'Spare': '0', 'timestamp': '2019-10-19T03:47:28.820Z', 'description': 'AIS UTC and Date Report'}
+(8, 129794)
+    timestamp        : 2019-10-19T03:47:26.661Z
+    prio             : 6
+    src              : 8
+    dst              : 255
+    pgn              : 129794
+    description      : AIS Class A Static and Voyage Related Data
+    fields           : {'Message ID': 5, 'Repeat indicator': 'Initial', 'User ID': 366772960, 'IMO number': 7808114, 'Callsign': 'WYQ9302', 'Name': 'WSF KITTITAS', 'Type of ship': 'Passenger ship', 'Length': 100.0, 'Beam': 24.0, 'ETA Time': '01:00:00', 'Draft': 4.69, 'Destination': 'MUKILTEO', 'AIS version indicator': 'ITU-R M.1371-3', 'GNSS type': 'GPS', 'DTE': 'available', 'AIS Transceiver information': 'Channel B VDL reception', 'timestamp': '2019-10-19T03:47:26.661Z', 'description': 'AIS Class A Static and Voyage Related Data'}
+(8, 129810)
+    timestamp        : 2019-10-19T03:47:27.223Z
+    prio             : 6
+    src              : 8
+    dst              : 255
+    pgn              : 129810
+    description      : AIS Class B static data (msg 24 Part B)
+    fields           : {'Message ID': 24, 'Repeat indicator': 'Initial', 'User ID': 368002320, 'Type of ship': 'Pleasure', 'Vendor ID': '0 SO', 'Callsign': 'WDJ7004', 'Length': 17.0, 'Beam': 4.0, 'Position reference from Starboard': 1.0, 'Position reference from Bow': 4.0, 'Mothership User ID': 0, 'Spare': 11, 'timestamp': '2019-10-19T03:47:27.223Z', 'description': 'AIS Class B static data (msg 24 Part B)'}
+(16, 130822)
+    timestamp        : 2019-10-19T03:47:21.927Z
+    prio             : 3
+    src              : 16
+    dst              : 255
+    pgn              : 130822
+    description      : Manufacturer Proprietary fast-packet non-addressed
+    fields           : {'Manufacturer Code': 'Navico', 'Industry Code': 'Marine', 'Data': 'ff 01 00 06 01 28 02 02 79 01 00 a6 3a ', 'timestamp': '2019-10-19T03:47:21.927Z', 'description': 'Manufacturer Proprietary fast-packet non-addressed'}
+(10, 59904)
+    timestamp        : 2019-10-19T03:47:03.626Z
+    prio             : 6
+    src              : 10
+    dst              : 0
+    pgn              : 59904
+    description      : ISO Request
+    fields           : {'PGN': 60928, 'timestamp': '2019-10-19T03:47:03.626Z', 'description': 'ISO Request'}
+(9, 59904)
+    timestamp        : 2019-10-19T03:47:02.512Z
+    prio             : 6
+    src              : 9
+    dst              : 0
+    pgn              : 59904
+    description      : ISO Request
+    fields           : {'PGN': 60928, 'timestamp': '2019-10-19T03:47:02.512Z', 'description': 'ISO Request'}
+(8, 60928)
+    timestamp        : 2019-10-19T03:47:02.606Z
+    prio             : 6
+    src              : 8
+    dst              : 255
+    pgn              : 60928
+    description      : ISO Address Claim
+    fields           : {'Unique Number': '1106363', 'Manufacturer Code': 'B&G', 'Device Instance Lower': 0, 'Device Instance Upper': 0, 'Device Function': 150, 'Device Class': 'Communication', 'System Instance': 0, 'Industry Group': 'Marine', 'timestamp': '2019-10-19T03:47:02.606Z', 'description': 'ISO Address Claim'}
+(13, 59904)
+    timestamp        : 2019-10-19T03:47:02.266Z
+    prio             : 6
+    src              : 13
+    dst              : 0
+    pgn              : 59904
+    description      : ISO Request
+    fields           : {'PGN': 60928, 'timestamp': '2019-10-19T03:47:02.266Z', 'description': 'ISO Request'}
+(12, 59904)
+    timestamp        : 2019-10-19T03:47:02.344Z
+    prio             : 6
+    src              : 12
+    dst              : 0
+    pgn              : 59904
+    description      : ISO Request
+    fields           : {'PGN': 60928, 'timestamp': '2019-10-19T03:47:02.344Z', 'description': 'ISO Request'}
+(1, 60928)
+    timestamp        : 2019-10-19T03:47:02.606Z
+    prio             : 6
+    src              : 1
+    dst              : 255
+    pgn              : 60928
+    description      : ISO Address Claim
+    fields           : {'Unique Number': '1477561', 'Manufacturer Code': 'Navico', 'Device Instance Lower': 0, 'Device Instance Upper': 0, 'Device Function': 140, 'Device Class': 'Steering and Control surfaces', 'System Instance': 0, 'Industry Group': 'Marine', 'timestamp': '2019-10-19T03:47:02.606Z', 'description': 'ISO Address Claim'}
+(2, 60928)
+    timestamp        : 2019-10-19T03:47:02.606Z
+    prio             : 6
+    src              : 2
+    dst              : 255
+    pgn              : 60928
+    description      : ISO Address Claim
+    fields           : {'Unique Number': '1475806', 'Manufacturer Code': 'B&G', 'Device Instance Lower': 0, 'Device Instance Upper': 0, 'Device Function': 140, 'Device Class': 'Steering and Control surfaces', 'System Instance': 0, 'Industry Group': 'Marine', 'timestamp': '2019-10-19T03:47:02.606Z', 'description': 'ISO Address Claim'}
+(16, 60928)
+    timestamp        : 2019-10-19T03:47:02.606Z
+    prio             : 6
+    src              : 16
+    dst              : 255
+    pgn              : 60928
+    description      : ISO Address Claim
+    fields           : {'Unique Number': '1540378', 'Manufacturer Code': 'B&G', 'Device Instance Lower': 0, 'Device Instance Upper': 0, 'Device Function': 130, 'Device Class': 'Display', 'System Instance': 0, 'Industry Group': 'Marine', 'timestamp': '2019-10-19T03:47:02.606Z', 'description': 'ISO Address Claim'}
+(6, 60928)
+    timestamp        : 2019-10-19T03:47:03.627Z
+    prio             : 6
+    src              : 6
+    dst              : 255
+    pgn              : 60928
+    description      : ISO Address Claim
+    fields           : {'Unique Number': '1605914', 'Manufacturer Code': 'B&G', 'Device Instance Lower': 0, 'Device Instance Upper': 0, 'Device Function': 140, 'Device Class': 'Steering and Control surfaces', 'System Instance': 0, 'Industry Group': 'Marine', 'timestamp': '2019-10-19T03:47:03.627Z', 'description': 'ISO Address Claim'}
+(11, 59904)
+    timestamp        : 2019-10-19T03:47:02.606Z
+    prio             : 6
+    src              : 11
+    dst              : 0
+    pgn              : 59904
+    description      : ISO Request
+    fields           : {'PGN': 60928, 'timestamp': '2019-10-19T03:47:02.606Z', 'description': 'ISO Request'}
+(9, 130845)
+    timestamp        : 2019-10-19T03:47:05.571Z
+    prio             : 3
+    src              : 9
+    dst              : 255
+    pgn              : 130845
+    description      : Simnet: Parameter Handle
+    fields           : {'Manufacturer Code': 'Simrad', 'Industry Code': 'Marine Industry', 'G': 2, 'H': 0, 'I': 0, 'J': 1, 'Backlight': '102', 'L': 10, 'timestamp': '2019-10-19T03:47:05.571Z', 'description': 'Simnet: Parameter Handle'}
+(13, 130845)
+    timestamp        : 2019-10-19T03:47:05.675Z
+    prio             : 3
+    src              : 13
+    dst              : 255
+    pgn              : 130845
+    description      : Simnet: Parameter Handle
+    fields           : {'Manufacturer Code': 'Simrad', 'Industry Code': 'Marine Industry', 'G': 2, 'H': 0, 'I': 0, 'J': 1, 'Backlight': '102', 'L': 10, 'timestamp': '2019-10-19T03:47:05.675Z', 'description': 'Simnet: Parameter Handle'}
+(12, 130845)
+    timestamp        : 2019-10-19T03:47:05.639Z
+    prio             : 3
+    src              : 12
+    dst              : 255
+    pgn              : 130845
+    description      : Simnet: Parameter Handle
+    fields           : {'Manufacturer Code': 'Simrad', 'Industry Code': 'Marine Industry', 'G': 2, 'H': 0, 'I': 0, 'J': 1, 'Backlight': '102', 'L': 10, 'timestamp': '2019-10-19T03:47:05.639Z', 'description': 'Simnet: Parameter Handle'}
