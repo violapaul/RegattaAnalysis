@@ -14,7 +14,7 @@ from boat_shape import OUTLINE as BOAT_OUTLINE
 
 import process as p
 import chart as c
-import global_variables as G
+from global_variables import G
 from utils import DictClass
 
 pd.set_option('display.max_rows', 100)

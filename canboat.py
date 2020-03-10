@@ -27,14 +27,14 @@ import itertools as it
 import arrow
 import pandas as pd
 import copy
-
-import global_variables as G
+from global_variables import G
 
 def pgn_code(name):
     # This is a real mouthful when a dict would do...  let's go with it for a while.
     try:
         return G.PGNS[G.PGNS['Description'] == name].id.values[0]
     except Exception:
+        print(f"pgn_code: {name} not found.")
         return None
 
 
@@ -46,13 +46,13 @@ def device_code(name):
         return None
 
 
-def contains_matcher(to_match):
+def substring_matcher(substring_to_match):
     "Return a function that returns True if a string contains to_match."
-    return lambda s: to_match in s
+    return lambda s: substring_to_match in s
 
 
-def json_matcher(**match_dict):
-    "Returns a function which returns True if the json has all key value pairs, exact match."
+def dict_matcher(**match_dict):
+    "Returns a function which returns True dict has all key value pairs, exact match."
     def helper(j):
         for key in match_dict:
             if j[key] != match_dict[key]:
@@ -71,16 +71,16 @@ def pgn_filter(pgn_list):
     return helper
 
 
-def file_lines(path, line_match=None):
-    "Generate the lines of a file if and only if the line_match function returns True."
-    with open(path) as file_lines:
-        for line in file_lines:
-            if (line_match is None) or line_match(line):
+def matching_file_lines(path, line_matcher=None):
+    "Generate the lines of a file if and only if the LINE_MATCHER function returns True."
+    with open(path) as lines:
+        for line in lines:
+            if (line_matcher is None) or line_matcher(line):
                 yield line
 
 
 def matching_records(json_lines, json_matcher=None, line_skip=1):
-    "Return parsed json for each line, optionally json_matcher must return True, and skipping lines."
+    "Return parsed json for each line, optionally json_matcher must return True, and optionally skipping lines."
     for line in it.islice(json_lines, 0, None, line_skip):
         record = json.loads(line)
         if (json_matcher is None) or json_matcher(record):
@@ -104,14 +104,24 @@ def gnss_convert(record):
                 alt = float(record['fields']['Altitude']))
 
 
+def valid_gnss_record(record, src):
+    correct_src = record['src'] == src
+    fields = record['fields']
+    has_date_time = ('Date' in fields) and ('Time' in fields)
+    has_latlonalt = ('Latitude' in fields) and ('Longitude' in fields) and ('Altitude' in fields)
+    return correct_src and has_date_time and has_latlonalt
+
+
 def lla_records(json_log_path, src=5):
     "Construct a sequence of lat/lon/alt GNSS records from from a JSON log file."
     return map( gnss_convert,
                 matching_records(
-                    file_lines(json_log_path,
-                               contains_matcher('GNSS Position Data')),
-                    json_matcher(src=src),
-                    1))
+                    # Return online lines which contain GNSS position data.
+                    matching_file_lines(json_log_path,
+                                        substring_matcher('GNSS Position Data')),
+                    # And a valid gnss record
+                    lambda record: valid_gnss_record(record, src=src),
+                    line_skip=1))
 
 
 def set_of_pgns(record_generator, line_count=500000):
@@ -143,7 +153,7 @@ def flatten_pgns(record_generator, line_count=500000):
         yield pgn_dict
 
 
-def log_gpstime(records, retries=10):
+def log_gpstime(records, retries=100):
     "Find the first System Time record and return its datetime."
     time_pgn = pgn_code('System Time')
 
@@ -252,7 +262,7 @@ def json_to_data_frame(json_file, count=1000000, trim=100, rhythm=0.1):
        TRIM   : trim off the first N records,  since the beginning can be wonky
        RHYTHM : Rate at which records are generated.
     """
-    records = matching_records( file_lines(json_file), pgn_filter(G.PGN_WHITELIST), 1)
+    records = matching_records( matching_file_lines(json_file), pgn_filter(G.PGN_WHITELIST), 1)
     # Throw out the first trim records, just to make sure things are working
     records = it.islice(records, trim, None)
 

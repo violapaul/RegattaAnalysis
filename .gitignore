@@ -4,5 +4,9 @@ __pycache__
 Icon*
 .DS_Store
 .ipynb_checkpoints
+Backup
+*.gpx
+*.stderr
+Scripts
 
 

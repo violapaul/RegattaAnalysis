@@ -1,5 +1,12 @@
+"""
+Collection of tool to create sailing charts, display race tracks, and race data.
+
+Most interesting part is the generation of GEO-registered charts, upon which lat/lon
+positions can be scale accurately ploted.
+"""
 import os
 import itertools as it
+import time
 
 import math
 
@@ -18,6 +25,7 @@ from global_variables import G
 # PLOTTING HELPERS ###################################################################################
 
 def draw_arrow(ax, begin, end, color='red'):
+    "Draw an arrow on the AXIS."
     delta = end - begin
     ax.arrow(begin[0], begin[1], delta[0], delta[1], head_width=0.2, length_includes_head=True, color=color)
 
@@ -32,6 +40,7 @@ def new_axis(fignum=None, equal=False, clf=True):
         ax.axis('equal')
     return fig, ax
 
+
 def quick_plot_ax(ax, index, data, legend=None, s=slice(None, None, None)):
     if index is None:
         index = range(len(data[0]))
@@ -45,6 +54,24 @@ def quick_plot_ax(ax, index, data, legend=None, s=slice(None, None, None)):
 
 
 def quick_plot(index, data, legend=None, fignum=None, clf=True, title=None, s=slice(None, None, None), ylim=None):
+    """
+    Super quick tool to display a set of associated data on a single axis.
+
+    All data is assumed to share a single index (X axis).  All data is the same length.
+
+    DATA is a list of Y axis data.
+    LEGEND is a list of legend names
+
+    So if you have your data in a DataFrame this works great.
+
+    quick_plot(df.index, (df.one, df.two, df.three), ['one', 'two', 'three'])
+
+    OR
+
+    quick_plot(df.index, (df.one, df.two, df.three), "(df.one, df.two, df.three)".split())
+
+    Note, that in the second case I just copied the text of the DATA param into the legend and let split work it out.
+    """
     if isinstance(fignum, matplotlib.figure.Figure):
         fig = fignum
     else:
@@ -151,14 +178,25 @@ def create_chart(df, border=0.2):
                      track=track)
 
 
-def draw_track(df, chart, subsample_rate=1, color='green', linestyle='solid'):
+def draw_track(df, chart, ax=None, subsample_rate=1, color='green', linestyle='solid'):
+    """
+    Convert the track from lat/lon to image coordinates and then draw.
+
+    Optionally draw on a specific axis.
+    """
     lon, lat = np.asarray(df.longitude), np.asarray(df.latitude)
     track = np.vstack(G.MAP(lon, lat)).T - (chart.west, chart.south)
     track = track[::subsample_rate]
-    chart.ax.plot(track[:, 0], track[:, 1], color=color)
+    if ax is None:
+        ax = chart.ax
+    ax.plot(track[:, 0], track[:, 1], color=color)
 
 
 def plot_chart(df, fig_or_num=None, border=0.2):
+    """
+    Plot a track for race.  The background image comes from NOAA (though it has limited
+    resolution if you sail long distances).
+    """
     chart = create_chart(df, border=border)
 
     if isinstance(fig_or_num, matplotlib.figure.Figure):
@@ -173,16 +211,29 @@ def plot_chart(df, fig_or_num=None, border=0.2):
     return chart
 
 
-def plot_track(df, fignum=None, sliders=True, border=0.2, skip=None):
+# This was a challenge to get working well both in native python and in Jupyter.  
+def plot_track(df, fignum=None, sliders=True, border=0.2, skip=None, delay=0.01):
+    """
+    Plot an interactive sail track on a map.  Provides sliders which can be used to trim
+    the begin and end of the track.
+
+    One potential use is to find the trim points so that only the race is
+    displayed/analyzed.
+
+    ch = plot_track(df)
+    # Play with the UI, this happens in a different thread
+    # At any point you can get the values of the sliders.
+    print(ch.begin, ch.end)
+    
+    """
     chart = plot_chart(df, fig_or_num=fignum, border=border)
     if skip is None:
         skip = math.ceil(len(chart.track) / 2000)  # No more than 2000 points
     index = df.index[::skip]
     track = chart.track[::skip]
 
-    line, = chart.ax.plot(track[:, 0], track[:, 1], color='red')
-
     fig = chart.fig
+    line, = chart.ax.plot(track[:, 0], track[:, 1], color='red')
 
     if sliders:
         ax1 = fig.add_axes([0.05, 0.1, 0.03, 0.8], facecolor='lightgoldenrodyellow')
@@ -197,15 +248,17 @@ def plot_track(df, fignum=None, sliders=True, border=0.2, skip=None):
             chart.begin, chart.end = index[track_begin], index[track_end]
             line.set_data(track[track_begin:track_end, 0],
                           track[track_begin:track_end, 1])
-            # chart.ax.draw_artist(ax.patch)
-            # chart.ax.draw_artist(line)
-            fig.canvas.update()
+
+            # fig.canvas.restore_region(axbackground)
+            # line.axes.draw_artist(line)
+            # chart.ax.figure.canvas.blit(chart.ax.bbox)
             fig.canvas.flush_events()
 
         s_beg.on_changed(lambda v: update())
         s_end.on_changed(lambda v: update())
 
     return chart
+
 
 def show_boat_arrows(df, df_slice, dt_seconds=5, skip=2, current_scale=1):
     delay = 16

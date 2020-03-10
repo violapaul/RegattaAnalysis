@@ -10,9 +10,11 @@ import multiprocessing
 import gpxpy
 import gpxpy.gpx
 
-import canboat as cb
-import global_variables as G
+import global_variables
+G = global_variables.init_seattle()
+
 import utils
+import canboat as cb
 
 
 description = [
@@ -23,7 +25,7 @@ description = [
 
 description = "\n".join(description)
 
-def canboat_to_json(raw_file, trim=100):
+def canboat_to_json(raw_file, trim=100, reconvert=False):
     """
     Converts the logs captured with actisense-serial canboat software on the raspberry PI
     and converts it to JSON.  Names the file with the date and time logged.
@@ -31,14 +33,17 @@ def canboat_to_json(raw_file, trim=100):
     path, file = os.path.split(raw_file)
     base, extension = os.path.splitext(file)
     json_file = os.path.join(path, base + ".json")
-    if extension.casefold() == '.gz':
-        command = "zcat {0} | analyzer -json > {1}".format(raw_file, json_file)
-    else:
-        command = "cat {0} | analyzer -json > {1}".format(raw_file, json_file)
-    print("Running ", command)
-    subprocess.run(command, shell=True)
+    log_file = os.path.join(path, base + ".stderr")
 
-    records = cb.matching_records( cb.file_lines(json_file),
+    if reconvert or not os.path.exists(json_file):
+        if extension.casefold() == '.gz':
+            command = f"zcat {raw_file} | analyzer -json > {json_file} 2> {log_file}"
+        else:
+            command = f"cat {raw_file} | analyzer -json > {json_file} 2> {log_file}"
+        print("Running ", command)
+        subprocess.run(command, shell=True)
+
+    records = cb.matching_records( cb.matching_file_lines(json_file),
                                    cb.pgn_filter(G.PGN_WHITELIST), 1)
     # Throw out the first trim records, just to make sure things are working
     records = it.islice(records, trim, None)
@@ -115,11 +120,16 @@ if __name__ == "__main__":
     log_files = glob.glob("actisense*.log") + glob.glob("actisense*.log.gz")
 
     if args.json:
-        # We are going to squirrel away the old logs.
         for file in log_files:
             print("Converting log {0} to JSON".format(file))
             log_path = os.path.join(cwd, file)
             canboat_to_json(log_path, trim=args.trim)
+            print("Cleaning up raw files.")
+            old_logs_dir = os.path.join(cwd, "OldLogs")
+            utils.ensure_directory(old_logs_dir)
+            for file in log_files:
+                log_path = os.path.join(cwd, file)
+                os.rename(log_path, os.path.join(old_logs_dir, file))
 
     json_files = glob.glob("*.json")
     gpx_files = utils.extract_base_names(glob.glob("*.gpx"))
@@ -151,12 +161,6 @@ if __name__ == "__main__":
         print(f"Done creating {len(json_files)} pandas dataframes!")
 
     if args.cleanup:
-        print("Cleaning up raw files.")
-        old_logs_dir = os.path.join(cwd, "OldLogs")
-        utils.ensure_directory(old_logs_dir)
-        for file in log_files:
-            log_path = os.path.join(cwd, file)
-            os.rename(log_path, os.path.join(old_logs_dir, file))
         json_dir = os.path.join(cwd, "JSON")
         utils.ensure_directory(json_dir)
         for jfile in json_files:

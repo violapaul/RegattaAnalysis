@@ -124,9 +124,8 @@ def df_retain_columns(df, white_list):
 
 def process_sensors(df, causal=False, cutoff=0.3):
     """
-    Process sensor data to normalize and smooth.  Note, this is likely done on the boat in
-    real-time, but not recorded.
-
+    Process sensor data to normalize and smooth.  Note, this done on the boat, before
+    display, in real-time, but not logged.  We do our best to simulate that here.
     """
     df.rawa = p.sign_angle(df.rawa)
 
@@ -141,7 +140,9 @@ def process_sensors(df, causal=False, cutoff=0.3):
     df['awa'] = np.degrees(np.arctan2(saw_e, saw_n))
     df['aws'] = np.sqrt(np.square(saw_e) + np.square(saw_n))
 
+    # For now raw is processed (since TWA/TWD/TWS is filtered on the boat).
     if 'rtwa' in df.columns:
+        df.rtwa = p.sign_angle(df.rtwa)
         df['twa'] = p.sign_angle(df.rtwa)
     if 'rtws' in df.columns:
         df['tws'] = df.rtws
@@ -267,7 +268,6 @@ def read_log_file(pickle_file, skip_dock_only=True, discard_columns = True,
         compute_record_times(df)
     return df
 
-
 def read_logs(log_entries, skip_dock_only=True, discard_columns = True,
               rename_columns=True, trim=True,
               race_trim=True,
@@ -285,9 +285,22 @@ def read_logs(log_entries, skip_dock_only=True, discard_columns = True,
                            rename_columns=rename_columns, trim=trim, process=process, cutoff=cutoff,
                            path=path)
         if race_trim:
-            df = df.loc[log.begin: log.end].copy()
+            df = df.iloc[log.begin: log.end].copy()
         ns = SimpleNamespace(**log)
         df.log = ns
         dfs.append(df)
     valid_dfs = [df for df in dfs if df is not None]
     return valid_dfs, pd.concat(valid_dfs, sort=True, ignore_index=True)
+
+def read_dates(dates):
+    "Convience function.  Given a list of text dates YYYY-MM-DD, will return races on those dates."
+    log_info = read_log_info()
+    races = []
+    for date in dates:
+        log = get_log(log_info, date)
+        if log is None:
+            print(f"Warning, {date} could not be found in the race logs.")
+        else:
+            races.append(log)
+    df, big_df = read_logs(races, path=G.LOGS_DIRECTORY)
+    return df, races, big_df
