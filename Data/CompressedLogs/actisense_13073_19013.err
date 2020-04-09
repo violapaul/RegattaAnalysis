@@ -1,0 +1,484 @@
+Attempt 1
+ERROR 2019-11-25T03:30:36.624Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 1 baud rate 230400
+ERROR 2019-11-25T03:30:38.654Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 2
+ERROR 2019-11-25T03:30:40.669Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 2 baud rate 230400
+ERROR 2019-11-25T03:30:42.678Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 3
+ERROR 2019-11-25T03:30:44.688Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 3 baud rate 230400
+ERROR 2019-11-25T03:30:46.698Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 4
+ERROR 2019-11-25T03:30:48.707Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 4 baud rate 230400
+ERROR 2019-11-25T03:30:50.714Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 5
+ERROR 2019-11-25T03:30:52.720Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 5 baud rate 230400
+ERROR 2019-11-25T03:30:54.730Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 6
+ERROR 2019-11-25T03:30:56.742Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 6 baud rate 230400
+ERROR 2019-11-25T03:30:58.751Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 7
+ERROR 2019-11-25T03:31:00.758Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 7 baud rate 230400
+ERROR 2019-11-25T03:31:02.764Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 8
+ERROR 2019-11-25T03:31:04.775Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 8 baud rate 230400
+ERROR 2019-11-25T03:31:06.788Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 9
+ERROR 2019-11-25T03:31:08.803Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 9 baud rate 230400
+ERROR 2019-11-25T03:31:10.815Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 10
+ERROR 2019-11-25T03:31:12.828Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 10 baud rate 230400
+ERROR 2019-11-25T03:31:14.841Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 11
+ERROR 2019-11-25T03:31:16.854Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 11 baud rate 230400
+ERROR 2019-11-25T03:31:18.863Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 12
+ERROR 2019-11-25T03:31:20.869Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 12 baud rate 230400
+ERROR 2019-11-25T03:31:22.876Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 13
+ERROR 2019-11-25T03:31:24.886Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 13 baud rate 230400
+ERROR 2019-11-25T03:31:26.896Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 14
+ERROR 2019-11-25T03:31:28.909Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 14 baud rate 230400
+ERROR 2019-11-25T03:31:30.921Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 15
+ERROR 2019-11-25T03:31:32.934Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 15 baud rate 230400
+ERROR 2019-11-25T03:31:34.947Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 16
+ERROR 2019-11-25T03:31:36.960Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 16 baud rate 230400
+ERROR 2019-11-25T03:31:38.969Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 17
+ERROR 2019-11-25T03:31:40.976Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 17 baud rate 230400
+ERROR 2019-11-25T03:31:42.982Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 18
+ERROR 2019-11-25T03:31:44.989Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 18 baud rate 230400
+ERROR 2019-11-25T03:31:46.999Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 19
+ERROR 2019-11-25T03:31:49.009Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 19 baud rate 230400
+ERROR 2019-11-25T03:31:51.018Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 20
+ERROR 2019-11-25T03:31:53.031Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 20 baud rate 230400
+ERROR 2019-11-25T03:31:55.044Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 21
+ERROR 2019-11-25T03:32:21.051Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 21 baud rate 230400
+ERROR 2019-11-25T03:32:23.064Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 22
+ERROR 2019-11-25T03:32:25.076Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 22 baud rate 230400
+ERROR 2019-11-25T03:32:27.086Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 23
+ERROR 2019-11-25T03:32:29.092Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 23 baud rate 230400
+ERROR 2019-11-25T03:32:31.098Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 24
+ERROR 2019-11-25T03:32:33.108Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 24 baud rate 230400
+ERROR 2019-11-25T03:32:35.122Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 25
+ERROR 2019-11-25T03:32:37.135Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 25 baud rate 230400
+ERROR 2019-11-25T03:32:39.147Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 26
+ERROR 2019-11-25T03:32:41.160Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 26 baud rate 230400
+ERROR 2019-11-25T03:32:43.173Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 27
+ERROR 2019-11-25T03:32:45.186Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 27 baud rate 230400
+ERROR 2019-11-25T03:32:47.198Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 28
+ERROR 2019-11-25T03:32:49.207Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 28 baud rate 230400
+ERROR 2019-11-25T03:32:51.217Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 29
+ERROR 2019-11-25T03:32:53.226Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 29 baud rate 230400
+ERROR 2019-11-25T03:32:55.237Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 30
+ERROR 2019-11-25T03:32:57.251Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 30 baud rate 230400
+ERROR 2019-11-25T03:32:59.264Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 31
+ERROR 2019-11-25T03:33:01.274Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 31 baud rate 230400
+ERROR 2019-11-25T03:33:03.284Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 32
+ERROR 2019-11-25T03:33:05.296Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 32 baud rate 230400
+ERROR 2019-11-25T03:33:07.309Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 33
+ERROR 2019-11-25T03:33:09.322Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 33 baud rate 230400
+ERROR 2019-11-25T03:33:11.331Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 34
+ERROR 2019-11-25T03:33:13.341Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 34 baud rate 230400
+ERROR 2019-11-25T03:33:15.354Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 35
+ERROR 2019-11-25T03:33:17.367Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 35 baud rate 230400
+ERROR 2019-11-25T03:33:19.380Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 36
+ERROR 2019-11-25T03:33:21.398Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 36 baud rate 230400
+ERROR 2019-11-25T03:33:23.411Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 37
+ERROR 2019-11-25T03:33:25.424Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 37 baud rate 230400
+ERROR 2019-11-25T03:33:27.436Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 38
+ERROR 2019-11-25T03:33:29.446Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 38 baud rate 230400
+ERROR 2019-11-25T03:33:31.456Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 39
+ERROR 2019-11-25T03:33:33.469Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 39 baud rate 230400
+ERROR 2019-11-25T03:33:35.479Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 40
+ERROR 2019-11-25T03:33:37.488Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 40 baud rate 230400
+ERROR 2019-11-25T03:33:39.498Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 41
+ERROR 2019-11-25T03:33:41.507Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 41 baud rate 230400
+ERROR 2019-11-25T03:33:43.520Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 42
+ERROR 2019-11-25T03:33:45.533Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 42 baud rate 230400
+ERROR 2019-11-25T03:33:47.546Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 43
+ERROR 2019-11-25T03:33:49.558Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 43 baud rate 230400
+ERROR 2019-11-25T03:33:51.571Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 44
+ERROR 2019-11-25T03:33:53.584Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 44 baud rate 230400
+ERROR 2019-11-25T03:33:55.597Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 45
+ERROR 2019-11-25T03:33:57.610Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 45 baud rate 230400
+ERROR 2019-11-25T03:33:59.623Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 46
+ERROR 2019-11-25T03:34:01.636Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 46 baud rate 230400
+ERROR 2019-11-25T03:34:03.645Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 47
+ERROR 2019-11-25T03:34:05.652Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 47 baud rate 230400
+ERROR 2019-11-25T03:34:07.658Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 48
+ERROR 2019-11-25T03:34:09.667Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 48 baud rate 230400
+ERROR 2019-11-25T03:34:11.678Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 49
+ERROR 2019-11-25T03:34:13.692Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 49 baud rate 230400
+ERROR 2019-11-25T03:34:15.705Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 50
+ERROR 2019-11-25T03:34:17.717Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 50 baud rate 230400
+ERROR 2019-11-25T03:34:19.730Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 51
+ERROR 2019-11-25T03:34:21.743Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 51 baud rate 230400
+ERROR 2019-11-25T03:34:23.755Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 52
+ERROR 2019-11-25T03:34:25.765Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 52 baud rate 230400
+ERROR 2019-11-25T03:34:27.771Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 53
+ERROR 2019-11-25T03:34:29.778Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 53 baud rate 230400
+ERROR 2019-11-25T03:34:31.787Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 54
+ERROR 2019-11-25T03:34:33.801Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 54 baud rate 230400
+ERROR 2019-11-25T03:34:35.814Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 55
+ERROR 2019-11-25T03:34:37.826Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 55 baud rate 230400
+ERROR 2019-11-25T03:34:39.836Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 56
+ERROR 2019-11-25T03:34:41.846Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 56 baud rate 230400
+ERROR 2019-11-25T03:34:43.858Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 57
+ERROR 2019-11-25T03:34:45.865Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 57 baud rate 230400
+ERROR 2019-11-25T03:34:47.874Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 58
+ERROR 2019-11-25T03:34:49.883Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 58 baud rate 230400
+ERROR 2019-11-25T03:34:51.892Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 59
+ERROR 2019-11-25T03:34:53.902Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 59 baud rate 230400
+ERROR 2019-11-25T03:34:55.909Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 60
+ERROR 2019-11-25T03:34:57.917Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 60 baud rate 230400
+ERROR 2019-11-25T03:34:59.926Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 61
+ERROR 2019-11-25T03:35:01.939Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 61 baud rate 230400
+ERROR 2019-11-25T03:35:03.949Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 62
+ERROR 2019-11-25T03:35:05.961Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 62 baud rate 230400
+ERROR 2019-11-25T03:35:07.972Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 63
+ERROR 2019-11-25T03:35:09.986Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 63 baud rate 230400
+ERROR 2019-11-25T03:35:11.999Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 64
+ERROR 2019-11-25T03:35:14.012Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 64 baud rate 230400
+ERROR 2019-11-25T03:35:16.025Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 65
+ERROR 2019-11-25T03:35:18.037Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 65 baud rate 230400
+ERROR 2019-11-25T03:35:20.051Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 66
+ERROR 2019-11-25T03:35:22.065Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 66 baud rate 230400
+ERROR 2019-11-25T03:35:24.077Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 67
+ERROR 2019-11-25T03:35:26.088Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 67 baud rate 230400
+ERROR 2019-11-25T03:35:28.099Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 68
+ERROR 2019-11-25T03:35:30.109Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 68 baud rate 230400
+ERROR 2019-11-25T03:35:32.122Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 69
+ERROR 2019-11-25T03:35:34.135Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 69 baud rate 230400
+ERROR 2019-11-25T03:35:36.148Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 70
+ERROR 2019-11-25T03:35:38.159Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 70 baud rate 230400
+ERROR 2019-11-25T03:35:40.169Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 71
+ERROR 2019-11-25T03:35:42.178Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 71 baud rate 230400
+ERROR 2019-11-25T03:35:44.191Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 72
+ERROR 2019-11-25T03:35:46.204Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 72 baud rate 230400
+ERROR 2019-11-25T03:35:48.216Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 73
+ERROR 2019-11-25T03:35:50.229Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 73 baud rate 230400
+ERROR 2019-11-25T03:35:52.242Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 74
+ERROR 2019-11-25T03:35:54.258Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 74 baud rate 230400
+ERROR 2019-11-25T03:35:56.271Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 75
+ERROR 2019-11-25T03:35:58.282Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 75 baud rate 230400
+ERROR 2019-11-25T03:36:00.289Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 76
+ERROR 2019-11-25T03:36:02.299Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 76 baud rate 230400
+ERROR 2019-11-25T03:36:04.311Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 77
+ERROR 2019-11-25T03:36:06.321Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 77 baud rate 230400
+ERROR 2019-11-25T03:36:08.335Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 78
+ERROR 2019-11-25T03:36:10.348Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 78 baud rate 230400
+ERROR 2019-11-25T03:36:12.359Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 79
+ERROR 2019-11-25T03:36:14.370Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 79 baud rate 230400
+ERROR 2019-11-25T03:36:16.382Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 80
+ERROR 2019-11-25T03:36:18.395Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 80 baud rate 230400
+ERROR 2019-11-25T03:36:20.404Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 81
+ERROR 2019-11-25T03:36:22.415Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 81 baud rate 230400
+ERROR 2019-11-25T03:36:24.428Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 82
+ERROR 2019-11-25T03:36:26.440Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 82 baud rate 230400
+ERROR 2019-11-25T03:36:28.455Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 83
+ERROR 2019-11-25T03:36:30.469Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 83 baud rate 230400
+ERROR 2019-11-25T03:36:32.481Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 84
+ERROR 2019-11-25T03:36:34.494Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 84 baud rate 230400
+ERROR 2019-11-25T03:36:36.504Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 85
+ERROR 2019-11-25T03:36:38.514Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 85 baud rate 230400
+ERROR 2019-11-25T03:36:40.526Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 86
+ERROR 2019-11-25T03:36:42.540Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 86 baud rate 230400
+ERROR 2019-11-25T03:36:44.553Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 87
+ERROR 2019-11-25T03:36:46.566Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 87 baud rate 230400
+ERROR 2019-11-25T03:36:48.579Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 88
+ERROR 2019-11-25T03:36:50.591Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 88 baud rate 230400
+ERROR 2019-11-25T03:36:52.604Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 89
+ERROR 2019-11-25T03:36:54.616Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 89 baud rate 230400
+ERROR 2019-11-25T03:36:56.629Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 90
+ERROR 2019-11-25T03:36:58.642Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 90 baud rate 230400
+ERROR 2019-11-25T03:37:00.654Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 91
+ERROR 2019-11-25T03:37:02.667Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 91 baud rate 230400
+ERROR 2019-11-25T03:37:04.679Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 92
+ERROR 2019-11-25T03:37:06.692Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 92 baud rate 230400
+ERROR 2019-11-25T03:37:08.702Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 93
+ERROR 2019-11-25T03:37:10.709Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 93 baud rate 230400
+ERROR 2019-11-25T03:37:12.716Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 94
+ERROR 2019-11-25T03:37:14.726Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 94 baud rate 230400
+ERROR 2019-11-25T03:37:16.735Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 95
+ERROR 2019-11-25T03:37:18.745Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 95 baud rate 230400
+ERROR 2019-11-25T03:37:20.757Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 96
+ERROR 2019-11-25T03:37:22.770Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 96 baud rate 230400
+ERROR 2019-11-25T03:37:24.782Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 97
+ERROR 2019-11-25T03:37:26.795Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 97 baud rate 230400
+ERROR 2019-11-25T03:37:28.805Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 98
+ERROR 2019-11-25T03:37:30.811Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 98 baud rate 230400
+ERROR 2019-11-25T03:37:32.820Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 99
+ERROR 2019-11-25T03:37:34.833Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 99 baud rate 230400
+ERROR 2019-11-25T03:37:36.844Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 100
+ERROR 2019-11-25T03:37:38.856Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 100 baud rate 230400
+ERROR 2019-11-25T03:37:40.868Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 101
+ERROR 2019-11-25T03:37:42.879Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 101 baud rate 230400
+ERROR 2019-11-25T03:37:44.886Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 102
+ERROR 2019-11-25T03:37:46.896Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 102 baud rate 230400
+ERROR 2019-11-25T03:37:48.906Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 103
+ERROR 2019-11-25T03:37:50.913Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 103 baud rate 230400
+ERROR 2019-11-25T03:37:52.920Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 104
+ERROR 2019-11-25T03:37:54.928Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 104 baud rate 230400
+ERROR 2019-11-25T03:37:56.935Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 105
+ERROR 2019-11-25T03:37:58.942Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 105 baud rate 230400
+ERROR 2019-11-25T03:38:00.949Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 106
+ERROR 2019-11-25T03:38:02.961Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 106 baud rate 230400
+ERROR 2019-11-25T03:38:04.971Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 107
+ERROR 2019-11-25T03:38:06.978Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 107 baud rate 230400
+ERROR 2019-11-25T03:38:08.988Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 108
+ERROR 2019-11-25T03:38:11.000Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 108 baud rate 230400
+ERROR 2019-11-25T03:38:13.075Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 109
+ERROR 2019-11-25T03:38:15.085Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 109 baud rate 230400
+ERROR 2019-11-25T03:38:17.096Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 110
+ERROR 2019-11-25T03:38:19.106Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 110 baud rate 230400
+ERROR 2019-11-25T03:38:21.117Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 111
+ERROR 2019-11-25T03:38:23.129Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 111 baud rate 230400
+ERROR 2019-11-25T03:38:25.142Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 112
+ERROR 2019-11-25T03:38:27.155Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 112 baud rate 230400
+ERROR 2019-11-25T03:38:29.168Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 113
+ERROR 2019-11-25T03:38:31.180Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 113 baud rate 230400
+ERROR 2019-11-25T03:38:33.194Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 114
+ERROR 2019-11-25T03:38:35.210Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 114 baud rate 230400
+ERROR 2019-11-25T03:38:37.223Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 115
+ERROR 2019-11-25T03:38:39.236Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 115 baud rate 230400
+ERROR 2019-11-25T03:38:41.249Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 116
+ERROR 2019-11-25T03:38:43.266Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 116 baud rate 230400
+ERROR 2019-11-25T03:38:45.285Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 117
+ERROR 2019-11-25T03:38:47.298Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 117 baud rate 230400
+ERROR 2019-11-25T03:38:49.307Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 118
+ERROR 2019-11-25T03:38:51.317Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 118 baud rate 230400
+ERROR 2019-11-25T03:38:53.330Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 119
+ERROR 2019-11-25T03:38:55.339Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 119 baud rate 230400
+ERROR 2019-11-25T03:38:57.349Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 120
+ERROR 2019-11-25T03:38:59.362Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 120 baud rate 230400
+ERROR 2019-11-25T03:39:01.375Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 121
+ERROR 2019-11-25T03:39:03.384Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 121 baud rate 230400
+ERROR 2019-11-25T03:39:05.394Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0

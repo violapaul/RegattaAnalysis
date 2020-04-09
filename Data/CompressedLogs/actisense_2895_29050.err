@@ -1,0 +1,4 @@
+Attempt 1
+ERROR 2019-10-20T18:17:07.020Z [actisense-serial] Ignoring message with invalid checksum
+ERROR 2019-10-20T18:17:07.039Z [actisense-serial] DLE followed by unexpected char 00, ignore message
+ERROR 2019-10-20T18:17:07.039Z [actisense-serial] Ignore short command len = 0

@@ -1,0 +1,4 @@
+Attempt 1
+ERROR 2019-10-04T21:57:38.389Z [actisense-serial] Ignore short command len = 0
+ERROR 2019-10-04T21:57:38.424Z [actisense-serial] Ignoring N2K message - too short
+ERROR 2019-10-04T21:57:38.425Z [actisense-serial] DLE followed by unexpected char 7F, ignore message

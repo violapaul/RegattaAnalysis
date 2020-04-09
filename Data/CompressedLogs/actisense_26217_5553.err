@@ -1,0 +1,3 @@
+Attempt 1
+ERROR 2019-11-30T13:17:07.642Z [actisense-serial] Ignore short command len = 0
+ERROR 2019-11-30T13:17:07.738Z [actisense-serial] Ignoring N2K message - too short

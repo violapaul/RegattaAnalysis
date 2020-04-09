@@ -1,0 +1,4 @@
+Attempt 1
+ERROR 2019-11-30T07:05:13.800Z [actisense-serial] DLE followed by unexpected char 00, ignore message
+ERROR 2019-11-30T07:05:13.838Z [actisense-serial] Ignoring message with invalid checksum
+ERROR 2019-11-30T07:05:13.893Z [actisense-serial] Ignoring message with invalid checksum

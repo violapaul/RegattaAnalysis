@@ -1,0 +1,22 @@
+Attempt 1
+ERROR 2019-10-13T15:24:56.078Z [actisense-serial] Ignoring message with invalid checksum
+FATAL 2019-10-13T15:28:40.774Z [actisense-serial] Unable to read from NGT1 device
+Attempt 1 baud rate 230400
+ERROR 2019-10-13T15:28:40.786Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 2
+ERROR 2019-10-13T15:28:42.808Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 2 baud rate 230400
+ERROR 2019-10-13T15:28:42.814Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 3
+ERROR 2019-10-13T15:28:44.827Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 3 baud rate 230400
+ERROR 2019-10-13T15:28:44.834Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 4
+ERROR 2019-10-13T15:28:46.846Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 4 baud rate 230400
+ERROR 2019-10-13T15:28:46.853Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 5
+ERROR 2019-10-13T15:28:48.866Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 5 baud rate 230400
+ERROR 2019-10-13T15:28:48.872Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 6
