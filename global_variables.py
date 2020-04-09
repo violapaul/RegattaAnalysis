@@ -38,9 +38,20 @@ class RaceAnalysis:
         
         self.SAMPLES_PER_SECOND = 10
         self.MS_2_KNOTS = 1.944
+        self.METERS_PER_FOOT = 0.3048
 
         self.DATA_DIRECTORY = 'Data'
-        self.LOGS_DIRECTORY = 'Data/Logs'
+        # Mount point for the USB memory stick
+        self.USB_LOGS_DIRECTORY = 'Data/USB/logs'
+        # Directory where compressed canboat logs are stored
+        self.COMPRESSED_LOGS_DIRECTORY = 'Data/CompressedLogs'
+        self.NAMED_LOGS_DIRECTORY = 'Data/NamedLogs'
+        self.GPX_LOGS_DIRECTORY = 'Data/GPXLogs'
+        self.PANDAS_LOGS_DIRECTORY = 'Data/PandasLogs'
+
+        # A small log is generally an artifact.
+        self.MIN_LOG_FILE_SIZE = 5000000
+        
         self.MAP_DIRECTORY = 'Data/Maps'
         self.LOG_INFO_PATH = os.path.join(self.DATA_DIRECTORY, 'log_info.pd')
 
@@ -73,6 +84,8 @@ class PeerGynt(RaceAnalysis):
             (128, "ZG100 Compass"                        )
         ], columns=['src', 'Device'])
 
+        self.MAST_HEIGHT = 50 * self.METERS_PER_FOOT
+        self.BOAT_NAME = "PeerGynt"
 
 class Seattle(PeerGynt):
     "Global variables unique to Seattle."
@@ -117,7 +130,7 @@ class SanDiego(PeerGynt):
         self.PROJ4 += " +k_0=0.9996 +datum=WGS84 +units=m +no_defs "
         self.MAP = Proj(self.PROJ4)
 
-        self.BASE_MAP_PATH = os.path.join(self.DATA_DIRECTORY, 'sandiego_base_map.tif'),
+        self.BASE_MAP_PATH = os.path.join(self.MAP_DIRECTORY, 'sandiego_base_map.tif')
 
 
 class Uninitialized():

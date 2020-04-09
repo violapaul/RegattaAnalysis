@@ -1,0 +1,32 @@
+#!/bin/bash
+
+canlogDir="/home/pi/logs"
+homeDir="/home/pi"
+copyDir="/media/pi/USB"
+
+
+for (( i=1; i<=1000; i++))
+do
+    echo "$(date): Attempt $i" >> usbcopy.log
+
+    if [ -d $copyDir ] 
+    then
+	echo "Running rsync -av $canlogDir $copyDir" >> usbcopy.log
+	rsync -av $canlogDir $copyDir >> usbcopy.log 2>&1
+	echo "Running rsync -av --exclude-from /home/pi/rsync_exclude.txt $homeDir $copyDir" >> usbcopy.log
+	rsync -av --exclude-from /home/pi/rsync_exclude.txt $homeDir $copyDir >> usbcopy.log 2>&1
+	
+	echo "Attempting to sync disk" >> usbcopy.log 2>&1
+	sync >> usbcopy.log 2>&1
+	echo "Not Attemping to shutdown" >> usbcopy.log 2>&1
+	# sudo shutdown -h now >> usbcopy.log 2>&1
+    else
+	echo "USB drive $copyDir is missing" >> usbcopy.log
+    fi
+
+    echo "Sleeping" >> usbcopy.log 2>&1
+    sleep 2
+    echo "Syncing" >> usbcopy.log 2>&1
+    sync -f $copyDir
+    sync -f /
+done

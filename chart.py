@@ -205,6 +205,7 @@ def plot_chart(df, fig_or_num=None, border=0.2):
         chart.fig = plt.figure(num=fig_or_num)
     chart.fig.clf()
     chart.ax = chart.fig.subplots(1, 1)
+    chart.fig.tight_layout()
     image = desaturate_image(chart.image)
     chart.ax.imshow(image, extent=[0, chart.east - chart.west, 0, chart.north - chart.south])
     chart.ax.grid(True)
@@ -296,9 +297,7 @@ def show_boat_arrows(df, df_slice, dt_seconds=5, skip=2, current_scale=1):
 
     color = 'green'
     for (east, north), ve, vn in it.islice(zip(pos, tw_e, tw_n), 0, None, skip):
-        ee = east + ve
-        nn = north + vn
-        atw = chart.ax.arrow(ee, nn, -ve, -vn, head_width=hwidth, length_includes_head=True, color=color)
+        atw = chart.ax.arrow(east, north, ve, vn, head_width=hwidth, length_includes_head=True, color=color)
 
     color = 'red'
     for (east, north), ve, vn in it.islice(zip(pos, btv_e, btv_n), 0, None, skip):

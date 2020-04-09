@@ -1,0 +1,12 @@
+[Unit]
+Description=Canboat Actisense Data Collection
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/Canboat
+ExecStart=/home/pi/Canboat/read_actisense_data
+
+[Install]
+WantedBy=multi-user.target

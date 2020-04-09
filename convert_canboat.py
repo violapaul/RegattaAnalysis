@@ -16,7 +16,6 @@ G = global_variables.init_seattle()
 import utils
 import canboat as cb
 
-
 description = [
     "Convert a raw canboat log to a json file and then both to a GPX and a PANDAS pickle",
     "file.  Extract date/time along the way and use it for the filenames.  Moves the log",
@@ -25,16 +24,61 @@ description = [
 
 description = "\n".join(description)
 
-def canboat_to_json(raw_file, trim=100, reconvert=False):
+def log_datetime(canboat_log_file):
+    """
+    Using the contents of the canboat log file, extract the GPS datetime.
+    """
+    path, file = os.path.split(canboat_log_file)
+    base, extension = os.path.splitext(file)
+
+    tmp_path = "/tmp"
+    json_file = os.path.join(tmp_path, base + ".json")
+    log_file = os.path.join(tmp_path, base + ".stderr")
+
+    if extension.casefold() == '.gz':
+        command = f"zcat {canboat_log_file}"
+    else:
+        command = f"cat {canboat_log_file}"
+    # Extract the head...  just need the first record.
+    command += f" | analyzer -json 2> {log_file} | head -1000 > {json_file}"
+    print("Running ", command)
+    subprocess.run(command, shell=True)
+
+    records = cb.json_records( cb.file_lines(json_file),
+                                   cb.pgn_filter(G.PGN_WHITELIST), 1)
+
+    gps_time = cb.log_gpstime(records)
+
+    local_time = gps_time.to('US/Pacific')
+    return local_time.format('YYYY-MM-DD_HH:mm')
+
+def rename_log_file(canboat_log_file):
+    """
+    The RPi does not have a battery back real time clock, so the log files have funny
+    names and datetimes.  Extract the true GPS time and then rename the file based on
+    datetime.
+    """
+    path, file = os.path.split(canboat_log_file)
+    base, extension = os.path.splitext(file)
+
+    datetime = log_datetime(canboat_log_file)
+
+    new_file = os.path.join(path, G.BOAT_NAME + "_" + datetime + ".log")
+    if extension.casefold() == '.gz':
+        new_file += ".gz"
+    os.rename(canboat_log_file, new_file)
+
+def canboat_to_json(canboat_file, trim=100, reconvert=False):
     """
     Converts the logs captured with actisense-serial canboat software on the raspberry PI
     and converts it to JSON.  Names the file with the date and time logged.
     """
+
     path, file = os.path.split(raw_file)
     base, extension = os.path.splitext(file)
     json_file = os.path.join(path, base + ".json")
     log_file = os.path.join(path, base + ".stderr")
-
+    
     if reconvert or not os.path.exists(json_file):
         if extension.casefold() == '.gz':
             command = f"zcat {raw_file} | analyzer -json > {json_file} 2> {log_file}"
@@ -43,8 +87,8 @@ def canboat_to_json(raw_file, trim=100, reconvert=False):
         print("Running ", command)
         subprocess.run(command, shell=True)
 
-    records = cb.matching_records( cb.matching_file_lines(json_file),
-                                   cb.pgn_filter(G.PGN_WHITELIST), 1)
+    records = cb.json_records( cb.file_lines(json_file),
+                               cb.pgn_filter(G.PGN_WHITELIST), 1)
     # Throw out the first trim records, just to make sure things are working
     records = it.islice(records, trim, None)
 

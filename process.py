@@ -165,8 +165,8 @@ def smooth(coeff, signal, causal=False):
     signal = np.asarray(signal)
     if causal:
         zi = scipy.signal.lfilter_zi(b, a)
-        res1, _ = scipy.signal.lfilter(b, a, signal, zi= zi * signal[0])
-        res, _ = scipy.signal.lfilter(b, a, res1,   zi= zi * signal[0])
+        res1, _ = scipy.signal.lfilter(b, a, signal, zi = zi * signal[0])
+        res, _ = scipy.signal.lfilter(b, a, res1,   zi = zi * res1[0])
     else:
         res = scipy.signal.filtfilt(b, a, signal)
     return res
@@ -284,127 +284,4 @@ def max_min_mid(values, border=0.1):
     max = max + border * delta
     min = min - border * delta
     return np.array((max, min, mid))
-
-# Instrument processing
-
-# For copious documuntation and discussion of this function, see Boat_Instruments.ipynb
-# 
-@jit(nopython=True)
-def estimate_true_wind_helper_leeway(epsilon, aws, awa, hdg, spd, cog, sog, 
-                                     tws_init, twd_init, variation, tws_mult):
-    # TWD/TWS are ouptputs.  This sets the initial conditions.
-    twd = np.radians(twd_init) + np.zeros(awa.shape)
-    tws = tws_init + np.zeros(awa.shape)
-    # Residuals are stored here.
-    res_n = np.zeros(awa.shape)
-    res_e = np.zeros(awa.shape)
-    # Process apparent wind to decompose into boat relative components.
-    aw_n = aws * np.cos(np.radians(awa))
-    aw_e = aws * np.sin(np.radians(awa))
-
-    # preconvert some values
-    rhdg = np.radians(hdg)
-    rcog = np.radians(cog)
-    variation = np.radians(variation)
-    
-    time_shift = 10
-    eps = epsilon
-    for i in range(1, len(aws)-time_shift):
-        # Transform to boat relative angles.
-        twa = twd[i-1] - (rhdg[i] + variation)
-        course_angle = rcog[i+time_shift]  - (rhdg[i] + variation)
-        
-        # Useful below
-        c = np.cos(twa)
-        s = np.sin(twa)
-        
-        # Boat relative vector of true wind
-        twn = c * tws[i-1]
-        twe = s * tws[i-1]
-        
-        # Boat relative vector of travel
-        btn = np.cos(course_angle) * sog[i+time_shift]
-        bte = -np.sin(course_angle) * sog[i+time_shift]
-        
-        # The forward predictions, introduce leeway
-        f_aw_n = twn + btn
-        f_aw_e = twe + bte
-
-        # Residuals
-        res_n[i] = (aw_n[i] - f_aw_n)
-        res_e[i] = (aw_e[i] - f_aw_e)
-
-        # derivatives
-        delta_tws = res_n[i] * c + res_e[i] * s
-        delta_twd = res_n[i] * tws[i-1] * -s + res_e[i] * tws[i-1] * c
-
-        if np.sqrt(np.square(res_n[i]) + np.square(res_e[i])) > 1.5:
-            eps = min(5*epsilon, 1.1 * eps)
-        else:
-            eps -= 0.2 * (eps - epsilon)
-        
-        # Hack, which the update to TWS and TWD don't have the same magnitude
-        tws[i] = eps * tws_mult * delta_tws + tws[i-1]
-        twd[i] = eps * delta_twd + twd[i-1]
-
-    return np.degrees(twd), tws, res_n, res_e
-
-
-@jit(nopython=True)
-def estimate_true_wind_helper_leeway(epsilon, aws, awa, hdg, spd, cog, sog, 
-                                     tws_init, twd_init, variation, tws_mult):
-    # Components of True Wind, initialized.
-    tw_n = np.cos(np.radians(twd_init)) * tws_init + np.zeros(awa.shape)
-    tw_e = np.sin(np.radians(twd_init)) * tws_init + np.zeros(awa.shape)    
-    
-    # Residuals are stored here.
-    res_n = np.zeros(awa.shape)
-    res_e = np.zeros(awa.shape)
-    # Process apparent wind to decompose into boat relative components.
-    aw_n = aws * np.cos(np.radians(awa))
-    aw_e = aws * np.sin(np.radians(awa))
-
-    # preconvert some values
-    rhdg = np.radians(hdg + variation)
-    rcog = np.radians(cog)
-    variation = np.radians(variation)
-    
-    time_shift = 10
-    eps = epsilon
-    for i in range(1, len(aws)-time_shift):
-        # Useful below
-        c = np.cos(rhdg[i])
-        s = np.sin(rhdg[i])
-
-        # True wind rotated into boat coordinates
-        tw_bn =  c * tw_n[i-i] + s * tw_e[i-1]
-        tw_be = -s * tw_n[i-i] + c * tw_e[i-1]
-        course_angle = rcog[i+time_shift]  - rhdg[i]
-
-        # Boat relative vector of travel
-        btn = np.cos(course_angle) * sog[i+time_shift]
-        bte = -np.sin(course_angle) * sog[i+time_shift]
-        
-        # The forward predictions, introduce leeway
-        f_aw_n = tw_bn + btn
-        f_aw_e = tw_be + bte
-
-        # Residuals
-        res_n[i] = (aw_n[i] - f_aw_n)
-        res_e[i] = (aw_e[i] - f_aw_e)
-
-        # derivatives
-        delta_tw_n = res_n[i] * c + res_e[i] * -s
-        delta_tw_e = res_n[i] * s + res_e[i] * c        
-        
-        if np.sqrt(np.square(res_n[i]) + np.square(res_e[i])) > 1.5:
-            eps = min(5*epsilon, 1.1 * eps)
-        else:
-            eps -= 0.2 * (eps - epsilon)
-        
-        # Hack, which the update to TWS and TWD don't have the same magnitude
-        tw_n[i] = eps * delta_tw_n + tw_n[i-1]
-        tw_e[i] = eps * delta_tw_e + tw_e[i-1]
-
-    return np.degrees(twd), tws, res_n, res_e
 

@@ -10,6 +10,8 @@ import datetime
 import pytz
 from types import SimpleNamespace
 
+from numba import jit
+
 import pandas as pd
 import numpy as np
 
@@ -66,7 +68,7 @@ def find_new_logs(log_info):
     known_logs = set(log_info.file)
 
     # Grab all the log files.
-    files = os.listdir(G.LOGS_DIRECTORY)
+    files = os.listdir(G.PANDAS_LOGS_DIRECTORY)
 
     # Keep those that are race logs
     race_files = sorted([f for f in files if re.match('^20.*.pd.gz$', f)])
@@ -120,7 +122,129 @@ def df_retain_columns(df, white_list):
     to_drop = [col for col in df.columns if col not in white_list]
     return df.drop(columns=to_drop)
 
-# Log Reading ######################################################################
+# Pre-processing of Log Data ##################################################################
+
+@jit(nopython=True)
+def estimate_true_wind_helper(epsilon, aws, awa, hdg, spd, cog, sog,
+                              tws_init, twd_init, variation, tws_mult, time_delay):
+    "Documented in True_Wind.ipynb"
+    # TWD/TWS are ouptputs.  This sets the initial conditions.
+    ptwd = np.radians(twd_init) + np.zeros(awa.shape)
+    ptws = tws_init + np.zeros(awa.shape)
+    # Residuals are stored here.
+    res_n = np.zeros(awa.shape)
+    res_e = np.zeros(awa.shape)
+    # Process apparent wind to decompose into boat relative components.
+    aw_n = aws * np.cos(np.radians(awa))
+    aw_e = aws * np.sin(np.radians(awa))
+
+    # preconvert some values
+    rhdg = np.radians(hdg)
+    rcog = np.radians(cog)
+    variation = np.radians(variation)
+    
+    eps = epsilon
+    for i in range(1, len(aws)-time_delay):
+        # Transform to boat relative angles.
+        twa = ptwd[i-1] - (rhdg[i] + variation)
+        course_angle = rcog[i+time_delay]  - (rhdg[i] + variation)
+        
+        # Useful below
+        c = np.cos(twa)
+        s = np.sin(twa)
+        
+        # Boat relative vector of true wind
+        twn = c * ptws[i-1]
+        twe = s * ptws[i-1]
+        
+        # Boat relative vector of travel
+        btn = np.cos(course_angle) * sog[i+time_delay]
+        bte = np.sin(course_angle) * sog[i+time_delay]
+        
+        # The forward predictions, introduce leeway
+        f_aw_n = twn + btn
+        f_aw_e = twe - bte  # WHY IS THIS NEGATIVE???  SEEMS INCORRECT
+
+        # Residuals
+        res_n[i] = (aw_n[i] - f_aw_n)
+        res_e[i] = (aw_e[i] - f_aw_e)
+
+        # derivatives
+        delta_tws = res_n[i] * c + res_e[i] * s
+        delta_twd = res_n[i] * ptws[i-1] * -s + res_e[i] * ptws[i-1] * c
+        
+        # Hack, which the update to TWS and TWD don't have the same magnitude
+        ptws[i] = eps * tws_mult * delta_tws + ptws[i-1]
+        ptwd[i] = eps * delta_twd + ptwd[i-1]
+
+        if (np.abs(res_n[i]) + np.abs(res_e[i])) > 1.0:
+            eps = min(1.05 * eps, 10*epsilon)
+        else:
+            eps = (eps + epsilon) / 2
+
+    return np.degrees(ptwd), ptws, res_n, res_e
+
+
+def estimate_true_wind(epsilon, df, awa_mult=1.0, aws_mult=1.0, spd_mult=1.0, awa_offset=0, tws_mult=30, time_delay=12):
+    variation = df.variation.mean()
+    tws_init = df.aws.iloc[0]
+    twd_init = df.rawa.iloc[0] + df.rhdg.iloc[0] + variation
+    (twd, tws, res_n, res_e) = estimate_true_wind_helper(epsilon,
+                                                         aws = aws_mult * np.asarray(df.caws),
+                                                         awa = awa_mult * np.asarray(df.cawa) + awa_offset,
+                                                         hdg = np.asarray(df.rhdg),
+                                                         spd = spd_mult * np.asarray(df.rspd),
+                                                         cog = np.asarray(df.rcog),
+                                                         sog = np.asarray(df.rsog),
+                                                         tws_init = tws_init,
+                                                         twd_init = twd_init,
+                                                         variation = variation,
+                                                         tws_mult = tws_mult,
+                                                         time_delay = time_delay)
+    df['twd'] = twd
+    df['tws'] = tws
+    df['twa'] = twd - (df.rhdg + variation)
+
+    
+def heel_corrected_apparent_wind(df):
+    """
+    Heel (aka roll) introduces motion at the masthead, which can in turn impact AWA.
+    Correct this.  See True_Wind.ipynb
+    """
+
+    # Compute a smoothed version of heel.  Note the cutoff is set to 0.3 Hz.  Since the
+    # signal is sampled at 1 Hz.  Nyquist says we cannot hope measure any signal higher
+    # than 0.5 Hz.
+    coeff = p.butterworth_filter(cutoff=0.3, order=5)
+
+    # Smooth the heel signal.
+    # Note causal is false, which will filter the signal but not introduce any delay.
+    sheel = p.smooth_angle(coeff, df.zg100_roll, causal=False)
+
+    # Take the derivative
+    heel_rate = G.SAMPLES_PER_SECOND * np.diff(sheel, prepend=sheel[0])
+
+    mast_vel = G.MAST_HEIGHT * np.radians(heel_rate)
+
+    aw_n = df.raws * p.cos_d(df.rawa)
+    aw_e = df.raws * p.sin_d(df.rawa)
+
+    # Corrected
+    caw_e = aw_e - mast_vel
+
+    # Unsmoothed
+    df['cawa'] = np.degrees(np.arctan2(caw_e, aw_n))
+    df['caws'] = np.sqrt(np.square(aw_n) + np.square(caw_e))
+
+    # Compute smoothed versions
+    theta = 0.8
+    alpha = 0.97
+    saw_n, _ = p.exponential_filter(np.array(aw_n), alpha, theta)
+    scaw_e, _ = p.exponential_filter(np.array(caw_e), alpha, theta)
+
+    df['scawa'] = np.degrees(np.arctan2(scaw_e, saw_n))
+    df['scaws'] = np.sqrt(np.square(saw_n) + np.square(scaw_e))
+
 
 def process_sensors(df, causal=False, cutoff=0.3):
     """
@@ -140,14 +264,27 @@ def process_sensors(df, causal=False, cutoff=0.3):
     df['awa'] = np.degrees(np.arctan2(saw_e, saw_n))
     df['aws'] = np.sqrt(np.square(saw_e) + np.square(saw_n))
 
-    # For now raw is processed (since TWA/TWD/TWS is filtered on the boat).
+    heel_corrected_apparent_wind(df)
+
+    # If TWA/TWD/TWS is available from the boat, grab it.
     if 'rtwa' in df.columns:
-        df.rtwa = p.sign_angle(df.rtwa)
+        df['boat_twa'] = p.sign_angle(df.rtwa)
         df['twa'] = p.sign_angle(df.rtwa)
     if 'rtws' in df.columns:
+        df['boat_tws'] = df.rtws
         df['tws'] = df.rtws
     if 'rtwd' in df.columns:
+        df['boat_twd'] = df.rtwd
         df['twd'] = df.rtwd
+
+    # Replace with computed quantity
+    estimate_true_wind(0.00001, df, tws_mult=16)
+    df['stwd'] = df.twd
+    df['stws'] = df.tws
+    df['stwa'] = df.twa
+    
+    # Replace with computed quantity
+    estimate_true_wind(0.0001, df, tws_mult=16)
 
     # Less noise and smaller theta values.
     df['spd'], _ = p.exponential_filter(np.array(df.rspd), 0.8, 0.5)
@@ -239,7 +376,7 @@ def read_log_file(pickle_file, skip_dock_only=True, discard_columns = True,
     PATH is the path to the pickle file.
     """
     if path is None:
-        path = G.LOGS_DIRECTORY
+        path = G.PANDAS_LOGS_DIRECTORY
     full_path = os.path.join(path, pickle_file) if path else pickle_file
     df = pd.read_pickle(full_path)
     df = df[df[['date', 'time']].isna().sum(1) == 0]
@@ -302,5 +439,5 @@ def read_dates(dates):
             print(f"Warning, {date} could not be found in the race logs.")
         else:
             races.append(log)
-    df, big_df = read_logs(races, path=G.LOGS_DIRECTORY)
+    df, big_df = read_logs(races, path=G.PANDAS_LOGS_DIRECTORY)
     return df, races, big_df

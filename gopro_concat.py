@@ -17,6 +17,8 @@ import utils
 #
 # If a big bunch of files do not share the same base then they will not sort correctly.
 
+FFMPEG = "/Users/pviola/Bin/ffmpeg"
+
 def rename_small_videos(dryrun=False):
     # mkdir Small; for file in *.LRV; do echo $i; mv "$file" "Small/$(basename "$file" .LRV).MP4"; done
     print("Ensure subdirectory Small")
@@ -88,7 +90,7 @@ def raw_concat(files, output_file, dryrun=False):
         return
     sequence_file = "files.txt"
     create_video_list_file(sequence_file, files)
-    command = "ffmpeg -safe 0 -f concat -i {0} -c copy {1}".format(sequence_file, output_file)
+    command = f"{FFMPEG} -safe 0 -f concat -i {sequence_file} -c copy {output_file}"
     print(command)
     if not dryrun:
         call(command.split())
@@ -108,8 +110,11 @@ def timelapse_videos(speedup=20, dryrun=False):
         sequence_file = "files{0:04d}.txt".format(num)
         output_file = "timelapse{0:04d}.mp4".format(num)
         create_video_list_file(sequence_file, files)
-        base_command = 'ffmpeg -safe 0 -f concat -i {0} -an -filter:v setpts={2:03.3f}*PTS {1}'
-        command = base_command.format(sequence_file, output_file, 1.0/speedup)
+        rate = 1.0/speedup
+        input_command = f"{FFMPEG} -safe 0 -f concat -i {sequence_file}"
+        filter_command = f" -an -filter:v setpts={rate:03.3f}*PTS"
+        output_command = f" -c:v h264 -crf 20 {output_file}"
+        command = input_command + filter_command + output_command
         print(command)
         print(command.split())
         if not dryrun:

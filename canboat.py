@@ -28,13 +28,18 @@ import arrow
 import pandas as pd
 import copy
 from global_variables import G
+import logging
+
+import gpxpy
+import gpxpy.gpx
+
 
 def pgn_code(name):
     # This is a real mouthful when a dict would do...  let's go with it for a while.
     try:
         return G.PGNS[G.PGNS['Description'] == name].id.values[0]
     except Exception:
-        print(f"pgn_code: {name} not found.")
+        logging.error(f"pgn_code: {name} not found.")
         return None
 
 
@@ -71,7 +76,7 @@ def pgn_filter(pgn_list):
     return helper
 
 
-def matching_file_lines(path, line_matcher=None):
+def file_lines(path, line_matcher=None):
     "Generate the lines of a file if and only if the LINE_MATCHER function returns True."
     with open(path) as lines:
         for line in lines:
@@ -79,14 +84,14 @@ def matching_file_lines(path, line_matcher=None):
                 yield line
 
 
-def matching_records(json_lines, json_matcher=None, line_skip=1):
-    "Return parsed json for each line, optionally json_matcher must return True, and optionally skipping lines."
+def json_records(json_lines, json_matcher=None, line_skip=1):
+    "Return parsed json for each line, optionally JSON_MATCHER must return True, and optionally skipping lines."
     for line in it.islice(json_lines, 0, None, line_skip):
         record = json.loads(line)
         if (json_matcher is None) or json_matcher(record):
             yield record
 
-
+################ Functions that support conversion to GPX file.  
 def convert_gnss_date_time(gnss_date, gnss_time):
     # canboat time is in a funny format
     date = gnss_date.replace(".", "-")
@@ -115,14 +120,36 @@ def valid_gnss_record(record, src):
 def lla_records(json_log_path, src=5):
     "Construct a sequence of lat/lon/alt GNSS records from from a JSON log file."
     return map( gnss_convert,
-                matching_records(
+                json_records(
                     # Return online lines which contain GNSS position data.
-                    matching_file_lines(json_log_path,
-                                        substring_matcher('GNSS Position Data')),
+                    file_lines(json_log_path, substring_matcher('GNSS Position Data')),
                     # And a valid gnss record
                     lambda record: valid_gnss_record(record, src=src),
                     line_skip=1))
 
+def lla_to_gpx(lla_records, stop=None):
+    "Given a sequence of lat/lon/alt records, create a GPX datastructure."
+    gpx = gpxpy.gpx.GPX()  # Empty
+
+    # Create first track in our GPX:
+    gpx_track = gpxpy.gpx.GPXTrack()
+    gpx.tracks.append(gpx_track)
+
+    # Create first segment in our GPX track:
+    gpx_segment = gpxpy.gpx.GPXTrackSegment()
+    gpx_track.segments.append(gpx_segment)
+
+    for gpx_data in lla_records:
+        # Add records
+        gpx_segment.points.append(
+            gpxpy.gpx.GPXTrackPoint(
+                gpx_data['lat'],
+                gpx_data['lon'],
+                elevation=gpx_data['alt'],
+                time=gpx_data['timestamp'].datetime))
+    return gpx
+
+################################################################
 
 def set_of_pgns(record_generator, line_count=500000):
     # DEBUG
@@ -158,17 +185,16 @@ def log_gpstime(records, retries=100):
     time_pgn = pgn_code('System Time')
 
     def match_system_time(record):
-        return record['pgn'] == time_pgn and record['src'] == 5
-
+        return record['pgn'] == time_pgn
+    
     # During initialization the records may be missing date/time data.
     for i in range(retries):
         system_time_record = next(filter(match_system_time, records))
-        print(system_time_record)
         fields = system_time_record['fields']
         if 'Date' in fields and 'Time' in fields:
             return convert_gnss_date_time(fields['Date'],
                                           fields['Time'])
-    raise Exception("Could not find record to extract Date/Time from.")
+    raise Exception("Could not find a valid System Time record to extract Date/Time from.")
 
 
 def time_records(records, src=device_code("ZG100 Antenna")):
@@ -262,7 +288,7 @@ def json_to_data_frame(json_file, count=1000000, trim=100, rhythm=0.1):
        TRIM   : trim off the first N records,  since the beginning can be wonky
        RHYTHM : Rate at which records are generated.
     """
-    records = matching_records( matching_file_lines(json_file), pgn_filter(G.PGN_WHITELIST), 1)
+    records = json_records( file_lines(json_file), pgn_filter(G.PGN_WHITELIST), 1)
     # Throw out the first trim records, just to make sure things are working
     records = it.islice(records, trim, None)
 
@@ -274,7 +300,7 @@ def json_to_data_frame(json_file, count=1000000, trim=100, rhythm=0.1):
     row_seconds = 0
     for record_num, record in zip(it.count(), it.islice(records, 0, count)):
         if record_num % 10000 == 0:
-            print(record_num)
+            logging.info(f"Processed {record_num} json lines from {json_file}.")
         if remove_record(record):
             continue
         record = transform_record(record)

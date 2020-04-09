@@ -1,0 +1,12 @@
+[Unit]
+Description=Copy Files to USB drive automagically
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/UsbCopy
+ExecStart=/home/pi/UsbCopy/copy_logs_to_usb
+
+[Install]
+WantedBy=multi-user.target

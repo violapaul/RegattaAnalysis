@@ -1,0 +1,29 @@
+#!/bin/bash
+
+logDir="/Users/viola/tmp"
+logDir="/home/pi/logs"
+
+dateTime=$(date '+%Y_%m_%d_%H_%M_%S')
+
+logRoot="$logDir/actisense_${dateTime}_${RANDOM}"
+
+logFile="$logRoot.log"
+logErr="$logRoot.err"
+
+echo $logRoot, $logFile, $logErr
+
+for (( i=1; i<=1000; i++))
+do
+    echo "Attempt $i" >> $logErr
+
+    actisense-serial -r /dev/ttyUSB0 >> $logFile 2>> $logErr
+
+    sleep 2    
+
+    echo "Attempt $i baud rate 230400" >> $logErr
+
+    actisense-serial -s 230400 -r /dev/ttyUSB0 >> $logFile 2>> $logErr
+
+    sleep 2
+done
+
