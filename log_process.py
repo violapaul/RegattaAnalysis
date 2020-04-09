@@ -10,8 +10,6 @@ import re
 import concurrent.futures
 import logging
 
-import gpxpy
-
 import global_variables
 G = global_variables.init_seattle()
 
@@ -20,9 +18,6 @@ import canboat as cb
 # Remove all handlers associated with the root logger object.
 for handler in logging.root.handlers[:]:
     logging.root.removeHandler(handler)
-
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s|%(levelname)s|%(funcName)s| %(message)s')
 
 description = [
     "Convert a raw canboat log to a json file and then both to a GPX and a PANDAS pickle",
@@ -75,6 +70,9 @@ def update_utimes(from_dir, to_dir, regex_pattern):
 
 
 ################ Application specific helpers.  Have knowledge of file types/locations. ################
+
+def usb_drive_available():
+    return os.path.exists(G.USB_LOGS_DIRECTORY)
 
 def log_basename(file):
     "Remove the extensions from log files, either .log or .log.gz."
@@ -242,7 +240,7 @@ def convert_named_log_to_gpx_and_pandas_file(named_file, count, trim):
     """
     Given a named log file (compressed JSON) will convert to GPX and/or PANDAS (if missing).
     """
-    logging.info(f'{named_file}: Processing')
+    logging.info(f"{named_file}: Examining")
     named_path = named_log_path(named_file)
     basename = log_basename(named_file)
 
@@ -254,7 +252,7 @@ def convert_named_log_to_gpx_and_pandas_file(named_file, count, trim):
     p_path = pandas_path(pandas_filename)
 
     if os.path.exists(g_path) and os.path.exists(cp_path):
-        logging.info("{named_file}: GPX and Pandas logs exist. Skipping.")
+        logging.debug("{named_file}: GPX and Pandas logs exist. Skipping.")
         return f"{named_file}: Skipped"
 
     tmp_path = "/tmp"
@@ -262,12 +260,12 @@ def convert_named_log_to_gpx_and_pandas_file(named_file, count, trim):
     log_path = os.path.join(tmp_path, basename + ".stderr")
 
     command = f"zcat {named_path} | analyzer -json 2> {log_path} > {json_path}"
-    logging.info(f"{named_file}: Creating JSON file.")
+    logging.debug(f"{named_file}: Creating JSON file.")
     logging.debug(f'Running "{command}"')
     subprocess.run(command, shell=True)
 
     if not os.path.exists(g_path):
-        logging.info(f"{named_file}: Creating GPX file.")
+        logging.debug(f"{named_file}: Creating GPX file.")
         json_to_gpx(json_path, g_path)
 
     if not os.path.exists(cp_path):
@@ -281,18 +279,34 @@ def convert_named_log_to_gpx_and_pandas_file(named_file, count, trim):
 def create_gpx_and_pandas_files(count, trim):
     "Examines all named log files and computes GPX/PANDAS if necessary."
     nlogs = named_log_files()
+    logging.info(f"Found {len(nlogs)} named log files.")
     with concurrent.futures.ProcessPoolExecutor(max_workers=4) as ex:
         res = list(ex.map(convert_named_log_to_gpx_and_pandas_file, nlogs, it.cycle([count]), it.cycle([trim])))
     return res
+
+def process_all():
+    if usb_drive_available():
+        copy_err_files_from_usb()
+        copy_log_files_from_usb()
+    else:
+        logging.warning(f"USB drive not found.  Skipping copy.")
+    create_compressed_log_files()
+    create_named_log_files()
+    create_gpx_and_pandas_files(100000000, 100)
+
 
 if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(description=description)
+    parser.add_argument("--log", help="Logging level", type=str, default='warning')
     args = parser.parse_args()
 
-    copy_err_files_from_usb()
-    copy_log_files_from_usb()
-    create_compressed_log_files()
-    create_named_log_files()
-    create_gpx_and_pandas_files(100000000, 100)
+    numeric_level = getattr(logging, args.log.upper(), None)
+    if not isinstance(numeric_level, int):
+        raise ValueError(f"Invalid log level: {args.log}")
+
+    logging.basicConfig(level=numeric_level,
+                        format='%(asctime)s|%(levelname)s|%(funcName)s| %(message)s')
+
+    process_all()
