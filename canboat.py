@@ -27,27 +27,28 @@ import itertools as it
 import arrow
 import pandas as pd
 import copy
-from global_variables import G
 import logging
 
 import gpxpy
 import gpxpy.gpx
 
+from global_variables import G
 
-def pgn_code(name):
+
+def pgn_code(name, pgn_df=G.PGNS):
     # This is a real mouthful when a dict would do...  let's go with it for a while.
     try:
-        return G.PGNS[G.PGNS['Description'] == name].id.values[0]
+        return pgn_df[pgn_df['Description'] == name].id.values[0]
     except Exception:
-        logging.error(f"pgn_code: {name} not found.")
+        logging.error(f"{name} not found.")
         return None
-
 
 def device_code(name):
     # This is a real mouthful when a dict would do...  let's go with it for a while.
     try:
         return G.DEVICES[G.DEVICES['Device'] == name].src.values[0]
     except Exception:
+        logging.error(f"{name} not found.")    
         return None
 
 
@@ -240,6 +241,16 @@ def canonical_field_name(field_name):
 
 
 def prefix_field_names(record, prefix):
+    """
+    Rename all the fields in the record to include the PREFIX.  Useful when multiple
+    records have the same field names and they need to ultimately be kept separate.
+
+    So if prefix='wind_'
+
+         a['fields']['speed'] => a['fields']['wind_speed']
+
+    etc.
+    """
     fields = record.get('fields', None)
     if fields is not None:
         new_fields = {}
@@ -281,12 +292,12 @@ def transform_record(record):
     return record
 
 
-def json_to_data_frame(json_file, count=1000000, trim=100, rhythm=0.1):
+def json_to_data_frame(json_file, count=1000000, trim=100, pandas_time_step = 0.1):
     """
     Main function.  Reads a json file and produces a dataframe.
-       COUNT  : max number of records to process *after* filtering by PGNS
-       TRIM   : trim off the first N records,  since the beginning can be wonky
-       RHYTHM : Rate at which records are generated.
+       COUNT            : max number of records to process *after* filtering by PGNS
+       TRIM             : trim off the first N records,  since the beginning can be wonky
+       PANDAS_TIME_STEP : Rate at which records are generated.
     """
     records = json_records( file_lines(json_file), pgn_filter(G.PGN_WHITELIST), 1)
     # Throw out the first trim records, just to make sure things are working
@@ -296,8 +307,12 @@ def json_to_data_frame(json_file, count=1000000, trim=100, rhythm=0.1):
 
     rows = []
     data_dict = {}
-    rhythm = 0.1
     row_seconds = 0
+    # The code below is a dance between the irregular stream of records in the NMEA logs,
+    # and the rigidly regular sequence of records in the resulting Pandas log.  There is
+    # one row in the Pandas log per PANDAS_TIME_STEP.  The PANDAS row contains *all* the
+    # fields from all the various types of records in the NMEA logs (from the subset of
+    # NMEA records we select and after a bit of cleanup and translation).
     for record_num, record in zip(it.count(), it.islice(records, 0, count)):
         if record_num % 10000 == 0:
             logging.info(f"Processed {record_num} json lines from {json_file}.")
@@ -310,8 +325,9 @@ def json_to_data_frame(json_file, count=1000000, trim=100, rhythm=0.1):
         if 'fields' in record:
             data_dict.update(record['fields'])
         if log_seconds > row_seconds:
+            # When log time progresses past the row second, then issue a new row.
             data_dict['row_seconds'] = row_seconds
             rows.append(copy.copy(data_dict))
-            row_seconds += rhythm
+            row_seconds += pandas_time_step
     return pd.DataFrame(rows)
 

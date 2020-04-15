@@ -178,7 +178,7 @@ def create_chart(df, border=0.2):
                      track=track)
 
 
-def draw_track(df, chart, ax=None, subsample_rate=1, color='green', linestyle='solid'):
+def draw_track(df, chart, ax=None, subsample_rate=1, color='green', **args):
     """
     Convert the track from lat/lon to image coordinates and then draw.
 
@@ -189,7 +189,7 @@ def draw_track(df, chart, ax=None, subsample_rate=1, color='green', linestyle='s
     track = track[::subsample_rate]
     if ax is None:
         ax = chart.ax
-    ax.plot(track[:, 0], track[:, 1], color=color)
+    ax.plot(track[:, 0], track[:, 1], color=color, **args)
 
 
 def plot_chart(df, fig_or_num=None, border=0.2):

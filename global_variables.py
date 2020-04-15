@@ -7,6 +7,7 @@ Edit this file to match you boat and location.
 """
 
 import os
+import logging
 
 from pyproj import Proj
 import pandas as pd
@@ -33,8 +34,16 @@ class RaceAnalysis:
             (129540, 'GNSS Sats in View'),
             (130306, 'Wind Data')
         ], columns=['id', 'Description'])
-        
+
+        self.PGNS_AIS = pd.DataFrame([
+            (129039, "AIS Class B Position Report"),
+            (129809, "AIS Class B static data (msg 24 Part A)"),
+            (129810, "AIS Class B static data (msg 24 Part B)"),
+            (130842, "Simnet: AIS Class B static data (msg 24 Part A)")
+        ], columns=['id', 'Description'])
+
         self.PGN_WHITELIST = self.PGNS.loc[:, 'id'].tolist()
+        self.PGN_AIS_WHITELIST = self.PGNS_AIS.loc[:, 'id'].tolist()
         
         self.SAMPLES_PER_SECOND = 10
         self.MS_2_KNOTS = 1.944
@@ -145,7 +154,8 @@ class Uninitialized():
 # All downstream code should access globals through global_variables.G.
 G = Uninitialized()
 
-def initialzize_global_variables(variables):
+def initialzize_global_variables(variables, logging_level):
+    logging.basicConfig(level=logging_level, format='%(asctime)s|%(levelname)s|%(funcName)s| %(message)s')
     global G
     if type(G) == type(variables):
         return
@@ -154,13 +164,12 @@ def initialzize_global_variables(variables):
     else:
         raise Exception("Do not initialized global variables twice.  Can lead to unexpect behaviors.")
 
-def init_seattle():
+def init_seattle(logging_level=logging.INFO):
     "Rebind globals to Seattle."
-    initialzize_global_variables(Seattle())
+    initialzize_global_variables(Seattle(), logging_level)
     return G
 
-def init_san_diego():
+def init_san_diego(logging_level=logging.INFO):
     "Rebind globals to San Diego."
-    initialzize_global_variables(SanDiego())
+    initialzize_global_variables(SanDiego(), logging_level)
     return G
-

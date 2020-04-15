@@ -279,12 +279,13 @@ def process_sensors(df, causal=False, cutoff=0.3):
 
     # Replace with computed quantity
     estimate_true_wind(0.00001, df, tws_mult=16)
-    df['stwd'] = df.twd
+    df['stwd'] = p.compass_angle(df.twd)
     df['stws'] = df.tws
     df['stwa'] = df.twa
     
     # Replace with computed quantity
     estimate_true_wind(0.0001, df, tws_mult=16)
+    df['twd'] = p.compass_angle(df.twd)
 
     # Less noise and smaller theta values.
     df['spd'], _ = p.exponential_filter(np.array(df.rspd), 0.8, 0.5)
@@ -312,17 +313,22 @@ def compute_record_times(df):
     #
     # Additionally, since it is a feedback loop, it can deal with log drop outs (where the
     # GPS time might change a lot, but the row times do not).
+    
+    # These are GPS times, which are updated only every second
     base_time = df.timestamp.min()
-    gps_delta_sec = np.array((df.timestamp - base_time) / pd.Timedelta('1s'))
-    gps_delta_diff = np.diff(gps_delta_sec, prepend=0)
+    gps_delta_sec = np.array((df.timestamp - base_time) / pd.Timedelta('1s'))  # Conversion to seconds
+    gps_delta_diff = np.diff(gps_delta_sec, prepend=0)  # Value is non-zero if there is an update.
+
+    # RPi time stamps, which are inaccurate but frequent!
     row_delta_sec = np.array(df.row_seconds - df.row_seconds.min())
 
     # Code attempts to minimize the "error" to infrequent GPS time measurements, by
     # adjusting an offset.  Positive error reduces the offset, negative error increases
     # the offset.
-    deltas = np.zeros(row_delta_sec.shape)
+    deltas = np.zeros(row_delta_sec.shape)  # deltas which will result.
     feed_forward = gps_delta_diff.mean()
-    offset = 0.0
+    offset = 0.0  # Offset between the RPi clock and the GPS clock
+    # PID gains for adjusting the offset
     proportional = 0.01
     integral = 0.000
     sum_error = 0
@@ -330,35 +336,16 @@ def compute_record_times(df):
         deltas[i] = deltas[i-1] + feed_forward + offset
         # Only compute error if the GPS time has been updated.
         if gps_delta_diff[i] > 0.1:
-            error = gps_delta_sec[i] - deltas[i]
+            error = gps_delta_sec[i] - deltas[i]  # First is accurate, second is frequent
             sum_error += error
-            offset = proportional * error + integral * sum_error
+            offset = proportional * error + integral * sum_error  # Offset is adjusted to keep them aligned.
             # If the error gets large, then increase the tracking gain.
             if np.abs(error) > 10:
                 offset = 2.0 * proportional * error + integral * sum_error
 
     res_sec = deltas * pd.Timedelta('1s')
+    # Convert back to times and set the correct timezone.
     df['row_times'] = (np.datetime64(base_time) + res_sec).reshape(-1)
-    df.row_times = df.row_times.dt.tz_localize('UTC').dt.tz_convert('US/Pacific')
-
-def compute_record_times_old(df):
-    # NOT USED ANY MORE, because it was not robust to log drop outs (it assumed that there
-    # was a single global offset between local and GPS time).  Still eduational.
-    # 
-    # This code computes the drift and offset from GPS to synthesized row stamps.
-    # Generally it is good (about 60msec per hour or a second per day).  The RPI does
-    # *NOT* have a realtime clock.
-    #
-    # From this I conclude that one can simply add the row_seconds to the base_time to
-    # compute row times.
-    base_time = df.timestamp.min()
-    gps_times = (df.timestamp - base_time) / pd.Timedelta('1s')
-    A = np.vstack([df.row_seconds, np.ones(df.row_seconds.shape)]).T
-    b = np.array(gps_times).reshape(-1, 1)
-    result = np.linalg.lstsq(A, b, rcond=None)
-    fit = result[0]
-    offsets = np.dot(A, fit) * pd.Timedelta('1s')
-    df['row_times'] = (np.datetime64(base_time) + offsets).reshape(-1)
     df.row_times = df.row_times.dt.tz_localize('UTC').dt.tz_convert('US/Pacific')
 
 
