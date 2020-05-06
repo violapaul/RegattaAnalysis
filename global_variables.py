@@ -8,43 +8,70 @@ Edit this file to match you boat and location.
 
 import os
 import logging
+import dateutil
+import dateutil.tz
+import matplotlib.style as mplstyle
 
-from pyproj import Proj
-import pandas as pd
+import pyproj
 
-from utils import DictClass
+def setup_logger(level):
+    # create logger
+    logger = logging.getLogger('regatta_analysis')
+    logger.setLevel(level)
+
+    # create console handler and set level to debug
+    ch = logging.StreamHandler()
+    ch.setLevel(level)
+
+    # create formatter
+    formatter = logging.Formatter('%(asctime)s|%(levelname)s|%(funcName)s| %(message)s')
+    # add formatter to ch
+    ch.setFormatter(formatter)
+
+    # add ch to logger
+    logger.addHandler(ch)
+    return logger
 
 # Setup some global variables ################
 class RaceAnalysis:
     "Global variables that are shared by most foreseeable uses of the RaceAnalysis software."
     def __init__(self):
-        self.PGNS = pd.DataFrame([
-            (126992, 'System Time'),
-            (127245, 'Rudder'),
-            (127250, 'Vessel Heading'),
-            (127251, 'Rate of Turn'),
-            (127257, 'Attitude (pitch, roll)'),
-            (127258, 'Magnetic Variation'),
-            (128259, 'Speed'),
-            (128267, 'Water Depth'),
-            (129025, 'Position, Rapid Update'),
-            (129026, 'COG & SOG, Rapid Update'),
-            (129029, 'GNSS Position Data'),
-            (129539, 'GNSS DOPs'),
-            (129540, 'GNSS Sats in View'),
-            (130306, 'Wind Data')
-        ], columns=['id', 'Description'])
+        # Use this logger rather than the global logging functions.
+        self.logger = setup_logger(logging.DEBUG)
+        # Try to make matplotlib faster.  See https://matplotlib.org/tutorials/introductory/usage.html#performance
+        mplstyle.use('fast')
 
-        self.PGNS_AIS = pd.DataFrame([
-            (129039, "AIS Class B Position Report"),
-            (129809, "AIS Class B static data (msg 24 Part A)"),
-            (129810, "AIS Class B static data (msg 24 Part B)"),
-            (130842, "Simnet: AIS Class B static data (msg 24 Part A)")
-        ], columns=['id', 'Description'])
+        # The NMEA 2k messages that we are interested in.
+        self.PGN_NAME = {
+            126992: 'System Time',
+            127245: 'Rudder',
+            127250: 'Vessel Heading',
+            127251: 'Rate of Turn',
+            127257: 'Attitude (pitch, roll)',
+            127258: 'Magnetic Variation',
+            128259: 'Speed',
+            128267: 'Water Depth',
+            129025: 'Position, Rapid Update',
+            129026: 'COG & SOG, Rapid Update',
+            129029: 'GNSS Position Data',
+            129539: 'GNSS DOPs',
+            129540: 'GNSS Sats in View',
+            130306: 'Wind Data'
+        }
 
-        self.PGN_WHITELIST = self.PGNS.loc[:, 'id'].tolist()
-        self.PGN_AIS_WHITELIST = self.PGNS_AIS.loc[:, 'id'].tolist()
+        # Reverse index.
+        self.PGN_CODE = {v:k for (k,v) in self.PGN_NAME.items()}
         
+        self.PGNS_AIS = {
+            129039: "AIS Class B Position Report",
+            129809: "AIS Class B static data (msg 24 Part A)",
+            129810: "AIS Class B static data (msg 24 Part B)",
+            130842: "Simnet: AIS Class B static data (msg 24 Part A)",
+        }
+
+        self.PGN_WHITELIST = list(self.PGN_NAME.keys())
+        self.PGN_AIS_WHITELIST = list(self.PGNS_AIS.keys())
+
         self.SAMPLES_PER_SECOND = 10
         self.MS_2_KNOTS = 1.944
         self.METERS_PER_FOOT = 0.3048
@@ -60,116 +87,97 @@ class RaceAnalysis:
 
         # A small log is generally an artifact.
         self.MIN_LOG_FILE_SIZE = 5000000
-        
+
         self.MAP_DIRECTORY = 'Data/Maps'
         self.LOG_INFO_PATH = os.path.join(self.DATA_DIRECTORY, 'log_info.pd')
 
+        self.TIMEZONE = dateutil.tz.gettz('UTC')
 
-class PeerGynt(RaceAnalysis):
-    "Global variables that are shared for all races sailed by Peer Gynt, J105"
-    def __init__(self):
-        super().__init__()
 
-        self.DEVICES = pd.DataFrame([
-            (0,   "Actisense"                            ),
-            (1,   "BT-1"                                 ),
-            (2,   "Triton Autopilot Keypad"              ),
-            (3,   "Autopilot"                            ),
-            (4,   "RC42 Rate Compass"                    ),
-            (5,   "Zeus iGPS"                            ),
-            (6,   "Zeus Pilot Controller"                ),
-            (7,   "Zeus Navigator"                       ),
-            (8,   "V50 Radio"                            ),
-            (9,   "Triton Display"                       ),
-            (10,  "Triton Display"                       ),
-            (11,  "Triton Display"                       ),
-            (12,  "Triton Display"                       ),
-            (13,  "Triton Display"                       ),
-            (14,  "Wind Sensor"                          ),
-            (16,  "Zeus MFD"                             ),
-            (35,  "Airmar Depth/Speed Transducer DST200" ),
-            (43,  "NAIS-400"                             ),
-            (127, "ZG100 Antenna"                        ),
-            (128, "ZG100 Compass"                        )
-        ], columns=['src', 'Device'])
+    def set_logging_level(self, level):
+        if isinstance(level, str):
+            numeric_level = getattr(logging, level.upper(), None)
+            if not isinstance(numeric_level, int):
+                raise ValueError(f"Invalid log level: level")
+            self.logger.setLevel(numeric_level)
+        else:
+            self.logger.setLevel(level)                
 
-        self.MAST_HEIGHT = 50 * self.METERS_PER_FOOT
+    def init_j105(self):
+        "Measurements for a J105."
+        self.MAST_HEIGHT = 50 * self.METERS_PER_FOOT  # 50 feet in meters
         self.BOAT_NAME = "PeerGynt"
 
-class Seattle(PeerGynt):
-    "Global variables unique to Seattle."
-    def __init__(self):
-        super().__init__()
+    def init_peer_gynt(self):
+        "Measurements from the J105 called Peer Gynt."
+        self.init_j105()
+        self.DEVICES = {
+            "Actisense": 0,
+            "BT-1": 1,
+            "Triton Autopilot Keypad": 2,
+            "Autopilot": 3,
+            "RC42 Rate Compass": 4,
+            "Zeus iGPS": 5,
+            "Zeus Pilot Controller": 6,
+            "Zeus Navigator": 7,
+            "V50 Radio": 8,
+            "Triton Display 0": 9,
+            "Triton Display 1": 10,
+            "Triton Display 2": 11,
+            "Triton Display 3": 12,
+            "Triton Display 4": 13,
+            "Wind Sensor": 14,
+            "Zeus MFD": 16,
+            "Airmar Depth/Speed Transducer DST200": 35,
+            "NAIS-400": 43,
+            "ZG100 Antenna": 127,
+            "ZG100 Compass": 128
+        }
+
+    def init_seattle(self, logging_level=logging.INFO):
+        "Localize to Seattle."
+
+        self.init_peer_gynt()
+        self.set_logging_level(logging_level)
+
+        self.LOCALE = "Seattle"
         # By centering everything here, we can easily compare North/East (NED) coordinates across
         # runs and races, etc.
-        self.LATITIDE_CENTER    = 47.687307
+        self.LATITUDE_CENTER    = 47.687307
         self.LONGITUDE_CENTER = -122.438644
 
-        # These are chosen by hand to in order to cover the entire region
-        self.LAT_MAX_MIN = (48.3, 47.3)
-        self.LON_MAX_MIN = (-122.3, -122.8)
-
-        # MBTILES_FILE = os.path.join(DATA_DIRECTORY, "MBTILES/MBTILES_06.mbtiles")
-
         # Define the projection of the map.  Transverse mercator
-        self.PROJ4 = f" +proj=tmerc +lat_0={self.LATITIDE_CENTER:.7f} +lon_0={self.LONGITUDE_CENTER:.7f}"
+        self.PROJ4 = f" +proj=tmerc +lat_0={self.LATITUDE_CENTER:.7f} +lon_0={self.LONGITUDE_CENTER:.7f}"
         self.PROJ4 += " +k_0=0.9996 +datum=WGS84 +units=m +no_defs "
-        self.MAP = Proj(self.PROJ4)
+        self.MAP = pyproj.Proj(self.PROJ4)
 
-        self.BASE_MAP_PATH = os.path.join(self.MAP_DIRECTORY, 'seattle_base_map.tif')
+        self.MBTILES_PATH  = os.path.join(self.DATA_DIRECTORY, "MBTILES/MBTILES_06.mbtiles")        
+        self.BASE_MAP_PATH = os.path.join(self.DATA_DIRECTORY, 'maps/seattle_base_map.tif')
 
+        self.TIMEZONE = dateutil.tz.gettz('US/Pacific')
 
-class SanDiego(PeerGynt):
-    "Global variables unique to SanDiego."
-    def __init__(self):
-        super().__init__()
+    def init_san_diego(self, logging_level=logging.INFO):
+        "Localize to SanDiego."        
+
+        self.init_j105()
+        self.set_logging_level(logging_level)
+
+        self.LOCALE = "San Diego"
         # By centering everything here, we can easily compare North/East (NED) coordinates across
         # runs and races, etc.
-        self.LATITIDE_CENTER    = 32.7036
+        self.LATITUDE_CENTER    = 32.7036
         self.LONGITUDE_CENTER   = -117.1833
 
-        # These are chosen by hand to in order to cover the entire region
-        self.LAT_MAX_MIN = (32.7554, 32.6176)
-        self.LON_MAX_MIN = (-117.105, -117.2616)
-
-        # self.MBTILES_FILE = os.path.join(DATA_DIRECTORY, "MBTILES/MBTILES_10.mbtiles"),
-
         # Define the projection of the map.  Transverse mercator
-        self.PROJ4 = f" +proj=tmerc +lat_0={self.LATITIDE_CENTER:.7f} +lon_0={self.LONGITUDE_CENTER:.7f}"
+        self.PROJ4 = f" +proj=tmerc +lat_0={self.LATITUDE_CENTER:.7f} +lon_0={self.LONGITUDE_CENTER:.7f}"
         self.PROJ4 += " +k_0=0.9996 +datum=WGS84 +units=m +no_defs "
-        self.MAP = Proj(self.PROJ4)
+        self.MAP = pyproj.Proj(self.PROJ4)
 
-        self.BASE_MAP_PATH = os.path.join(self.MAP_DIRECTORY, 'sandiego_base_map.tif')
+        self.MBTILES_PATH  = os.path.join(self.DATA_DIRECTORY, "MBTILES/MBTILES_10.mbtiles")        
+        self.BASE_MAP_PATH = os.path.join(self.DATA_DIRECTORY, 'maps/sandiego_base_map.tif')
 
-
-class Uninitialized():
-    def __getattr__(self, key):
-        messages = ["Global variables are not yet initialized.  Please call one of the init functions first!",
-                    "    For example global_variables.init_seattle() "]
-        raise Exception("\n".join(messages))
+        self.TIMEZONE = dateutil.tz.gettz('US/Pacific')        
 
 
-# Setup a global class that can be used to access these variables. ################
-
-# All downstream code should access globals through global_variables.G.
-G = Uninitialized()
-
-def initialzize_global_variables(variables, logging_level):
-    logging.basicConfig(level=logging_level, format='%(asctime)s|%(levelname)s|%(funcName)s| %(message)s')
-    global G
-    if type(G) == type(variables):
-        return
-    if type(G) is Uninitialized:
-        G = variables
-    else:
-        raise Exception("Do not initialized global variables twice.  Can lead to unexpect behaviors.")
-
-def init_seattle(logging_level=logging.INFO):
-    "Rebind globals to Seattle."
-    initialzize_global_variables(Seattle(), logging_level)
-    return G
-
-def init_san_diego(logging_level=logging.INFO):
-    "Rebind globals to San Diego."
-    initialzize_global_variables(SanDiego(), logging_level)
-    return G
+# All downstream code should access globals through global_variables.  
+G = RaceAnalysis()
