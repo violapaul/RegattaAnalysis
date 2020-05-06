@@ -1,34 +1,47 @@
 """
-Collection of tool to create sailing charts, display race tracks, and race data.
+# Charting and Graphing
+
+Collection of tools to create sailing charts, display race tracks, and plot instrument data.
 
 Most interesting part is the generation of GEO-registered charts, upon which lat/lon
 positions can be scale accurately ploted.
+
+Warning this is a [Literate Notebook](Literate_Notebook_Module.ipynb), i.e. the notebook contains the code for the charting module.  Do not edit the code in the module directly, edit the notebook and then regenerate the module code.
+
+    convert_notebook.py Chart_Module.ipynb --module
 """
+
+#### Cell #7 Type: module ######################################################
+
+# Load some libraries
+
+# Basics
 import os
-import itertools as it
-import time
-
 import math
+import time  # used to compute elapsed times
+import itertools as it
 
-import numpy as np
+# Matplotlib is the engine for plotting graphs and images
 import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.widgets as widgets
 
-import cv2
+# Numpy and Pandas are used to process our racing data.
+import numpy as np
+import pandas as pd
 
-from utils import DictClass
+# OpenCV is a powerful tool for image manipulation.
+import cv2  # why is it called cv2?  ... just is.
 
-import process as p
-from global_variables import G
+# These are libraries written for RegattaAnalysis
+from global_variables import G  # global variables
+import race_logs                # load data from races
+import process as p             # additional supporting processing code
+from utils import DictClass, is_iterable
 
-# PLOTTING HELPERS ###################################################################################
+#### Cell #9 Type: module ######################################################
 
-def draw_arrow(ax, begin, end, color='red'):
-    "Draw an arrow on the AXIS."
-    delta = end - begin
-    ax.arrow(begin[0], begin[1], delta[0], delta[1], head_width=0.2, length_includes_head=True, color=color)
-
+# Helper functions
 
 def new_axis(fignum=None, equal=False, clf=True):
     "Convenience to create an axis with optional CLF and EQUAL."
@@ -40,145 +53,171 @@ def new_axis(fignum=None, equal=False, clf=True):
         ax.axis('equal')
     return fig, ax
 
+#### Cell #13 Type: module #####################################################
 
-def quick_plot_ax(ax, index, data, legend=None, s=slice(None, None, None)):
-    if index is None:
-        index = range(len(data[0]))
-    else:
-        index = index[s]
-    for d in data:
-        ax.plot(index, d[s])
-    if legend is not None:
-        ax.legend(legend, loc='best')
-    ax.grid(True)
+# This is the heart of the chart extraction process.
 
-
-def quick_plot(index, data, legend=None, fignum=None, clf=True, title=None, s=slice(None, None, None), ylim=None):
+def gdal_extract_chart(chart, source_path, chart_path, zoom_level=None):
     """
-    Super quick tool to display a set of associated data on a single axis.
+    Using GDAL, extract a chart from the source image.
 
-    All data is assumed to share a single index (X axis).  All data is the same length.
-
-    DATA is a list of Y axis data.
-    LEGEND is a list of legend names
-
-    So if you have your data in a DataFrame this works great.
-
-    quick_plot(df.index, (df.one, df.two, df.three), ['one', 'two', 'three'])
-
-    OR
-
-    quick_plot(df.index, (df.one, df.two, df.three), "(df.one, df.two, df.three)".split())
-
-    Note, that in the second case I just copied the text of the DATA param into the legend and let split work it out.
+    chart                  : a dict with lat_max, lat_min, lon_max, lon_min, for the extent of the map
+    source_path, chart_path : path of the input and output files
+    zoom_level              : optional, specify to limit resolution and speed up (13 will do that)
+    pixels                  : max width/height of the image, other dimension is computed from extent
+    srs                     : spatial reference of the resulting chart
     """
-    if isinstance(fignum, matplotlib.figure.Figure):
-        fig = fignum
-    else:
-        fig = plt.figure(num=fignum)
-    if clf:
-        fig.clf()
-    ax = fig.add_subplot(111)
-    quick_plot_ax(ax, index, data, legend=legend, s=s)
-    if ylim is not None:
-        ax.set_ylim(*ylim)
-    if title is not None:
-        fig.suptitle(title, fontsize=14, fontweight='bold')
-    fig.tight_layout()
+    # Find the extents of the map
 
+    sw = map_project(DictClass(lat=chart.lat_min, lon=chart.lon_min))  # Southwest corner
+    ne = map_project(DictClass(lat=chart.lat_max, lon=chart.lon_max))  # Northeast corner
 
-# Code to support plotting on charts ######################################################
-
-def create_base_map(map_width=10000):
-    """
-    One time task to create a single chart of a SAILING AREA from the NOAA MBTILES file.
-    The result is much smaller than the MBTILE and perhaps a bit faster to read (not
-    clear).  Result single image is still quite large.
-    """
-    print(f"Creating base map for {G.LOCALE}")
-    
-    # Create an area a bit bigger than the data
-    lat_max, lat_min = G.LAT_MAX_MIN
-    lon_max, lon_min = G.LON_MAX_MIN
+    south, west = sw.north, sw.east
+    north, east = ne.north, ne.east
 
     # Setup gdalwarp args
-    # Define the extent of the map in lon/lat
-    te_arg = f"-te {lon_min:.7f} {lat_min:.7f} {lon_max:.7f} {lat_max:.7f}"
-    t_srs_arg = f"-t_srs '{G.PROJ4}'"
+    # Define the extent of the chart in lon/lat
+    te = f"-te {chart.lon_min:.7f} {chart.lat_min:.7f} {chart.lon_max:.7f} {chart.lat_max:.7f}"
+    # Reference system of the extent
+    te_srs = " -te_srs EPSG:4326 "  # WGS 84
 
-    zoom = "-oo ZOOM_LEVEL=16"
-    zoom = ""
-    command = "gdalwarp"
-    command += " " + zoom
-    command += " " + t_srs_arg
-    command += " " + te_arg
-    command += " " + f"-te_srs EPSG:4326 -ts {map_width} 0 -r bilinear"
-    command += " " + "-of vrt"
-    command += f" {G.MBTILES_FILE} /tmp/chart.vrt"
-    print(command)
-    os.system("rm /tmp/chart.vrt")
-    os.system(command)
+    # Define the SRS of the result
+    t_srs = f"-t_srs '{chart.proj}'"
+    # Size the image to the longest axis,
+    if (east - west) > (north - south):  # wide?
+        ts = f"-ts {chart.pixels} 0"  # limit width
+    else:
+        ts = f"-ts 0 {chart.pixels}"   # limit height
 
-    # command = "gdal_translate -co compress=LZW seattle.vrt seattle.tif"
-    command = "gdal_translate"
-    command += " -co COMPRESS=JPEG -co TILED=YES"
-    command += f" /tmp/chart.vrt {G.BASE_MAP_PATH}"
-    os.system(f"rm {G.BASE_MAP_PATH}")
-    os.system(command)
+    # Note the default is to pick the zoom level that is matched to the output resolution.
+    # Smaller numbers are lower res, and faster.  13 will speed things up a bit.
+    if zoom_level is None:
+        zoom = ""
+    else:
+        zoom = f"-oo ZOOM_LEVEL={zoom_level}"  # A hint to determine the level of the pyramid to use.
 
-    command = "gdaladdo --config COMPRESS_OVERVIEW JPEG --config INTERLEAVE_OVERVIEW PIXEL"
-    command += " -r average"
-    command += f" {G.BASE_MAP_PATH}"
-    command += " 2 4"
-    os.system(command)
+    command = f"gdalwarp {zoom} {te} {te_srs} {t_srs} {ts} -r bilinear {source_path} {chart_path}"
 
+    run_system_command(f"rm {chart_path}")  # remove output, since gdalwarp will not overwrite
+    run_system_command(command)
+    # Add the extent of the map in the projection
+    return chart.union(dict(south=south, north=north, east=east, west=west,
+                            path=chart_path, source=source_path))
+
+
+def run_system_command(command, dry_run=False):
+    "Run a shell command, time it, and log."
+    G.logger.debug(f"Running command: {command}")
+    if not dry_run:
+        start = time.perf_counter()
+        os.system(command)
+        end = time.perf_counter()
+        G.logger.debug(f"Command finished in {end-start:.3f} seconds.")
+
+def map_project(p):
+    """
+    Project lat/lon pair into our prefered map projection.
+    """
+    east, north = G.MAP(p.lon, p.lat)  # gdal order is lon then lat, I prefer lat/lon
+    return DictClass(north=north, east=east)
+
+def extract_region(df, border=0.2):
+    """
+    Extract the geographic region which covers the entire race track.  BORDER is an
+    additional margin which ensures you do not bump up against the edge when graphing.
+    """
+    # Add just a bit of "fudge factor" to ensure that the extent is not too small, which
+    # triggers some corner cases.
+    fudge = (0.001, -0.001)
+
+    # TODO: since the border is applied in lat/lon separately, its is not uniform.  Same
+    # for FUDGE.
+    lat_max, lat_min = max_min_with_border(df.latitude, border) + fudge
+    lon_max, lon_min = max_min_with_border(df.longitude, border) + fudge
+
+    return DictClass(lat_max=lat_max, lat_min=lat_min,
+                     lon_max=lon_max, lon_min=lon_min)
+
+
+def max_min_with_border(values, border=0.1):
+    "Return the range of a series, with a buffer added which is border times the range."
+    max = values.max()
+    min = values.min()
+    delta = (max - min)
+    max = max + border * delta
+    min = min - border * delta
+    return np.array((max, min))
+
+
+#### Cell #16 Type: module #####################################################
+
+# note  - read the resulting image and display
+
+image = cv2.imread(chart.path)
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+fig, ax = new_axis()
+
+# By specifying the extent, matplot "knows" the scale of the image.  Note, extent is
+# weird: (left, right, bottom, top) Let's set the image coordinates to start 0,0 at the
+# lower left.
+ax.imshow(image, extent=[0, chart.east - chart.west, 0, chart.north - chart.south])
+ax.grid(True)
+# We can plot the projected coordinates directly on the image.
+ax.plot(df_west - chart.west, df_north - chart.south)
+
+
+#### Cell #18 Type: module #####################################################
 
 def desaturate_image(im, factor=2):
-    hsv = cv2.cvtColor(im, cv2.COLOR_RGB2HSV)
-    hsv[:, :, 1] = hsv[:, :, 1] // factor
+    "Desaturate the colors in an image, in preparation for plotting on that image."
+    hsv = cv2.cvtColor(im, cv2.COLOR_RGB2HSV)  # HSV is hue, saturation, value (intensity)
+    hsv[:, :, 1] = hsv[:, :, 1] // factor      # divide the value by factor
     val_offset = ((factor - 1) * 255) // factor
     hsv[:, :, 2] = val_offset + (hsv[:, :, 2] // factor)
     return cv2.cvtColor(hsv, cv2.COLOR_HSV2RGB)
 
+#### Cell #20 Type: module #####################################################
 
-def create_chart(df, border=0.2):
-    # Add/sub just a bit to make the map interpretable for small excursions
-    lat_max, lat_min, lat_mid = p.max_min_mid(df.latitude, border) + (0.002, -0.002, 0.0)
-    lon_max, lon_min, lon_mid = p.max_min_mid(df.longitude, border) + (0.002, -0.002, 0.0)
+# Combining all features.
 
-    # Find the extents of the map
-    west, south = np.array(G.MAP(lon_min, lat_min))
-    east, north = np.array(G.MAP(lon_max, lat_max))
+def plot_chart(df, border=0.2, pixels=2000, color='green', **plot_args):
+    """
+    Plot a track for race.  The background chart comes from NOAA tiled charts.
+    """
+    chart = create_chart(df, border=border, pixels=pixels)
+    chart.fig, chart.ax = new_axis()
+    chart = draw_chart(chart)
+    chart = draw_track(df, chart, color=color, **plot_args)
+    return chart
 
-    # Setup gdalwarp args
-    # Define the extent of the map in lon/lat
-    te = f"-te {lon_min:.7f} {lat_min:.7f} {lon_max:.7f} {lat_max:.7f}"
-    t_srs = f"-t_srs '{G.PROJ4}'"
-    # Size of the image should match the shape of the map
-    if (east - west) > (north - south):
-        ts = "-ts 2000 0"
-    else:
-        ts = "-ts 0 2000"
-    chart_file = os.path.join('/tmp/chart.tif')
+def create_chart(df, border=0.2, pixels=2000):
+    """
+    Using the extent of the GPS race track, create a geolocated map image AND a
+    reprojection of the track into the local north/east coordinates.
 
-    zoom = "-oo ZOOM_LEVEL=16"
-    zoom = ""
-    command1 = f"gdalwarp {zoom} {te} {t_srs} -te_srs EPSG:4326 -r bilinear"
-    command1 += " " + ts
-    command1 += " " + G.BASE_MAP_PATH
-    command1 += " " + chart_file
-
-    os.system(f"rm {chart_file}")
-    os.system(command1)
-    image = cv2.imread(chart_file)
+    Data is loaded into a 'chart' dict, which will collect info on this transformation and
+    later plots.
+    """
+    # Extract the region of the race.
+    region = extract_region(df, border)
+    chart = region.union(dict(proj=G.PROJ4, border=border, pixels=pixels))
+    
+    chart = gdal_extract_chart(chart, G.MBTILES_PATH, "/tmp/mbtile.tif")
+    image = cv2.imread(chart.path)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    track = np.vstack(G.MAP(np.asarray(df.longitude), np.asarray(df.latitude))).T - (west, south)
+    return chart.union(dict(image=image))
 
-    return DictClass(image=image, west=west, east=east, north=north, south=south,
-                     track=track)
+def draw_chart(chart, ax=None):
+    if ax is None:
+        ax = chart.ax
+    ax.imshow(desaturate_image(chart.image), 
+              extent=[0, chart.east - chart.west, 0, chart.north - chart.south])
+    ax.grid(True)
+    return chart
 
 
-def draw_track(df, chart, ax=None, subsample_rate=1, color='green', **args):
+def draw_track(df, chart, ax=None, color='green', **plot_args):
     """
     Convert the track from lat/lon to image coordinates and then draw.
 
@@ -186,34 +225,252 @@ def draw_track(df, chart, ax=None, subsample_rate=1, color='green', **args):
     """
     lon, lat = np.asarray(df.longitude), np.asarray(df.latitude)
     track = np.vstack(G.MAP(lon, lat)).T - (chart.west, chart.south)
-    track = track[::subsample_rate]
+    chart.track = track
     if ax is None:
         ax = chart.ax
-    ax.plot(track[:, 0], track[:, 1], color=color, **args)
+    chart.line = ax.plot(chart.track[:, 0], chart.track[:, 1], color=color, **plot_args)[0]
+    return chart
+
+#### Cell #25 Type: module #####################################################
+
+# - notebook 
+
+plt.figure()
+df.spd.plot()
+df.sog.plot()
+df.tws.plot()
+plt.grid()
+plt.legend("spd, sog, tws".split(','), loc="upper right")
+
+plt.figure()
+df.hdg.plot()
+df.twd.plot()
+df.awa.plot()
+plt.grid()
+plt.legend("hdg, twd, awa".split(','), loc="upper right")
+
+#### Cell #27 Type: module #####################################################
 
 
-def plot_chart(df, fig_or_num=None, border=0.2):
+def quick_plot(index, data, legend=None, fignum=None, clf=True, title=None, s=slice(None, None, None), ylim=None):
     """
-    Plot a track for race.  The background image comes from NOAA (though it has limited
-    resolution if you sail long distances).
-    """
-    chart = create_chart(df, border=border)
+    Super quick tool to display multiple plots on a single axis.
 
-    if isinstance(fig_or_num, matplotlib.figure.Figure):
-        chart.fig = fig_or_num
+    All data is assumed to share a single index (X axis).  All data is the same length.
+
+    INDEX, which can be None, is the common index for all plots.
+    DATA is a sequence of multiple Y axis data (e.g. list or numpy array)
+         NOTE: data can be string.  If so it is assumed that it is a comma separated list of
+         expressions (see example below).
+    LEGEND is a list of legend names one for each data
+    FIGNUM is the existing figure to use.
+    CLF to clear before plotting, or just plot on what is already there
+    YLIM to set the Y limits
+    S an optional slice to limit the data to display (or reduce the size)
+
+    For example: 
+
+    quick_plot(df.index, (df.one, df.two, df.three), ['one', 'two', 'three'])
+    quick_plot(df.index, (df.one, df.two, df.three), "df.one df.two df.three")
+    quick_plot(df.index, "df.one, df.two, df.three")  # Spiffy all in one!
+    """
+    # Setup the figure and axis
+    if isinstance(fignum, matplotlib.figure.Figure):
+        fig = fignum
     else:
-        chart.fig = plt.figure(num=fig_or_num)
-    chart.fig.clf()
-    chart.ax = chart.fig.subplots(1, 1)
-    chart.fig.tight_layout()
-    image = desaturate_image(chart.image)
-    chart.ax.imshow(image, extent=[0, chart.east - chart.west, 0, chart.north - chart.south])
-    chart.ax.grid(True)
+        fig = plt.figure(num=fignum)
+    if clf:
+        fig.clf()
+    # Create a single axis that fills the figure
+    ax = fig.add_subplot(111)
+    # Do the plotting
+    plot = quick_plot_ax(ax, index, data, legend=legend, s=s)
+    # Decorate or adjust
+    if ylim is not None:
+        ax.set_ylim(*ylim)
+    if title is not None:
+        fig.suptitle(title, fontsize=14, fontweight='bold')
+    fig.tight_layout()
+    return plot
+
+
+def quick_plot_ax(ax, index, data, legend=None, s=slice(None, None, None)):
+    "Helper function.  See quick_plot for documentation of arguments."
+    if isinstance(data, str):
+        expressions = data.split(',')
+        data = []
+        for d in expressions:
+            G.logger.debug(f"Evaluating expression {d}")
+            data.append(eval(d))
+        if legend is None:
+            legend = expressions
+    np_data = [np.asarray(d) for d in data]
+    
+    def draw():
+        if index is None:
+            x = range(len(np_data[0][s]))
+        else:
+            x = index[s]
+        for d in np_data:
+            ax.plot(x, d[s])[0]
+        if is_datetime(index):
+            ax.xaxis.set_major_formatter(matplotlib.dates.DateFormatter('%H:%M', tz=G.TIMEZONE))
+        if isinstance(legend, str):
+            # When the loc is 'best' then it is very slow!
+            ax.legend(legend.split(','), loc='upper right')
+        elif is_iterable(legend):
+            ax.legend(legend, loc='upper right')
+        ax.grid(True)
+
+    def update_func(begin, end):
+        nonlocal s
+        s = slice(begin, end)
+        ax.clear()
+        draw()
+
+    def trim_func(*args):
+        pass
+
+    draw()
+
+    return DictClass(trim_func=trim_func, update_func=update_func)
+
+
+def is_datetime(series_like):
+    "Does this series contain data which looks like a?"
+    # The column types are weirdly obscure. Check the first value.
+    np_datetime = isinstance(nth_value(series_like, 0), np.datetime64)
+    pd_datetime = isinstance(nth_value(series_like, 0), pd.Timestamp)
+    return np_datetime or pd_datetime
+
+def nth_value(series_like, n):
+    if isinstance(series_like, pd.Series):
+        return series_like.iloc[n]
+    elif isinstance(series_like, np.ndarray):
+        return series_like[n]
+
+#### Cell #29 Type: module #####################################################
+
+# To link plot to the chart, we add two functions to the chart.  
+#
+# 1. to trim the track shown to match the plot.
+# 2. to show a point at a particular time
+
+def chart_update_functions(chart, skip=None):
+    """
+    Create two update functions.
+    
+    trim_func(begin, end) redraws the track trimming off the points before begin and after
+    end.
+
+    point_func(time) draws mark at the particular time along the track
+    """
+
+    # There can be a huge number of sampled points (at 10Hz).  This limits the total
+    # number of samples.
+    if skip is None:
+        skip = math.ceil(len(chart.track) / 8000)  # No more than 2000 points
+    track = chart.track[::skip]
+
+    def trim_func(begin, end):
+        G.logger.info(f"trim_func {track.shape} {begin} {end}")
+        begin = max(0, begin)
+        # end = min(track.shape[0])
+        G.logger.info(f"trim_func {begin} {end}")        
+        chart.begin, chart.end = begin, end
+        b, e = int(begin/skip), int(end/skip)
+        chart.line.set_data(track[b:e, 0],
+                            track[b:e, 1])
+        chart.fig.canvas.draw_idle()
+
+    chart.point = None
+
+    def point_func(time):
+        point = chart.track[time]
+        G.logger.info(f"Calling point_func update with {time}, {point}")
+        if chart.point is None:
+            chart.point = chart.ax.plot([point[0]], [point[1]], linestyle = 'None', marker='+', color='red')[0]
+        else:
+            chart.point.set_data([point[0]], [point[1]])
+        chart.fig.canvas.draw_idle()
+
+    chart.trim_func = trim_func
+    chart.point_func = point_func
+
     return chart
 
 
-# This was a challenge to get working well both in native python and in Jupyter.  
-def plot_track(df, fignum=None, sliders=True, border=0.2, skip=None, delay=0.01):
+#### Cell #30 Type: module #####################################################
+
+# And now we pull it all together.
+
+def chart_and_plot(df, index, data, data2=None):
+    """
+    Create a figure with one or two plots of data, along with a synced chart/track.
+
+    - If you zoom/pan the top plot, then the track will display the region of interest.
+    - If you click on either plot, then the point on the chart will be highlighted.
+    """
+    if data2 is not None:
+        # Create three axes.
+        fig = plt.figure(figsize=(8, 10))  # make this figure large
+        ax1 = plt.subplot(311)
+        ax2 = plt.subplot(312, sharex=ax1)
+        ax_chart = plt.subplot(313)
+    else:
+        # Create two axes.
+        fig = plt.figure(figsize=(8, 8))  # make this figure large
+        ax1 = plt.subplot(211)
+        ax_chart = plt.subplot(212)
+        
+    quick_plot_ax(ax1, index, data)
+    if data2 is not None:
+        quick_plot_ax(ax2, index, data2)
+
+    # Chart in the third axis.
+    chart = create_chart(df)   # Create the chart
+    chart.fig = fig
+    chart.ax = ax_chart        # Assign the axis
+    chart = draw_chart(chart)  
+    chart = draw_track(df, chart, color='chartreuse')  # Draw track in light color
+    chart = draw_track(df, chart, color='green')       # Draw again in darker
+    # Note, chart.line and other attributes are overridden, purposefully.
+    fig.tight_layout()
+
+    # Create a set of chart update functions, 
+    chart = chart_update_functions(chart)
+
+    # Arrange it so that the plots match the chart, by redrawing the chart to highlight
+    # the currently zoomed region in the plots, stored in xlim
+
+    # Declare and register callbacks
+    def on_xlim_change(event_ax):
+        G.logger.info(f"xlim changed")
+        lo, hi = [int(v) for v in ax1.get_xlim()]
+        G.logger.info(f"updated xlim: {(lo, hi)}")
+        chart.trim_func(lo, hi)
+
+    ax1.callbacks.connect('xlim_changed', on_xlim_change)
+
+    def on_click(event):
+        G.logger.info(f"Click event: {event.xdata}")
+        if event.xdata is not None:
+            chart.point_func(int(event.xdata))
+
+    fig.canvas.mpl_connect('button_press_event', on_click)
+    G.logger.info("done")
+    return chart
+
+
+#### Cell #31 Type: module #####################################################
+
+ch = chart_and_plot(df, None, "df.spd, df.sog, df.tws, vmg", "df.hdg, df.twd, 100+5*df.rudder, df.awa")
+
+#### Cell #32 Type: module #####################################################
+
+# One of the critical tasks is to trim the data to remove time at the dock, or to slip into races.
+
+def trim_track(df, fignum=None, border=0.2, skip=None, delay=0.01):
     """
     Plot an interactive sail track on a map.  Provides sliders which can be used to trim
     the begin and end of the track.
@@ -227,88 +484,52 @@ def plot_track(df, fignum=None, sliders=True, border=0.2, skip=None, delay=0.01)
     print(ch.begin, ch.end)
     
     """
-    chart = plot_chart(df, fig_or_num=fignum, border=border)
-    if skip is None:
-        skip = math.ceil(len(chart.track) / 2000)  # No more than 2000 points
-    index = df.index[::skip]
-    track = chart.track[::skip]
-
-    fig = chart.fig
-    line, = chart.ax.plot(track[:, 0], track[:, 1], color='red')
-
-    if sliders:
-        ax1 = fig.add_axes([0.05, 0.1, 0.03, 0.8], facecolor='lightgoldenrodyellow')
-        ax2 = fig.add_axes([0.11, 0.1, 0.03, 0.8], facecolor='lightgoldenrodyellow')
-        count = track.shape[0]
-        s_beg = widgets.Slider(ax1, 'Begin', 0, count, valinit=0, orientation='vertical')
-        s_end = widgets.Slider(ax2, 'End',   0, count-1, valinit=count-1, orientation='vertical')
-        chart.begin, chart.end = index[0], index[-1]
-
-        def update():
-            track_begin, track_end = int(s_beg.val), int(s_end.val)
-            chart.begin, chart.end = index[track_begin], index[track_end]
-            line.set_data(track[track_begin:track_end, 0],
-                          track[track_begin:track_end, 1])
-
-            # fig.canvas.restore_region(axbackground)
-            # line.axes.draw_artist(line)
-            # chart.ax.figure.canvas.blit(chart.ax.bbox)
-            fig.canvas.flush_events()
-
-        s_beg.on_changed(lambda v: update())
-        s_end.on_changed(lambda v: update())
-
-    return chart
-
-
-def show_boat_arrows(df, df_slice, dt_seconds=5, skip=2, current_scale=1):
-    delay = 16
-    dt = dt_seconds * G.SAMPLES_PER_SECOND
-    scale = dt_seconds
-    ss = slice(df_slice.start, df_slice.stop, dt)
-    dss = slice(ss.start+delay, ss.stop+delay, dt)
-    
-    mdf = df.loc[ss]
-    ddf = df.loc[dss]
-    vog_n = scale * ddf.sog * p.north_d(ddf.cog)
-    vog_e = scale * ddf.sog * p.east_d(ddf.cog)
-
-    tw_n = scale * ddf.tws * p.north_d(ddf.twd)
-    tw_e = scale * ddf.tws * p.east_d(ddf.twd)
-
-    hdg = mdf.hdg + df.variation.mean()
-    btv_n = scale * mdf.spd * p.north_d(hdg)
-    btv_e = scale * mdf.spd * p.east_d(hdg)
-
-    cur_n = current_scale * (np.asarray(vog_n) - np.asarray(btv_n))
-    cur_e = current_scale * (np.asarray(vog_e) - np.asarray(btv_e))
-
-    chart = plot_chart(mdf, 3, border=0.0)
-    chart.mdf = mdf
-    chart.ddf = ddf
-    longitudes = np.asarray(mdf.longitude)
-    latitudes = np.asarray(mdf.latitude)
-    pos = np.vstack(G.MAP(longitudes, latitudes)).T - (chart.west, chart.south)
-
-    color = 'blue'
-    hwidth = scale/5
-    for (east, north), ve, vn in it.islice(zip(pos, vog_e, vog_n), 0, None, skip):
-        avog = chart.ax.arrow(east, north, ve, vn, head_width=hwidth, length_includes_head=True, color=color)
-
-    color = 'green'
-    for (east, north), ve, vn in it.islice(zip(pos, tw_e, tw_n), 0, None, skip):
-        atw = chart.ax.arrow(east, north, ve, vn, head_width=hwidth, length_includes_head=True, color=color)
-
-    color = 'red'
-    for (east, north), ve, vn in it.islice(zip(pos, btv_e, btv_n), 0, None, skip):
-        abtv = chart.ax.arrow(east, north, ve, vn, head_width=hwidth, length_includes_head=True, color=color)
-
-    color = 'orange'
-    for (east, north), ve, vn in it.islice(zip(pos, cur_e, cur_n), 0, None, skip):
-        acurrent = chart.ax.arrow(east, north, ve, vn, head_width=hwidth, length_includes_head=True, color=color)
-
-    chart.ax.legend([avog, atw, abtv, acurrent],
-                    'VOG TWD BTV CURRENT'.split(),
-                    loc='best')
+    fig = plt.figure(figsize=(8, 8))  # make this figure large
+    ax_chart = plt.subplot(111)
         
+    # Chart in the third axis.
+    chart = create_chart(df)   # Create the chart
+    chart.fig = fig
+    chart.ax = ax_chart        # Assign the axis
+    chart = draw_chart(chart)  
+    chart = draw_track(df, chart, color='chartreuse')  # Draw track in light color
+    chart = draw_track(df, chart, color='green')       # Draw again in darker   
+
+    fig.tight_layout()
+
+    # Create a set of chart update functions, 
+    chart = chart_update_functions(chart)
+
+    ax_beg = chart.fig.add_axes([0.05, 0.1, 0.03, 0.8], facecolor='lightgoldenrodyellow')
+    ax_end = chart.fig.add_axes([0.11, 0.1, 0.03, 0.8], facecolor='lightgoldenrodyellow')
+    count = chart.track.shape[0]
+    chart.begin, chart.end = 0, count-1
+    s_beg = widgets.Slider(ax_beg, 'Begin', 0, count, valinit=0, orientation='vertical', valfmt="%i")
+    s_end = widgets.Slider(ax_end, 'End',   0, count-1, valinit=count-1, orientation='vertical', valfmt="%i")
+
+    # Unfortunate "bug" that graph can be unresponsive if you do not keep a handle on the sliders.
+    # https://github.com/matplotlib/matplotlib/issues/3105/
+    chart.sliders = [s_beg, s_end]
+    chart = chart_update_functions(chart)
+
+    def trim(val):
+        G.logger.info(f"Calling plot_track update.")
+        chart.trim_func(int(s_beg.val), int(s_end.val))
+        fig.canvas.draw_idle()
+
+    s_beg.on_changed(trim)
+    s_end.on_changed(trim)
+
     return chart
+
+
+#### Cell #36 Type: module #####################################################
+
+image = fetch_noaa_chart(df, zoom=14)
+
+fig, ax = new_axis()
+
+# By specifying the extent, matplot "knows" the scale of the image.  Note, extent is
+# weird: (left, right, bottom, top) Let's set the image coordinates to start 0,0 at the
+# lower left.
+ax.imshow(image)
