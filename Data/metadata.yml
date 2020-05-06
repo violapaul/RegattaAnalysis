@@ -1,0 +1,180 @@
+---
+date: "2020-04-16"
+name: Tune-up with Creative
+purpose: tune_up
+conditions: >-
+  Beautiful day. Winds were 3 quickly building to 10ish. Flat
+  seas. Upwind to Pt. Wells buoy, raised and raced home to the hamburger.
+performance: >-
+  Good height and speed vs. Creative on the way upwind. Perhaps a bit
+  slow at first downwind, exploring to tradeoffs between depth and
+  speed.  Best downwind speed when I was at the shrouds and Sara had a
+  hand on the mainsheet.
+learnings: >-
+  Let the sails out for downwind: both main and kite.  Stand forward
+  if possible.
+
+  Shroud settings seemed really great, and versatile.  With only 2 on
+  the boat, we sailed very well.  These settings are the new base!
+raceqs_video: "https://youtu.be/9a5bLeZw8EM"
+raceqs: "https://raceqs.com/tv-beta/tv.htm#userId=1146016&divisionId=64190&updatedAt=2020-04-17T18:05:59Z&dt=2020-04-16T15:43:47-07:00..2020-04-16T17:39:12-07:00&boat=Creative"
+segments:
+  - winds: [6, 12]
+  - shrouds:
+      tensions: [29, 10, 0]
+      port: [2.251, 1.953, 999]
+      stbd: [2.271, 1.959, 999]
+    shroud_thoughts: >-
+      Overall we have had trouble with the Quantum quick tune card,
+      where the uppers are a bit too loose or the middles too tight.
+      The result is that the mast falls off at the top, rather than
+      staying straight or sagging for power.  We took a bit off the
+      middle (12 down to 10).
+
+---
+date: "2020-04-19"
+name: Tune-up with Creative
+purpose: tune_up
+conditions: >-
+  Beautiful day. Very light at times, almost glassy.
+performance: >-
+  Good height and speed vs. Creative.  Generally Creative sails lower and
+  faster, and it can be super hard to know who is winning.  
+  
+  We sailed both with 'full depth' sails (no backstay, high traveler,
+  little outhaul, light halyards) and with "flat sails" (4 inches of
+  backstay, outhaul, tighter halyards).  I am not sure there was a
+  clear winner from looking at the video.  We sailed higher on flat
+  sails, without much speed penalty.  The height is very clear near
+  the end of the video.
+
+  I do know there was a point when we were flat where we encountered
+  some smallish waves from a powerboat...  we seemed to stop in our
+  tracks.  And if the wind were to come up (to 6 or 8), "full sails"
+  would be right.
+
+  The only recent race where I would consider "flat" would be
+  Foulweather Bluff.  Hours of flat and glassy with less than 3 knots
+  of wind.  It took us a while to get in the groove on flat...  so a
+  very long leg would be needed.
+learnings: >-
+  Based on Al's advice, we got a bit more speed and height by lowering
+  traveller a bit and sheeting on more.
+setting_thoughts: >-
+  We were expecting a super light day, and it did not disappoint.
+  Often below the 3 knots, though most of the time we had enough wind
+  to move.
+raceqs_video: "https://youtu.be/BVhUOwI-SuE"
+raceqs: "https://raceqs.com/tv-beta/tv.htm#userId=1146016&divisionId=64201&updatedAt=2020-04-20T03:11:15Z&dt=2020-04-19T12:22:45-07:00..2020-04-19T13:53:49-07:00&boat=Peer%20Gynt"
+segments:
+  - shrouds: null
+    shroud_thoughts: >-
+
+---
+date: "2020-04-24"
+name: Tune-up with Creative
+purpose: tune_up
+conditions: >-
+  Super light winds from the SSE (1-3) during tuneup.  Gave up a bit early.  After, on
+  the way back, winds picked up to 8-10.
+
+  There should have been a large have been a large current heading
+  south, due to a large flood.  The interactions between southerly
+  current and winds from the south may have been complex.
+performance: >-
+  We tried flat sails again vs. Creative and did not do well.
+  Initially it seemed OK, but then they just pulled away (perhaps as
+  we encountered wake from passing barge.)
+learnings: >-
+  
+observations: >-
+  
+questions: 
+  - text: Was the prop set correctly?
+    author: sara
+    context: Were we slower on one tack than the other? 
+    proposed_solution: ??
+  - text: Were the middles too tight?
+  - text: Is flat ever a good thing?
+    author: paul
+    context: >-
+      At times it seems that we can sail higher on flat sails, without losing too much speed.  But when we encounter waves, we seem to stop.  
+  
+raceqs_video: 
+raceqs: 
+segments:
+  - shrouds: [21, 7, 0]
+    shroud_thoughts: >-
+      Overall we have had trouble with the Quantum quick tune card,
+      where the uppers are a bit too loose or the middles too tight.
+      The result is that the mast falls off at the top, rather than
+      staying straight or sagging for power.
+
+
+---
+date: "2020-04-28"
+name: Fun sail.
+purpose: practice
+crew: [Paul, Sara]
+conditions: >-
+  Overcast.  Calm as we arrived on dock, but then it picked up to 10-15.  A bit rough.
+performance: >-
+  Good. Given the conditions we did not see too much weather helm, nor
+  a lot of heel.  Seemed faster on stbd than port.
+learnings: >-
+  
+observations: >-
+  
+questions: 
+  - text: Is it OK if the leward shrouds are slack (1 inch).
+    author: paul
+    context: Various articles say it is not great.
+    proposed_solution: ??
+raceqs_video: 
+raceqs: 
+segments:
+  - shrouds: [34, 16, 0]
+    shroud_thoughts: >-
+      Leward upper was lose at times, with about a 1 inch circle.
+      Leward middle was snug.  The top fell off to leward when
+      pressure was high.  Even with 4-5 backstay, there was still
+      noticable sag in the headstay.
+
+      Perhaps we could have gone a bit tigher overall.  Tighter up to
+      control fall off.  Tighter middles/lower to transfer more
+      tension to headstay.  But it is not clear if that would be
+      faster.  The boat did not show excessive heel or weather helm.
+
+
+---
+date: "2020-05-04"
+name: Raises and Douses, part 2.
+purpose: practice
+crew: [Paul, Sara]
+conditions: >-
+  Light winds and then building.
+performance: >-
+  Once again, sailed higher (faster?) on stbd than port.
+learnings: ""
+observations: >-
+  Way better!  We handled every transition without a major mistake.
+  Need to get better at rounding upwind and trimming to accelerate.
+  Don't be a afraid to reach a bit to keep up speed.  Proposal: set
+  the wheel to a gradual upwind turn, and then keep pulling in
+  mainsheet to keep up.  Alternative reach more and wait for the spin
+  stuff to be done.
+warnings: >-
+  We adjusted the AWA offset from -4 degrees back to 0.0 (Tutmark
+  adjusted it, seemed OK at the time, and it just does not seem right
+  anymore.  Perhaps after we re-set the mast things went back?
+questions: []
+raceqs_video: 
+raceqs: ""
+segments: 
+  - shrouds: [22, 10, 0]
+    name: "super light"
+    shroud_thoughts: >-
+      Good sag at light wind, down to 3-4.  Below that straight.
+      Seemed to work OK up to 10, not too much helm. Note, at 10
+      leeward upper had 2 inches of play.
+    
