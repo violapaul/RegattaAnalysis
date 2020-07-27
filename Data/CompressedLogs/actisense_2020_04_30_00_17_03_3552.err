@@ -1,0 +1,3 @@
+Attempt 1
+ERROR 2020-04-30T07:17:05.609Z [actisense-serial] DLE followed by unexpected char 13, ignore message
+ERROR 2020-04-30T07:17:05.609Z [actisense-serial] Ignoring message with invalid checksum

@@ -1,0 +1,3 @@
+Attempt 1
+ERROR 2020-07-25T05:56:18.099Z [actisense-serial] DLE followed by unexpected char 00, ignore message
+ERROR 2020-07-25T05:56:18.099Z [actisense-serial] Ignore short command len = 0

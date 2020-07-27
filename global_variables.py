@@ -10,7 +10,10 @@ import os
 import logging
 import dateutil
 import dateutil.tz
-import matplotlib.style as mplstyle
+
+import pandas as pd
+
+from latlonalt import LatLonAlt as lla
 
 import pyproj
 
@@ -38,9 +41,7 @@ class RaceAnalysis:
     def __init__(self):
         # Use this logger rather than the global logging functions.
         self.logger = setup_logger(logging.DEBUG)
-        # Try to make matplotlib faster.  See https://matplotlib.org/tutorials/introductory/usage.html#performance
-        mplstyle.use('fast')
-
+        
         # The NMEA 2k messages that we are interested in.
         self.PGN_NAME = {
             126992: 'System Time',
@@ -93,6 +94,8 @@ class RaceAnalysis:
 
         self.TIMEZONE = dateutil.tz.gettz('UTC')
 
+        self.GSHEET_URL = r"https://docs.google.com/spreadsheets/d/e/2PACX-1vS5g8oeSAMk-CFP-xDi4hu9a23W-iF5SMNjap-Gd78BPWvhA1GGgpDqFkQaEUVD3zoM9Pud1fozuDn8/pub?output=csv"
+        self.METADATA_PATH = os.path.join(self.DATA_DIRECTORY, 'metadata.yml')
 
     def set_logging_level(self, level):
         if isinstance(level, str):
@@ -145,6 +148,7 @@ class RaceAnalysis:
         # runs and races, etc.
         self.LATITUDE_CENTER    = 47.687307
         self.LONGITUDE_CENTER = -122.438644
+        self.LATLON = lla(lat=self.LATITUDE_CENTER, lon=self.LONGITUDE_CENTER)
 
         # Define the projection of the map.  Transverse mercator
         self.PROJ4 = f" +proj=tmerc +lat_0={self.LATITUDE_CENTER:.7f} +lon_0={self.LONGITUDE_CENTER:.7f}"
@@ -154,7 +158,21 @@ class RaceAnalysis:
         self.MBTILES_PATH  = os.path.join(self.DATA_DIRECTORY, "MBTILES/MBTILES_06.mbtiles")        
         self.BASE_MAP_PATH = os.path.join(self.DATA_DIRECTORY, 'maps/seattle_base_map.tif')
 
+        self.TIDES_PATH = os.path.join(self.DATA_DIRECTORY, 'Tides/seattle_tides2.pd')
+        self.TIDES_DF = pd.read_pickle(self.TIDES_PATH)
+
         self.TIMEZONE = dateutil.tz.gettz('US/Pacific')
+
+        self.STYC_RACE_MARKS = dict(
+            n = lla.from_degrees_minutes((47, 41.064), (-122, 24.679)),
+            b = lla.from_degrees_minutes((47, 40.285), (-122, 25.342)),
+            r = lla.from_degrees_minutes((47, 44.387), (-122, 22.944)),
+            u = lla.from_degrees_minutes((47, 45.676), (-122, 23.833)),
+            m = lla.from_degrees_minutes((47, 41.783), (-122, 24.538)),
+            w = lla.from_degrees_minutes((47, 39.617), (-122, 26.467)),
+            k = lla.from_degrees_minutes((47, 35.700), (-122, 28.800)),
+            d = lla.from_degrees_minutes((47, 35.933), (-122, 23.267))
+        )
 
     def init_san_diego(self, logging_level=logging.INFO):
         "Localize to SanDiego."        

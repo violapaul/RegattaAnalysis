@@ -1,0 +1,818 @@
+Attempt 1
+FATAL 2020-07-25T05:10:50.609Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 1 baud rate 230400
+FATAL 2020-07-25T05:10:52.664Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 2
+FATAL 2020-07-25T05:10:54.674Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 2 baud rate 230400
+FATAL 2020-07-25T05:10:56.683Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 3
+FATAL 2020-07-25T05:10:58.693Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 3 baud rate 230400
+FATAL 2020-07-25T05:11:00.701Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 4
+FATAL 2020-07-25T05:11:02.708Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 4 baud rate 230400
+FATAL 2020-07-25T05:11:04.717Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 5
+FATAL 2020-07-25T05:11:06.729Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 5 baud rate 230400
+FATAL 2020-07-25T05:11:08.741Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 6
+FATAL 2020-07-25T05:11:10.751Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 6 baud rate 230400
+FATAL 2020-07-25T05:11:12.758Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 7
+FATAL 2020-07-25T05:11:14.768Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 7 baud rate 230400
+FATAL 2020-07-25T05:11:16.780Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 8
+FATAL 2020-07-25T05:11:18.792Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 8 baud rate 230400
+FATAL 2020-07-25T05:11:31.682Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 9
+FATAL 2020-07-25T05:11:33.694Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 9 baud rate 230400
+FATAL 2020-07-25T05:11:35.706Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 10
+FATAL 2020-07-25T05:11:37.718Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 10 baud rate 230400
+FATAL 2020-07-25T05:11:39.728Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 11
+FATAL 2020-07-25T05:11:41.737Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 11 baud rate 230400
+FATAL 2020-07-25T05:11:43.750Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 12
+FATAL 2020-07-25T05:11:45.762Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 12 baud rate 230400
+FATAL 2020-07-25T05:11:47.774Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 13
+FATAL 2020-07-25T05:11:49.786Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 13 baud rate 230400
+FATAL 2020-07-25T05:11:51.800Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 14
+FATAL 2020-07-25T05:11:53.815Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 14 baud rate 230400
+FATAL 2020-07-25T05:11:55.826Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 15
+FATAL 2020-07-25T05:11:57.838Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 15 baud rate 230400
+FATAL 2020-07-25T05:11:59.849Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 16
+FATAL 2020-07-25T05:12:01.859Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 16 baud rate 230400
+FATAL 2020-07-25T05:12:03.870Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 17
+FATAL 2020-07-25T05:12:05.881Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 17 baud rate 230400
+FATAL 2020-07-25T05:12:07.892Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 18
+FATAL 2020-07-25T05:12:09.904Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 18 baud rate 230400
+FATAL 2020-07-25T05:12:11.916Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 19
+FATAL 2020-07-25T05:12:13.928Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 19 baud rate 230400
+FATAL 2020-07-25T05:12:15.940Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 20
+FATAL 2020-07-25T05:12:17.952Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 20 baud rate 230400
+FATAL 2020-07-25T05:12:19.964Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 21
+FATAL 2020-07-25T05:12:21.976Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 21 baud rate 230400
+FATAL 2020-07-25T05:12:23.988Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 22
+FATAL 2020-07-25T05:12:26.001Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 22 baud rate 230400
+FATAL 2020-07-25T05:12:28.013Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 23
+FATAL 2020-07-25T05:12:30.025Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 23 baud rate 230400
+FATAL 2020-07-25T05:12:32.037Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 24
+FATAL 2020-07-25T05:12:34.049Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 24 baud rate 230400
+FATAL 2020-07-25T05:12:36.061Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 25
+FATAL 2020-07-25T05:12:38.073Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 25 baud rate 230400
+FATAL 2020-07-25T05:12:40.085Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 26
+FATAL 2020-07-25T05:12:42.097Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 26 baud rate 230400
+FATAL 2020-07-25T05:12:44.109Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 27
+FATAL 2020-07-25T05:12:46.121Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 27 baud rate 230400
+FATAL 2020-07-25T05:12:48.133Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 28
+FATAL 2020-07-25T05:12:50.145Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 28 baud rate 230400
+FATAL 2020-07-25T05:12:52.157Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 29
+FATAL 2020-07-25T05:12:54.169Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 29 baud rate 230400
+FATAL 2020-07-25T05:12:56.181Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 30
+FATAL 2020-07-25T05:12:58.193Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 30 baud rate 230400
+FATAL 2020-07-25T05:13:00.205Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 31
+FATAL 2020-07-25T05:13:02.218Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 31 baud rate 230400
+FATAL 2020-07-25T05:13:04.230Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 32
+FATAL 2020-07-25T05:13:06.242Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 32 baud rate 230400
+FATAL 2020-07-25T05:13:08.254Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 33
+FATAL 2020-07-25T05:13:10.266Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 33 baud rate 230400
+FATAL 2020-07-25T05:13:12.278Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 34
+FATAL 2020-07-25T05:13:14.290Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 34 baud rate 230400
+FATAL 2020-07-25T05:13:16.302Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 35
+FATAL 2020-07-25T05:13:18.314Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 35 baud rate 230400
+FATAL 2020-07-25T05:13:20.326Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 36
+FATAL 2020-07-25T05:13:22.338Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 36 baud rate 230400
+FATAL 2020-07-25T05:13:24.349Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 37
+FATAL 2020-07-25T05:13:26.361Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 37 baud rate 230400
+FATAL 2020-07-25T05:13:28.373Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 38
+FATAL 2020-07-25T05:13:30.385Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 38 baud rate 230400
+FATAL 2020-07-25T05:13:32.397Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 39
+FATAL 2020-07-25T05:13:34.409Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 39 baud rate 230400
+FATAL 2020-07-25T05:13:36.421Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 40
+FATAL 2020-07-25T05:13:38.433Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 40 baud rate 230400
+FATAL 2020-07-25T05:13:40.445Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 41
+FATAL 2020-07-25T05:13:42.457Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 41 baud rate 230400
+FATAL 2020-07-25T05:13:44.468Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 42
+FATAL 2020-07-25T05:13:46.481Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 42 baud rate 230400
+FATAL 2020-07-25T05:13:48.496Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 43
+FATAL 2020-07-25T05:13:50.509Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 43 baud rate 230400
+FATAL 2020-07-25T05:13:52.521Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 44
+FATAL 2020-07-25T05:13:54.533Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 44 baud rate 230400
+FATAL 2020-07-25T05:13:56.545Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 45
+FATAL 2020-07-25T05:13:58.557Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 45 baud rate 230400
+FATAL 2020-07-25T05:14:00.569Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 46
+FATAL 2020-07-25T05:14:02.581Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 46 baud rate 230400
+FATAL 2020-07-25T05:14:04.593Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 47
+FATAL 2020-07-25T05:14:06.605Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 47 baud rate 230400
+FATAL 2020-07-25T05:14:08.618Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 48
+FATAL 2020-07-25T05:14:10.630Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 48 baud rate 230400
+FATAL 2020-07-25T05:14:12.642Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 49
+FATAL 2020-07-25T05:14:14.651Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 49 baud rate 230400
+FATAL 2020-07-25T05:14:16.658Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 50
+FATAL 2020-07-25T05:14:18.665Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 50 baud rate 230400
+FATAL 2020-07-25T05:14:20.675Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 51
+FATAL 2020-07-25T05:14:22.687Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 51 baud rate 230400
+FATAL 2020-07-25T05:14:24.697Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 52
+FATAL 2020-07-25T05:14:26.708Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 52 baud rate 230400
+FATAL 2020-07-25T05:14:28.717Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 53
+FATAL 2020-07-25T05:14:30.728Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 53 baud rate 230400
+FATAL 2020-07-25T05:14:32.740Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 54
+FATAL 2020-07-25T05:14:34.751Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 54 baud rate 230400
+FATAL 2020-07-25T05:14:36.763Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 55
+FATAL 2020-07-25T05:14:38.774Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 55 baud rate 230400
+FATAL 2020-07-25T05:14:40.786Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 56
+FATAL 2020-07-25T05:14:42.797Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 56 baud rate 230400
+FATAL 2020-07-25T05:14:44.807Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 57
+FATAL 2020-07-25T05:14:46.817Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 57 baud rate 230400
+FATAL 2020-07-25T05:14:48.829Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 58
+FATAL 2020-07-25T05:14:50.841Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 58 baud rate 230400
+FATAL 2020-07-25T05:14:52.891Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 59
+FATAL 2020-07-25T05:14:54.916Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 59 baud rate 230400
+FATAL 2020-07-25T05:14:56.923Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 60
+FATAL 2020-07-25T05:14:58.931Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 60 baud rate 230400
+FATAL 2020-07-25T05:15:00.940Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 61
+FATAL 2020-07-25T05:15:02.950Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 61 baud rate 230400
+FATAL 2020-07-25T05:15:04.960Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 62
+FATAL 2020-07-25T05:15:06.973Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 62 baud rate 230400
+FATAL 2020-07-25T05:15:08.984Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 63
+FATAL 2020-07-25T05:15:10.995Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 63 baud rate 230400
+FATAL 2020-07-25T05:15:13.004Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 64
+FATAL 2020-07-25T05:15:15.018Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 64 baud rate 230400
+FATAL 2020-07-25T05:15:17.026Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 65
+FATAL 2020-07-25T05:15:19.033Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 65 baud rate 230400
+FATAL 2020-07-25T05:15:21.052Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 66
+FATAL 2020-07-25T05:15:23.061Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 66 baud rate 230400
+FATAL 2020-07-25T05:15:25.071Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 67
+FATAL 2020-07-25T05:15:27.083Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 67 baud rate 230400
+FATAL 2020-07-25T05:15:29.094Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 68
+FATAL 2020-07-25T05:15:31.104Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 68 baud rate 230400
+FATAL 2020-07-25T05:15:33.112Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 69
+FATAL 2020-07-25T05:15:35.121Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 69 baud rate 230400
+FATAL 2020-07-25T05:15:37.130Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 70
+FATAL 2020-07-25T05:15:39.140Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 70 baud rate 230400
+FATAL 2020-07-25T05:15:41.151Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 71
+FATAL 2020-07-25T05:15:43.162Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 71 baud rate 230400
+FATAL 2020-07-25T05:15:45.173Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 72
+FATAL 2020-07-25T05:15:47.184Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 72 baud rate 230400
+FATAL 2020-07-25T05:15:49.194Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 73
+FATAL 2020-07-25T05:15:51.204Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 73 baud rate 230400
+FATAL 2020-07-25T05:15:53.218Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 74
+FATAL 2020-07-25T05:15:55.230Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 74 baud rate 230400
+FATAL 2020-07-25T05:15:57.243Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 75
+FATAL 2020-07-25T05:15:59.255Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 75 baud rate 230400
+FATAL 2020-07-25T05:16:01.265Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 76
+FATAL 2020-07-25T05:16:03.278Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 76 baud rate 230400
+FATAL 2020-07-25T05:16:05.289Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 77
+FATAL 2020-07-25T05:16:07.299Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 77 baud rate 230400
+FATAL 2020-07-25T05:16:09.319Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 78
+FATAL 2020-07-25T05:16:11.330Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 78 baud rate 230400
+FATAL 2020-07-25T05:16:13.340Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 79
+FATAL 2020-07-25T05:16:15.351Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 79 baud rate 230400
+FATAL 2020-07-25T05:16:17.359Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 80
+FATAL 2020-07-25T05:16:19.389Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 80 baud rate 230400
+FATAL 2020-07-25T05:16:21.397Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 81
+FATAL 2020-07-25T05:16:23.407Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 81 baud rate 230400
+FATAL 2020-07-25T05:16:25.419Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 82
+FATAL 2020-07-25T05:16:27.432Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 82 baud rate 230400
+FATAL 2020-07-25T05:16:29.445Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 83
+FATAL 2020-07-25T05:16:31.457Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 83 baud rate 230400
+FATAL 2020-07-25T05:16:33.469Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 84
+FATAL 2020-07-25T05:16:35.479Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 84 baud rate 230400
+FATAL 2020-07-25T05:16:37.488Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 85
+FATAL 2020-07-25T05:16:39.501Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 85 baud rate 230400
+FATAL 2020-07-25T05:16:41.512Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 86
+FATAL 2020-07-25T05:16:43.522Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 86 baud rate 230400
+FATAL 2020-07-25T05:16:45.533Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 87
+FATAL 2020-07-25T05:16:47.542Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 87 baud rate 230400
+FATAL 2020-07-25T05:16:49.554Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 88
+FATAL 2020-07-25T05:16:51.568Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 88 baud rate 230400
+FATAL 2020-07-25T05:16:53.580Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 89
+FATAL 2020-07-25T05:16:55.592Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 89 baud rate 230400
+FATAL 2020-07-25T05:16:57.603Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 90
+FATAL 2020-07-25T05:16:59.613Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 90 baud rate 230400
+FATAL 2020-07-25T05:17:01.622Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 91
+FATAL 2020-07-25T05:17:03.629Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 91 baud rate 230400
+FATAL 2020-07-25T05:17:05.639Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 92
+FATAL 2020-07-25T05:17:07.652Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 92 baud rate 230400
+FATAL 2020-07-25T05:17:09.665Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 93
+FATAL 2020-07-25T05:17:11.677Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 93 baud rate 230400
+FATAL 2020-07-25T05:17:13.689Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 94
+FATAL 2020-07-25T05:17:15.701Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 94 baud rate 230400
+FATAL 2020-07-25T05:17:17.713Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 95
+FATAL 2020-07-25T05:17:19.725Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 95 baud rate 230400
+FATAL 2020-07-25T05:17:21.736Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 96
+FATAL 2020-07-25T05:17:23.748Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 96 baud rate 230400
+FATAL 2020-07-25T05:17:25.760Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 97
+FATAL 2020-07-25T05:17:27.773Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 97 baud rate 230400
+FATAL 2020-07-25T05:17:29.785Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 98
+FATAL 2020-07-25T05:17:31.797Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 98 baud rate 230400
+FATAL 2020-07-25T05:17:33.808Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 99
+FATAL 2020-07-25T05:17:35.819Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 99 baud rate 230400
+FATAL 2020-07-25T05:17:37.831Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 100
+FATAL 2020-07-25T05:17:39.841Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 100 baud rate 230400
+FATAL 2020-07-25T05:17:41.850Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 101
+FATAL 2020-07-25T05:17:43.859Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 101 baud rate 230400
+FATAL 2020-07-25T05:17:45.872Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 102
+FATAL 2020-07-25T05:17:47.884Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 102 baud rate 230400
+FATAL 2020-07-25T05:17:49.896Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 103
+FATAL 2020-07-25T05:17:51.909Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 103 baud rate 230400
+FATAL 2020-07-25T05:17:53.919Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 104
+FATAL 2020-07-25T05:17:55.931Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 104 baud rate 230400
+FATAL 2020-07-25T05:17:57.940Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 105
+FATAL 2020-07-25T05:17:59.950Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 105 baud rate 230400
+FATAL 2020-07-25T05:18:01.965Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 106
+FATAL 2020-07-25T05:18:03.975Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 106 baud rate 230400
+FATAL 2020-07-25T05:18:05.985Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 107
+FATAL 2020-07-25T05:18:07.996Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 107 baud rate 230400
+FATAL 2020-07-25T05:18:10.006Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 108
+FATAL 2020-07-25T05:18:12.019Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 108 baud rate 230400
+FATAL 2020-07-25T05:18:14.029Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 109
+FATAL 2020-07-25T05:18:16.039Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 109 baud rate 230400
+FATAL 2020-07-25T05:18:18.051Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 110
+FATAL 2020-07-25T05:18:20.061Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 110 baud rate 230400
+FATAL 2020-07-25T05:18:22.070Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 111
+FATAL 2020-07-25T05:18:24.080Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 111 baud rate 230400
+FATAL 2020-07-25T05:18:26.092Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 112
+FATAL 2020-07-25T05:18:28.104Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 112 baud rate 230400
+FATAL 2020-07-25T05:18:30.117Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 113
+FATAL 2020-07-25T05:18:32.129Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 113 baud rate 230400
+FATAL 2020-07-25T05:18:34.142Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 114
+FATAL 2020-07-25T05:18:36.154Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 114 baud rate 230400
+FATAL 2020-07-25T05:18:38.166Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 115
+FATAL 2020-07-25T05:18:40.179Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 115 baud rate 230400
+FATAL 2020-07-25T05:18:42.190Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 116
+FATAL 2020-07-25T05:18:44.201Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 116 baud rate 230400
+FATAL 2020-07-25T05:18:46.213Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 117
+FATAL 2020-07-25T05:18:48.225Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 117 baud rate 230400
+FATAL 2020-07-25T05:18:50.236Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 118
+FATAL 2020-07-25T05:18:52.256Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 118 baud rate 230400
+FATAL 2020-07-25T05:18:54.265Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 119
+FATAL 2020-07-25T05:18:56.273Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 119 baud rate 230400
+FATAL 2020-07-25T05:18:58.282Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 120
+FATAL 2020-07-25T05:19:00.294Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 120 baud rate 230400
+FATAL 2020-07-25T05:19:02.307Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 121
+FATAL 2020-07-25T05:19:04.318Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 121 baud rate 230400
+FATAL 2020-07-25T05:19:06.329Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 122
+FATAL 2020-07-25T05:19:08.341Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 122 baud rate 230400
+FATAL 2020-07-25T05:19:10.354Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 123
+FATAL 2020-07-25T05:19:12.366Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 123 baud rate 230400
+FATAL 2020-07-25T05:19:14.379Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 124
+FATAL 2020-07-25T05:19:16.390Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 124 baud rate 230400
+FATAL 2020-07-25T05:19:18.401Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 125
+FATAL 2020-07-25T05:19:20.412Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 125 baud rate 230400
+FATAL 2020-07-25T05:19:22.422Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 126
+FATAL 2020-07-25T05:19:24.436Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 126 baud rate 230400
+FATAL 2020-07-25T05:19:26.449Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 127
+FATAL 2020-07-25T05:19:28.460Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 127 baud rate 230400
+FATAL 2020-07-25T05:19:30.471Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 128
+FATAL 2020-07-25T05:19:32.483Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 128 baud rate 230400
+FATAL 2020-07-25T05:19:34.494Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 129
+FATAL 2020-07-25T05:19:36.504Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 129 baud rate 230400
+FATAL 2020-07-25T05:19:38.514Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 130
+FATAL 2020-07-25T05:19:40.523Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 130 baud rate 230400
+FATAL 2020-07-25T05:19:42.533Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 131
+FATAL 2020-07-25T05:19:44.545Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 131 baud rate 230400
+FATAL 2020-07-25T05:19:46.558Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 132
+FATAL 2020-07-25T05:19:48.570Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 132 baud rate 230400
+FATAL 2020-07-25T05:19:50.582Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 133
+FATAL 2020-07-25T05:19:52.594Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 133 baud rate 230400
+FATAL 2020-07-25T05:19:54.607Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 134
+FATAL 2020-07-25T05:19:56.618Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 134 baud rate 230400
+FATAL 2020-07-25T05:19:58.628Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 135
+FATAL 2020-07-25T05:20:00.639Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 135 baud rate 230400
+FATAL 2020-07-25T05:20:02.649Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 136
+FATAL 2020-07-25T05:20:04.660Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 136 baud rate 230400
+FATAL 2020-07-25T05:20:06.672Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 137
+FATAL 2020-07-25T05:20:08.684Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 137 baud rate 230400
+FATAL 2020-07-25T05:20:10.696Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 138
+FATAL 2020-07-25T05:20:12.710Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 138 baud rate 230400
+FATAL 2020-07-25T05:20:14.722Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 139
+FATAL 2020-07-25T05:20:16.734Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 139 baud rate 230400
+FATAL 2020-07-25T05:20:18.746Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 140
+FATAL 2020-07-25T05:20:20.758Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 140 baud rate 230400
+FATAL 2020-07-25T05:20:22.770Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 141
+FATAL 2020-07-25T05:20:24.782Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 141 baud rate 230400
+FATAL 2020-07-25T05:20:26.794Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 142
+FATAL 2020-07-25T05:20:28.806Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 142 baud rate 230400
+FATAL 2020-07-25T05:20:30.818Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 143
+FATAL 2020-07-25T05:20:32.830Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 143 baud rate 230400
+FATAL 2020-07-25T05:20:34.842Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 144
+FATAL 2020-07-25T05:20:36.854Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 144 baud rate 230400
+FATAL 2020-07-25T05:20:38.866Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 145
+FATAL 2020-07-25T05:20:40.878Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 145 baud rate 230400
+FATAL 2020-07-25T05:20:42.890Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 146
+FATAL 2020-07-25T05:20:44.902Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 146 baud rate 230400
+FATAL 2020-07-25T05:20:46.913Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 147
+FATAL 2020-07-25T05:20:48.924Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 147 baud rate 230400
+FATAL 2020-07-25T05:20:50.935Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 148
+FATAL 2020-07-25T05:20:52.947Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 148 baud rate 230400
+FATAL 2020-07-25T05:20:54.959Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 149
+FATAL 2020-07-25T05:20:56.971Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 149 baud rate 230400
+FATAL 2020-07-25T05:20:58.983Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 150
+FATAL 2020-07-25T05:21:00.995Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 150 baud rate 230400
+FATAL 2020-07-25T05:21:03.008Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 151
+FATAL 2020-07-25T05:21:05.020Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 151 baud rate 230400
+FATAL 2020-07-25T05:21:07.032Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 152
+FATAL 2020-07-25T05:21:09.044Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 152 baud rate 230400
+FATAL 2020-07-25T05:21:11.057Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 153
+FATAL 2020-07-25T05:21:13.068Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 153 baud rate 230400
+FATAL 2020-07-25T05:21:15.080Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 154
+FATAL 2020-07-25T05:21:17.092Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 154 baud rate 230400
+FATAL 2020-07-25T05:21:19.104Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 155
+FATAL 2020-07-25T05:21:21.116Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 155 baud rate 230400
+FATAL 2020-07-25T05:21:23.127Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 156
+FATAL 2020-07-25T05:21:25.138Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 156 baud rate 230400
+FATAL 2020-07-25T05:21:27.150Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 157
+FATAL 2020-07-25T05:21:29.162Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 157 baud rate 230400
+FATAL 2020-07-25T05:21:31.174Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 158
+FATAL 2020-07-25T05:21:33.183Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 158 baud rate 230400
+FATAL 2020-07-25T05:21:35.193Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 159
+FATAL 2020-07-25T05:21:37.205Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 159 baud rate 230400
+FATAL 2020-07-25T05:21:39.217Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 160
+FATAL 2020-07-25T05:21:41.229Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 160 baud rate 230400
+FATAL 2020-07-25T05:21:43.242Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 161
+FATAL 2020-07-25T05:21:45.253Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 161 baud rate 230400
+FATAL 2020-07-25T05:21:47.266Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 162
+FATAL 2020-07-25T05:21:49.278Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 162 baud rate 230400
+FATAL 2020-07-25T05:21:51.290Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 163
+FATAL 2020-07-25T05:21:53.302Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 163 baud rate 230400
+FATAL 2020-07-25T05:21:55.313Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 164
+FATAL 2020-07-25T05:21:57.324Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 164 baud rate 230400
+FATAL 2020-07-25T05:21:59.336Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 165
+FATAL 2020-07-25T05:22:01.348Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 165 baud rate 230400
+FATAL 2020-07-25T05:22:03.360Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 166
+FATAL 2020-07-25T05:22:05.372Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 166 baud rate 230400
+FATAL 2020-07-25T05:22:07.384Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 167
+FATAL 2020-07-25T05:22:09.397Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 167 baud rate 230400
+FATAL 2020-07-25T05:22:11.409Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 168
+FATAL 2020-07-25T05:22:13.421Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 168 baud rate 230400
+FATAL 2020-07-25T05:22:15.430Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 169
+FATAL 2020-07-25T05:22:17.437Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 169 baud rate 230400
+FATAL 2020-07-25T05:22:19.445Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 170
+FATAL 2020-07-25T05:22:21.456Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 170 baud rate 230400
+FATAL 2020-07-25T05:22:23.468Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 171
+FATAL 2020-07-25T05:22:25.480Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 171 baud rate 230400
+FATAL 2020-07-25T05:22:27.490Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 172
+FATAL 2020-07-25T05:22:29.499Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 172 baud rate 230400
+FATAL 2020-07-25T05:22:31.513Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 173
+FATAL 2020-07-25T05:22:33.526Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 173 baud rate 230400
+FATAL 2020-07-25T05:22:35.539Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 174
+FATAL 2020-07-25T05:22:37.551Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 174 baud rate 230400
+FATAL 2020-07-25T05:22:39.560Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 175
+FATAL 2020-07-25T05:22:41.568Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 175 baud rate 230400
+FATAL 2020-07-25T05:22:43.580Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 176
+FATAL 2020-07-25T05:22:45.592Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 176 baud rate 230400
+FATAL 2020-07-25T05:22:47.604Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 177
+FATAL 2020-07-25T05:22:49.613Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 177 baud rate 230400
+FATAL 2020-07-25T05:22:51.621Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 178
+FATAL 2020-07-25T05:22:53.630Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 178 baud rate 230400
+FATAL 2020-07-25T05:22:55.642Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 179
+FATAL 2020-07-25T05:22:57.655Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 179 baud rate 230400
+FATAL 2020-07-25T05:22:59.667Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 180
+FATAL 2020-07-25T05:23:01.678Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 180 baud rate 230400
+FATAL 2020-07-25T05:23:03.688Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 181
+FATAL 2020-07-25T05:23:05.699Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 181 baud rate 230400
+FATAL 2020-07-25T05:23:07.712Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 182
+FATAL 2020-07-25T05:23:09.724Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 182 baud rate 230400
+FATAL 2020-07-25T05:23:11.733Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 183
+FATAL 2020-07-25T05:23:13.744Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 183 baud rate 230400
+FATAL 2020-07-25T05:23:15.758Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 184
+FATAL 2020-07-25T05:23:17.771Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 184 baud rate 230400
+FATAL 2020-07-25T05:23:19.784Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 185
+FATAL 2020-07-25T05:23:21.795Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 185 baud rate 230400
+FATAL 2020-07-25T05:23:23.807Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 186
+FATAL 2020-07-25T05:23:25.819Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 186 baud rate 230400
+FATAL 2020-07-25T05:23:27.830Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 187
+FATAL 2020-07-25T05:23:29.842Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 187 baud rate 230400
+FATAL 2020-07-25T05:23:31.854Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 188
+FATAL 2020-07-25T05:23:33.866Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 188 baud rate 230400
+FATAL 2020-07-25T05:23:35.878Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 189
+FATAL 2020-07-25T05:23:37.889Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 189 baud rate 230400
+FATAL 2020-07-25T05:23:39.899Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 190
+FATAL 2020-07-25T05:23:41.911Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 190 baud rate 230400
+FATAL 2020-07-25T05:23:43.923Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 191
+FATAL 2020-07-25T05:23:45.935Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 191 baud rate 230400
+FATAL 2020-07-25T05:23:47.946Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 192
+FATAL 2020-07-25T05:23:49.957Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 192 baud rate 230400
+FATAL 2020-07-25T05:23:51.974Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 193
+FATAL 2020-07-25T05:23:53.986Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 193 baud rate 230400
+FATAL 2020-07-25T05:23:55.998Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 194
+FATAL 2020-07-25T05:23:58.009Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 194 baud rate 230400
+FATAL 2020-07-25T05:24:00.021Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 195
+FATAL 2020-07-25T05:24:02.032Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 195 baud rate 230400
+FATAL 2020-07-25T05:24:04.043Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 196
+FATAL 2020-07-25T05:24:06.055Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 196 baud rate 230400
+FATAL 2020-07-25T05:24:08.067Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 197
+FATAL 2020-07-25T05:24:10.077Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 197 baud rate 230400
+FATAL 2020-07-25T05:24:12.083Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 198
+FATAL 2020-07-25T05:24:14.093Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 198 baud rate 230400
+FATAL 2020-07-25T05:24:16.105Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 199
+FATAL 2020-07-25T05:24:18.117Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 199 baud rate 230400
+FATAL 2020-07-25T05:24:20.129Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 200
+FATAL 2020-07-25T05:24:22.139Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 200 baud rate 230400
+FATAL 2020-07-25T05:24:24.149Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 201
+FATAL 2020-07-25T05:24:26.161Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 201 baud rate 230400
+FATAL 2020-07-25T05:24:28.173Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 202
+FATAL 2020-07-25T05:24:30.185Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 202 baud rate 230400
+FATAL 2020-07-25T05:24:32.197Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 203
+FATAL 2020-07-25T05:24:34.208Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 203 baud rate 230400
+FATAL 2020-07-25T05:24:36.218Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 204
+FATAL 2020-07-25T05:24:38.228Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 204 baud rate 230400
+FATAL 2020-07-25T05:24:40.240Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 205
+FATAL 2020-07-25T05:24:42.252Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0

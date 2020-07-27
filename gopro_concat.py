@@ -17,7 +17,7 @@ import utils
 #
 # If a big bunch of files do not share the same base then they will not sort correctly.
 
-FFMPEG = "/Users/pviola/Bin/ffmpeg"
+FFMPEG = "/Users/viola/Bin/ffmpeg"
 
 def rename_small_videos(dryrun=False):
     # mkdir Small; for file in *.LRV; do echo $i; mv "$file" "Small/$(basename "$file" .LRV).MP4"; done
@@ -62,6 +62,12 @@ def find_video_sequence(basefile):
     return (int(basenum), [basefile] + segments)
 
 
+def flatten_video_files(vid_files):
+    for n, video_segments in vid_files:
+        for f in video_segments:
+            yield f
+
+
 def find_video_files():
     """
     Find all the GOPRO videos in a directory and sort them in a meaningful order.
@@ -82,6 +88,19 @@ def create_video_list_file(outfile, videos):
             f.write("file \'%s\'\n" % video_file)
 
 
+def concat_all(output_file, dryrun=False):
+    """
+    Concat all the GoPro videos in the directory.  GoPro vides are named oddly... deal
+    with the fact that the sorted order is not the correct order.
+    """
+    print("Concatenating Gopro files")
+    sequence_file = "files.txt"
+    create_video_list_file(sequence_file, flatten_video_files(find_video_files()))
+    command = f"{FFMPEG} -safe 0 -f concat -i {sequence_file} -c copy {output_file}"
+    print(command)
+    if not dryrun:
+        call(command.split())
+            
 def raw_concat(files, output_file, dryrun=False):
     "Used to concat a set of videos into a single video."
     print("Concatenating {0} files into {1}".format(len(files), output_file))
@@ -163,6 +182,7 @@ if __name__ == "__main__":
     parser.add_argument("--speedup", help="Speed of the timelapse videos.", type=int, default=15)
 
     parser.add_argument("--concat", help="Simple concatenation of multiple files.",  nargs='*')
+    parser.add_argument("--concat_all", help="Simple concatenation of multiple files.", action='store_true')
     parser.add_argument("--output", help="Output for concatenation.",  default="output.mp4")
 
     args = parser.parse_args()
@@ -178,3 +198,8 @@ if __name__ == "__main__":
 
     if args.concat and len(args.concat) > 0:
         raw_concat(args.concat, args.output, args.dryrun)
+
+    if args.concat_all:
+        concat_all(args.output, args.dryrun)
+
+        

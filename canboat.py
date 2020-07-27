@@ -27,30 +27,21 @@ import itertools as it
 import arrow
 import pandas as pd
 import copy
-import logging
 
 import gpxpy
 import gpxpy.gpx
 
 from global_variables import G
 
+###  Various constants which define the meaning of canbus messages. ###
 
-def pgn_code(name, pgn_df=G.PGNS):
-    # This is a real mouthful when a dict would do...  let's go with it for a while.
-    try:
-        return pgn_df[pgn_df['Description'] == name].id.values[0]
-    except Exception:
-        logging.error(f"{name} not found.")
-        return None
+def pgn_code(name):
+    return G.PGN_CODE[name]
 
 def device_code(name):
-    # This is a real mouthful when a dict would do...  let's go with it for a while.
-    try:
-        return G.DEVICES[G.DEVICES['Device'] == name].src.values[0]
-    except Exception:
-        logging.error(f"{name} not found.")    
-        return None
+    return G.DEVICES[name]
 
+# Clean up and filter records ################
 
 def substring_matcher(substring_to_match):
     "Return a function that returns True if a string contains to_match."
@@ -118,8 +109,10 @@ def valid_gnss_record(record, src):
     return correct_src and has_date_time and has_latlonalt
 
 
-def lla_records(json_log_path, src=5):
+def lla_records(json_log_path, src=None):
     "Construct a sequence of lat/lon/alt GNSS records from from a JSON log file."
+    if src is None:
+        src = device_code("Zeus iGPS")
     return map( gnss_convert,
                 json_records(
                     # Return online lines which contain GNSS position data.
@@ -198,7 +191,9 @@ def log_gpstime(records, retries=100):
     raise Exception("Could not find a valid System Time record to extract Date/Time from.")
 
 
-def time_records(records, src=device_code("ZG100 Antenna")):
+def time_records(records, src=None):
+    if src is None:
+        src = device_code("ZG100 Antenna")
     time_pgn = pgn_code('System Time')
 
     for record in records:
@@ -210,9 +205,10 @@ def time_records(records, src=device_code("ZG100 Antenna")):
             yield record
 
 
-def gnss_records(records, src=device_code("ZG100 Antenna")):
+def gnss_records(records, src=None):
+    if src is None:
+        src = device_code("ZG100 Antenna")
     code = pgn_code('GNSS Position Data')
-
     for record in records:
         if record['pgn'] == code and record['src'] == src:
             record['gps_time'] = convert_gnss_date_time(record['fields']['Date'],
@@ -221,15 +217,6 @@ def gnss_records(records, src=device_code("ZG100 Antenna")):
             record['delta_time'] = record['gps_time'] - record['pi_time']
             yield record
 
-
-# Clean up and filter records ################
-PGN_WIND_DATA = pgn_code("Wind Data")
-PGN_RUDDER = pgn_code("Rudder")
-PGN_DEPTH = pgn_code('Water Depth')
-PGN_RATE_OF_TURN = pgn_code('Rate of Turn')
-DEVICE_ZEUS_IGPS = device_code("Zeus iGPS")
-DEVICE_ZG100_COMPASS = device_code("ZG100 Compass")
-DEVICE_ZG100_ANTENNA = device_code("ZG100 Antenna")
 
 def remove_record(record):
     return False
@@ -263,7 +250,7 @@ def transform_record(record):
     "Transform the canboat record to resolve ambiguities in field names."
     # BOAT 
     # Wind Data can be True or Apparent, and then collide.  Deconflict
-    if record['pgn'] == PGN_WIND_DATA:
+    if record['pgn'] == pgn_code("Wind Data"):
         fields = record.get('fields', None)
         if fields is not None:
             if "True (boat referenced)" in fields.get('Reference', ""):
@@ -271,21 +258,21 @@ def transform_record(record):
             if "True (ground referenced to North)" in fields.get('Reference', ""):
                 prefix_field_names(record, 'True North ')
 
-    if record['pgn'] == PGN_RUDDER:
+    if record['pgn'] == pgn_code("Rudder"):
         prefix_field_names(record, "Rudder ")
-    if record['pgn'] == PGN_RATE_OF_TURN:
+    if record['pgn'] == pgn_code('Rate of Turn'):
         prefix_field_names(record, "Turn ")
 
-    if record['src'] == DEVICE_ZG100_COMPASS:
+    if record['src'] == device_code("ZG100 Compass"):
         prefix_field_names(record, "ZG100 ")
-    elif record['src'] == DEVICE_ZEUS_IGPS:
+    elif record['src'] == device_code("Zeus iGPS"):
         prefix_field_names(record, "ZEUS ")
 
     fields = record.get('fields', [])
     flat_fields = {}
     for key in fields:
         flat_fields[canonical_field_name(key)] = fields[key]
-    if record['pgn'] == PGN_DEPTH:
+    if record['pgn'] == pgn_code('Water Depth'):
         if 'depth' not in flat_fields.keys():
             flat_fields['depth'] = 99
     record['fields'] = flat_fields
@@ -299,7 +286,8 @@ def json_to_data_frame(json_file, count=1000000, trim=100, pandas_time_step = 0.
        TRIM             : trim off the first N records,  since the beginning can be wonky
        PANDAS_TIME_STEP : Rate at which records are generated.
     """
-    records = json_records( file_lines(json_file), pgn_filter(G.PGN_WHITELIST), 1)
+    pgn_whitelist = set(G.PGN_NAME.keys())  # set of PGNs to process
+    records = json_records( file_lines(json_file), pgn_filter(pgn_whitelist), 1)
     # Throw out the first trim records, just to make sure things are working
     records = it.islice(records, trim, None)
 
@@ -315,7 +303,7 @@ def json_to_data_frame(json_file, count=1000000, trim=100, pandas_time_step = 0.
     # NMEA records we select and after a bit of cleanup and translation).
     for record_num, record in zip(it.count(), it.islice(records, 0, count)):
         if record_num % 10000 == 0:
-            logging.info(f"Processed {record_num} json lines from {json_file}.")
+            G.logger.info(f"Processed {record_num} json lines from {json_file}.")
         if remove_record(record):
             continue
         record = transform_record(record)
@@ -330,4 +318,3 @@ def json_to_data_frame(json_file, count=1000000, trim=100, pandas_time_step = 0.
             rows.append(copy.copy(data_dict))
             row_seconds += pandas_time_step
     return pd.DataFrame(rows)
-

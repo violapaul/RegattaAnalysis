@@ -19,12 +19,14 @@ Warning this is a [Literate Notebook](Literate_Notebook_Module.ipynb), i.e. the 
 import os
 import math
 import time  # used to compute elapsed times
-import itertools as it
 
 # Matplotlib is the engine for plotting graphs and images
 import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.widgets as widgets
+import matplotlib.style as mplstyle
+# Try to make matplotlib faster.  See https://matplotlib.org/tutorials/introductory/usage.html#performance
+mplstyle.use('fast')
 
 # Numpy and Pandas are used to process our racing data.
 import numpy as np
@@ -35,9 +37,8 @@ import cv2  # why is it called cv2?  ... just is.
 
 # These are libraries written for RegattaAnalysis
 from global_variables import G  # global variables
-import race_logs                # load data from races
-import process as p             # additional supporting processing code
 from utils import DictClass, is_iterable
+import utils
 
 #### Cell #9 Type: module ######################################################
 
@@ -121,14 +122,22 @@ def map_project(p):
     east, north = G.MAP(p.lon, p.lat)  # gdal order is lon then lat, I prefer lat/lon
     return DictClass(north=north, east=east)
 
-def extract_region(df, border=0.2):
+def region_from_marks(marks, lat_border=0.2, lon_border=0.3):
+    pos = [G.STYC_RACE_MARKS[m] for m in marks]
+    lats = [p.lat for p in pos]
+    lons = [p.lon for p in pos]    
+    lat_max, lat_min = max_min_with_border(np.array(lats), lat_border)
+    lon_max, lon_min = max_min_with_border(np.array(lons), lon_border)
+    return DictClass(lat_max=lat_max, lat_min=lat_min,
+                     lon_max=lon_max, lon_min=lon_min)
+
+def extract_region(df, border=0.2, fudge = (0.015, -0.015)):
     """
     Extract the geographic region which covers the entire race track.  BORDER is an
     additional margin which ensures you do not bump up against the edge when graphing.
     """
     # Add just a bit of "fudge factor" to ensure that the extent is not too small, which
     # triggers some corner cases.
-    fudge = (0.001, -0.001)
 
     # TODO: since the border is applied in lat/lon separately, its is not uniform.  Same
     # for FUDGE.
@@ -149,24 +158,6 @@ def max_min_with_border(values, border=0.1):
     return np.array((max, min))
 
 
-#### Cell #16 Type: module #####################################################
-
-# note  - read the resulting image and display
-
-image = cv2.imread(chart.path)
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-
-fig, ax = new_axis()
-
-# By specifying the extent, matplot "knows" the scale of the image.  Note, extent is
-# weird: (left, right, bottom, top) Let's set the image coordinates to start 0,0 at the
-# lower left.
-ax.imshow(image, extent=[0, chart.east - chart.west, 0, chart.north - chart.south])
-ax.grid(True)
-# We can plot the projected coordinates directly on the image.
-ax.plot(df_west - chart.west, df_north - chart.south)
-
-
 #### Cell #18 Type: module #####################################################
 
 def desaturate_image(im, factor=2):
@@ -181,17 +172,18 @@ def desaturate_image(im, factor=2):
 
 # Combining all features.
 
-def plot_chart(df, border=0.2, pixels=2000, color='green', **plot_args):
+def plot_chart(df, fig=None, border=0.2, pixels=2000, color='green', fudge=(0.015, -0.015),  **plot_args):
     """
     Plot a track for race.  The background chart comes from NOAA tiled charts.
     """
-    chart = create_chart(df, border=border, pixels=pixels)
-    chart.fig, chart.ax = new_axis()
-    chart = draw_chart(chart)
+    region = extract_region(df, border, fudge=fudge) 
+    chart = create_chart(region, pixels=pixels)
+    chart.fig, chart.ax = create_figure(fig)
+    chart = draw_chart(chart, chart.ax)
     chart = draw_track(df, chart, color=color, **plot_args)
     return chart
 
-def create_chart(df, border=0.2, pixels=2000):
+def create_chart(region, pixels=2000):
     """
     Using the extent of the GPS race track, create a geolocated map image AND a
     reprojection of the track into the local north/east coordinates.
@@ -200,22 +192,30 @@ def create_chart(df, border=0.2, pixels=2000):
     later plots.
     """
     # Extract the region of the race.
-    region = extract_region(df, border)
-    chart = region.union(dict(proj=G.PROJ4, border=border, pixels=pixels))
+    chart = region.union(dict(proj=G.PROJ4, pixels=pixels))
     
     chart = gdal_extract_chart(chart, G.MBTILES_PATH, "/tmp/mbtile.tif")
     image = cv2.imread(chart.path)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     return chart.union(dict(image=image))
 
+def create_figure(fig=None, figsize=(6, 6)):
+    G.logger.debug(f"Creating figure {fig}")
+    if isinstance(fig, matplotlib.figure.Figure):
+        fig = fig
+    else:
+        fig = plt.figure(num=fig, figsize=figsize)
+    fig.clf()
+    ax = fig.add_subplot(111)   
+    return fig, ax
+
 def draw_chart(chart, ax=None):
     if ax is None:
         ax = chart.ax
     ax.imshow(desaturate_image(chart.image), 
-              extent=[0, chart.east - chart.west, 0, chart.north - chart.south])
+              extent=[chart.west, chart.east, chart.south, chart.north])
     ax.grid(True)
     return chart
-
 
 def draw_track(df, chart, ax=None, color='green', **plot_args):
     """
@@ -224,30 +224,12 @@ def draw_track(df, chart, ax=None, color='green', **plot_args):
     Optionally draw on a specific axis.
     """
     lon, lat = np.asarray(df.longitude), np.asarray(df.latitude)
-    track = np.vstack(G.MAP(lon, lat)).T - (chart.west, chart.south)
+    track = np.vstack(G.MAP(lon, lat)).T
     chart.track = track
     if ax is None:
         ax = chart.ax
     chart.line = ax.plot(chart.track[:, 0], chart.track[:, 1], color=color, **plot_args)[0]
     return chart
-
-#### Cell #25 Type: module #####################################################
-
-# - notebook 
-
-plt.figure()
-df.spd.plot()
-df.sog.plot()
-df.tws.plot()
-plt.grid()
-plt.legend("spd, sog, tws".split(','), loc="upper right")
-
-plt.figure()
-df.hdg.plot()
-df.twd.plot()
-df.awa.plot()
-plt.grid()
-plt.legend("hdg, twd, awa".split(','), loc="upper right")
 
 #### Cell #27 Type: module #####################################################
 
@@ -428,10 +410,11 @@ def chart_and_plot(df, index, data, data2=None):
         quick_plot_ax(ax2, index, data2)
 
     # Chart in the third axis.
-    chart = create_chart(df)   # Create the chart
+    region = extract_region(df) 
+    chart = create_chart(region)    
     chart.fig = fig
     chart.ax = ax_chart        # Assign the axis
-    chart = draw_chart(chart)  
+    chart = draw_chart(chart)
     chart = draw_track(df, chart, color='chartreuse')  # Draw track in light color
     chart = draw_track(df, chart, color='green')       # Draw again in darker
     # Note, chart.line and other attributes are overridden, purposefully.
@@ -458,19 +441,14 @@ def chart_and_plot(df, index, data, data2=None):
             chart.point_func(int(event.xdata))
 
     fig.canvas.mpl_connect('button_press_event', on_click)
-    G.logger.info("done")
     return chart
 
-
-#### Cell #31 Type: module #####################################################
-
-ch = chart_and_plot(df, None, "df.spd, df.sog, df.tws, vmg", "df.hdg, df.twd, 100+5*df.rudder, df.awa")
 
 #### Cell #32 Type: module #####################################################
 
 # One of the critical tasks is to trim the data to remove time at the dock, or to slip into races.
 
-def trim_track(df, fignum=None, border=0.2, skip=None, delay=0.01):
+def trim_track(df, fig_or_num=None, border=0.2, skip=None, delay=0.01):
     """
     Plot an interactive sail track on a map.  Provides sliders which can be used to trim
     the begin and end of the track.
@@ -484,18 +462,17 @@ def trim_track(df, fignum=None, border=0.2, skip=None, delay=0.01):
     print(ch.begin, ch.end)
     
     """
-    fig = plt.figure(figsize=(8, 8))  # make this figure large
-    ax_chart = plt.subplot(111)
-        
     # Chart in the third axis.
-    chart = create_chart(df)   # Create the chart
-    chart.fig = fig
-    chart.ax = ax_chart        # Assign the axis
+    region = extract_region(df) 
+    chart = create_chart(region)
+    chart.fig, chart.ax = create_figure(fig_or_num)
+
     chart = draw_chart(chart)  
     chart = draw_track(df, chart, color='chartreuse')  # Draw track in light color
     chart = draw_track(df, chart, color='green')       # Draw again in darker   
 
-    fig.tight_layout()
+    # Chart overlapps the widgets... sometimes.
+    # chart.fig.tight_layout()
 
     # Create a set of chart update functions, 
     chart = chart_update_functions(chart)
@@ -510,12 +487,14 @@ def trim_track(df, fignum=None, border=0.2, skip=None, delay=0.01):
     # Unfortunate "bug" that graph can be unresponsive if you do not keep a handle on the sliders.
     # https://github.com/matplotlib/matplotlib/issues/3105/
     chart.sliders = [s_beg, s_end]
+    chart.is_trimmed = False
     chart = chart_update_functions(chart)
 
     def trim(val):
         G.logger.info(f"Calling plot_track update.")
+        chart.is_trimmed = True
         chart.trim_func(int(s_beg.val), int(s_end.val))
-        fig.canvas.draw_idle()
+        chart.fig.canvas.draw_idle()
 
     s_beg.on_changed(trim)
     s_end.on_changed(trim)
@@ -523,13 +502,13 @@ def trim_track(df, fignum=None, border=0.2, skip=None, delay=0.01):
     return chart
 
 
-#### Cell #36 Type: module #####################################################
+#### Cell #38 Type: metadata ###################################################
 
-image = fetch_noaa_chart(df, zoom=14)
+#: {
+#:   "metadata": {
+#:     "timestamp": "2020-06-11T13:25:55.536999-07:00"
+#:   }
+#: }
 
-fig, ax = new_axis()
+#### Cell #39 Type: finish #####################################################
 
-# By specifying the extent, matplot "knows" the scale of the image.  Note, extent is
-# weird: (left, right, bottom, top) Let's set the image coordinates to start 0,0 at the
-# lower left.
-ax.imshow(image)

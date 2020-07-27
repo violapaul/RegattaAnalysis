@@ -1,0 +1,75 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # Capturing Data from the Boat Using Canboat
+# 
+# Peer Gynt has a "modern" B&G set of instruments and displays (circa 2015).  These instruments all sit on a digital databus called NMEA 2000. NMEA 2000 (or 2K for short) is an adaptation of the CAN bus used on many/all cars today.    
+# 
+# The data on the bus is captured using a Raspberry Pi (RPi), running the [Canboat](https://github.com/canboat/canboat) software which includes several command line tools.  The raw bus data is captured and logged to disk with the [actisense-serial](https://github.com/canboat/canboat/wiki/actisense-serial) program.
+# 
+# After the race I copy the raw log off of the RPi and then convert it to JSON using another Canboat program called [analyzer](https://github.com/canboat/canboat/wiki/analyzer).  This JSON file is then read into Pyhton/Pandas for analysis.
+# 
+# I do not currently compute on the boat during a race.  That is for later.
+# 
+# 
+# ## More Background
+# 
+# In addition to 2K, there is an older standard called [NMEA 0183](https://en.wikipedia.org/wiki/NMEA_0183) which was based on RS-422.  2K is easy to hookup: the connectors are standardized and the cables carry (limited) power. In theory you can easily connect devices from different manufacturers.  You can buy a bridge from older 0183 devices to the newer 2K bus. 
+# 
+# The biggest problem with with 2k is that it is propietary.  The messages are sent in an industry standard format,  but to get access to that standard you need to buy a license, sign a lot of forms, and then swear to never redistributed the information.  Interestingly, 0183 is old enough that the standard is much more public (though it is also more limited).  The secret nature of 2k makes it harder to create new devices, and this keeps the prices up for devices made by old school manufacturers.
+# 
+# Luckily folks sat down and created [Canboat](https://github.com/canboat/canboat).  This is free software that knows how to read NMEA messages and then converts them to readable JSON.  The source code is available, and it is quite simple.  The Canboat owners are very upfront that their efforts are perfectly legal,  but it may result in errors and mistranslations.  
+# 
+# To run Canboat you need to plug a small computer into the 2K bus.  I use a Raspberry Pi 3 by CanaKit [Amazon Link] (https://www.amazon.com/dp/B01C6EQNNK/ref=cm_sw_em_r_mt_dp_U_-QvuEbN65D6RP) (there are many other ways to buy something similar).  You also need to buy an adapter from 2k to the computer.  I use [NGT-1 NMEA 2000® to PC](
+# https://www.actisense.com/products/ngt-1-nmea-2000-to-pc-interface/).  This particular adapter is explicitly supported by Canboat.  There may be other ways to go,  but I felt good using a high quality interface, since I did not want to corrupt the 2K bus during sailing.
+# 
+# Note, Canboat is also used by a much more complex and ambitious project called [SignalK](http://signalk.org/).  If you search around on the internet for computers on boats you will run into SignalK.  SignalK has the goal of letting people create their own new devices and information displays.  Its all very cool, but very complex...  or rather it "easy" to set up, but then doing anything beyond what is built in can be a lot harder.  By using Canboat I've cut out the middle man.  
+# 
+# In the longer term SignalK may well be the right way to build smart algorithms that can run on the boat.
+# 
+# 
+# ### Other Info
+# 
+# - [Basic NMEA 2K Video](https://www.youtube.com/watch?v=U4jAxINtF5w) if you have never heard of NMEA 2k.
+# - [NMEA 2K whitepaper](https://www.nmea.org/Assets/20090423%20rtcm%20white%20paper%20nmea%202000.pdf)
+# - [Actisense's Guide to NMEA 2K](https://www.actisense.com/wp-content/uploads/2020/01/Complete-Guide-to-Building-an-NMEA-2000-Network-issue-1.1.pdf)
+# - [NMEA 2k wikipedia](https://en.wikipedia.org/wiki/NMEA_2000)
+# 
+# 
+# ## The processing pipeline
+# 
+# There are lots of steps between data catpure and analysis.
+# 
+# - Convert NMEA 2K to USB using Actisense NGT-1
+# - Capture the raw log data on the RPi, using `actisense-serial`.
+# - Copy the logs off the RPi and onto my laptop.
+# - Convert the raw logs with `analyzer` to JSON.
+# - Read the JSON into Python, normalize, and convert.
+# - Reorganize the data into a tabular format that is useful for analysis.
+# - Save the tables using Pandas.
+# 
+
+# In[ ]:
+
+
+# Data in NMEA 2k is sent in PGN's.  
+
+PGNS = pd.DataFrame([
+    (126992, 'System Time'),
+    (127245, 'Rudder'),
+    (127250, 'Vessel Heading'),
+    (127251, 'Rate of Turn'),
+    (127257, 'Attitude (pitch, roll)'),
+    (127258, 'Magnetic Variation'),
+    (128259, 'Speed'),
+    (128267, 'Water Depth'),
+    (129025, 'Position, Rapid Update'),
+    (129026, 'COG & SOG, Rapid Update'),
+    (129029, 'GNSS Position Data'),
+    (129539, 'GNSS DOPs'),
+    (129540, 'GNSS Sats in View'),
+    (130306, 'Wind Data')
+], columns=['id', 'Description'])
+
+PGN_WHITELIST = PGNS.loc[:, 'id'].tolist()
+

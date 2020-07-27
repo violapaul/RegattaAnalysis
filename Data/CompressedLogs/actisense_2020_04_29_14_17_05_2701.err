@@ -1,0 +1,4 @@
+Attempt 1
+ERROR 2020-04-29T21:17:07.361Z [actisense-serial] DLE followed by unexpected char 00, ignore message
+ERROR 2020-04-29T21:17:07.361Z [actisense-serial] DLE followed by unexpected char F0, ignore message
+ERROR 2020-04-29T21:17:07.361Z [actisense-serial] Ignoring message with invalid checksum

@@ -21,8 +21,8 @@ moviepy.config.change_settings(dict(FFMPEG_BINARY="/Users/viola/Bin/ffmpeg"))
 
 # RESOLUTION
 
-w = 1440
-h = 807
+stars = ImageClip('Data/Images/movie_grab_01.png')
+w, h = stars.size
 moviesize = w, h
 
 
@@ -101,7 +101,6 @@ warped_txt.mask = warped_txt.mask.fl_image(fl_mask)
 
 # BACKGROUND IMAGE, DARKENED AT 60%
 
-stars = ImageClip('/Users/viola/tmp/test.png')
 stars_darkened = stars.fl_image(lambda pic: (0.6*pic).astype('int16'))
 
 
@@ -113,9 +112,12 @@ final = CompositeVideoClip([
                            size = moviesize)
 
 
+final.show(1.5, interactive = True)
+
+
 import time
 tic = time.perf_counter()
-final.set_duration(8).write_videofile("starworms.mp4", fps=30, logger=None)
+final.set_duration(8).write_videofile("starworms.mp4", fps=30, codec='hevc_videotoolbox', logger=None)
 toc = time.perf_counter()
 print(toc-tic)
 
@@ -124,8 +126,7 @@ import cProfile
 
 # WRITE TO A FILE
 
-cProfile.run('final.set_duration(8).write_videofile("starworms.mp4", fps=30, logger=None)', 'profile')
-
+cProfile.run('final.set_duration(8).write_videofile("starworms.mp4", codec="hevc_videotoolbox", fps=30, logger=None)', 'profile')
 import pstats
 
 p = pstats.Stats('profile')

@@ -6,8 +6,6 @@ Also manages metadata for each race.
 import os
 import itertools as it
 import re
-import datetime
-import pytz
 from types import SimpleNamespace
 
 from numba import jit
@@ -16,75 +14,9 @@ import pandas as pd
 import numpy as np
 
 from global_variables import G
-import utils
+from utils import DictClass
 import process as p
-
-# Race Log Metadata is stored in the "log info" dataframe. #############################################
-
-EMPTY_LOG_INFO_ROW = dict(file='', race='', begin=0, end=-1, description='')
-
-def datetime_from_log_filename(filename, time_zone='US/Pacific'):
-    "Extracts the datetime from a log filename."
-    dt_string = re.sub(r".gz$", "", filename)   # Could be compressed
-    dt_string = re.sub(r".pd$", "", dt_string)  # Standard .pd
-    dt = datetime.datetime.strptime(dt_string, '%Y-%m-%d_%H:%M')
-    return pytz.timezone(time_zone).localize(dt)
-
-
-def loginfo_new_row(file, race='', begin=0, end=-1, description=''):
-    dt = datetime_from_log_filename(file)
-    new_row = dict(file=file, datetime=dt, race=race, begin=begin, end=end, description=description)
-    return {**EMPTY_LOG_INFO_ROW, **new_row}
-
-
-def add_log_info_rows(log_info, files):
-    new_rows = []
-    for f in files:
-        print(f"Adding {f}")
-        new_rows.append(loginfo_new_row(f))
-    return log_info.append(new_rows, ignore_index=True)
-
-
-def save_updated_log_info(log_info_df):
-    "Save an updated log_info DataFrame."
-
-    # Backup the old data (since data is precious)
-    backup_file = utils.backup_file(G.LOG_INFO_PATH)
-    print(f"Backed up log info data to {backup_file}")
-
-    # Overwrite the original file.
-    log_info_df.to_pickle(G.LOG_INFO_PATH)
-
-
-def read_log_info():
-    "Read the current log info dataframe."
-    return pd.read_pickle(G.LOG_INFO_PATH)
-
-
-def find_new_logs(log_info):
-    "Let's find new logs that do not yet have an entry."
-
-    # All the known logs (may not include new files)
-    known_logs = set(log_info.file)
-
-    # Grab all the log files.
-    files = os.listdir(G.PANDAS_LOGS_DIRECTORY)
-
-    # Keep those that are race logs
-    race_files = sorted([f for f in files if re.match('^20.*.pd.gz$', f)])
-
-    # Just keep those that are missing
-    return [f for f in race_files if f not in known_logs]
-
-
-def get_log(log_info, filename_prefix):
-    "Return a log_info entry that where the provided filename_prefix matches."
-    match = log_info.file.str.startswith(filename_prefix)
-    matches = log_info[match]
-    if len(matches) > 0:
-        return log_info[match].iloc[0]
-    else:
-        return None
+import metadata
 
 
 # COLUMN CLEANUP ################################################################
@@ -246,7 +178,7 @@ def heel_corrected_apparent_wind(df):
     df['scaws'] = np.sqrt(np.square(saw_n) + np.square(scaw_e))
 
 
-def process_sensors(df, causal=False, cutoff=0.3):
+def process_sensors(df, causal=False, cutoff=0.3, compute_true_wind=True):
     """
     Process sensor data to normalize and smooth.  Note, this done on the boat, before
     display, in real-time, but not logged.  We do our best to simulate that here.
@@ -270,6 +202,7 @@ def process_sensors(df, causal=False, cutoff=0.3):
     if 'rtwa' in df.columns:
         df['boat_twa'] = p.sign_angle(df.rtwa)
         df['twa'] = p.sign_angle(df.rtwa)
+        df['rtwa'] = p.sign_angle(df.rtwa)        
     if 'rtws' in df.columns:
         df['boat_tws'] = df.rtws
         df['tws'] = df.rtws
@@ -352,7 +285,7 @@ def compute_record_times(df):
 def read_log_file(pickle_file, skip_dock_only=True, discard_columns = True,
                   rename_columns=True, trim=True,
                   process=True, cutoff=0.3,
-                  path=None):
+                  path=None, compute_true_wind=True):
     """
     SKIP_DOCK_ONLY filters examples where the boat never gets of the dock, otherwise returns None
     DISCARD_COLUMNS drops columns that are not particular helpful
@@ -388,43 +321,57 @@ def read_log_file(pickle_file, skip_dock_only=True, discard_columns = True,
         df = df[df.isna().sum(1) == 0]
     df.filename = pickle_file
     if process:
-        process_sensors(df, causal=False, cutoff=cutoff)
+        process_sensors(df, causal=False, cutoff=cutoff, compute_true_wind=compute_true_wind)
         compute_record_times(df)
     return df
 
-def read_logs(log_entries, skip_dock_only=True, discard_columns = True,
-              rename_columns=True, trim=True,
-              race_trim=True,
-              process=True, cutoff=0.3,
-              path=None):
+
+def read_logs(log_entries, race_trim=True, **args):
     """
     SKIP_DOCK_ONLY filters examples where the boat never gets of the dock
     CUTOFF is the Butterworth cutoff frequency for smoothing, in Hz.
     """
     dfs = []
     for i, log in zip(it.count(), log_entries):
+        G.logger.info(f"Reading file {log.file}")
         pickle_file = log.file
-        df = read_log_file(pickle_file,
-                           skip_dock_only=skip_dock_only, discard_columns=discard_columns,
-                           rename_columns=rename_columns, trim=trim, process=process, cutoff=cutoff,
-                           path=path)
+        df = read_log_file(pickle_file, **args)
+        G.logger.info(f"Found {len(df)} records before trim.")
         if race_trim:
             df = df.iloc[log.begin: log.end].copy()
+            G.logger.info(f"Trimming to {log.begin} {log.end}")
+        # Weird requirement that you can't add a dict to a Dataframe
+        # https://stackoverflow.com/a/54137536
         ns = SimpleNamespace(**log)
         df.log = ns
         dfs.append(df)
     valid_dfs = [df for df in dfs if df is not None]
     return valid_dfs, pd.concat(valid_dfs, sort=True, ignore_index=True)
 
-def read_dates(dates):
+def read_date(date, **args):
+    dfs, races, bigdf = read_dates([date], **args)
+    if len(dfs) < 1:
+        raise Exception(f"Date not found {date}.")
+    return dfs[0], races[0]
+
+def read_dates(dates, **args):
     "Convience function.  Given a list of text dates YYYY-MM-DD, will return races on those dates."
-    log_info = read_log_info()
+    md = metadata.read_metadata()
     races = []
     for date in dates:
-        log = get_log(log_info, date)
+        log = md.dates.get(date, None)
         if log is None:
             print(f"Warning, {date} could not be found in the race logs.")
         else:
-            races.append(log)
-    df, big_df = read_logs(races, path=G.PANDAS_LOGS_DIRECTORY)
+            # Casting to a DictClass for convenience
+            races.append(DictClass(**log))
+    df, big_df = read_logs(races, path=G.PANDAS_LOGS_DIRECTORY, **args)
     return df, races, big_df
+
+def trim_race(race, begin, end):
+    "Trim the race data by specifying the begin/end.  Used to trim away time at the dock, etc."
+    race.begin = begin
+    race.end = end
+    # casting back to a dict to support YAML serialization
+    race_dict = dict(**race)
+    metadata.update_race(race_dict)

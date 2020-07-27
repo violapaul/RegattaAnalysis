@@ -1,180 +1,1908 @@
+file: 2019-10-04_16:43.pd.gz
+date: '2019-10-04'
+title: Sail to Everett for Foulweather Bluff Race.
+begin: 0
+end: -1
+source: loginfo
+description: ''
 ---
-date: "2020-04-16"
-name: Tune-up with Creative
+file: 2019-10-05_09:18.pd.gz
+date: '2019-10-05'
+title: Foulweather Bluff Race
+begin: 36051
+end: 258396
+source: loginfo
+description: Foulweather Bluff Race
+---
+file: 2019-10-11_17:38.pd.gz
+date: '2019-10-11'
+title: Short practice, upwind tacks and downwind jibes.
+begin: 0
+end: -1
+source: loginfo
+description: ''
+---
+file: 2019-10-12_09:45.pd.gz
+date: '2019-10-12'
+title: CYC PSSC Day 1
+begin: 19081
+end: 233893
+source: loginfo
+description: CYC PSSC Day 1
+---
+file: 2019-10-18_13:51.pd.gz
+date: '2019-10-18'
+title: Short, at dock.
+description: ''
+begin: 0
+end: -1
+source: loginfo
+---
+file: 2019-10-19_09:45.pd.gz
+date: '2019-10-19'
+title: STYC Fall Regatta
+begin: 0
+end: -1
+source: loginfo
+description: STYC Fall Regatta.
+---
+file: 2019-10-26_09:40.pd.gz
+date: '2019-10-26'
+title: Grand Prix Saturday
+begin: 40503
+end: 87408
+source: loginfo
+description: Grand Prix Saturday.
+---
+file: 2019-11-07_12:46.pd.gz
+date: '2019-11-07'
+title: Short, at dock.
+description: ''
+begin: 0
+end: -1
+source: loginfo
+---
+file: 2019-11-16_10:09.pd.gz
+date: '2019-11-16'
+title: 'Snowbird #1'
+begin: 41076
+end: 111668
+source: loginfo
+description: 'Snowbird #1.'
+---
+file: 2019-11-23_10:23.pd.gz
+date: '2019-11-23'
+title: Practice.
+begin: 0
+end: -1
+source: loginfo
+description: ''
+---
+file: 2019-11-24_10:33.pd.gz
+date: '2019-11-24'
+title: Practice.
+begin: 0
+end: -1
+source: loginfo
+description: ''
+---
+file: 2019-11-29_12:54.pd.gz
+date: '2019-11-29'
+title: Longer.  At dock for data collection.
+begin: 0
+end: -1
+source: loginfo
+description: ''
+---
+file: 2019-12-06_11:25.pd.gz
+date: '2019-12-06'
+title: Short, at dock.
+begin: 0
+end: -1
+source: loginfo
+description: ''
+---
+file: 2019-12-07_09:47.pd.gz
+date: '2019-12-07'
+title: 'Snowbird #2'
+begin: 54316
+end: 109378
+source: loginfo
+description: 'Snowbird #2.'
+---
+file: 2020-01-18_10:50.pd.gz
+date: '2020-01-18'
+title: Practice
+begin: 0
+end: -1
+source: loginfo
+description: ''
+---
+file: 2020-01-25_14:23.pd.gz
+date: '2020-01-25'
+title: STYC Iceberg
+begin: 0
+end: -1
+source: loginfo
+description: Lot's of wind was predicted, but we got little.  We swapped on older
+  sails, and the rig was super tight.  WE WERE SLOW!
+---
+file: 2020-02-08_10:23.pd.gz
+date: '2020-02-08'
+title: 'Snowbird #4'
+begin: 32000
+end: 130010
+source: loginfo
+description: 'Snowbird #4.'
+---
+file: 2020-02-16_11:18.pd.gz
+date: '2020-02-16'
+title: ''
+begin: 0
+end: -1
+source: loginfo
+description: ''
+---
+file: 2020-02-29_10:24.pd.gz
+date: '2020-02-29'
+title: Practice
+begin: 0
+end: -1
+source: loginfo
+description: ''
+---
+file: 2020-03-07_09:28.pd.gz
+date: '2020-03-07'
+title: CYC, Blakely Rocks, CSS
+begin: 26719
+end: 192079
+source: loginfo
+description: Great day!  Good speed, both upwind and down.
+---
+file: 2020-03-14_10:24.pd.gz
+date: '2020-03-14'
+title: ''
+begin: 0
+end: -1
+source: loginfo
+description: ''
+---
+file: 2020-03-21_16:01.pd.gz
+date: '2020-03-21'
+title: ''
+begin: 0
+end: -1
+source: loginfo
+description: ''
+---
+file: 2020-03-22_11:06.pd.gz
+date: '2020-03-22'
+title: ''
+begin: 0
+end: -1
+source: loginfo
+description: ''
+---
+file: 2020-03-31_12:04.pd.gz
+date: '2020-03-31'
+title: ''
+begin: 0
+end: -1
+source: loginfo
+description: ''
+---
+file: 2020-04-04_10:03.pd.gz
+date: '2020-04-04'
+title: ''
+begin: 0
+end: -1
+source: loginfo
+description: ''
+---
+file: 2020-04-08_10:49.pd.gz
+date: '2020-04-08'
+title: ''
+begin: 40409
+end: 130577
+source: loginfo
+description: ''
+---
+file: 2020-04-12_10:29.pd.gz
+date: '2020-04-12'
+title: Tune Up
+begin: 46325
+end: 68933
+source: loginfo
+description: Quick tune up race vs. Creative.  We raced upwind from West Point to
+  Meadow Point.  They were definitely a bit faster.
+---
+file: 2020-04-16_14:54.pd.gz
+date: '2020-04-16'
+title: Tune-up with Creative
+begin: 27053
+end: 99221
+source: byhand
+description: null
+crew:
+- Paul
+- Sara
 purpose: tune_up
-conditions: >-
-  Beautiful day. Winds were 3 quickly building to 10ish. Flat
-  seas. Upwind to Pt. Wells buoy, raised and raced home to the hamburger.
-performance: >-
-  Good height and speed vs. Creative on the way upwind. Perhaps a bit
-  slow at first downwind, exploring to tradeoffs between depth and
-  speed.  Best downwind speed when I was at the shrouds and Sara had a
-  hand on the mainsheet.
-learnings: >-
-  Let the sails out for downwind: both main and kite.  Stand forward
-  if possible.
+conditions: Beautiful day. Winds were 3 quickly building to 10ish. Flat seas. Upwind
+  to Pt. Wells buoy, raised and raced home to the hamburger.
+performance: Good height and speed vs. Creative on the way upwind. Perhaps a bit slow
+  at first downwind, exploring to tradeoffs between depth and speed.  Best downwind
+  speed when I was at the shrouds and Sara had a hand on the mainsheet.
+learnings: 'Let the sails out for downwind: both main and kite.  Stand forward if
+  possible.
 
-  Shroud settings seemed really great, and versatile.  With only 2 on
-  the boat, we sailed very well.  These settings are the new base!
-raceqs_video: "https://youtu.be/9a5bLeZw8EM"
-raceqs: "https://raceqs.com/tv-beta/tv.htm#userId=1146016&divisionId=64190&updatedAt=2020-04-17T18:05:59Z&dt=2020-04-16T15:43:47-07:00..2020-04-16T17:39:12-07:00&boat=Creative"
+  Shroud settings seemed really great, and versatile.  With only 2 on the boat, we
+  sailed very well.  These settings are the new base!'
+raceqs_video: https://youtu.be/9a5bLeZw8EM
+raceqs: https://raceqs.com/tv-beta/tv.htm#userId=1146016&divisionId=64190&updatedAt=2020-04-17T18:05:59Z&dt=2020-04-16T15:43:47-07:00..2020-04-16T17:39:12-07:00&boat=Creative
+wind:
+- 4
+- 10
+shroud_name: New "base"?
+shroud_tension:
+- 29
+- 10
+- 0
 segments:
-  - winds: [6, 12]
-  - shrouds:
-      tensions: [29, 10, 0]
-      port: [2.251, 1.953, 999]
-      stbd: [2.271, 1.959, 999]
-    shroud_thoughts: >-
-      Overall we have had trouble with the Quantum quick tune card,
-      where the uppers are a bit too loose or the middles too tight.
-      The result is that the mast falls off at the top, rather than
-      staying straight or sagging for power.  We took a bit off the
-      middle (12 down to 10).
-
+- winds:
+  - 6
+  - 12
+  tensions:
+  - 29
+  - 10
+  - 0
+  port:
+  - 2.251
+  - 1.953
+  - 999
+  stbd:
+  - 2.271
+  - 1.959
+  - 999
+  thoughts: Overall we have had trouble with the Quantum quick tune card, where the
+    uppers are a bit too loose or the middles too tight. The result is that the mast
+    falls off at the top, rather than staying straight or sagging for power.  We took
+    a bit off the middle (12 down to 10).
 ---
-date: "2020-04-19"
-name: Tune-up with Creative
+file: 2020-04-19_12:00.pd.gz
+date: '2020-04-19'
+title: Tune-up with Creative
+begin: 19979
+end: 137718
+source: byhand
+description: ''
+crew:
+- Paul
+- Sara
 purpose: tune_up
-conditions: >-
-  Beautiful day. Very light at times, almost glassy.
-performance: >-
-  Good height and speed vs. Creative.  Generally Creative sails lower and
-  faster, and it can be super hard to know who is winning.  
-  
-  We sailed both with 'full depth' sails (no backstay, high traveler,
-  little outhaul, light halyards) and with "flat sails" (4 inches of
-  backstay, outhaul, tighter halyards).  I am not sure there was a
-  clear winner from looking at the video.  We sailed higher on flat
-  sails, without much speed penalty.  The height is very clear near
-  the end of the video.
+conditions: Beautiful day. Very light at times, almost glassy.
+performance: 'We were expecting a super light day, and it did not disappoint. Often
+  below the 3 knots, though most of the time we had enough wind to move.
 
-  I do know there was a point when we were flat where we encountered
-  some smallish waves from a powerboat...  we seemed to stop in our
-  tracks.  And if the wind were to come up (to 6 or 8), "full sails"
-  would be right.
+  Good height and speed vs. Creative.  Generally Creative sails lower and faster,
+  and it can be super hard to know who is winning.
 
-  The only recent race where I would consider "flat" would be
-  Foulweather Bluff.  Hours of flat and glassy with less than 3 knots
-  of wind.  It took us a while to get in the groove on flat...  so a
-  very long leg would be needed.
-learnings: >-
-  Based on Al's advice, we got a bit more speed and height by lowering
-  traveller a bit and sheeting on more.
-setting_thoughts: >-
-  We were expecting a super light day, and it did not disappoint.
-  Often below the 3 knots, though most of the time we had enough wind
-  to move.
-raceqs_video: "https://youtu.be/BVhUOwI-SuE"
-raceqs: "https://raceqs.com/tv-beta/tv.htm#userId=1146016&divisionId=64201&updatedAt=2020-04-20T03:11:15Z&dt=2020-04-19T12:22:45-07:00..2020-04-19T13:53:49-07:00&boat=Peer%20Gynt"
+  We sailed both with "full depth" sails (no backstay, high traveler, little outhaul,
+  light halyards) and with "flat sails" (4 inches of backstay, outhaul, tighter halyards).  I
+  am not sure there was a clear winner from looking at the video.  We sailed higher
+  on flat sails, without much speed penalty.  The height is very clear near the end
+  of the video.
+
+  I do know there was a point when we were flat where we encountered some smallish
+  waves from a powerboat...  we seemed to stop in our tracks.  And if the wind were
+  to come up (to 6 or 8), "full sails" would be right.
+
+  The only recent race where I would consider "flat" would be Foulweather Bluff.  Hours
+  of flat and glassy with less than 3 knots of wind.  It took us a while to get in
+  the groove on flat...  so a very long leg would be needed.'
+learnings: Based on Al's advice, we got a bit more speed and height by lowering traveller
+  a bit and sheeting on more.
+raceqs_video: https://youtu.be/BVhUOwI-SuE
+raceqs: https://raceqs.com/tv-beta/tv.htm#userId=1146016&divisionId=64201&updatedAt=2020-04-20T03:11:15Z&dt=2020-04-19T12:22:45-07:00..2020-04-19T13:53:49-07:00&boat=Peer%20Gynt
 segments:
-  - shrouds: null
-    shroud_thoughts: >-
-
+- tensions: null
+  thoughts: ''
 ---
-date: "2020-04-24"
-name: Tune-up with Creative
+file: 2020-04-24_15:10.pd.gz
+date: '2020-04-24'
+title: Tune-up with Creative
+begin: 32140
+end: 130560
+source: byhand
+description: Sailed up from Elliott Bay. Met Creative in the middle.
+crew:
+- Paul
+- Sara
 purpose: tune_up
-conditions: >-
-  Super light winds from the SSE (1-3) during tuneup.  Gave up a bit early.  After, on
-  the way back, winds picked up to 8-10.
+conditions: 'Super light winds from the SSE (1-3) during tuneup.  Gave up a bit early.  After,
+  on the way back, winds picked up to 8-10.
 
-  There should have been a large have been a large current heading
-  south, due to a large flood.  The interactions between southerly
-  current and winds from the south may have been complex.
-performance: >-
-  We tried flat sails again vs. Creative and did not do well.
-  Initially it seemed OK, but then they just pulled away (perhaps as
-  we encountered wake from passing barge.)
-learnings: >-
-  
-observations: >-
-  
-questions: 
-  - text: Was the prop set correctly?
-    author: sara
-    context: Were we slower on one tack than the other? 
-    proposed_solution: ??
-  - text: Were the middles too tight?
-  - text: Is flat ever a good thing?
-    author: paul
-    context: >-
-      At times it seems that we can sail higher on flat sails, without losing too much speed.  But when we encounter waves, we seem to stop.  
-  
-raceqs_video: 
-raceqs: 
+  There should have been a strong current heading south, due to a large flood.  The
+  interactions between southerly current and winds from the south may have been complex.'
+performance: We tried flat sails again vs. Creative and did not do well. Initially
+  it seemed OK, but then they just pulled away (perhaps as we encountered wake from
+  passing barge.)
+questions:
+- text: Was the prop set correctly?
+  author: sara
+  context: Were we slower on one tack than the other?
+  proposed_solution: ??
+- text: Were the middles too tight?
+- text: Is flat ever a good thing in super light conditions?
+  author: paul
+  context: 'At times it seems that we can sail higher on flat sails, without losing
+    too much speed.  But when we encounter waves, we seem to stop.  '
+raceqs_video: null
+raceqs: null
 segments:
-  - shrouds: [21, 7, 0]
-    shroud_thoughts: >-
-      Overall we have had trouble with the Quantum quick tune card,
-      where the uppers are a bit too loose or the middles too tight.
-      The result is that the mast falls off at the top, rather than
-      staying straight or sagging for power.
-
-
+- tensions:
+  - 21
+  - 7
+  - 0
+  thoughts: Overall we have had trouble with the Quantum quick tune card, where the
+    uppers are a bit too loose or the middles too tight. The result is that the mast
+    falls off at the top, rather than staying straight or sagging for power.
 ---
-date: "2020-04-28"
-name: Fun sail.
+file: 2020-04-26_14:26.pd.gz
+date: '2020-04-26'
+title: Return from Elliott Bay
+begin: 0
+end: -1
+source: byhand
+description: ''
+---
+file: 2020-04-28_16:43.pd.gz
+date: '2020-04-28'
+title: Fun sail.
+begin: 0
+end: -1
+source: byhand
+description: ''
 purpose: practice
-crew: [Paul, Sara]
-conditions: >-
-  Overcast.  Calm as we arrived on dock, but then it picked up to 10-15.  A bit rough.
-performance: >-
-  Good. Given the conditions we did not see too much weather helm, nor
+crew:
+- Paul
+- Sara
+conditions: Overcast.  Calm as we arrived on dock, but then it picked up to 10-15.  A
+  bit rough.
+performance: Good. Given the conditions we did not see too much weather helm, nor
   a lot of heel.  Seemed faster on stbd than port.
-learnings: >-
-  
-observations: >-
-  
-questions: 
-  - text: Is it OK if the leward shrouds are slack (1 inch).
-    author: paul
-    context: Various articles say it is not great.
-    proposed_solution: ??
-raceqs_video: 
-raceqs: 
+questions:
+- text: Is it OK if the leward shrouds are slack (1 inch).
+  author: paul
+  context: Various articles say it is not great.
+  proposed_solution: ??
+raceqs_video: null
+raceqs: null
 segments:
-  - shrouds: [34, 16, 0]
-    shroud_thoughts: >-
-      Leward upper was lose at times, with about a 1 inch circle.
-      Leward middle was snug.  The top fell off to leward when
-      pressure was high.  Even with 4-5 backstay, there was still
-      noticable sag in the headstay.
+- tensions:
+  - 34
+  - 16
+  - 0
+  thoughts: 'Leward upper was lose at times, with about a 1 inch circle. Leward middle
+    was snug.  The top fell off to leward when pressure was high.  Even with 4-5 backstay,
+    there was still noticable sag in the headstay.
 
-      Perhaps we could have gone a bit tigher overall.  Tighter up to
-      control fall off.  Tighter middles/lower to transfer more
-      tension to headstay.  But it is not clear if that would be
-      faster.  The boat did not show excessive heel or weather helm.
-
-
+    Perhaps we could have gone a bit tigher overall.  Tighter up to control fall off.  Tighter
+    middles/lower to transfer more tension to headstay.  But it is not clear if that
+    would be faster.  The boat did not show excessive heel or weather helm.'
 ---
-date: "2020-05-04"
-name: Raises and Douses, part 2.
+file: 2020-05-01_16:46.pd.gz
+date: '2020-05-01'
+title: ''
+begin: 0
+end: -1
+source: loginfo
+description: ''
+---
+file: 2020-05-04_17:18.pd.gz
+date: '2020-05-04'
+title: Raises and Douses, part 2.
+begin: 0
+end: -1
+source: byhand
+description: ''
 purpose: practice
-crew: [Paul, Sara]
-conditions: >-
-  Light winds and then building.
-performance: >-
-  Once again, sailed higher (faster?) on stbd than port.
-learnings: ""
-observations: >-
-  Way better!  We handled every transition without a major mistake.
-  Need to get better at rounding upwind and trimming to accelerate.
-  Don't be a afraid to reach a bit to keep up speed.  Proposal: set
-  the wheel to a gradual upwind turn, and then keep pulling in
-  mainsheet to keep up.  Alternative reach more and wait for the spin
-  stuff to be done.
-warnings: >-
-  We adjusted the AWA offset from -4 degrees back to 0.0 (Tutmark
-  adjusted it, seemed OK at the time, and it just does not seem right
-  anymore.  Perhaps after we re-set the mast things went back?
-questions: []
-raceqs_video: 
-raceqs: ""
-segments: 
-  - shrouds: [22, 10, 0]
-    name: "super light"
-    shroud_thoughts: >-
-      Good sag at light wind, down to 3-4.  Below that straight.
-      Seemed to work OK up to 10, not too much helm. Note, at 10
-      leeward upper had 2 inches of play.
-    
+crew:
+- Paul
+- Sara
+conditions: Light winds and then building.
+performance: Once again, sailed higher (faster?) on stbd than port.
+observations: 'Way better!  We handled every transition without a major mistake. Need
+  to get better at rounding upwind and trimming to accelerate. Don''t be a afraid
+  to reach a bit to keep up speed.  Proposal: set the wheel to a gradual upwind turn,
+  and then keep pulling in mainsheet to keep up.  Alternative reach more and wait
+  for the spin stuff to be done.'
+warnings: We adjusted the AWA offset from -4 degrees back to 0.0 (Tutmark adjusted
+  it, seemed OK at the time, and it just does not seem right anymore.  Perhaps after
+  we re-set the mast things went back?
+raceqs_video: null
+raceqs: ''
+segments:
+- tensions:
+  - 22
+  - 9
+  - 0
+  name: super light
+  thoughts: Good sag at light wind, down to 3-4.  Below that straight. Seemed to work
+    OK up to 10, not too much helm. Note, at 10 leeward upper had 2 inches of play.
+---
+file: 2020-05-06_18:50.pd.gz
+date: '2020-05-06'
+title: Out with Marisa
+begin: 0
+end: -1
+source: byhand
+description: Went out with Marisa to practice for cohabitation race
+purpose: practice
+crew:
+- Paul
+- Sara
+- Marisa
+conditions: 16 kits consistent.  Some sea state.
+performance: Lots of speed and lots of heel.  To keep the boat under control we did
+  not attempt to sail fast.
+learnings: 'Departure was tricky with strong wind from north blowing bow off before
+  stern line unhooked and reversing '
+wave: 1-2
+wind:
+- 8
+- 14
+settings: Not quite right
+shroud_name: Light wind
+shroud_tension:
+- 29
+- 9
+- 0
+raceqs_video: null
+raceqs: ''
+segments:
+- tensions:
+  - 29
+  - 9
+  - 0
+  name: New base?
+  start: 2020-05-07 01:55:49.483760
+  end: 2020-05-07 02:21:44.624995
+  thoughts: I believe these are Sara's new base settings.  Did not get up to look
+    at the mast.  Conditions were higher than expected, so there is a chance these
+    were too loose.  We went pretty well, but were not out long enough to make any
+    real conclusions.
+---
+file: 2020-05-08_17:18.pd.gz
+date: '2020-05-08'
+title: Practice
+begin: 8497
+end: 69171
+source: gsheet
+description: 'Good day at about 13 knots.   Nice weather.  Just before high tide.  Current
+  pushing out as we left the dock. Just Sara Paul on the boat.  We went pretty far
+  up north doing tuneup. We needed Cunningham and back stay on. We have the rig tune
+  for base setting  10 to 40 nots.  We tried the leward spin drop for the first time.  10
+  knots as we dropped. '
+purpose: practice
+crew:
+- Sara
+- Paul
+conditions: 'Weird wind shift at the end of our excursion '
+performance: 'No other boats out there. '
+learnings: 'We can do a leward drop. '
+wave: 1-2
+wind:
+- 8
+- 14
+settings: 3 inches on the back stay main ion on tight Cunningham on six and we could
+  point pretty well pointing. Pointing was sensitive to Halyard adjustments
+shroud_name: Base
+shroud_tension:
+- 36
+- 17
+- -2
+other: 'Prep for Cohabitation Race after lockdown.  Lots of people around on the dock. '
+timestamp: 2020-05-08 21:32:07-07:00
+shroud_tensions: 36, 17, -2
+---
+file: 2020-05-09_08:40.pd.gz
+date: '2020-05-09'
+title: Cohabitate Race
+begin: 30682
+end: 197069
+source: byhand
+description: Great day on the water. Range from 10-15 Jordi of the day. Marisa came
+  along with us.  We had a pretty major disappointment when we tried to drop the spinnaker
+  using the letter box.
+purpose: race
+crew:
+- Sara
+- Marisa
+- Paul
+conditions: 'Oscillating wind from the north.  '
+performance: "Came in second place behind Poke and Dystroy.   Beat Jadad by like an
+  hour. Chris wasn\u2019t on that boat.  He was on Gamon"
+learnings: "Learn the letterbox drop.  Don\u2019t Try new things with Marisa on the
+  boat.  She is likely to panic if things go Wong.  Hand Paul the wheel when strat. "
+wave: 1-2
+wind:
+- 8
+- 14
+settings: 'It was trimmed out well. All adjusted the upper shroud tensions while we
+  were out on the water.. We went out with light wind setting. '
+shroud_name: 'Modified '
+shroud_tension:
+- 44
+- 10
+- 2
+other: 'Lube turnbuckles '
+timestamp: 2020-05-09 23:37:05
+---
+file: 2020-05-11_16:01.pd.gz
+date: '2020-05-11'
+title: 'Practice '
+begin: 0
+end: -1
+source: gsheet
+description: 'Goal was to try letterbox again but conditions were challenging. '
+purpose: practice
+crew:
+- Sara
+- Paul
+conditions: 'Overcast with swirling wind from all four directions.  Low tide at -1.9,
+  with wind from the south mostly.  '
+performance: 'Nobody else out.  Boat felt hard to control '
+learnings: 'Always check shrouds at the dock. '
+wave: 1-2
+wind:
+- 12
+- 18
+port_pointing: 25-27
+stbd_pointing: 28-30
+settings: Tight
+shroud_name: Mystery
+other: 'Try to get breast line on tight in docking.  '
+timestamp: 2020-05-18 12:53:05-07:00
+fluids: Empty Bilge?
+---
+file: 2020-05-15_16:51.pd.gz
+date: '2020-05-15'
+title: Practice with Beth and Holm
+begin: 0
+end: -1
+source: gsheet
+description: Friday evening sunset sail.  Did some raises and douses
+purpose: practice
+crew:
+- Sara
+- Paul
+conditions: Nice. Warm
+performance: Very similar to Gusto
+learnings: 'Stay out for snacks at sunset. '
+wave: flat
+wind:
+- 4
+- 10
+port_pointing: 31-33
+stbd_pointing: 20-24
+shroud_name: Light wind
+shroud_tension:
+- 29
+- 9
+- 0
+timestamp: 2020-05-16 23:40:15-07:00
+shroud_tensions: 29,9,0
+---
+file: 2020-05-16_10:06.pd.gz
+date: '2020-05-16'
+title: Cohab 2 race
+begin: 9771
+end: 146553
+source: gsheet
+description: Paul organized this race. The course was nwmn That means hamburger, West
+  Point buoy , Meadowpoint, hamburger. It was supposed to be much longer but there
+  was not much wind
+purpose: race
+crew:
+- Sara
+- Paul
+conditions: Very light to no wind at times. Strong current to start pushing us 1.2
+  knots south. Wind came from south and east and north.  It was hard to figure out
+  when to use the spinnaker
+performance: 'Good on down wind. Recovered from a bad start in current and no wind.   Lost
+  a lot to Poke on the upwind.  '
+learnings: "If you can\u2019t take because the wind is so light you may be able to
+  gybe. "
+wave: flat
+wind:
+- 0
+- 6
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: 'Lots of twist. No back stay.  No Cunningham '
+shroud_name: 'Extra light wind. No yet on chart. '
+shroud_tension:
+- 24
+- 7
+- 0
+other: Engine ran well
+timestamp: 2020-05-16 23:37:18-07:00
+fluids: Empty Bilge?
+shroud_tensions: 24, 7,0
+---
+file: 2020-05-18_17:16.pd.gz
+date: '2020-05-18'
+title: ''
+begin: 16126
+end: 118579
+source: loginfo
+description: ''
+---
+file: 2020-05-23_09:31.pd.gz
+date: '2020-05-23'
+title: Cohab 3
+begin: 31667
+end: 157264
+source: gsheet
+description: 'Nwmn and we went to West Point again.  We tried hard to use current
+  data but it was hard. Extra hard rounding at meadow poi t due to southern current. '
+purpose: race
+crew:
+- Sara
+- Paul
+conditions: 'Light wind from the south. '
+performance: Good upwind. Lost on down wind leg
+learnings: "Review timing to turn down on windward drop.  Paul should not yell \u201Cgo
+  down \u201C when he means go straight. We almost hit West Point buoy. Wear sunscreen. "
+wave: flat
+wind:
+- 0
+- 6
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: Lots of twist.  Cars at 6
+shroud_name: 'Light wind '
+shroud_tension:
+- 27
+- 7
+- 0
+other: "Current was very strong at meadow point. \nCleaned bathroom.  Tape remover
+  applied.  Spin left for starboard raise. Repaired bathroom door hinges.  Repairs
+  clasp on starboard side lazarette  "
+timestamp: 2020-05-23 17:32:46-07:00
+fluid_comments: 'Used some water for flushing '
+fluids: Empty Bilge?
+shroud_tensions: 27,7,0
+---
+file: 2020-05-27_18:53.pd.gz
+date: '2020-05-27'
+title: '2020-05-27'
+begin: 8906
+end: 56930
+source: logprocess
+---
+file: 2020-05-29_17:56.pd.gz
+date: '2020-05-29'
+title: 'Practice '
+begin: 12497
+end: 55463
+source: gsheet
+purpose: practice
+crew:
+- Sara
+- Paul
+description: We did  nmnmn.  Practiced windward douse twice and one Mexican.  Wind
+  from the nor  th and current pushing south
+conditions: 'Nice!  Wind went up and down rapidly. '
+performance: No boats out
+learnings: 'Pull out jib early on dowse when double at 8 boat lengths. Paul wants
+  spin halyard burped on windward strip even before tack open.  Bow should also pull
+  foot if sheet is stuck. '
+warnings: New tennis balls
+wave: 1-2
+wind:
+- 8
+- 14
+port_pointing: 20-24
+stbd_pointing: 28-30
+settings: Back stay on and off a bunch
+shroud_name: Base
+shroud_tension:
+- 34
+- 17
+- 0
+timestamp: 2020-05-29 21:18:34-07:00
+fluid_comments: 'Water in sink for some reason. '
+fluids: Empty Bilge?
+shroud_tensions: 34, 17, 0
+---
+file: 2020-05-31_09:08.pd.gz
+date: '2020-05-31'
+title: 'Cohab #4'
+begin: 41181
+end: 146094
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+description: "Solid day of racing against \u201CMore Uff Da\u201D and \u201CJaded\u201D.
+  \ Victoria was out there too. Raining at points but dried up on the long leg. Course
+  was nbwmnun. Our start was 10:26:19am. Finished at 1:12.  I think we won!  But still
+  need to calculate the handicap. "
+conditions: 'Breeze started from the south as we warmed up but clocked around to the
+  East so we raised spin at start on a port tack to Ballard buoy and stayed on spin
+  to West Point.  Mexican at West Point and  went north on stbd. '
+performance: 'We caught up on the long upwind leg. Then they tacked when they should
+  not have to go to the mark. The U mark was new to many of us. '
+learnings: "Know your marks.  Think about angles.  If we can go 8 on spin or 6 on
+  jib and higher then what\u2019s best.   Check the math on this course. "
+wave: flat
+wind:
+- 4
+- 10
+port_pointing: 25-27
+stbd_pointing: 20-24
+settings: 'Jib sheet in tight.  Travelor up to bench. Jib cars at 3.  Some vang on
+  up wind. '
+shroud_name: Base light.  They were set to base on Friday but cooler today
+shroud_tension:
+- 32
+- 15
+- 0
+other: 'Only 3 boats really in our competition so less traffic at the marks. '
+timestamp: 2020-05-31 16:21:31-07:00
+fluid_comments: 'Paul added 20 seconds of water to the tank.  It sounded dry when
+  I tried to flush. '
+fluids: Empty Bilge?, Add Water?
+shroud_tensions: 32, 15, 0
+---
+date: '2020-06-01'
+title: Monday race
+purpose: race
+crew:
+- Sara
+- Paul
+description: Creative Jubaliee and us made for a good race
+learnings: 'Main sheet got tangled on the binacle so rounding at Meadow Point was
+  messed up.  I over focused on untangling and accidentally jibed.  Then had to jibe
+  back quick to the starboard tack with More Ufda right behind.  Later Paul accused
+  me of almost killing him.  That was later retracted but I was initially very anxious
+  that it was closer than I realized.  He exaggeratied the danger that he was watching
+  for and ducked.   He was skipper and flipped driver and bow several times when he
+  felt he could do a better job in my position than I was.  I left not wanting to
+  return.  Some discussion ensued over video replay. '
+wave: 1-2
+wind:
+- 8
+- 14
+shroud_name: Base
+shroud_tension:
+- 34
+- 17
+- 0
+timestamp: 2020-06-06 08:56:02-07:00
+source: gsheet
+shroud_tensions: 34, 17, 0
+---
+file: 2020-06-05_16:00.pd.gz
+date: '2020-06-05'
+title: 'Friday Eve practice '
+begin: 0
+end: -1
+source: gsheet
+purpose: practice
+crew:
+- Sara
+- Paul
+description: "Light wind mild day.  Didn\u2019t get very far but worked on job car
+  settings "
+conditions: Warm. Light wind.  High tide
+performance: No boats around but good grove
+learnings: 'Jib car back to 4 or 5 worked better than 3 at 4 knots '
+warnings: Fixed a small hole in jib
+wave: flat
+wind:
+- 0
+- 6
+port_pointing: 25-27
+stbd_pointing: 25-27
+settings: 'Loose on everything '
+shroud_name: Light breeze
+shroud_tension:
+- 28
+- 12
+- 0
+timestamp: 2020-06-06 08:46:28-07:00
+shroud_tensions: 28, 12,  0
+---
+file: 2020-06-06_09:23.pd.gz
+date: '2020-06-06'
+title: 'Cohab #5'
+begin: 36271
+end: 152106
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+description: 'Course nmwnubn.  Our star was 10:29:26. '
+conditions: 'Oscillating wind with two storm clouds passing over Bainbrige. Puffs
+  and lulls.  Wind varied from 160 to 230.  Numbers in 200s were coincident with storms.  We
+  tried to use the drllenbaugh approach calling out persistent vs oscillating times.   We
+  still got beat. Not sure where but near meadow point on way back was more clear '
+performance: Slower in the up and down but we took a different path
+learnings: Bilge pump button was in middle again. Maybe our current prediction distracting
+  us?
+wave: 1-2
+wind:
+- 8
+- 14
+port_pointing: 25-27
+stbd_pointing: 25-27
+settings: Mostly loose.  Left back stay on too long down wind
+shroud_name: Light breeze
+shroud_tension:
+- 27
+- 12
+- 0
+timestamp: 2020-06-06 15:13:15-07:00
+fluids: Empty Bilge?
+shroud_tensions: 27,12,0
+---
+file: 2020-06-08_17:12.pd.gz
+date: '2020-06-08'
+title: 'TYT Monday '
+begin: 44865
+end: 98151
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+description: "Rough shifting wind from south with current churn.  Jubalie, Liftoff\u2019,
+  Creative, and us among the J105s. Many other boats too.  We. Beat jubilee and creative
+  but not left off. They were a couple mins ahread. Eclipse was in the mix too.  Gusto
+  got a new phrf and maybe not flying.  Our start was 6;35. Finish 7:55"
+conditions: 'Rolling and rough ride!  Rather fun in retrospect but a bit scary at
+  times. '
+performance: Boat felt good.  Speed on creative was about equal but we pointed higher.
+  Stayed in front of jubilee until they quit.  We lost more on switching to stbd roundings
+learnings: "Think way in advance about rounding \nSay stbd side rounding pull out
+  jib on port.  Green sheet is first active.  Fewer wraps on lines I need to release
+  \nBack stay off down wind!"
+warnings: 'Watch mail sail at mast where Paul tide it back on. '
+wave: 2-4
+wind:
+- 8
+- 14
+port_pointing: 20-24, 25-27
+stbd_pointing: 20-24, 25-27
+settings: 'Tight. Cars back to 5. Cunningham on all the way.  May be needed more halyard.
+  Travel down below center back stay on and off to 3.5in. '
+shroud_name: Base
+other: Good cooperation day
+timestamp: 2020-06-08 23:23:09-07:00
+fluid_comments: Late on bilge pump
+fluids: Empty Bilge?
+shroud_tensions: 33,17,0
+shroud_tension:
+- 33
+- 17
+- 0
+---
+file: 2020-06-10_18:17.pd.gz
+date: '2020-06-10'
+title: Sunset Sail
+begin: 15411
+end: 116115
+source: gsheet
+purpose: fun
+crew:
+- Sara
+- Paul
+description: Sailed to Elliot Bay to look For a good race route.   Wind picked up
+  on way back so we floated out spin at sunset.  Just beautiful!
+conditions: Gentle south west wind
+performance: Good on polars. No competion
+learnings: Step forward to fly out spin on windward  dowse
+warnings: "Main sail string needs to be trimmed and\xF2 finished off. "
+wave: flat
+wind:
+- 8
+- 14
+port_pointing: 20-24
+stbd_pointing: 25-27, 31-33
+settings: Cars at 4.  Loose settings mistly
+shroud_name: Base
+shroud_tension:
+- 34
+- 17
+- 0
+other: Flat water as darkness set in was very nice! Hit 15 knots and flat still
+timestamp: 2020-06-10 22:44:03-07:00
+---
+file: 2020-06-13_09:10.pd.gz
+date: '2020-06-13'
+title: 'Cohab#6 '
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+description: Crazy wind shifty day.  Started south to meadow point on spin. West Point.  Hamburger.
+  At most to meadow point again on spin when wind shifted north and we had to drop.
+  Almost hoisted spin again 10 mins later just to decide to wait again.  We got out
+  ahead of More Jubalee and Lift Off on second leg and they never caught us. Only
+  Valkyrie caught us but not by much!  Then big storm hit and we called it early.
+  Fun day!
+conditions: Wind oscillating 160-230. Then flipped 330-012
+performance: 'Beat Liftoff and More Jubilee. '
+learnings: Keep trying!  The caught back up sometimes and we pulled ahead again. Keep
+  clear air!
+warnings: Flip spin
+wave: flat
+wind:
+- 4
+- 10
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: 'Loose '
+shroud_name: Light air
+shroud_tension:
+- 25
+- 10
+- 0
+timestamp: 2020-06-13 17:55:17-07:00
+fluids: Empty Bilge?
+---
+file: 2020-06-15_17:36.pd.gz
+date: '2020-06-15'
+title: 'Cohab#6 '
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+description: Crazy wind shifty day.  Started south to meadow point on spin. West Point.  Hamburger.
+  At most to meadow point again on spin when wind shifted north and we had to drop.
+  Almost hoisted spin again 10 mins later just to decide to wait again.  We got out
+  ahead of More Jubalee and Lift Off on second leg and they never caught us. Only
+  Valkyrie caught us but not by much!  Then big storm hit and we called it early.
+  Fun day!
+conditions: Wind oscillating 160-230. Then flipped 330-012
+performance: 'Beat Liftoff and More Jubilee. '
+learnings: Keep trying!  The caught back up sometimes and we pulled ahead again. Keep
+  clear air!
+warnings: Flip spin
+wave: flat
+wind:
+- 4
+- 10
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: 'Loose '
+shroud_name: Light air
+shroud_tension:
+- 25
+- 10
+- 0
+other: 'Something made the bow sprit hard to pull out.  Time to get bottom cleaned. '
+timestamp: 2020-06-15 22:11:59-07:00
+fluids: Empty Bilge?
+---
+date: '2020-06-15'
+title: 'TYT Monday '
+purpose: race
+crew:
+- Sara
+- Paul
+description: 'Windy and rougher conditions than usual.  We lost to Creative mostly
+  because our rounding were imperfect.  They also went lower and at least as fast
+  down wind.  '
+conditions: "Lots of puffs.  We would see 11 knots on gauge but only going 4.5.  So
+  I\u2019d have to foot off to get speed but then the heel was so big the rail was
+  buried. Downwind was fun!  "
+performance: 'We lost.  '
+learnings: "Paul was on strategy instead of me today.  The problem with shifting that
+  role is that he is more reactive to situations than planning ahead. He sees 11 ft
+  of depth and crash tacked when it wasn\u2019t necessary to do that.  Also we fouled
+  the second rounding because we got jib out late again.  Who calls that?  I\u2019d
+  much rather be early.  \n\nSo what is the strat role vs the driver vs just Sara\u2019s
+  role cuz she is more aware of the map while Paul is more oriented to wind?   \n\nAlso
+  need to review the video with the tack line of the spinnaker way out.  We forgot
+  to pull in the tack to the mark. Our prep was rushed.  There was some discussion
+  who was going to the wheel but in the end I dove back and I believe stopped a breach
+  by driving down hard like Jim said!  I\u2019m rather proud I caught it.  Paul worked
+  hard to grind it back in.  It was flying rather well with 10 ft of tack. "
+warnings: Wheel feels loose to me
+wave: 2-4
+wind:
+- 8
+- 14
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: 'Tight. But needed changing. '
+shroud_name: Base
+shroud_tension:
+- 34
+- 17
+- 0
+other: 'Something made the bow sprit hard to pull out.  Time to get bottom cleaned. '
+timestamp: 2020-06-15 22:28:10-07:00
+fluids: Empty Bilge?
+source: gsheet
+---
+date: '2020-06-16'
+title: 'TYT Monday '
+purpose: race
+crew:
+- Sara
+- Paul
+description: 'Windy and rougher conditions than usual.  We lost to Creative mostly
+  because our rounding were imperfect.  They also went lower and at least as fast
+  down wind.  '
+conditions: "Lots of puffs.  We would see 11 knots on gauge but only going 4.5.  So
+  I\u2019d have to foot off to get speed but then the heel was so big the rail was
+  buried. Downwind was fun!  "
+performance: 'We lost.  '
+learnings: "Paul was on strategy instead of me today.  The problem with shifting that
+  role is that he is more reactive to situations than planning ahead. He sees 11 ft
+  of depth and crash tacked when it wasn\u2019t necessary to do that.  Also we fouled
+  the second rounding because we got jib out late again.  Who calls that?  I\u2019d
+  much rather be early.  \n\nSo what is the strat role vs the driver vs just Sara\u2019s
+  role cuz she is more aware of the map while Paul is more oriented to wind?   \n\nAlso
+  need to review the video with the tack line of the spinnaker way out.  We forgot
+  to pull in the tack to the mark. Our prep was rushed.  There was some discussion
+  who was going to the wheel but in the end I dove back and I believe stopped a breach
+  by driving down hard like Jim said!  I\u2019m rather proud I caught it.  Paul worked
+  hard to grind it back in.  It was flying rather well with 10 ft of tack. "
+warnings: Wheel feels loose to me
+wave: 2-4
+wind:
+- 8
+- 14
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: 'Tight. But needed changing. '
+shroud_name: Base
+shroud_tension:
+- 34
+- 17
+- 0
+other: 'Something made the bow sprit hard to pull out.  Time to get bottom cleaned. '
+timestamp: 2020-06-16 18:47:54-07:00
+fluids: Empty Bilge?
+source: gsheet
+---
+date: '2020-06-18'
+title: 'TYT Monday '
+purpose: race
+crew:
+- Sara
+- Paul
+description: "Rough shifting wind from south with current churn.  Jubalie, Liftoff\u2019,
+  Creative, and us among the J105s. Many other boats too.  We. Beat jubilee and creative
+  but not left off. They were a couple mins ahread. Eclipse was in the mix too.  Gusto
+  got a new phrf and maybe not flying.  Our start was 6;35. Finish 7:55"
+conditions: 'Rolling and rough ride!  Rather fun in retrospect but a bit scary at
+  times. '
+performance: Boat felt good.  Speed on creative was about equal but we pointed higher.
+  Stayed in front of jubilee until they quit.  We lost more on switching to stbd roundings
+learnings: "Think way in advance about rounding \nSay stbd side rounding pull out
+  jib on port.  Green sheet is first active.  Fewer wraps on lines I need to release
+  \nBack stay off down wind!"
+warnings: 'Watch mail sail at mast where Paul tide it back on. '
+wave: 2-4
+wind:
+- 8
+- 14
+port_pointing: 20-24, 25-27
+stbd_pointing: 20-24, 25-27
+settings: 'Tight. Cars back to 5. Cunningham on all the way.  May be needed more halyard.
+  Travel down below center back stay on and off to 3.5in. '
+shroud_name: Base
+shroud_tension:
+- 33
+- 17
+- 0
+other: Good cooperation day
+timestamp: 2020-06-18 11:07:22-07:00
+fluid_comments: Late on bilge pump
+fluids: Empty Bilge?
+source: gsheet
+---
+file: 2020-06-19_17:50.pd.gz
+date: '2020-06-19'
+title: 'Friday practice '
+begin: 0
+end: -1
+source: gsheet
+purpose: practice
+crew:
+- Sara
+- Paul
+description: Nice evening sail.  80 degrees.  No competition to race so we just did
+  laps and some experiments with drops
+conditions: 'Breezy '
+warnings: "Bottom needs cleaned.  Speedometer wasn\u2019t working right "
+wave: 1-2
+wind:
+- 8
+- 14
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: 'Loose. Added Cunningham and a little back stay at the end. '
+shroud_name: Base
+shroud_tension:
+- 35
+- 18
+- 0
+timestamp: 2020-06-19 20:43:55-07:00
+fluids: Empty Bilge?
+---
+file: 2020-06-20_09:49.pd.gz
+date: '2020-06-20'
+title: 'Friday practice '
+begin: 0
+end: -1
+source: gsheet
+purpose: practice
+crew:
+- Sara
+- Paul
+description: Nice evening sail.  80 degrees.  No competition to race so we just did
+  laps and some experiments with drops
+conditions: 'Breezy '
+performance: "Great on the upwind leg and equal to the best 105s on downwind.   We
+  didn\u2019t round as fast as others.  We were the only double handed team out there
+  on 105s.   We came in third of five. Just 10 seconds behind Creative. "
+learnings: 'Crossing situation communication.  Big one:  think through the rounding
+  days in advance.  Draw it on the chart!!!   Set up for starboard rounding if we
+  want to return on port tack.  Dumb dumb dumb to have set up for port rounding on
+  this race.  '
+warnings: "Bottom needs cleaned.  Speedometer wasn\u2019t working right "
+wave: 1-2
+wind:
+- 8
+- 14
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: 'Loose. Added Cunningham and a little back stay at the end. '
+shroud_name: Base
+shroud_tension:
+- 35
+- 18
+- 0
+other: "Engine failure!!!!   Got air in fuel line because we didn\u2019t close the
+  fuel valve. Let\u2019s ask around about their rule for closing.  Need to open engine
+  and fuel filters and pump out the air.    Extra tough because it fouled out dowse.
+  \ We also had the barberhauller line on the jib and it was all tangled.  "
+timestamp: 2020-06-20 07:40:58-07:00
+fluid_comments: Add fuel and do pump out soon
+fluids: Empty Bilge?
+---
+date: '2020-06-20'
+title: Cohab 7. Downtown Exploration
+purpose: race
+crew:
+- Sara
+- Paul
+description: "Fresh breeze day for the race we created.  NW\u2014spaceneedlebellharborline-NW. "
+conditions: 'Nice wind 10-12 up wind. 150-174 from south.    Picked up to 15-20  for
+  the exciting spinnaker finish with 4 boats side by side.  We finished behind Lodos
+  and needed a referee on double trouble and eclipse.  '
+performance: "Great on the upwind leg and equal to the best 105s on downwind.   We
+  didn\u2019t round as fast as others.  We were the only double handed team out there
+  on 105s.   We came in third of five. Just 10 seconds behind Creative. "
+learnings: 'Crossing situation communication.  Big one:  think through the rounding
+  days in advance.  Draw it on the chart!!!   Set up for starboard rounding if we
+  want to return on port tack.  Dumb dumb dumb to have set up for port rounding on
+  this race.  '
+warnings: Careful with engine
+wave: 1-2
+wind:
+- 12
+- 18
+port_pointing: 20-24
+stbd_pointing: 28-30
+settings: 'Tight.  '
+shroud_name: Fresh breeze 14-18
+shroud_tension:
+- 42
+- 22
+- 4
+other: "Engine failure!!!!   Got air in fuel line because we didn\u2019t close the
+  fuel valve. Let\u2019s ask around about their rule for closing.  Need to open engine
+  and fuel filters and pump out the air.    Extra tough because it fouled out dowse.
+  \ We also had the barberhauller line on the jib and it was all tangled.  "
+timestamp: 2020-06-21 10:52:52-07:00
+fluid_comments: Add fuel and do pump out soon
+fluids: Empty Bilge?
+source: gsheet
+---
+file: 2020-06-22_18:13.pd.gz
+date: '2020-06-22'
+title: TYT Monday
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+description: 'Beautiful summer evening.  Course was NUN. Our start was 6:40.  We either
+  had a great start or over early.  But our upwind speed was not excellent.  Biggish
+  waves meant we had to foot off particularly on starboard.  Moose, Jubilee, Creative,
+  Liftoff, and Gusto came out too.  '
+conditions: 'Breezy with some sea state.  '
+performance: 'Only beat Liftoff.  Made up a little time down wind.  Erik went further
+  out and ran back hot.  '
+learnings: 'Are we losing due to only 2 people?  Other boats had more.  We need to
+  figure out rail position and weight better '
+warnings: 'Bleeder screw still stripped.  Chuck very kindly left us a replacement.  Bring
+  GoPro next time. '
+wave: 2-4
+wind:
+- 12
+- 18
+port_pointing: 20-24
+stbd_pointing: 31-33
+settings: Tight
+shroud_name: Fresh bree ze
+shroud_tension:
+- 44
+- 22
+- 4
+timestamp: 2020-06-22 22:09:45-07:00
+fluid_comments: Need gas
+fluids: Empty Bilge?
+---
+date: '2020-06-24'
+title: TYT Monday
+purpose: race
+crew:
+- Sara
+- Paul
+description: 'Beautiful summer evening.  Course was NUN. Our start was 6:40.  We either
+  had a great start or over early.  But our upwind speed was not excellent.  Biggish
+  waves meant we had to foot off particularly on starboard.  Moose, Jubilee, Creative,
+  Liftoff, and Gusto came out too.  '
+wave: 2-4
+wind:
+- 12
+- 18
+shroud_name: Fresh bree ze
+timestamp: 2020-06-24 15:13:34-07:00
+fluid_comments: Need gas
+fluids: Empty Bilge?
+source: gsheet
+conditions: 'Breezy with some sea state.  '
+performance: 'Only beat Liftoff.  Made up a little time down wind.  Erik went further
+  out and ran back hot.  '
+learnings: 'Are we losing due to only 2 people?  Other boats had more.  We need to
+  figure out rail position and weight better '
+warnings: 'Bleeder screw still stripped.  Chuck very kindly left us a replacement.  Bring
+  GoPro next time. '
+port_pointing: 20-24
+stbd_pointing: 31-33
+settings: Tight
+shroud_tension:
+- 44
+- 22
+- 4
+---
+date: '2020-06-24'
+title: Gas run
+purpose: fun
+crew:
+- Sara
+- Paul
+description: 'Mad dash to the fuel dock to get deisel since they are now open to 5:00 '
+wave: 1-2
+wind:
+- 8
+- 14
+shroud_name: 'Fresh breeze '
+timestamp: 2020-06-24 17:14:55-07:00
+fluid_comments: 5.5 gallons. $13.25
+fluids: Add Gas?
+source: gsheet
+---
+file: 2020-06-27_09:57.pd.gz
+date: '2020-06-27'
+title: '2020-06-27'
+begin: 0
+end: -1
+source: logprocess
+---
+date: '2020-06-28'
+title: Cohab 8
+purpose: race
+crew:
+- Paul
+- Amy
+- Steve
+description: "NBWNUN. \n\nFolks worked super hard to \u201Cknock the dust off\u201D
+  and do very well.  Might have actually helped to be shorthanded, since we needed
+  100% attention 100% of the time.\n\n\nWe focused intensely on Moose, a luxury since
+  there were no other boats nearby (Rush was ahead the whole time!).  We marked them
+  and beat them to U mark, and then separated 20+ boat lengths.  Congrats.\n\n\nTacks
+  were great. Jibes were flawless.  Raise was great.  Douse worked well.  Folks did
+  their jobs, with little practice and little review.  And no critical job got dropped.
+  \ Props to Amy for working the PIT, which has dozens of little steps (in addition
+  to main\u2026 and we were pretty fast).\n\n\nThanks to you both for showing up early
+  and for keeping cheerful through the near constant rain.  Almost July 4th and it
+  was darn cold out there!  (Double thanks for Steve for getting there first and getting
+  the boat almost completely set!)\n\n"
+conditions: "Weird East wind predicted.  Did not disappoint at the start.  Converged
+  to a northerly at 6-10. \nVery light at first, but then consistent.  Consistent
+  rain and low visibility.  Hard to find the marks."
+performance: Reasonably well vs Moose.  Both Steve (jib) and Amy (main) were ramping
+  back up.  Went for low and fast.
+learnings: The UW current charts did not pay off that much, inside (to U) was supposed
+  to be favored, but we did not see it.
+warnings: Diesel was spraying all over the engine comparment.  The diaper was soaked.  Assume
+  it was bleed screw.  Traveller is still balky.
+wave: 1-2
+wind:
+- 4
+- 10
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: Rig was +2 when we arrived. Removed turns in a rush.
+shroud_name: 'Base-ish?  '
+shroud_tension:
+- 32
+- 12
+- 0
+other: 'Never ignore critical maintenance. '
+timestamp: 2020-06-28 08:28:02-07:00
+fluid_comments: Did not pump bilge!  Got to remember.
+source: gsheet
+---
+date: '2020-06-29'
+title: 'TYT Monday night '
+purpose: race
+crew:
+- Sara
+- Paul
+- Amy
+- Steve
+description: 'Fresh breeze out there but minimal waves. Quite a nice day for sailing. '
+conditions: '10-18 knots. Liftoff, corvo, creative, moose and us out there among the
+  105s.  We had a good start on starboard and tacked soon to port. '
+performance: "We struggled at first douse and lost some distance but then doused first
+  the second time. We lost speed on the last leg again. Didn\u2019t close out. Creative
+  won by going back out.  "
+learnings: 'Discuss strategy for after rounding. Starboard raise works. Just reverse
+  all.   Watch the boats rounding behind us. Where are they going?  Cover them. '
+warnings: "Travelor just fixed but wasn\u2019t quite right. Paul figure out a twist.
+  Main and spin sheets knitted easily.  Boom vang line too long. Mostly all fixed
+  now.  Paul added a new secondary fuel filter and a hand pump.  Engine seemed to
+  run well. "
+wave: 1-2
+wind:
+- 12
+- 18
+port_pointing: 20-24
+stbd_pointing: 28-30
+settings: Tightish
+shroud_name: Base
+shroud_tension:
+- 35
+- 15
+- 0
+other: 'Think through 4 person team more. We had bow/trim, pit, main, helm.  I think
+  pit should fly kite at first, bow clean up, then hand off and pit clean.  Maybe
+  pit flies and locks off. '
+timestamp: 2020-06-29 23:11:12-07:00
+fluid_comments: 'More than half tank of gas even after deisel spray in engine compartment '
+source: gsheet
+---
+date: '2020-06-30'
+title: TYT Monday
+purpose: race
+crew:
+- Sara
+- Paul
+description: 'Beautiful summer evening.  Course was NUN. Our start was 6:40.  We either
+  had a great start or over early.  But our upwind speed was not excellent.  Biggish
+  waves meant we had to foot off particularly on starboard.  Moose, Jubilee, Creative,
+  Liftoff, and Gusto came out too.  '
+conditions: 'Breezy with some sea state.  '
+performance: 'Only beat Liftoff.  Made up a little time down wind.  Erik went further
+  out and ran back hot.  '
+learnings: 'Are we losing due to only 2 people?  Other boats had more.  We need to
+  figure out rail position and weight better '
+warnings: 'Bleeder screw still stripped.  Chuck very kindly left us a replacement.  Bring
+  GoPro next time. '
+wave: 2-4
+wind:
+- 12
+- 18
+port_pointing: 20-24
+stbd_pointing: 31-33
+settings: Tight
+shroud_name: Fresh bree ze
+shroud_tension:
+- 44
+- 22
+- 4
+timestamp: 2020-06-30 12:02:20-07:00
+fluid_comments: Need gas
+fluids: Empty Bilge?
+source: gsheet
+---
+date: '2020-07-01'
+title: 'TYT Monday night '
+purpose: race
+crew:
+- Sara
+- Paul
+- Amy
+- Steve
+description: 'Fresh breeze out there but minimal waves. Quite a nice day for sailing. '
+conditions: '10-18 knots. Liftoff, corvo, creative, moose and us out there among the
+  105s.  We had a good start on starboard and tacked soon to port. '
+performance: "We struggled at first douse and lost some distance but then doused first
+  the second time. We lost speed on the last leg again. Didn\u2019t close out. Creative
+  won by going back out.  "
+learnings: 'Discuss strategy for after rounding. Starboard raise works. Just reverse
+  all.   Watch the boats rounding behind us. Where are they going?  Cover them. '
+warnings: "Travelor just fixed but wasn\u2019t quite right. Paul figure out a twist.
+  Main and spin sheets knitted easily.  Boom vang line too long. Mostly all fixed
+  now.  Paul added a new secondary fuel filter and a hand pump.  Engine seemed to
+  run well. "
+wave: 1-2
+wind:
+- 12
+- 18
+port_pointing: 20-24
+stbd_pointing: 28-30
+settings: Tightish
+shroud_name: Base
+shroud_tension:
+- 35
+- 15
+- 0
+other: 'Think through 4 person team more. We had bow/trim, pit, main, helm.  I think
+  pit should fly kite at first, bow clean up, then hand off and pit clean.  Maybe
+  pit flies and locks off. '
+timestamp: 2020-07-01 18:17:01-07:00
+fluid_comments: 'More than half tank of gas even after deisel spray in engine compartment '
+source: gsheet
+---
+date: '2020-07-05'
+title: TYT Monday
+purpose: race
+crew:
+- Sara
+- Paul
+description: 'Beautiful summer evening.  Course was NUN. Our start was 6:40.  We either
+  had a great start or over early.  But our upwind speed was not excellent.  Biggish
+  waves meant we had to foot off particularly on starboard.  Moose, Jubilee, Creative,
+  Liftoff, and Gusto came out too.  '
+conditions: 'Breezy with some sea state.  '
+performance: 'Only beat Liftoff.  Made up a little time down wind.  Erik went further
+  out and ran back hot.  '
+learnings: 'Are we losing due to only 2 people?  Other boats had more.  We need to
+  figure out rail position and weight better '
+warnings: 'Bleeder screw still stripped.  Chuck very kindly left us a replacement.  Bring
+  GoPro next time. '
+wave: 2-4
+wind:
+- 12
+- 18
+port_pointing: 20-24
+stbd_pointing: 31-33
+settings: Tight
+shroud_name: Fresh bree ze
+shroud_tension:
+- 44
+- 22
+- 4
+timestamp: 2020-07-05 19:19:27-07:00
+fluid_comments: Need gas
+fluids: Empty Bilge?
+source: gsheet
+---
+file: 2020-07-06_17:27.pd.gz
+date: '2020-07-06'
+title: '2020-07-06'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2020-07-08_17:19.pd.gz
+date: '2020-07-08'
+title: 'CYC Wednesday #1'
+begin: 33892
+end: 75343
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+description: "Double handed race.  Course JMEFMEF. Pronounced J-mef-mef. That\u2019s
+  just our practice workout sail using the green can and meadow point.   "
+performance: 'Despite some significant strategic errors and a lot of tension between
+  us we did well on down wind legs and kept ourselves in the race.  Douses in particular
+  went well.  '
+learnings: "Don\u2019t say ambiguous things like \u201Cdon\u2019t worry about that\u201D.
+  \ I didn\u2019t pull in the extra tack line.  We still don\u2019t know what Paul
+  meant not to worry about.  "
+warnings: Plug for dehumidifier extension cord
+wave: 1-2
+wind:
+- 8
+- 14
+shroud_name: Light wind
+shroud_tension:
+- 29
+- 12
+- 0
+timestamp: 2020-07-12 08:01:58-07:00
+---
+file: 2020-07-11_09:37.pd.gz
+date: '2020-07-11'
+title: 'Cohab #10'
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Steve
+description: 'Course: NWNUN. Wind from 0-15 knots. Tide ebbing throughout from 8.5ft.
+  Nice calm sea state.  10 boats out.  4 j105s. Jubilee,, Moose, and Jaded came with.  LA
+  and Dan double handed Jaded and Erik and Patty double handed Jubi'
+conditions: 'Wind from south. 140-200 oscillating. Some other boats out so the field
+  is getting more crowded. '
+performance: "We were side by side with Jubi most of the race.  He snuck in front
+  of us around 3/4 way to U when I called a gybe too early and we must have landed
+  in bad air or gybed slow.  We tried to dirty his air to keep him close by.  That
+  worked.  Wind died at U so all boats rounded together.  Around 1/2 way back wind
+  was up to 13 and we started pulling ahead.  Beat Jubi by 39 seconds so maybe 4 boat
+  lengths.  Moose and Jaded were another min behind.  Jaded hasn\u2019t reported but
+  came in after Moose. "
+learnings: 'Main trim for heal went well.  Paul was driving well and Sara trimmed.  We
+  stayed on edge for long stretches.  Steve is still doing really well on bow.  He
+  is sure footed. Paul was very encouraging and complimentary while I trimmed.  '
+warnings: 'Raspberry pie computer broken '
+wave: 1-2
+wind:
+- 8
+- 14
+port_pointing: 20-24
+stbd_pointing: 25-27
+settings: Lots of changes.   Cars moved back
+shroud_name: Light wind for 6-10
+shroud_tension:
+- 29
+- 12
+- 0
+timestamp: 2020-07-12 07:48:24-07:00
+fluids: Empty Bilge?
+---
+date: '2020-07-11'
+title: 'Cohab #10'
+purpose: race
+crew:
+- Sara
+- Paul
+- Steve
+description: 'Course: NWNUN. Wind from 0-15 knots. Tide ebbing throughout from 8.5ft.
+  Nice calm sea state.  10 boats out.  4 j105s. Jubilee,, Moose, and Jaded came with.  LA
+  and Dan double handed Jaded and Erik and Patty double handed Jubi'
+conditions: 'Wind from south. 140-200 oscillating. Some other boats out so the field
+  is getting more crowded. '
+performance: "We were side by side with Jubi most of the race.  He snuck in front
+  of us around 3/4 way to U when I called a gybe too early and we must have landed
+  in bad air or gybed slow.  We tried to dirty his air to keep him close by.  That
+  worked.  Wind died at U so all boats rounded together.  Around 1/2 way back wind
+  was up to 13 and we started pulling ahead.  Beat Jubi by 39 seconds so maybe 4 boat
+  lengths.  Moose and Jaded were another min behind.  Jaded hasn\u2019t reported but
+  came in after Moose. "
+learnings: 'Main trim for heal went well.  Paul was driving well and Sara trimmed.  We
+  stayed on edge for long stretches.  Steve is still doing really well on bow.  He
+  is sure footed. Paul was very encouraging and complimentary while I trimmed.  '
+warnings: 'Raspberry pie computer broken '
+wave: 1-2
+wind:
+- 8
+- 14
+port_pointing: 20-24
+stbd_pointing: 25-27
+settings: Lots of changes.   Cars moved back
+shroud_name: Light wind for 6-10
+shroud_tension:
+- 29
+- 12
+- 0
+timestamp: 2020-07-12 14:01:45-07:00
+fluids: Empty Bilge?
+source: gsheet
+---
+file: 2020-07-13_18:02.pd.gz
+date: '2020-07-13'
+title: 'STYC Monday '
+begin: 21466
+end: 90359
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Steve
+- Peter
+description: 'Beautiful evening sail.  5 of the 105s came out. Corvo, Jubilee, creative,
+  liftoff and us.  Marisa made lovely green masks for us.  '
+conditions: Wind from true north.  Ranged from 5-13 knots.  Some one knot current
+  push sometimes
+performance: 'We came in second among the 105s. Corvo beat us. '
+learnings: 'Main tension line at tack stops main flapping noise. '
+warnings: 'Main sail came loose again from on slug.  Keep a watch on it. '
+wave: flat
+wind:
+- 8
+- 14
+port_pointing: 20-24
+stbd_pointing: "I don\u2019t know"
+settings: Out haul on an off.  Light Cunningham. Cars back to 3-5.  Shrouds At base
+  may have been too much
+shroud_name: 'Base. '
+shroud_tension:
+- 34
+- 15
+- 4
+timestamp: 2020-07-13 23:44:17-07:00
+---
+file: 2020-07-15_17:19.pd.gz
+date: '2020-07-15'
+title: CYC Wednesday 2
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+description: 'We had Jaded and Corvo out with us.   All double handed. Started north
+  of meadow point, north to Spring Beach, south to green can and back to start. Fresh
+  breeze 16-18 at times. Note the big lift going north up the coast.  Wind was straight
+  north at meadow but more like 338 near mark. '
+conditions: 'Steady wind. Minimal current change.  '
+performance: "Speed was good.  We didn\u2019t account for the lift quite right.  Raise
+  and douse were terrible "
+learnings: 'More prep time needed when going fast.  Maybe jib out at 15 boat lengths
+  would have been good before mark. Maybe jib out at x boat lengths if wind at x boat
+  lenghts. Or maybe speed dependent.     Call reset if things are spiraling down.  Change
+  driver if needed when the buoy is clearly visible. '
+warnings: Slug holding on main sail
+wave: 1-2
+wind:
+- 12
+- 18
+port_pointing: 20-24
+stbd_pointing: 25-27
+settings: 'Tight. 3 in back stay. Cunningham on tight. Some vang.  '
+shroud_name: Base
+shroud_tension:
+- 35
+- 15
+- 2
+timestamp: 2020-07-16 22:18:20-07:00
+fluids: Empty Bilge?
+---
+date: '2020-07-15'
+title: CYC Wednesday 2
+purpose: race
+crew:
+- Sara
+- Paul
+description: 'We had Jaded and Corvo out with us.   All double handed. Started north
+  of meadow point, north to Spring Beach, south to green can and back to start. Fresh
+  breeze 16-18 at times. Note the big lift going north up the coast.  Wind was straight
+  north at meadow but more like 338 near mark. '
+conditions: 'Steady wind. Minimal current change.  '
+performance: "Speed was good.  We didn\u2019t account for the lift quite right.  Raise
+  and douse were terrible "
+learnings: 'More prep time needed when going fast.  Maybe jib out at 15 boat lengths
+  would have been good before mark. Maybe jib out at x boat lengths if wind at x boat
+  lenghts. Or maybe speed dependent.     Call reset if things are spiraling down.  Change
+  driver if needed when the buoy is clearly visible. '
+warnings: Slug holding on main sail
+wave: 1-2
+wind:
+- 12
+- 18
+port_pointing: 20-24
+stbd_pointing: 25-27
+settings: 'Tight. 3 in back stay. Cunningham on tight. Some vang.  '
+shroud_name: Base
+shroud_tension:
+- 35
+- 15
+- 2
+timestamp: 2020-07-18 09:33:56-07:00
+fluids: Empty Bilge?
+source: gsheet
+---
+date: '2020-07-16'
+title: 'STYC Monday '
+purpose: race
+crew:
+- Sara
+- Paul
+- Steve
+- Peter
+description: 'Beautiful evening sail.  5 of the 105s came out. Corvo, Jubilee, creative,
+  liftoff and us.  Marisa made lovely green masks for us.  '
+conditions: Wind from true north.  Ranged from 5-13 knots.  Some one knot current
+  push sometimes
+performance: 'We came in second among the 105s. Corvo beat us. '
+learnings: 'Main tension line at tack stops main flapping noise. '
+warnings: 'Main sail came loose again from on slug.  Keep a watch on it. '
+wave: flat
+wind:
+- 8
+- 14
+port_pointing: 20-24
+stbd_pointing: "I don\u2019t know"
+settings: Out haul on an off.  Light Cunningham. Cars back to 3-5.  Shrouds At base
+  may have been too much
+shroud_name: 'Base. '
+shroud_tension:
+- 34
+- 15
+- 4
+timestamp: 2020-07-16 22:08:43-07:00
+source: gsheet
+---
+file: 2020-07-18_09:58.pd.gz
+date: '2020-07-18'
+title: 'Cohab #10 for real'
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+description: Course nmwnmw
+conditions: 'Wind was very light to begin.  Picked up to 11 eventually at end of race.
+  Took 3 hours to do our two laps.  Strong ebbing tide. Jeff Madrigali was on board
+  with us double handing. '
+performance: 'Speed in light wind was good.  Speed is our friend today '
+learnings: "Don\u2019t waste a big lead.  Find a way to keep a hand on the wheel at
+  all times especially in higher wind.  \n\nDon\u2019t quit.  Don\u2019t even say
+  quit. You can do this.  We keep working out systems.  We have to be able to try
+  things and fail.  \n\nLook up at upper spreaders.  Where is jib? Is it luffing?"
+warnings: 'Slug still '
+wave: flat
+wind:
+- 4
+- 10
+port_pointing: 34+
+stbd_pointing: 34+
+settings: 'Very loose jib cars at 0 hole.  Jib halyard slacker than usual maybe 6.  Look
+  for good foot shape. Note the slack jib halyard made the line up from jib car look
+  right aiming at the middle of the forestry. '
+shroud_name: Very light wind
+shroud_tension:
+- 25
+- 12
+- 0
+other: See lesson notes
+additional_crew: 'Jeff Madrigali '
+timestamp: 2020-07-18 18:28:00-07:00
+fluids: Empty Bilge?
+---
+file: 2020-07-20_17:50.pd.gz
+date: '2020-07-20'
+title: 'Cohab #10 for real'
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+description: Course nmwnmw
+performance: 'Speed in light wind was good.  Speed is our friend today '
+warnings: 'Slug still '
+wave: flat
+wind:
+- 4
+- 10
+port_pointing: 34+
+stbd_pointing: 34+
+settings: 'Very loose jib cars at 0 hole.  Jib halyard slacker than usual maybe 6.  Look
+  for good foot shape. Note the slack jib halyard made the line up from jib car look
+  right aiming at the middle of the forestry. '
+shroud_name: Very light wind
+shroud_tension:
+- 25
+- 12
+- 0
+timestamp: 2020-07-20 06:31:57-07:00
+conditions: 'Wind was very light to begin.  Picked up to 11 eventually at end of race.
+  Took 3 hours to do our two laps.  Strong ebbing tide. Jeff Madrigali was on board
+  with us double handing. '
+learnings: "Don\u2019t waste a big lead.  Find a way to keep a hand on the wheel at
+  all times especially in higher wind.  \n\nDon\u2019t quit.  Don\u2019t even say
+  quit. You can do this.  We keep working out systems.  We have to be able to try
+  things and fail.  \n\nLook up at upper spreaders.  Where is jib? Is it luffing?"
+other: See lesson notes
+additional_crew: 'Jeff Madrigali '
+fluids: Empty Bilge?
+---
+date: '2020-07-20'
+title: 'Ballard Cup #3'
+purpose: race
+crew:
+- Sara
+- Paul
+- Steve
+- Peter
+description: 'Great day on water.  Sunny and warm. Windy was 6-12 mostly.  One painful
+  lull on last leg. '
+performance: Ah. Well. Paul called it a strategy lesson
+warnings: 'Sail connection to slug fixed by Alex Semanis. '
+wave: flat
+wind:
+- 4
+- 10
+port_pointing: 20-24
+stbd_pointing: 28-30
+settings: 'Loose '
+shroud_name: Light wind
+shroud_tension:
+- 29
+- 10
+- 0
+timestamp: 2020-07-20 23:30:39-07:00
+source: gsheet
+---
+file: 2020-07-22_17:25.pd.gz
+date: '2020-07-22'
+title: 'CYC Wednesday '
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+description: Lighter wind than expected
+conditions: 'Windy shifted just before the start. '
+performance: 'Corvo beat us downwind. Hotter and faster.  '
+learnings: 'On spin raise. Try to get spin sheet to driver. Move away from wheel to
+  hoist. '
+wave: flat
+wind:
+- 0
+- 6
+port_pointing: 25-27
+stbd_pointing: 20-24
+settings: Loose.  Jib had wrinkles cars at 0. Travelor all the way up
+shroud_name: Light wind
+shroud_tension:
+- 28
+- 12
+- 0
+other: Oops forgot to empty the bilge
+timestamp: 2020-07-22 23:44:22-07:00
+---
+file: 2020-07-25_09:07.pd.gz
+date: '2020-07-25'
+title: '2020-07-25'
+begin: 0
+end: -1
+source: logprocess

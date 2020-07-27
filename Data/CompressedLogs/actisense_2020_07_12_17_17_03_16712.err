@@ -1,0 +1,3 @@
+Attempt 1
+ERROR 2020-07-13T00:17:05.474Z [actisense-serial] Ignore short command len = 0
+ERROR 2020-07-13T00:17:05.513Z [actisense-serial] Ignoring message with invalid checksum
