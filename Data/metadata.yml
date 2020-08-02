@@ -1902,7 +1902,236 @@ timestamp: 2020-07-22 23:44:22-07:00
 ---
 file: 2020-07-25_09:07.pd.gz
 date: '2020-07-25'
-title: '2020-07-25'
+title: Women at the Helm
 begin: 0
 end: -1
-source: logprocess
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Steve
+- Peter
+- Laura
+description: "3 races. NMBMN,  NMEN,  NRN.   We flat out won the second race. Really
+  good speed. First and third race we got fouled and didn\u2019t call it right. Poke
+  hit our stbd aft corner bow to stern pulpit as we rounded R.  We had mark room rights.
+  \ It looked like minor damage so I kept sailing.  They did turns.   Reckless on
+  the other van fouled us as the port boat while we were stbd. I ducked them and yelled.
+  \ They said first time driver and then proceeded to win our division.  I should
+  have insisted on turns.  Will you take a penelty turn ?  I will call protest.  Pressure
+  was better outside.  Most of the day.  Third race was exBrought out the pink spin
+  and new jib. "
+conditions: 'Beautiful sunny day.  Ebbing tide all day.  Wind was light in the morning
+  so our shrouds were a bit tight.  Spot on for race 2.  Wind picked up later so we
+  went 7 both up and downwind. Speed was our friend.  '
+performance: 'Good but a bit slow at times on speed.  Long downwind we went lower
+  and slightly slower. '
+learnings: 'Call foul. Will you do your penalty turn?if not call penelty. '
+warnings: Batten pusher missing,  write turns for shrouds on mast
+wave: flat
+wind:
+- 4
+- 10
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: Loose for race 1.  Tighter for 3
+shroud_name: Light wind
+shroud_tension:
+- 28
+- 12
+- 0
+other: Discuss jib trim Jeff style
+timestamp: 2020-07-26 23:36:42-07:00
+fluid_comments: 'Check how to clear holding tank at sea. '
+fluids: Empty Bilge?
+---
+date: '2020-07-25'
+title: Women at the Helm
+purpose: race
+crew:
+- Sara
+- Paul
+- Steve
+- Peter
+- Laura
+description: "3 races. NMBMN,  NMEN,  NRN.   We flat out won the second race. Really
+  good speed. First and third race we got fouled and didn\u2019t call it right. Poke
+  hit our stbd aft corner bow to stern pulpit as we rounded R.  We had mark room rights.
+  \ It looked like minor damage so I kept sailing.  They did turns.   Reckless on
+  the other van fouled us as the port boat while we were stbd. I ducked them and yelled.
+  \ They said first time driver and then proceeded to win our division.  I should
+  have insisted on turns.  Will you take a penelty turn ?  I will call protest.  Pressure
+  was better outside.  Most of the day.  Third race was exBrought out the pink spin
+  and new jib. "
+conditions: 'Beautiful sunny day.  Ebbing tide all day.  Wind was light in the morning
+  so our shrouds were a bit tight.  Spot on for race 2.  Wind picked up later so we
+  went 7 both up and downwind. Speed was our friend.  '
+performance: 'Good but a bit slow at times on speed.  Long downwind we went lower
+  and slightly slower. '
+learnings: 'Call foul. Will you do your penalty turn?if not call penelty. '
+warnings: Batten pusher missing,  write turns for shrouds on mast
+wave: flat
+wind:
+- 4
+- 10
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: Loose for race 1.  Tighter for 3
+shroud_name: Light wind
+shroud_tension:
+- 28
+- 12
+- 0
+other: Discuss jib trim Jeff style
+timestamp: 2020-07-27 22:31:05-07:00
+fluid_comments: 'Check how to clear holding tank at sea. '
+fluids: Empty Bilge?
+source: gsheet
+---
+date: '2020-07-27'
+title: 'Ballard cup Monday '
+purpose: race
+crew:
+- Sara
+- Paul
+- Steve
+- Peter
+description: 'Nice evening.  A lot of boats out again.  Course NMWMN. Flooding current.  Got
+  hit hard after West Point.   Over 1knot against us. We tried both in and out. The
+  Meadow Point hurricane worked in our favor and lifted us up the beach nicely so
+  made the mark when I thought we could not.  Over shot a bit in fact. '
+conditions: Sunny warm moderate breeze
+performance: Lost to Corvo. Beat insubordination, creative and liftoff.  And puff
+learnings: 'Move travelor on a tack from the old side.  When flat it moves across
+  really fast. '
+warnings: Batten pusher
+wave: 1-2
+wind:
+- 8
+- 14
+port_pointing: 20-24
+stbd_pointing: 25-27
+settings: '6 in main halyard. 5 on jib halyard. No back stay. A little Cunningham.
+  Stb jib car was at 5.  Travelor was very high at first but the main was more twisted
+  than jib.  Made us slow until we dropped travelor to the bench. '
+shroud_name: Light wind
+shroud_tension:
+- 30
+- 12
+- 0
+timestamp: 2020-07-27 23:35:38-07:00
+fluids: Empty Bilge?
+source: gsheet
+---
+file: 2020-07-29_17:17.pd.gz
+date: '2020-07-29'
+title: 'STYC Monday '
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Steve
+- Peter
+description: 'Beautiful evening sail.  5 of the 105s came out. Corvo, Jubilee, creative,
+  liftoff and us.  Marisa made lovely green masks for us.  '
+performance: 'We came in second among the 105s. Corvo beat us. '
+learnings: 'Main tension line at tack stops main flapping noise. '
+warnings: 'Main sail came loose again from on slug.  Keep a watch on it. '
+wave: flat
+wind:
+- 8
+- 14
+port_pointing: 20-24
+stbd_pointing: "I don\u2019t know"
+settings: Out haul on an off.  Light Cunningham. Cars back to 3-5.  Shrouds At base
+  may have been too much
+shroud_name: 'Base. '
+shroud_tension:
+- 34
+- 15
+- 4
+timestamp: 2020-07-29 15:58:51-07:00
+fluids: Empty Bilge?
+conditions: Wind from true north.  Ranged from 5-13 knots.  Some one knot current
+  push sometimes
+---
+date: '2020-07-29'
+title: 'CYC Wednesday '
+purpose: race
+crew:
+- Sara
+- Paul
+description: 'Short sail JMWJ. '
+performance: 'Lost to Corvo.  Beat Liftoff and Creative. '
+learnings: Double check tack before hoist
+warnings: 'Just my docking confidence. '
+wave: 1-2
+wind:
+- 8
+- 14
+port_pointing: 20-24
+stbd_pointing: 25-27
+settings: Tight halyards and outhaul
+shroud_name: Base
+shroud_tension:
+- 34
+- 18
+- 4
+timestamp: 2020-07-31 20:42:48-07:00
+fluids: Empty Bilge?
+source: gsheet
+---
+date: '2020-07-31'
+title: Picnic Sail Friday
+purpose: fun
+crew:
+- Sara
+- Marisa
+- Paul
+description: 'Moderate Breeze and tide ebbing against the wind so rather bumpy upwind.
+  Nice easy sailing. '
+wave: 2-4
+wind:
+- 12
+- 18
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: Tight
+shroud_name: Base
+shroud_tension:
+- 34
+- 17
+- 0
+timestamp: 2020-07-31 20:45:49-07:00
+source: gsheet
+---
+file: 2020-08-01_10:54.pd.gz
+date: '2020-08-01'
+title: Picnic Sail Friday
+begin: 0
+end: -1
+source: gsheet
+purpose: fun
+crew:
+- Sara
+- Marisa
+- Paul
+description: 'Moderate Breeze and tide ebbing against the wind so rather bumpy upwind.
+  Nice easy sailing. '
+wave: 2-4
+wind:
+- 12
+- 18
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: Tight
+shroud_name: Base
+shroud_tension:
+- 34
+- 17
+- 0
+timestamp: 2020-08-01 08:21:53-07:00

@@ -51,7 +51,7 @@ from nbutils import display_markdown, display
 
 # code to render a metadata entry in markdown... 
 
-def display_race_summary(race_record):
+def display_race_metadata(race_record, include_extras=True):
     "Summarize a race."
     display_markdown(f"# {race_record['title']}: {race_record['date']}")
     rr = race_record.copy()
@@ -66,12 +66,13 @@ def display_race_summary(race_record):
             if k in rr:
                 lines += lines_url(make_title(k), rr.pop(k))
         display_markdown(lines)
-    keys = list(rr.keys())
-    if len(keys) > 0:
-        lines = ""
-        display_markdown("## Extras")
-        lines = lines_dict("", keys, rr)
-        display_markdown(lines)
+    if include_extras:
+        keys = list(rr.keys())
+        if len(keys) > 0:
+            lines = ""
+            display_markdown("## Extras")
+            lines = lines_dict("", keys, rr)
+            display_markdown(lines)
 
 def has_key(key_list, dictionary):
     for k in key_list:
@@ -174,14 +175,22 @@ def save_yaml(race_entries, stream=None):
 
 # Since the data for all days is in one place its easy to generate an all up summary.
 
-def summarize(race_records):
+def race_summary(race):
+    display_markdown(race_summary_lines(race))
+
+def race_summary_lines(race):
+    lines = ""
+    lines += f"- **{race['date']}**: {race['title']}\n"
+    for key in "description conditions".split():
+        if key in race and race[key] is not None and len(race[key]) > 0:
+            lines += f"  - *{key.capitalize()}:* {race[key]}\n"
+    return lines
+
+def display_race_summaries(race_records):
     "Summarize each race."
     lines = ""
     for race in race_records:
-        lines += f"- **{race['date']}**: {race['title']}\n"
-        for key in "description conditions".split():
-            if key in race and race[key] is not None and len(race[key]) > 0:
-                lines += f"  - *{key.capitalize()}:* {race[key]}\n"
+        lines += race_summary_lines(race)
     display_markdown(lines)
 
 def summary_table(race_records, columns = None):
@@ -456,7 +465,7 @@ def update_race(updated_race_record):
 
 #: {
 #:   "metadata": {
-#:     "timestamp": "2020-06-11T09:09:31.301365-07:00"
+#:     "timestamp": "2020-08-02T16:13:05.666836-07:00"
 #:   }
 #: }
 

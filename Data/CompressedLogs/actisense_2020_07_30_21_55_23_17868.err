@@ -1,0 +1,8 @@
+Attempt 1
+FATAL 2020-07-31T04:55:23.793Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 1 baud rate 230400
+FATAL 2020-07-31T04:56:29.191Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 2
+FATAL 2020-07-31T04:56:31.199Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 2 baud rate 230400
+FATAL 2020-07-31T04:56:33.207Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0

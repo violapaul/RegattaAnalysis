@@ -164,7 +164,7 @@ def land(a, *b):
         res = np.logical_and(res, e)
     return res
 
-def display_currents(uw_model, region, time_index):
+def display_currents(uw_model, region, time_index, plot_wind=False):
     """
     Draw a chart overlayed with the UW live ocean current predictions.
     """
@@ -172,10 +172,10 @@ def display_currents(uw_model, region, time_index):
     ch.fig = plt.figure(figsize=(8, 10))
     ch.ax = ch.fig.add_subplot(111)   
     ch = chart.draw_chart(ch, ch.ax)
-    return draw_current(ch, uw_model, time_index)
+    return draw_current(ch, uw_model, time_index, plot_wind=plot_wind)
 
 
-def draw_current(ch, uw_model, time_index, location=(2700, 737)):
+def draw_current(ch, uw_model, time_index, location=(2700, 737), plot_wind=False):
 
     # Current is in meters/sec. And we typically think in knots.  1 m/s is 2 kts.  If you
     # scale by 1000 then a 1kt current is 500m.
@@ -184,6 +184,10 @@ def draw_current(ch, uw_model, time_index, location=(2700, 737)):
     u = scale * uw_model.current_e[time_index, :, :]
     v = scale * uw_model.current_n[time_index, :, :]
 
+    wscale = 100
+    wu = wscale * uw_model.wind_e[time_index, :, :]
+    wv = wscale * uw_model.wind_n[time_index, :, :]
+    
     dt = utils.time_from_timestamp(uw_model.ocean_time[time_index])
     ch.datetime = dt
 
@@ -204,14 +208,19 @@ def draw_current(ch, uw_model, time_index, location=(2700, 737)):
 
     theta = (1/G.MS_2_KNOTS)*0.5*scale
     m1 = land(mask, np.sqrt(np.square(u) + np.square(v)) >= theta)
-    shaft_width = 0.004
+    shaft_width = 0.0025
     ch.ax.quiver(uw_model.east[m1], uw_model.north[m1], u[m1], v[m1], 
                  angles='xy', scale_units='xy', scale=1, color='red', width=shaft_width)
 
     m2 = land(mask, np.sqrt(np.square(u) + np.square(v)) < theta)
     ch.ax.quiver(uw_model.east[m2], uw_model.north[m2], u[m2], v[m2], 
                  angles='xy', scale_units='xy', scale=1, color='blue', width=shaft_width)
-    
+
+    if plot_wind:
+        shaft_width = 0.002
+        ch.ax.quiver(uw_model.east[mask], uw_model.north[mask], wu[mask], wv[mask], 
+                     angles='xy', scale_units='xy', scale=1, color='limegreen', width=shaft_width)
+
     ch.ax.set_title(uw_model.date + " : " + utils.time_to_string(dt))
     return ch
 
@@ -230,7 +239,7 @@ def save_chart(ch, directory="", filetype="pdf"):
     path = os.path.join(directory, filename)
     ch.fig.savefig(path, orientation='portrait', dpi=300)
 
-def create_charts(date, sail_date, start_time, end_time, region, marks=None):
+def create_charts(date, sail_date, start_time, end_time, region, marks=None, plot_wind=False):
     """
     Create a set of current charts from the UW Live Ocean data, for a given day that span
     from the start time to the finish.
@@ -244,7 +253,7 @@ def create_charts(date, sail_date, start_time, end_time, region, marks=None):
     if fetch_live_ocean_model(date):
         uw_model = read_live_ocean_model(date)
         time_indices, times  = find_times(uw_model, f"{sail_date} {start_time}", f"{sail_date} {end_time}")
-        ch_list = [display_currents(uw_model, region, t) for t in time_indices]
+        ch_list = [display_currents(uw_model, region, t, plot_wind=plot_wind) for t in time_indices]
         for ch in ch_list:
             if marks is not None:
                 plot_marks(ch, marks)
@@ -372,20 +381,40 @@ SAN_JUANS = dict(
 
 if True:
     plt.close('all')
-    date = "2020-07-06"
-    sail_date = "2020-07-06"
-    marks = "nunbw"
+    date = "2020-07-31"
+    sail_date = "2020-08-01"
+    marks = "nnkbw"
     region = region_from_marks(marks, 0.2, 0.6)
-    start_time = "18:30:00"
-    end_time = "21:00:00"
+    start_time = "11:00:00"
+    end_time = "14:00:00"
     # Note if the model is not downloaded will return None.  Takes 20 mins.
-    ch_list = create_charts(date, sail_date, start_time, end_time, region)
+    ch_list = create_charts(date, sail_date, start_time, end_time, region, plot_wind=True)
     if ch_list is not None:
-        display("Saving charts in /tmp")
+        chart_dir = "/Users/viola/tmp"
+        display(f"Saving charts in {chart_dir}")
         for ch in ch_list:
             plot_marks(ch, marks)
-            save_chart(ch, "/tmp", "jpg")
+            save_chart(ch, chart_dir, "jpg")
 
+
+if True:
+    plt.close('all')
+    date = "2020-08-01"
+    sail_date = "2020-08-01"
+    marks = "nnkbw"
+    region = region_from_marks(marks, 0.2, 0.6)
+    start_time = "11:00:00"
+    end_time = "17:00:00"
+    # Note if the model is not downloaded will return None.  Takes 20 mins.
+    ch_list = create_charts(date, sail_date, start_time, end_time, region, plot_wind=False)
+    if ch_list is not None:
+        chart_dir = "/Users/viola/tmp"
+        display(f"Saving charts in {chart_dir}")
+        for ch in ch_list:
+            plot_marks(ch, marks)
+            save_chart(ch, chart_dir, "jpg")
+
+            
 if True:
     plt.close('all')
     date = "2020-06-26"

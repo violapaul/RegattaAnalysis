@@ -302,7 +302,8 @@ def read_log_file(pickle_file, skip_dock_only=True, discard_columns = True,
     df = df[df[['date', 'time']].isna().sum(1) == 0]
     df['timestamp'] = pd.to_datetime(df.date + " " + df.time)
     session_length = df.timestamp.iloc[-1] - df.timestamp.iloc[0]
-    print("Session from {0}, {1} rows, {2} hours.".format(df.timestamp.iloc[0], len(df), session_length.seconds / (60 * 60)))
+    hours = session_length.seconds / (60 * 60)
+    G.logger.info(f"Session from {df.timestamp.iloc[0]}, {len(df)} rows, {hours} hours.")
     if skip_dock_only and df.speed_water_referenced.max() < 0.1:
         print("... skipping, the boat does not move!")
         return None
