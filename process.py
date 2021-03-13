@@ -425,12 +425,32 @@ def create_compressed_log_files():
         res = list(ex.map(compress_log, current_logs))
     return res
 
-def is_valuable_compressed_log(file):
+def is_valuable_compressed_log(file, min_size=G.MIN_LOG_FILE_SIZE):
     "A valuable compressed log is not too small."
     path = compressed_log_path(file)
-    return os.stat(path).st_size > G.MIN_LOG_FILE_SIZE
+    return os.stat(path).st_size > min_size
 
-def extract_log_name(json_file):
+def extract_log_name(compressed_filename):
+    compressed_path = compressed_log_path(compressed_filename)
+
+    tmp_path = "/tmp"
+    json_file = os.path.join(tmp_path, compressed_filename + ".json")
+    log_file = os.path.join(tmp_path, compressed_filename + ".stderr")
+
+    # Extract the head...  just need the first record.
+    # TODO: fix constant
+    command = f"zcat {compressed_path} | analyzer -json 2> {log_file} | head -10000 > {json_file}"
+    G.logger.info(f'Running "{command}"')
+    subprocess.run(command, shell=True)
+
+    named_filename = extract_log_name_from_json(json_file)
+    # Careful to remove JSON file, since it is not complete!  Otherwise it will be
+    # considered a cached and complete file.
+    os.remove(json_file)
+
+    return named_filename
+
+def extract_log_name_from_json(json_file):
     "From JSON log file, extract GPS datetime and convert to an appropriate filename."
     records = cb.json_records( cb.file_lines(json_file),
                                cb.pgn_filter(G.PGN_WHITELIST), 1)
@@ -457,21 +477,7 @@ def link_named_log_file(compressed_filename):
     G.logger.info(f'Linking {compressed_filename}')
     compressed_path = compressed_log_path(compressed_filename)
 
-    tmp_path = "/tmp"
-    json_file = os.path.join(tmp_path, compressed_filename + ".json")
-    log_file = os.path.join(tmp_path, compressed_filename + ".stderr")
-
-    # Extract the head...  just need the first record.
-    # TODO: fix constant
-    command = f"zcat {compressed_path} | analyzer -json 2> {log_file} | head -10000 > {json_file}"
-    G.logger.info(f'Running "{command}"')
-    subprocess.run(command, shell=True)
-
-    named_filename = extract_log_name(json_file)
-    # Careful to remove JSON file, since it is not complete!  Otherwise it will be
-    # considered a cached and complete file.
-    os.remove(json_file)
-
+    named_filename = extract_log_name(compressed_filename)
     named_path = named_log_path(named_filename)
     G.logger.info("Linking {compressed_filename} to {named_path}")
     symlink(compressed_path, named_path)

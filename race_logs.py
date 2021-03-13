@@ -12,6 +12,7 @@ from numba import jit
 
 import pandas as pd
 import numpy as np
+import scipy
 
 from global_variables import G
 from utils import DictClass
@@ -66,6 +67,7 @@ def estimate_true_wind_helper(epsilon, aws, awa, hdg, spd, cog, sog,
     # Residuals are stored here.
     res_n = np.zeros(awa.shape)
     res_e = np.zeros(awa.shape)
+    deps = np.zeros(awa.shape)
     # Process apparent wind to decompose into boat relative components.
     aw_n = aws * np.cos(np.radians(awa))
     aw_e = aws * np.sin(np.radians(awa))
@@ -105,23 +107,30 @@ def estimate_true_wind_helper(epsilon, aws, awa, hdg, spd, cog, sog,
         delta_tws = res_n[i] * c + res_e[i] * s
         delta_twd = res_n[i] * ptws[i-1] * -s + res_e[i] * ptws[i-1] * c
         
-        # Hack, which the update to TWS and TWD don't have the same magnitude
-        ptws[i] = eps * tws_mult * delta_tws + ptws[i-1]
+        # The mathematics allows for solutions were tws is negative, particularly when the
+        # wind directions switches rapidly.  Need to ensure its positive.
+        ptws[i] = np.absolute(eps * tws_mult * delta_tws + ptws[i-1])
         ptwd[i] = eps * delta_twd + ptwd[i-1]
 
-        if (np.abs(res_n[i]) + np.abs(res_e[i])) > 1.0:
+        # Check the current residuals.  If they are too large then gradually decrease the
+        # smoothness (increase epsilon).
+        res_error = (np.abs(res_n[i]) + np.abs(res_e[i]))
+        if res_error > 1.0 and res_error < 5.0:
             eps = min(1.05 * eps, 10*epsilon)
+        elif res_error > 5.0:
+            eps = min(1.1 * eps, 1000*epsilon)
         else:
             eps = (eps + epsilon) / 2
+        deps[i] = eps
 
-    return np.degrees(ptwd), ptws, res_n, res_e
+    return np.degrees(ptwd), ptws, res_n, res_e, deps
 
 
 def estimate_true_wind(epsilon, df, awa_mult=1.0, aws_mult=1.0, spd_mult=1.0, awa_offset=0, tws_mult=30, time_delay=12):
     variation = df.variation.mean()
     tws_init = df.aws.iloc[0]
     twd_init = df.rawa.iloc[0] + df.rhdg.iloc[0] + variation
-    (twd, tws, res_n, res_e) = estimate_true_wind_helper(epsilon,
+    (twd, tws, res_n, res_e, deps) = estimate_true_wind_helper(epsilon,
                                                          aws = aws_mult * np.asarray(df.caws),
                                                          awa = awa_mult * np.asarray(df.cawa) + awa_offset,
                                                          hdg = np.asarray(df.rhdg),
@@ -133,9 +142,10 @@ def estimate_true_wind(epsilon, df, awa_mult=1.0, aws_mult=1.0, spd_mult=1.0, aw
                                                          variation = variation,
                                                          tws_mult = tws_mult,
                                                          time_delay = time_delay)
-    df['twd'] = twd
+    df['twd'] = p.compass_angle(twd)
     df['tws'] = tws
-    df['twa'] = twd - (df.rhdg + variation)
+    df['twa'] = p.sign_angle(twd - (df.rhdg + variation))
+    return deps
 
     
 def heel_corrected_apparent_wind(df):
@@ -320,11 +330,23 @@ def read_log_file(pickle_file, skip_dock_only=True, discard_columns = True,
     # trim off the initial startup where data is missing
     if trim:
         df = df[df.isna().sum(1) == 0]
+    clean_gps_outliers(df)
     df.filename = pickle_file
     if process:
         process_sensors(df, causal=False, cutoff=cutoff, compute_true_wind=compute_true_wind)
         compute_record_times(df)
     return df
+
+def clean_gps_outliers(df):
+    # Every now and then you see crazy dropouts in GPS
+    smooth_longitude = scipy.signal.medfilt(df.longitude, 5)
+    smooth_latitude = scipy.signal.medfilt(df.latitude, 5)
+    if np.max(np.abs(df.longitude - smooth_longitude)) > 0.1:
+        G.logger.info(f"Noise in longitude, using median filter.")
+        df.longitude = smooth_longitude
+    if np.max(np.abs(df.latitude - smooth_latitude)) > 0.1:
+        G.logger.info(f"Noise in latitude, using median filter.")
+        df.latitude = smooth_latitude
 
 
 def read_logs(log_entries, race_trim=True, **args):

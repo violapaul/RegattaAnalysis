@@ -163,7 +163,19 @@ class RaceAnalysis:
 
         self.TIMEZONE = dateutil.tz.gettz('US/Pacific')
 
-        self.STYC_RACE_MARKS = dict(
+        self.STYC_MARKS = dict(
+            n = lla.from_degrees_minutes((47, 41.064), (-122, 24.679)),
+            b = lla.from_degrees_minutes((47, 40.285), (-122, 25.342)),
+            r = lla.from_degrees_minutes((47, 44.387), (-122, 22.944)),
+            u = lla.from_degrees_minutes((47, 45.676), (-122, 23.833)),
+            m = lla.from_degrees_minutes((47, 41.783), (-122, 24.538)),
+            w = lla.from_degrees_minutes((47, 39.617), (-122, 26.467)),
+            k = lla.from_degrees_minutes((47, 35.700), (-122, 28.800)),
+            d = lla.from_degrees_minutes((47, 35.933), (-122, 23.267)),
+            j = lla.from_degrees_minutes((47, 44.755), (-122, 28.38)),
+            o = lla.from_degrees_minutes((47, 42.600), (-122, 30.450))
+        )
+        self.CYC_MARKS = dict(
             n = lla.from_degrees_minutes((47, 41.064), (-122, 24.679)),
             b = lla.from_degrees_minutes((47, 40.285), (-122, 25.342)),
             r = lla.from_degrees_minutes((47, 44.387), (-122, 22.944)),
@@ -173,7 +185,19 @@ class RaceAnalysis:
             k = lla.from_degrees_minutes((47, 35.700), (-122, 28.800)),
             d = lla.from_degrees_minutes((47, 35.933), (-122, 23.267))
         )
+        self.RACE_MARKS = self.STYC_MARKS
 
+    def init_styc(self):
+        "Initialize for STYC races."
+        self.RACE_MARKS = self.STYC_MARKS
+
+    def init_cyc(self):
+        "Initialize for CYC races."
+        self.RACE_MARKS = self.CYC_MARKS
+
+    def mark_position(self, mark):
+        return self.RACE_MARKS[mark]
+        
     def init_san_diego(self, logging_level=logging.INFO):
         "Localize to SanDiego."        
 

@@ -9,6 +9,7 @@ try:
     if IN_NOTEBOOK:
         IPython.get_ipython().magic("matplotlib notebook")
         import matplotlib.pyplot as plt
+        plt.rcParams.update({'figure.max_open_warning': 0})
         plt.rcParams['figure.figsize'] = (6.0, 6.0)
 except:
     logging.info("Not running ipython.")

@@ -1,10 +1,16 @@
 """
 # Charting and Graphing
 
-Collection of tools to create sailing charts, display race tracks, and plot instrument data.
+Collection of tools to create sailing charts, display race tracks, and plot instrument data versus time.
 
-Most interesting part is the generation of GEO-registered charts, upon which lat/lon
+The first part of this notebook describes the the generation of GEO-registered charts, upon which lat/lon
 positions can be scale accurately ploted.
+
+The second describes the plotting of boat instrument data. 
+
+We'll conclude with some details on how these two can be combined.
+
+## Literate Notebook
 
 Warning this is a [Literate Notebook](Literate_Notebook_Module.ipynb), i.e. the notebook contains the code for the charting module.  Do not edit the code in the module directly, edit the notebook and then regenerate the module code.
 
@@ -19,6 +25,9 @@ Warning this is a [Literate Notebook](Literate_Notebook_Module.ipynb), i.e. the 
 import os
 import math
 import time  # used to compute elapsed times
+# Helpful when plotting dates.
+from datetime import datetime
+from dateutil import tz
 
 # Matplotlib is the engine for plotting graphs and images
 import matplotlib
@@ -122,10 +131,10 @@ def map_project(p):
     east, north = G.MAP(p.lon, p.lat)  # gdal order is lon then lat, I prefer lat/lon
     return DictClass(north=north, east=east)
 
-def region_from_marks(marks, lat_border=0.2, lon_border=0.3):
-    pos = [G.STYC_RACE_MARKS[m] for m in marks]
-    lats = [p.lat for p in pos]
-    lons = [p.lon for p in pos]    
+def region_from_marks(latlon_list, lat_border=0.2, lon_border=0.3):
+    "Compute a map region from a set of latlon marks."
+    lats = [p.lat for p in latlon_list]
+    lons = [p.lon for p in latlon_list]    
     lat_max, lat_min = max_min_with_border(np.array(lats), lat_border)
     lon_max, lon_min = max_min_with_border(np.array(lons), lon_border)
     return DictClass(lat_max=lat_max, lat_min=lat_min,
@@ -209,10 +218,14 @@ def create_figure(fig=None, figsize=(6, 6)):
     ax = fig.add_subplot(111)   
     return fig, ax
 
-def draw_chart(chart, ax=None):
+def draw_chart(chart, ax=None, desaturate=True):
     if ax is None:
         ax = chart.ax
-    ax.imshow(desaturate_image(chart.image), 
+    if desaturate:
+        image = desaturate_image(chart.image)
+    else:
+        image = chart.image
+    ax.imshow(image, 
               extent=[chart.west, chart.east, chart.south, chart.north])
     ax.grid(True)
     return chart
@@ -275,6 +288,35 @@ def quick_plot(index, data, legend=None, fignum=None, clf=True, title=None, s=sl
     fig.tight_layout()
     return plot
 
+def find_nearest(array, value):
+    "Find nearest value in array."
+    idx = np.searchsorted(array, value, side="left")
+    return idx, array[idx]
+
+def to_local_timezone(dt):
+    "Convert a datetime to a local datetime."
+    HERE = tz.tzlocal()
+    UTC = tz.gettz('UTC')
+    gmt = dt.replace(tzinfo=UTC)
+    return gmt.astimezone(HERE)
+
+# I found that plotting data against a datetime was very slow.  One solution is to explicitly
+# compute the datetime ticks.
+
+def get_ticks(datetimes):
+    "Explicitly compute the ticks for an array of datetimes."
+    formatter = matplotlib.dates.DateFormatter('%H:%M', tz=G.TIMEZONE)
+    # Pick a delta time that yields a reasonable number of ticks.
+    for dt in [120, 90, 60, 30, 20, 10, 8, 6, 4, 2, 1]:
+        loc = matplotlib.dates.MinuteLocator(byminute=None, interval=dt, tz=G.TIMEZONE)
+        tick_values = loc.tick_values(datetimes.iloc[0], datetimes.iloc[-1])
+        G.logger.debug(f"dt = {dt}, {str(tick_values)}")
+        if len(tick_values) > 8:
+            break
+    tick_datetimes = [to_local_timezone(matplotlib.dates.num2date(v)) for v in tick_values]
+    tick_positions = [find_nearest(datetimes, v)[0] for v in tick_datetimes]
+    tick_labels = [formatter.format_data(v) for v in tick_values]
+    return tick_positions, tick_labels
 
 def quick_plot_ax(ax, index, data, legend=None, s=slice(None, None, None)):
     "Helper function.  See quick_plot for documentation of arguments."
@@ -287,16 +329,22 @@ def quick_plot_ax(ax, index, data, legend=None, s=slice(None, None, None)):
         if legend is None:
             legend = expressions
     np_data = [np.asarray(d) for d in data]
+    x = range(len(np_data[0][s]))
     
     def draw():
         if index is None:
             x = range(len(np_data[0][s]))
         else:
             x = index[s]
-        for d in np_data:
-            ax.plot(x, d[s])[0]
         if is_datetime(index):
-            ax.xaxis.set_major_formatter(matplotlib.dates.DateFormatter('%H:%M', tz=G.TIMEZONE))
+            # If a datetime this can be slow.  Use a range instead, which is fast, and explicitly
+            # compute the ticks.
+            x = range(len(np_data[0][s]))
+            tick_positions, tick_labels = get_ticks(index[s])
+            ax.set_xticks(tick_positions) 
+            ax.set_xticklabels(tick_labels)
+        for d in np_data:
+            ax.plot(x, d[s])
         if isinstance(legend, str):
             # When the loc is 'best' then it is very slow!
             ax.legend(legend.split(','), loc='upper right')
@@ -331,7 +379,7 @@ def nth_value(series_like, n):
     elif isinstance(series_like, np.ndarray):
         return series_like[n]
 
-#### Cell #29 Type: module #####################################################
+#### Cell #31 Type: module #####################################################
 
 # To link plot to the chart, we add two functions to the chart.  
 #
@@ -382,7 +430,7 @@ def chart_update_functions(chart, skip=None):
     return chart
 
 
-#### Cell #30 Type: module #####################################################
+#### Cell #32 Type: module #####################################################
 
 # And now we pull it all together.
 
@@ -444,7 +492,7 @@ def chart_and_plot(df, index, data, data2=None):
     return chart
 
 
-#### Cell #32 Type: module #####################################################
+#### Cell #34 Type: module #####################################################
 
 # One of the critical tasks is to trim the data to remove time at the dock, or to slip into races.
 
@@ -502,13 +550,13 @@ def trim_track(df, fig_or_num=None, border=0.2, skip=None, delay=0.01):
     return chart
 
 
-#### Cell #38 Type: metadata ###################################################
+#### Cell #41 Type: metadata ###################################################
 
 #: {
 #:   "metadata": {
-#:     "timestamp": "2020-06-11T13:25:55.536999-07:00"
+#:     "timestamp": "2021-02-21T21:13:45.033077-08:00"
 #:   }
 #: }
 
-#### Cell #39 Type: finish #####################################################
+#### Cell #42 Type: finish #####################################################
 

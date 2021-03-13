@@ -44,7 +44,6 @@ from global_variables import G  # global variables
 import utils
 from utils import DictClass
 import process as p
-import nbutils
 from nbutils import display_markdown, display
 
 #### Cell #5 Type: module ######################################################
@@ -134,6 +133,8 @@ def read_metadata():
         # If the record is missing a source, assume it was written byhand.
         if 'source' not in record:
             record['source'] = 'byhand'
+        if 'date' not in record:
+            print(record)
         dates[record['date']] = record
         records.append(record)
     # File timestamp, used to find valid updates in other sources.
@@ -206,12 +207,13 @@ def summary_table(race_records, columns = None):
 
 #### Cell #16 Type: module #####################################################
 
-# These are the current list of columns used in the form.  Note the column names are long and verbose,
-# in Google Forms the column names are also the documentation for the form fields.
+# The column names are long and verbose, because the SHEET column names are the form field prompts.
 
-# Long name and a convenient short form.
+# These names are good as documentation, but painful for programmatic access.  The table below maps from 
+# a long name and a convenient short form.
+
 SHORT_COLNAME_TO_LONG = {
-    'date'            : 'Date YYYY-MM-DD (e.g. "2020-05-10") or blank for today.',
+    'date'            : 'Date YYYY-MM-DD (e.g. "2020-05-10") ',
     'title'           : 'Title: short name for sail (e.g. SBYC Snowbird #1)', 
     'purpose'         : 'Purpose',
     'crew'            : 'Crew',
@@ -237,6 +239,8 @@ SHORT_COLNAME_TO_LONG = {
 LONG_COLNAME_TO_SHORT = {v:k for k, v in SHORT_COLNAME_TO_LONG.items()}
 
 #### Cell #17 Type: module #####################################################
+
+# Read the sheet and convert to a pandas table.
 
 def read_gsheet():
     "Read the latest GSHEET.  Check that nothing bad has happened, and convert to short names."
@@ -270,8 +274,8 @@ def convert_to_short_names(raw_metadata):
 
 #### Cell #19 Type: module #####################################################
 
-# Next step is to convert the Google Form spreadsheet rows to race metadata entries.  The goal is to 
-# keep the two "close" so that conversion is not onerous.
+# Next step is to convert the Google Form spreadsheet rows to race metadata entries.  The goal was to 
+# keep the two "close" so that conversion is not onerous,  but we do need to massage some of the fields.
 
 def gsheet_row_to_metadata(row):
     "Convert the Google Form spreadsheet rows to race metadata entries."
@@ -323,6 +327,13 @@ def timestamp_convert(val):
 
 # If there are new rows in the GSHEET, then add them to metadata.
 
+def update_metadata_from_gsheet():
+    "Read metadata.yml and gsheet and update as needed."
+    metadata = read_metadata()
+    gsheet = read_gsheet()
+    new_records = add_gsheet_records(gsheet, metadata)
+    save_metadata(new_records)
+
 def add_gsheet_records(gsheet, metadata):
     "Find records in the gsheet which are missing from the existing metadata."
     dates = metadata.dates.copy()
@@ -333,20 +344,25 @@ def add_gsheet_records(gsheet, metadata):
             date = record['date']
             G.logger.debug(f"Examining record {date}")
             if date not in dates:
+                # If the date is missing just add it.
                 G.logger.info(f"Found new record for {date} : {record.get('title', '')}")
                 res.append(record)
             else:
+                # If the date is already present we need to merge.
                 existing = dates.pop(date)
                 source = existing['source']
                 if source == 'byhand':
+                    # The existing was entered byhand in metadata.yml.  Be careful!
                     if metadata.timestamp < record['timestamp']:
                         G.logger.warning(f"Duplicate record. GSheet row is newer than byhand metadata: {record['timestamp']}.")
                         # Append both, we'll need to figure this out by hand
                         res.append(existing)
                         res.append(record)
                     else:
+                        # Otherwise the GSHEET entry is older than the current record.  Ignore.
                         res.append(existing)
                 elif source in ['loginfo', 'logprocess', 'gsheet']:
+                    # Source was an automated process.  We can merge the records, overwriting with GSHEET
                     G.logger.debug(f"Merging gsheet into exiting record.")
                     # Overwrite the values in these records.
                     new_record = {**existing, **record}
@@ -355,15 +371,9 @@ def add_gsheet_records(gsheet, metadata):
                     G.logger.warning(f"Found strange source: {source}.")
     return res + list(dates.values())
 
-def update_metadata_from_gsheet():
-    "Read metadata.yml and gsheet and update as needed."
-    metadata = read_metadata()
-    gsheet = read_gsheet()
-    new_records = add_gsheet_records(gsheet, metadata)
-    save_metadata(new_records)
+# notebook
 
-
-#### Cell #23 Type: module #####################################################
+#### Cell #24 Type: module #####################################################
 
 def update_metadata_from_loginfo():
     "Read metadata.yml and loginfo and update as needed."
@@ -406,7 +416,7 @@ def loginfo_title(row):
         return row.description, ''
 
 
-#### Cell #24 Type: module #####################################################
+#### Cell #25 Type: module #####################################################
 
 # Finally, during upload we should ensure that there is a default and empty metadata record 
 # for each race.
@@ -450,7 +460,7 @@ def datetime_from_log_filename(filename, time_zone='US/Pacific'):
 def date_from_datetime(adt):
     return adt.format("YYYY-MM-DD")
 
-#### Cell #25 Type: module #####################################################
+#### Cell #26 Type: module #####################################################
 
 def update_race(updated_race_record):
     "Replace the race record, by date."
@@ -461,13 +471,13 @@ def update_race(updated_race_record):
     md.dates[date] = updated_race_record
     save_metadata(list(md.dates.values()))
 
-#### Cell #27 Type: metadata ###################################################
+#### Cell #28 Type: metadata ###################################################
 
 #: {
 #:   "metadata": {
-#:     "timestamp": "2020-08-02T16:13:05.666836-07:00"
+#:     "timestamp": "2020-11-22T09:25:43.744449-08:00"
 #:   }
 #: }
 
-#### Cell #28 Type: finish #####################################################
+#### Cell #29 Type: finish #####################################################
 

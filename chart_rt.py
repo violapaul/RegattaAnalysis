@@ -3,10 +3,16 @@
 
 #: # Charting and Graphing
 #: 
-#: Collection of tools to create sailing charts, display race tracks, and plot instrument data.
+#: Collection of tools to create sailing charts, display race tracks, and plot instrument data versus time.
 #: 
-#: Most interesting part is the generation of GEO-registered charts, upon which lat/lon
+#: The first part of this notebook describes the the generation of GEO-registered charts, upon which lat/lon
 #: positions can be scale accurately ploted.
+#: 
+#: The second describes the plotting of boat instrument data. 
+#: 
+#: We'll conclude with some details on how these two can be combined.
+#: 
+#: ## Literate Notebook
 #: 
 #: Warning this is a [Literate Notebook](Literate_Notebook_Module.ipynb), i.e. the notebook contains the code for the charting module.  Do not edit the code in the module directly, edit the notebook and then regenerate the module code.
 #: 
@@ -191,9 +197,9 @@ def plot_instrument_data_from_race():
 
 #: ## Tile Servers
 #: 
-#: As often happens, as I write I begin to understand better.  Writing a section naturally raises questions in my mind, and as I try to provide a link or reference I find additional info.  It happened again, as I wrote the section on tiled map servers.  To the rescue came the Open Street Map (OSM) page on [Slippy Maps](https://wiki.openstreetmap.org/wiki/Slippy_Map) (their funky name for tiled maps).  Specifically the referencing tiles is described [here](https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames).
+#: As often happens, as I write I begin to understand better.  Writing a section naturally raises questions in my mind, and as I try to provide a link or reference I find additional info.  It happened again, as I wrote the section on tiled map servers.  To the rescue came the Open Street Map (OSM) page on [Slippy Maps](https://wiki.openstreetmap.org/wiki/Slippy_Map) (their funky name for tiled maps).  Additional details on referencing tiles is [here](https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames).
 #: 
-#: For completeness, I'll include code to fetch maps from the NOAA server on demand.  This could work better if you do not know in advance where you'll be sailing, or if the file storage is not available.
+#: For completeness, I'll include code to fetch maps from the NOAA server on demand.  This "on demand" code could work better if you do not know in advance where you'll be sailing, or if the disk space to store the MBTILES files is not available.
 
 #### Cell #7 Type: module ######################################################
 
@@ -203,6 +209,9 @@ def plot_instrument_data_from_race():
 import os
 import math
 import time  # used to compute elapsed times
+# Helpful when plotting dates.
+from datetime import datetime
+from dateutil import tz
 
 # Matplotlib is the engine for plotting graphs and images
 import matplotlib
@@ -398,6 +407,15 @@ def map_project(p):
     east, north = G.MAP(p.lon, p.lat)  # gdal order is lon then lat, I prefer lat/lon
     return DictClass(north=north, east=east)
 
+def region_from_marks(latlon_list, lat_border=0.2, lon_border=0.3):
+    "Compute a map region from a set of latlon marks."
+    lats = [p.lat for p in latlon_list]
+    lons = [p.lon for p in latlon_list]    
+    lat_max, lat_min = max_min_with_border(np.array(lats), lat_border)
+    lon_max, lon_min = max_min_with_border(np.array(lons), lon_border)
+    return DictClass(lat_max=lat_max, lat_min=lat_min,
+                     lon_max=lon_max, lon_min=lon_min)
+
 def extract_region(df, border=0.2, fudge = (0.015, -0.015)):
     """
     Extract the geographic region which covers the entire race track.  BORDER is an
@@ -556,10 +574,14 @@ def create_figure(fig=None, figsize=(6, 6)):
     ax = fig.add_subplot(111)   
     return fig, ax
 
-def draw_chart(chart, ax=None):
+def draw_chart(chart, ax=None, desaturate=True):
     if ax is None:
         ax = chart.ax
-    ax.imshow(desaturate_image(chart.image), 
+    if desaturate:
+        image = desaturate_image(chart.image)
+    else:
+        image = chart.image
+    ax.imshow(image, 
               extent=[chart.west, chart.east, chart.south, chart.north])
     ax.grid(True)
     return chart
@@ -634,7 +656,7 @@ display_markdown("**Be sure to look at the chart above for the marks!**")
 
 #### Cell #24 Type: markdown ###################################################
 
-#: ## Plotting Instruments
+#: # Plotting Instruments
 #: 
 #: Python, Pandas, and matplotlib are awesome at plotting data.  As we have shown in previous notebooks, it is relatively easy to produce high quality plots.
 #: 
@@ -720,6 +742,35 @@ def quick_plot(index, data, legend=None, fignum=None, clf=True, title=None, s=sl
     fig.tight_layout()
     return plot
 
+def find_nearest(array, value):
+    "Find nearest value in array."
+    idx = np.searchsorted(array, value, side="left")
+    return idx, array[idx]
+
+def to_local_timezone(dt):
+    "Convert a datetime to a local datetime."
+    HERE = tz.tzlocal()
+    UTC = tz.gettz('UTC')
+    gmt = dt.replace(tzinfo=UTC)
+    return gmt.astimezone(HERE)
+
+# I found that plotting data against a datetime was very slow.  One solution is to explicitly
+# compute the datetime ticks.
+
+def get_ticks(datetimes):
+    "Explicitly compute the ticks for an array of datetimes."
+    formatter = matplotlib.dates.DateFormatter('%H:%M', tz=G.TIMEZONE)
+    # Pick a delta time that yields a reasonable number of ticks.
+    for dt in [120, 90, 60, 30, 20, 10, 8, 6, 4, 2, 1]:
+        loc = matplotlib.dates.MinuteLocator(byminute=None, interval=dt, tz=G.TIMEZONE)
+        tick_values = loc.tick_values(datetimes.iloc[0], datetimes.iloc[-1])
+        G.logger.debug(f"dt = {dt}, {str(tick_values)}")
+        if len(tick_values) > 8:
+            break
+    tick_datetimes = [to_local_timezone(matplotlib.dates.num2date(v)) for v in tick_values]
+    tick_positions = [find_nearest(datetimes, v)[0] for v in tick_datetimes]
+    tick_labels = [formatter.format_data(v) for v in tick_values]
+    return tick_positions, tick_labels
 
 def quick_plot_ax(ax, index, data, legend=None, s=slice(None, None, None)):
     "Helper function.  See quick_plot for documentation of arguments."
@@ -732,16 +783,22 @@ def quick_plot_ax(ax, index, data, legend=None, s=slice(None, None, None)):
         if legend is None:
             legend = expressions
     np_data = [np.asarray(d) for d in data]
+    x = range(len(np_data[0][s]))
     
     def draw():
         if index is None:
             x = range(len(np_data[0][s]))
         else:
             x = index[s]
-        for d in np_data:
-            ax.plot(x, d[s])[0]
         if is_datetime(index):
-            ax.xaxis.set_major_formatter(matplotlib.dates.DateFormatter('%H:%M', tz=G.TIMEZONE))
+            # If a datetime this can be slow.  Use a range instead, which is fast, and explicitly
+            # compute the ticks.
+            x = range(len(np_data[0][s]))
+            tick_positions, tick_labels = get_ticks(index[s])
+            ax.set_xticks(tick_positions) 
+            ax.set_xticklabels(tick_labels)
+        for d in np_data:
+            ax.plot(x, d[s])
         if isinstance(legend, str):
             # When the loc is 'best' then it is very slow!
             ax.legend(legend.split(','), loc='upper right')
@@ -783,6 +840,17 @@ def nth_value(series_like, n):
 # Simple single graph.  
 quick_plot(df.row_times, "df.spd, df.sog, df.tws")
 
+#### Cell #29 Type: notebook ###################################################
+
+# notebook 
+
+# Simple single graph.  
+quick_plot(df.row_times, "df.spd, df.sog, df.tws")
+
+#### Cell #30 Type: notebook ###################################################
+
+# notebook 
+
 # Compute a version of VMG (velocity made good)
 thdg = df.hdg + df.variation.mean()  # Get the boats heading in true north
 angle = np.radians(df.twd - thdg)    # Angle to the true wind
@@ -797,7 +865,7 @@ pl = quick_plot_ax(ax1, None, "df.spd, df.sog, df.tws, vmg")
 pl = quick_plot_ax(ax2, None, "df.hdg, df.twd, 100+5*df.rudder, df.awa")
 fig.tight_layout()
 
-#### Cell #29 Type: module #####################################################
+#### Cell #31 Type: module #####################################################
 
 # To link plot to the chart, we add two functions to the chart.  
 #
@@ -848,7 +916,7 @@ def chart_update_functions(chart, skip=None):
     return chart
 
 
-#### Cell #30 Type: module #####################################################
+#### Cell #32 Type: module #####################################################
 
 # And now we pull it all together.
 
@@ -910,13 +978,13 @@ def chart_and_plot(df, index, data, data2=None):
     return chart
 
 
-#### Cell #31 Type: notebook ###################################################
+#### Cell #33 Type: notebook ###################################################
 
 # notebook
 
-ch = chart_and_plot(df, None, "df.spd, df.sog, df.tws, vmg", "df.hdg, df.twd, 100+5*df.rudder, df.awa")
+ch = chart_and_plot(df, df.row_times, "df.spd, df.sog, df.tws, vmg", "df.hdg, df.twd, 100+5*df.rudder, df.awa")
 
-#### Cell #32 Type: module #####################################################
+#### Cell #34 Type: module #####################################################
 
 # One of the critical tasks is to trim the data to remove time at the dock, or to slip into races.
 
@@ -974,13 +1042,13 @@ def trim_track(df, fig_or_num=None, border=0.2, skip=None, delay=0.01):
     return chart
 
 
-#### Cell #33 Type: notebook ###################################################
+#### Cell #35 Type: notebook ###################################################
 
 # notebook 
 
 ch = trim_track(df)
 
-#### Cell #34 Type: notebook ###################################################
+#### Cell #36 Type: notebook ###################################################
 
 # notebook
 
@@ -994,7 +1062,13 @@ display_markdown(f"Trimmed track starts at {start_time}.")
 display_markdown(f"Trimmed track starts at {end_time}.")
 
 
-#### Cell #35 Type: notebook ###################################################
+#### Cell #37 Type: markdown ###################################################
+
+#: # Appendix - NOAA tiles
+#: 
+#: This appendix includes some example code to pull tiles from the NOAA tile server and then combine them into a map. This code should work for any region where NOAA has charts.  And likley a small modification would work for other tile servers (since this format is relatively standard).
+
+#### Cell #38 Type: notebook ###################################################
 
 # notebook - Returning to tiles.  
 
@@ -1079,7 +1153,7 @@ def num2deg(xtile, ytile, zoom):
 
 
 
-#### Cell #36 Type: notebook ###################################################
+#### Cell #39 Type: notebook ###################################################
 
 #notebook 
 
@@ -1092,7 +1166,7 @@ fig, ax = new_axis()
 # lower left.
 ax.imshow(image)
 
-#### Cell #37 Type: notebook ###################################################
+#### Cell #40 Type: notebook ###################################################
 
 # notebook - This is here for historical reference...  we do not use basemaps anymore.
 
@@ -1137,14 +1211,14 @@ def gdal_basemap(chart, source_path, chart_path, zoom_level=None):
 
 
 
-#### Cell #38 Type: metadata ###################################################
+#### Cell #41 Type: metadata ###################################################
 
 #: {
 #:   "metadata": {
 #:     "kernelspec": {
-#:       "display_name": "Python [conda env:sail] *",
+#:       "display_name": "Python [conda env:newsail]",
 #:       "language": "python",
-#:       "name": "conda-env-sail-py"
+#:       "name": "conda-env-newsail-py"
 #:     },
 #:     "language_info": {
 #:       "codemirror_mode": {
@@ -1156,13 +1230,13 @@ def gdal_basemap(chart, source_path, chart_path, zoom_level=None):
 #:       "name": "python",
 #:       "nbconvert_exporter": "python",
 #:       "pygments_lexer": "ipython3",
-#:       "version": "3.7.0"
+#:       "version": "3.7.9"
 #:     },
-#:     "timestamp": "2020-06-11T13:25:55.534552-07:00"
+#:     "timestamp": "2021-02-21T21:12:33.275583-08:00"
 #:   },
 #:   "nbformat": 4,
 #:   "nbformat_minor": 2
 #: }
 
-#### Cell #39 Type: finish #####################################################
+#### Cell #42 Type: finish #####################################################
 

@@ -1,0 +1,17 @@
+--2020-11-22 09:55:35--  https://docs.google.com/spreadsheets/d/1xdWvZ27rDa1xIr7M39bWWm7XHVaMoHrqoYwJKATkQjc/export?format=csv&gid=736429456
+Resolving docs.google.com (docs.google.com)... 172.217.3.206
+Connecting to docs.google.com (docs.google.com)|172.217.3.206|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://accounts.google.com/ServiceLogin?service=wise&passive=1209600&continue=https://docs.google.com/spreadsheets/d/1xdWvZ27rDa1xIr7M39bWWm7XHVaMoHrqoYwJKATkQjc/export?format%3Dcsv%26gid%3D736429456&followup=https://docs.google.com/spreadsheets/d/1xdWvZ27rDa1xIr7M39bWWm7XHVaMoHrqoYwJKATkQjc/export?format%3Dcsv%26gid%3D736429456&ltmpl=sheets [following]
+--2020-11-22 09:55:36--  https://accounts.google.com/ServiceLogin?service=wise&passive=1209600&continue=https://docs.google.com/spreadsheets/d/1xdWvZ27rDa1xIr7M39bWWm7XHVaMoHrqoYwJKATkQjc/export?format%3Dcsv%26gid%3D736429456&followup=https://docs.google.com/spreadsheets/d/1xdWvZ27rDa1xIr7M39bWWm7XHVaMoHrqoYwJKATkQjc/export?format%3Dcsv%26gid%3D736429456&ltmpl=sheets
+Resolving accounts.google.com (accounts.google.com)... 172.217.3.205
+Connecting to accounts.google.com (accounts.google.com)|172.217.3.205|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘downloaded_content.csv’
+
+     0K .......... .......... .......... .......... .......... 1.93M
+    50K ..........                                             2.19M=0.03s
+
+2020-11-22 09:55:36 (1.98 MB/s) - ‘downloaded_content.csv’ saved [62434]
+

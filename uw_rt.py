@@ -50,8 +50,8 @@ import process as p
 from utils import DictClass
 
 import metadata
-
 import nbutils
+
 from nbutils import display_markdown, display
 
 #### Cell #3 Type: module ######################################################
@@ -72,7 +72,7 @@ def live_ocean_path(date_string):
     result_filename = adt.format("YYYY-MM-DD") + "_ocean_surface.nc"
     return os.path.join(LIVE_OCEAN_DATA_DIRECTORY, result_filename)
 
-def fetch_live_ocean_model(date_string):
+def fetch_live_ocean_model(date_string, background=True, speed='1000k'):
     """
     Fetch the UW Live Ocean current model.  If the file has already been downloaded, then
     return the path.  If not, beging an asynchronous download and return False.
@@ -88,10 +88,12 @@ def fetch_live_ocean_model(date_string):
         url = f"{LIVE_OCEAN_BASE}/{directory}/{LIVE_OCEAN_FILE}"
         download_path = path + ".incomplete"
         log_file = "/tmp/wget-log"
-        command = f"(wget {url} -O {download_path} -c -o {log_file}; mv {download_path} {path})&"
+        command = f"(wget {url} -O {download_path} -c -T 10 --limit-rate={speed} -o {log_file}; mv {download_path} {path})"
+        if background:
+            command += "&"
         print(command)
-        utils.run_system_command(command)
         display(f"Downloading model to {path}.  Check {log_file}.  Incomplete results here: {download_path}.")
+        utils.run_system_command(command)
         return False
 
 def read_live_ocean_model(date):
@@ -137,8 +139,11 @@ def find_times(uw_model, start, finish):
     return time_indices, [utils.time_from_timestamp(uw_model.ocean_time[t]) for t in time_indices]
 
 
+def mark_positions(marks):
+    return [G.mark_position(m) for m in marks]
+
 def region_from_marks(marks, lat_border=0.2, lon_border=0.3):
-    pos = [G.STYC_RACE_MARKS[m] for m in marks]
+    pos = mark_positions(marks)
     return region_from_latlon(pos, lat_border, lon_border)
 
 def region_from_latlon(pos, lat_border=0.2, lon_border=0.3):
@@ -177,10 +182,12 @@ def display_currents(uw_model, region, time_index, plot_wind=False):
 
 def draw_current(ch, uw_model, time_index, location=(2700, 737), plot_wind=False):
 
-    # Current is in meters/sec. And we typically think in knots.  1 m/s is 2 kts.  If you
-    # scale by 1000 then a 1kt current is 500m.
 
-    scale = 1000
+    # How long should a current vector be?  Given the scale of the map (which may be 10's
+    # of Ks), you want the vectors to be visible.  Current is stored in meters/sec. And we
+    # typically think in knots.  
+    
+    scale = 500 * G.MS_2_KNOTS  # a 1 kt current will be 500m long
     u = scale * uw_model.current_e[time_index, :, :]
     v = scale * uw_model.current_n[time_index, :, :]
 
@@ -198,17 +205,24 @@ def draw_current(ch, uw_model, time_index, location=(2700, 737), plot_wind=False
 
     mask = np.logical_not(lor(ll_mask, u.mask, v.mask))
 
-    one_knot = (1/G.MS_2_KNOTS) * scale/np.sqrt(2)
+    # Draw a set of scale keys that show 1 knot 
+    one_knot = (1 / G.MS_2_KNOTS) * scale
     if location is None:
         m_east  = np.mean(uw_model.east[mask])
         m_north = np.mean(uw_model.north[mask])
     else:
         m_east, m_north = location
-    ch.ax.arrow(m_east, m_north, one_knot, one_knot, head_width=100, length_includes_head=True, color='red')
+    ch.ax.arrow(m_east, m_north, one_knot/np.sqrt(2), one_knot/np.sqrt(2),
+                head_width=100, length_includes_head=True, color='red')
+    ch.ax.arrow(m_east, m_north, one_knot, 0,
+                head_width=100, length_includes_head=True, color='red')
+    ch.ax.arrow(m_east, m_north, 0, one_knot,
+                head_width=100, length_includes_head=True, color='red')
 
-    theta = (1/G.MS_2_KNOTS)*0.5*scale
+    # Threshlold to display arrow in red.
+    theta = (1.0 / G.MS_2_KNOTS) * scale  # above 0.5 knots in red
     m1 = land(mask, np.sqrt(np.square(u) + np.square(v)) >= theta)
-    shaft_width = 0.0025
+    shaft_width = 0.004
     ch.ax.quiver(uw_model.east[m1], uw_model.north[m1], u[m1], v[m1], 
                  angles='xy', scale_units='xy', scale=1, color='red', width=shaft_width)
 
@@ -225,13 +239,16 @@ def draw_current(ch, uw_model, time_index, location=(2700, 737), plot_wind=False
     return ch
 
 def plot_marks(ch, marks):
+    mark_positions = [G.mark_position(m) for m in marks]
+    plot_positions(ch, mark_positions)
+
+def plot_positions(ch, positions):
     "Plot the STYC marks identified by name."
-    pos = [G.STYC_RACE_MARKS[m.casefold()] for m in marks]
-    lats = np.array([p.lat for p in pos])
-    lons = np.array([p.lon for p in pos])
+    lats = np.array([p.lat for p in positions])
+    lons = np.array([p.lon for p in positions])
     marks = np.vstack(G.MAP(lons, lats)).T 
     # Add red x's to the chart ABOVE, at the location of the marks
-    ch.ax.scatter(marks[:, 0], marks[:, 1], color='red', marker='x')
+    ch.ax.scatter(marks[:, 0], marks[:, 1], color='green', marker='x')
 
 def save_chart(ch, directory="", filetype="pdf"):
     "Save a current chart to a file, using time as filename."
@@ -363,7 +380,6 @@ if False:
 
 # notebook - plot charts for a day on the water
 
-
 from latlonalt import LatLonAlt as lla
             
 SAN_JUANS = dict(
@@ -372,62 +388,37 @@ SAN_JUANS = dict(
     SE = lla(48.136633, -122.639886)
 )
 
-SAN_JUANS = dict(
-    SW = lla(48.392903, -123.199949),
-    N = lla(48.769520, -122.930888),
-    SE = lla(48.336633, -122.639886)
+SCATCHET_HEAD = dict(
+    sh = lla(47.908261, -122.43814),
+    j = G.STYC_MARKS['j'],
+    n = G.STYC_MARKS['n']
+    )
+
+WINTER_VASHON = dict(
+    nw = lla.from_degrees_minutes((47, 31.033), (-122, 29.154)),
+    east = lla.from_degrees_minutes((47, 23.147), (-122, 20.951)),
+    south = lla.from_degrees_minutes((47, 19.122), (-122, 33.334))
 )
 
+JIM_DEPUE = [G.STYC_MARKS[m] for m in 'kwjom']
+BLAKELY_ROCKS = [G.STYC_MARKS[m] for m in 'nku']
 
 if True:
     plt.close('all')
-    date = "2020-07-31"
-    sail_date = "2020-08-01"
-    marks = "nnkbw"
-    region = region_from_marks(marks, 0.2, 0.6)
-    start_time = "11:00:00"
-    end_time = "14:00:00"
-    # Note if the model is not downloaded will return None.  Takes 20 mins.
-    ch_list = create_charts(date, sail_date, start_time, end_time, region, plot_wind=True)
-    if ch_list is not None:
-        chart_dir = "/Users/viola/tmp"
-        display(f"Saving charts in {chart_dir}")
-        for ch in ch_list:
-            plot_marks(ch, marks)
-            save_chart(ch, chart_dir, "jpg")
-
-
-if True:
-    plt.close('all')
-    date = "2020-08-01"
-    sail_date = "2020-08-01"
-    marks = "nnkbw"
-    region = region_from_marks(marks, 0.2, 0.6)
-    start_time = "11:00:00"
-    end_time = "17:00:00"
+    date = "2021-03-12"
+    sail_date = "2021-03-13"
+    positions = list(SCATCHET_HEAD.values())
+    region = region_from_latlon(positions, 0.1, 0.6)
+    start_time = "10:00:00"
+    end_time = "16:00:00"
     # Note if the model is not downloaded will return None.  Takes 20 mins.
     ch_list = create_charts(date, sail_date, start_time, end_time, region, plot_wind=False)
     if ch_list is not None:
         chart_dir = "/Users/viola/tmp"
         display(f"Saving charts in {chart_dir}")
         for ch in ch_list:
-            plot_marks(ch, marks)
+            plot_positions(ch, positions)
             save_chart(ch, chart_dir, "jpg")
-
-            
-if True:
-    plt.close('all')
-    date = "2020-06-26"
-    sail_date = "2020-06-27"
-    region = region_from_latlon(SAN_JUANS.values())
-    start_time = "10:30:00"
-    end_time = "14:00:00"
-    # Note if the model is not downloaded will return None.  Takes 20 mins.
-    ch_list = create_charts(date, sail_date, start_time, end_time, region)
-    if ch_list is not None:
-        display("Saving charts in /tmp")
-        for ch in ch_list:
-            save_chart(ch, "/tmp", "jpg")
 
             
 

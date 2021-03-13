@@ -36,11 +36,11 @@
 #: - A file called metadata.yaml (in YAML).  This is the final ultimate source for metadata.
 #:   - YAML is super powerful, allowing you to enter complex structured info.
 #:   - It is also designed to be human readable (unlike a database file, or even a CSV).
-#:   - There is no strong schema, and its a bit disorganized.
+#:   - Unfortunately there is no strong schema, and it is not that hard to mess things up.
 #: - A google spreadsheet (gsheet) that is fed by a [Google Form](https://forms.gle/JENZZdSWKNuoF8icA) (which is easy to use on the ride home from the race).
 #:   - The form determines the schema, which can be changed, but it does enforce some structure.
 #:   - The spreadsheet can be downloaded as a CSV from a URL.
-#: - An older pandas dataframe, `log_info.pd` which is should be deprecated.
+#: - An older pandas dataframe, `log_info.pd` which is now deprecated.
 #: 
 #: And a final source, which is a default and empty metadata record generated when we first upload the file.
 #: 
@@ -61,7 +61,7 @@
 #: 
 #: ### References 
 #: 
-#: - Good reference to start: [YAML tutorial](https://rollout.io/blog/yaml-tutorial-everything-you-need-get-started/)
+#: - Good YAML reference to start: [YAML tutorial](https://rollout.io/blog/yaml-tutorial-everything-you-need-get-started/)
 #:   - [The official reference](https://yaml.org/) Its written in YAML (which makes it a bit weird).
 #: - Nice Google page on [how to use Google Forms](https://zapier.com/learn/google-sheets/how-to-use-google-forms/)
 #: 
@@ -91,7 +91,6 @@
 #: ## Caveats and concerns
 #: 
 #: - YAML, as edited by a human author, does not support a strong schema.  Its easy to mess things up, with typos, missing fields, incorrectly named fields, etc.
-#: 
 
 
 #### Cell #2 Type: module ######################################################
@@ -113,12 +112,11 @@ from global_variables import G  # global variables
 import utils
 from utils import DictClass
 import process as p
-import nbutils
 from nbutils import display_markdown, display
 
 #### Cell #3 Type: notebook ####################################################
 
-# notebook - an example
+# notebook - YAML race metadata example.
 
 # Below is snippet of YAML inline.  I am not going to document YAML here.  But notice that the structure
 # is reminiscent of Python itself, and it is somewhat readable.
@@ -247,7 +245,7 @@ def lines_url(link_text, url):
 #### Cell #6 Type: notebook ####################################################
 
 # notebook - Create a human readable version of this metadata
-display_race_summary(race_metadata)
+display_race_metadata(race_metadata)
 
 #### Cell #7 Type: module ######################################################
 
@@ -267,6 +265,8 @@ def read_metadata():
         # If the record is missing a source, assume it was written byhand.
         if 'source' not in record:
             record['source'] = 'byhand'
+        if 'date' not in record:
+            print(record)
         dates[record['date']] = record
         records.append(record)
     # File timestamp, used to find valid updates in other sources.
@@ -311,8 +311,8 @@ def save_yaml(race_entries, stream=None):
 metadata = read_metadata()
 display(metadata.timestamp)
 
-display_race_summary(metadata.dates['2020-04-19'])
-display_race_summary(metadata.dates['2020-06-06'])
+display_race_metadata(metadata.dates['2020-04-19'])
+display_race_metadata(metadata.dates['2020-06-06'])
 
 
 #### Cell #9 Type: module ######################################################
@@ -352,7 +352,9 @@ def summary_table(race_records, columns = None):
 
 # notebook 
 
-summarize(metadata.records)
+metadata = read_metadata()
+
+display_race_summaries(metadata.records)
 summary_table(metadata.records)
 
 #### Cell #11 Type: notebook ###################################################
@@ -437,35 +439,49 @@ schema_lite(metadata.records)
 
 #: ## Reading metadata from Google Forms
 #: 
-#: We created a Google form for post race metadata entry: https://forms.gle/JENZZdSWKNuoF8icA
+#: We created a Google form to speed up post race metadata entry: https://forms.gle/JENZZdSWKNuoF8icA
 #: 
 #: The advantage of this **public** form is that it is easy to enter data from any device (including mobile) at any time.  And the schema is at least "weakly" enforced.
 #: 
-#: The form provide a scheme for publishing the resulting data as a spreadsheet, which is here: https://docs.google.com/spreadsheets/d/e/2PACX-1vS5g8oeSAMk-CFP-xDi4hu9a23W-iF5SMNjap-Gd78BPWvhA1GGgpDqFkQaEUVD3zoM9Pud1fozuDn8/pub?output=csv
+#: The form provides a scheme for publishing the resulting data as a spreadsheet, which is here: https://docs.google.com/spreadsheets/d/e/2PACX-1vS5g8oeSAMk-CFP-xDi4hu9a23W-iF5SMNjap-Gd78BPWvhA1GGgpDqFkQaEUVD3zoM9Pud1fozuDn8/pub?output=csv
 #: 
+#: The steps are:
+#: - Create a Google form which has the fields you want.
+#:   - Get a Google account and drive.
+#:   - Create the form here:  https://docs.google.com/forms/u/0/
+#: - Form data can be viewed as a Google sheet
+#:   - One column for each field.
+#: - A Google sheet can be exported as a CSV file.
+#: 
+#: Note, the Google form is designed to be easy to use and enter data.  The ultimate goal is to produce semi-structured data that can be used to better analyze our performance in races.  The design of the form is a compromise that makes data entry easy (on the drive home from the race), and analysis easy.
 
 
 #### Cell #15 Type: notebook ###################################################
 
-# notebook 
+# notebook - load GSHEET with form data
 
+# This is a magic URL that can be extracted from any Google Sheet.  Look under File and then "Publish to Web".  
+# Note this CSV takes a bit of time to be updated from the SHEET.
 URL = r"https://docs.google.com/spreadsheets/d/e/2PACX-1vS5g8oeSAMk-CFP-xDi4hu9a23W-iF5SMNjap-Gd78BPWvhA1GGgpDqFkQaEUVD3zoM9Pud1fozuDn8/pub?output=csv"
 
+# Use pandas to read the CSV
 raw_gsheet = pd.read_csv(URL)  # index_col=0, parse_dates=True)
+
+display_markdown("### A list of the columns in the GSHEET")
 
 for c in raw_gsheet.columns:
     print(repr(c))
 
 
-
 #### Cell #16 Type: module #####################################################
 
-# These are the current list of columns used in the form.  Note the column names are long and verbose,
-# in Google Forms the column names are also the documentation for the form fields.
+# The column names are long and verbose, because the SHEET column names are the form field prompts.
 
-# Long name and a convenient short form.
+# These names are good as documentation, but painful for programmatic access.  The table below maps from 
+# a long name and a convenient short form.
+
 SHORT_COLNAME_TO_LONG = {
-    'date'            : 'Date YYYY-MM-DD (e.g. "2020-05-10") or blank for today.',
+    'date'            : 'Date YYYY-MM-DD (e.g. "2020-05-10") ',
     'title'           : 'Title: short name for sail (e.g. SBYC Snowbird #1)', 
     'purpose'         : 'Purpose',
     'crew'            : 'Crew',
@@ -491,6 +507,8 @@ SHORT_COLNAME_TO_LONG = {
 LONG_COLNAME_TO_SHORT = {v:k for k, v in SHORT_COLNAME_TO_LONG.items()}
 
 #### Cell #17 Type: module #####################################################
+
+# Read the sheet and convert to a pandas table.
 
 def read_gsheet():
     "Read the latest GSHEET.  Check that nothing bad has happened, and convert to short names."
@@ -531,8 +549,8 @@ gsheet
 
 #### Cell #19 Type: module #####################################################
 
-# Next step is to convert the Google Form spreadsheet rows to race metadata entries.  The goal is to 
-# keep the two "close" so that conversion is not onerous.
+# Next step is to convert the Google Form spreadsheet rows to race metadata entries.  The goal was to 
+# keep the two "close" so that conversion is not onerous,  but we do need to massage some of the fields.
 
 def gsheet_row_to_metadata(row):
     "Convert the Google Form spreadsheet rows to race metadata entries."
@@ -593,6 +611,13 @@ print(save_yaml(gsheet_records[-1:]))
 
 # If there are new rows in the GSHEET, then add them to metadata.
 
+def update_metadata_from_gsheet():
+    "Read metadata.yml and gsheet and update as needed."
+    metadata = read_metadata()
+    gsheet = read_gsheet()
+    new_records = add_gsheet_records(gsheet, metadata)
+    save_metadata(new_records)
+
 def add_gsheet_records(gsheet, metadata):
     "Find records in the gsheet which are missing from the existing metadata."
     dates = metadata.dates.copy()
@@ -603,20 +628,25 @@ def add_gsheet_records(gsheet, metadata):
             date = record['date']
             G.logger.debug(f"Examining record {date}")
             if date not in dates:
+                # If the date is missing just add it.
                 G.logger.info(f"Found new record for {date} : {record.get('title', '')}")
                 res.append(record)
             else:
+                # If the date is already present we need to merge.
                 existing = dates.pop(date)
                 source = existing['source']
                 if source == 'byhand':
+                    # The existing was entered byhand in metadata.yml.  Be careful!
                     if metadata.timestamp < record['timestamp']:
                         G.logger.warning(f"Duplicate record. GSheet row is newer than byhand metadata: {record['timestamp']}.")
                         # Append both, we'll need to figure this out by hand
                         res.append(existing)
                         res.append(record)
                     else:
+                        # Otherwise the GSHEET entry is older than the current record.  Ignore.
                         res.append(existing)
                 elif source in ['loginfo', 'logprocess', 'gsheet']:
+                    # Source was an automated process.  We can merge the records, overwriting with GSHEET
                     G.logger.debug(f"Merging gsheet into exiting record.")
                     # Overwrite the values in these records.
                     new_record = {**existing, **record}
@@ -625,15 +655,40 @@ def add_gsheet_records(gsheet, metadata):
                     G.logger.warning(f"Found strange source: {source}.")
     return res + list(dates.values())
 
-def update_metadata_from_gsheet():
-    "Read metadata.yml and gsheet and update as needed."
-    metadata = read_metadata()
-    gsheet = read_gsheet()
-    new_records = add_gsheet_records(gsheet, metadata)
-    save_metadata(new_records)
-
+# notebook
 
 #### Cell #22 Type: notebook ###################################################
+
+#notebook 
+
+import collections
+
+def find_duplicates(metadata):
+    "Find duplicate dates in the metadata."
+    dates = collections.defaultdict(list)
+    for record in metadata.records:
+        date = record['date']
+        dates[date] += [record]
+    return {k:v for k, v in dates.items() if len(v) > 1}
+        
+
+def find_missing_data(metadata):
+    records = []
+    for record in metadata.records:
+        file = record.get('file', None)
+        if file is None:
+            records.append(record)
+    return records
+        
+    
+metadata = read_metadata()
+
+dups = find_duplicates(metadata)
+print(dups.keys())
+
+print([(r['date'], r['title']) for r in find_missing_data(metadata)])
+
+#### Cell #23 Type: notebook ###################################################
 
 # notebook 
 
@@ -644,7 +699,7 @@ display(len(log_info))
 log_info[:5]
 
 
-#### Cell #23 Type: module #####################################################
+#### Cell #24 Type: module #####################################################
 
 def update_metadata_from_loginfo():
     "Read metadata.yml and loginfo and update as needed."
@@ -687,7 +742,7 @@ def loginfo_title(row):
         return row.description, ''
 
 
-#### Cell #24 Type: module #####################################################
+#### Cell #25 Type: module #####################################################
 
 # Finally, during upload we should ensure that there is a default and empty metadata record 
 # for each race.
@@ -731,7 +786,7 @@ def datetime_from_log_filename(filename, time_zone='US/Pacific'):
 def date_from_datetime(adt):
     return adt.format("YYYY-MM-DD")
 
-#### Cell #25 Type: module #####################################################
+#### Cell #26 Type: module #####################################################
 
 def update_race(updated_race_record):
     "Replace the race record, by date."
@@ -742,7 +797,7 @@ def update_race(updated_race_record):
     md.dates[date] = updated_race_record
     save_metadata(list(md.dates.values()))
 
-#### Cell #26 Type: notebook ###################################################
+#### Cell #27 Type: notebook ###################################################
 
 # notebook - 
 
@@ -751,7 +806,7 @@ if False:
     add_missing_metadata()
     update_metadata_from_gsheet()
 
-#### Cell #27 Type: metadata ###################################################
+#### Cell #28 Type: metadata ###################################################
 
 #: {
 #:   "metadata": {
@@ -772,11 +827,11 @@ if False:
 #:       "pygments_lexer": "ipython3",
 #:       "version": "3.7.0"
 #:     },
-#:     "timestamp": "2020-08-02T16:13:05.664272-07:00"
+#:     "timestamp": "2020-11-22T09:23:52.143336-08:00"
 #:   },
 #:   "nbformat": 4,
 #:   "nbformat_minor": 2
 #: }
 
-#### Cell #28 Type: finish #####################################################
+#### Cell #29 Type: finish #####################################################
 

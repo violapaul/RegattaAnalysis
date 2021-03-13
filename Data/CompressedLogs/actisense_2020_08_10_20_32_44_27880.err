@@ -1,0 +1,38 @@
+Attempt 1
+FATAL 2020-08-11T03:32:44.645Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 1 baud rate 230400
+FATAL 2020-08-12T19:22:59.531Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 2
+FATAL 2020-08-12T19:23:01.541Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 2 baud rate 230400
+FATAL 2020-08-12T19:23:03.551Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 3
+FATAL 2020-08-12T19:23:05.559Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 3 baud rate 230400
+FATAL 2020-08-12T19:23:07.571Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 4
+FATAL 2020-08-12T19:23:09.583Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 4 baud rate 230400
+FATAL 2020-08-12T19:23:11.593Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 5
+FATAL 2020-08-12T19:23:13.604Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 5 baud rate 230400
+FATAL 2020-08-12T19:23:15.629Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 6
+FATAL 2020-08-12T19:23:17.641Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 6 baud rate 230400
+FATAL 2020-08-12T19:23:19.653Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 7
+FATAL 2020-08-12T19:23:21.664Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 7 baud rate 230400
+FATAL 2020-08-12T19:23:23.676Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 8
+FATAL 2020-08-12T19:23:25.688Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 8 baud rate 230400
+FATAL 2020-08-12T19:23:27.700Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 9
+FATAL 2020-08-12T19:23:23.746Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 9 baud rate 230400
+FATAL 2020-08-12T19:23:25.757Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Attempt 10
+FATAL 2020-08-12T19:23:27.769Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0

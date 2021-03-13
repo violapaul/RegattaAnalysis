@@ -1,149 +1,112 @@
 """
-Handy routines for dealing with GPS.
-
-Should put more here!
-
-All functions, where possible, should be able to consume and produce both scalars and
-numpy arrays.
+Handy routines for dealing with GPX files.
 """
 
-import numpy as np
+import os
 import itertools as it
+import arrow
 
-def degrees_to_dm(lat_or_lon):
-    "Convert degrees to degrees and minutes (dm for short)."
-    sign = np.sign(lat_or_lon)
-    lat_or_lon = sign * lat_or_lon
-    degrees = np.floor(lat_or_lon)
-    minutes = 60 * (lat_or_lon - degrees)
-    return np.int(sign * degrees), minutes
+import gpxpy
+import gpxpy.gpx
 
-def degrees_to_dms(lat_or_lon):
-    "Convert degrees to degrees, minutes, seconds (dms for short)."
-    sign = np.sign(lat_or_lon)
-    lat_or_lon = sign * lat_or_lon
-    degrees = np.floor(lat_or_lon)
-    minutes = 60 * (lat_or_lon - degrees)
-    seconds = 60 * (minutes - np.floor(minutes))
-    return np.int(sign * degrees), np.int(np.floor(minutes)), seconds
+def write_gpx(gpx, gpx_output_file):
+    with open(gpx_output_file, 'w') as gpx_fs:
+        gpx_fs.write(gpx.to_xml())
 
-def dm_to_degrees(degrees, minutes):
-    "Convert degrees and minutes to degrees."
-    sign = np.sign(degrees)
-    return degrees + sign * minutes/60.0
 
-def dms_to_degrees(degrees, minutes, seconds):
-    "Convert degrees, minutes, seconds to degrees."
-    sign = np.sign(degrees)
-    return degrees + sign * minutes/60.0 + sign * seconds/(60*60.0)
+def read_gpx(gpx_path):
+    with open(gpx_path, 'r') as gpx_file:
+        gpx_obj = gpxpy.parse(gpx_file)
+    return gpx_obj
 
-# Garmin FIT files pack lat (of lon) into signed 16 bits ints.  The unit is called the
-# "semi-circle"
-SEMICIRCLES_TO_DEGREES = 180/2**31
 
-def semi_to_degrees(semicircles):
-    "Convert the Garmin unit called semicircle to degrees."
-    return SEMICIRCLES_TO_DEGREES * semicircles
+def gpx_datetimes(gpx_obj, max_count=10, skip=0, minutes=False):
+    for i, track in zip(it.count(), gpx_obj.tracks):
+        print("Track {}".format(i))
+        for j, segment in zip(it.count(), track.segments):
+            print("   Segment {}", j)
+            for k, point in enumerate(it.islice(segment.points, skip, skip+max_count)):
+                gps_time = arrow.get(point.time)
+                local = gps_time.to('US/Pacific')
+                if k == 0:
+                    print(f"First time {local}")
+            print(f"Last time {local}")
 
-def degrees_to_semi(degrees):
-    "Degrees to the Garmin unit."
-    np.int16(degrees / SEMICIRCLES_TO_DEGREES)
 
-def iterable(val):
-    "Small local helper. Ensures that val is iterable"
-    if isinstance(val, np.ndarray):
-        return val
-    else:
-        return [val]
+def point_local_time(point):
+    "Return the local time of the trackpiont."
+    gps_time = arrow.get(point.time)
+    return gps_time.to('US/Pacific')
 
-class LatLonAlt(object):
+
+def gpx_date_chop(gpx_obj, max_count=10000, skip=0, step=1):
     """
-    Class that manages and converts information about lat/lon/alt locations.  In
-    particular the class can convert from the convenient decimal degrees representation to
-    degrees/minutes (aka dm) and degrees/minutes/seconds (aka dms).  Degrees is a
-    singleton, dm is a tuple (degrees, minutes) and dms is a tuple (degrees, minutes,
-    seconds).
+    Chop a gpx object into 'days'.  Return a list of points for each day.
 
-    All functions have been written to handle NUMPY arrays as well as primitive numbers.
+    Assume there is a single track and segment.
     """
-    def __init__(self, lat=None, lon=None, alt=None, datetime=None):
-        if lat is None or lon is None:
-            raise Exception("We do not support LatLonAlt with empty lat or lon.")
-        self.lat = lat
-        self.lon = lon
-        self.alt = alt if alt else np.full_like(lat, 0)
-        self.datetime = datetime if datetime else np.empty_like(self.lat, dtype='datetime64[ns]') 
-
-    @staticmethod
-    def from_degrees_minutes(lat_dm=None, lon_dm=None, alt=None, datetime=None):
-        if lat_dm is None or lon_dm is None:
-            raise Exception("We do not support LatLonAlt with empty lat or lon.")
-        return LatLonAlt(lat=dm_to_degrees(lat_dm),
-                         lon=dm_to_degrees(lon_dm),
-                         alt=alt,
-                         datetime=datetime)
-
-    @staticmethod
-    def from_degrees_minutes_seconds(lat_dms=None, lon_dms=None, alt=None, datetime=None):
-        if lat_dms is None or lon_dms is None:
-            raise Exception("We do not support LatLonAlt with empty lat or lon.")
-        return LatLonAlt(lat=dms_to_degrees(lat_dms),
-                         lon=dms_to_degrees(lon_dms),
-                         alt=alt,
-                         datetime=datetime)
-
-    def __repr__(self):
-        return "\n".join(it.islice(self.d_string(), 0, 10))
-
-    def __str__(self):
-        return self.__repr__()
-
-    def lat_dm(self):
-        "Return latitude in tuple (degrees, minutes)."
-        return degrees_to_dm(self.lat)
-
-    def lat_dms(self):
-        "Return latitude in tuple (degrees, minutes, seconds)"        
-        return degrees_to_dms(self.lat)
-
-    def lon_dm(self):
-        "Return longitude in tuple (degrees, minutes)"        
-        return degrees_to_dm(self.lon)
-
-    def lon_dms(self):
-        "Return longitude in tuple (degrees, minutes, seconds)"        
-        return degrees_to_dms(self.lon)
-
-    def dm_string(self):
-        "String representation of lat/lon in degrees/minutes."
-        for lat_dm, lon_dm in zip(iterable(degrees_to_dm(self.lat)),
-                                  iterable(degrees_to_dm(self.lon))):
-            if lon_dm[0] < 0:
-                lon = -lon_dm[0]
-                east_west = 'W'
+    tracks = gpx_obj.tracks
+    if len(tracks) > 1:
+        raise Exception(f"More than one track: {len(tracks)}")
+    segments = tracks[0].segments
+    if len(segments) > 1:
+        raise Exception(f"More than one segment: {len(segments)}")
+    current_date = None
+    days = []
+    date_points = []
+    # When the date changes then craete a new day.
+    for k, point in enumerate(it.islice(segments[0].points, skip, skip+max_count)):
+        local = point_local_time(point)
+        point_date = arrow.get(local.date())
+        if current_date is None:
+            current_date = point_date
+            print(f"First date is {current_date}")
+        else:
+            if current_date == point_date:
+                date_points.append(point)
             else:
-                lon = lon_dm[0]                
-                east_west = 'E'
-            yield f"{lat_dm[0]} {lat_dm[1]:.6f}N {lon} {lon_dm[1]:.6f}{east_west}"
+                current_date = point_date
+                print(f"New date is {current_date}")
+                days.append(date_points)
+                date_points = []
+    days.append(date_points)
+    return days
 
-    def dms_string(self):
-        "String representation of lat/lon in degrees/minutes/seconds."        
-        for lat_dms, lon_dms in zip(iterable(degrees_to_dms(self.lat)),
-                                    iterable(degrees_to_dms(self.lon))):
-            if lon_dms[0] < 0:
-                lon = -lon_dms[0]
-                east_west = 'W'
-            else:
-                lon = lon_dms[0]                
-                east_west = 'E'
-            yield f"{lat_dms[0]:d} {lat_dms[1]:d} {lat_dms[2]}N {lon} {lon_dms[1]} {lon_dms[2]:.6f}{east_west}"
 
-    def d_string(self):
-        "String representation of lat/lon in decimal degrees."                
-        for lat, lon in zip(iterable(self.lat), iterable(self.lon)):
-            if lon < 0:
-                lon = -lon
-                east_west = 'W'
-            else:
-                east_west = 'E'
-            yield f"{lat:.6f}N {lon:.6f}{east_west}"
+def gpx_from_points(points):
+    """
+    Create a GPX object from a list of GPXTrackPoint's.  Contains a single track and a
+    single segment.
+    """
+    # Empty object, add track, and segment.
+    gpx_out = gpxpy.gpx.GPX()  
+    gpx_track = gpxpy.gpx.GPXTrack()
+    gpx_out.tracks.append(gpx_track)
+    gpx_segment = gpxpy.gpx.GPXTrackSegment()
+    gpx_track.segments.append(gpx_segment)
+    # Add points to segment
+    for p in points:
+        gpx_segment.points.append(p)
+    return gpx_out
+
+
+def gpx_split_dates(gpx_path):
+    """
+    Given a GPX file that tracks overnight, split into different days.
+    
+    GPX files that cross midnight seem to screw up RaceQs.
+    """
+    directory, gpx_file = os.path.split(gpx_path)
+    ggg = read_gpx(gpx_path)
+    days = gpx_date_chop(ggg, max_count=10000000)
+    for d in days:
+        first_point = d[0]
+        name = point_local_time(first_point).format('YYYY-MM-DD_HH:mm')
+        gpx = gpx_from_points(d)
+        new_path = os.path.join(directory, f"{name}.gpx")
+        print(f"Writing {new_path} with {len(d)} points.")
+        write_gpx(gpx, new_path)
+
+
+def test():
+    gpx_split_dates("/Users/viola/Downloads/night.gpx")

@@ -6,6 +6,7 @@ import shutil
 import collections.abc
 import numbers
 import time
+import itertools as it
 import datetime
 import dateutil
 import arrow
@@ -21,6 +22,21 @@ def is_iterable(thing):
 
 def is_number(thing):
     return isinstance(thing, numbers.Number)
+
+################ itertools ################
+
+def pairwise(iterable):
+    "s -> (s0,s1), (s1,s2), (s2, s3), ..."
+    a, b = it.tee(iterable)
+    next(b, None)
+    return zip(a, b)
+
+def nwise(iterable, n=2):                                                      
+    iters = it.tee(iterable, n)                                                     
+    for c, i in enumerate(iters):                                               
+        next(it.islice(i, c, c), None)                                               
+    return zip(*iters)
+
 
 ################ utils ################
 def run_system_command(command, dry_run=False):

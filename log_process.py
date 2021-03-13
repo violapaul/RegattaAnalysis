@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import os
+import utils
 
 from global_variables import G
 import process as p
@@ -20,11 +22,26 @@ def process_all():
         G.logger.warning(f"USB drive not found.  Skipping copy.")
     p.create_compressed_log_files()
     p.create_named_log_files()
-    p.create_gpx_and_pandas_files(100000000, 100)
+    p.create_gpx_and_pandas_files(100000000, 500)  # got to skip 500 records
 
     # Add metadata
     metadata.add_missing_metadata()
     metadata.update_metadata_from_gsheet()
+    unmount()
+
+def unmount():
+    usb_drive = "/Volumes/USB"
+    if os.path.exists(usb_drive):
+        unmount_commands = [
+            "sync",
+            f"diskutil unmountdisk {usb_drive}",
+            "sync",
+            "sleep 1",
+            f"diskutil unmountdisk force {usb_drive}",
+        ]
+
+        for c in unmount_commands:
+            utils.run_system_command(c)
 
 
 if __name__ == "__main__":

@@ -31,9 +31,8 @@
 #### Cell #1 Type: module ######################################################
 
 # Load some libraries
-%matplotlib notebook
+from nbutils import display_markdown, display
 import matplotlib.pyplot as plt
-plt.rcParams.update({'figure.max_open_warning': 0})
 
 import numpy as np
 from numba import jit
@@ -55,13 +54,17 @@ importlib.reload(race_logs)
 
 #### Cell #3 Type: module ######################################################
 
-dfs, races, big_df = race_logs.read_dates(["2019-12-07", "2019-11-16"], compute_true_wind=False)
-df = dfs[1]
+if True:
+    dfs, races, big_df = race_logs.read_dates(["2019-12-07", "2019-11-16"], compute_true_wind=False)
+    df = dfs[1]
+else:
+    dfs, races, big_df = race_logs.read_dates(["2020-10-10"], compute_true_wind=False)
+    df = dfs[0]
 
 #### Cell #4 Type: module ######################################################
 
 chart = c.plot_chart(df)
-c.draw_track(df, chart, color='green')
+ccc = c.draw_track(df, chart, color='green')
 
 #### Cell #5 Type: markdown ####################################################
 
@@ -316,7 +319,7 @@ print(f"Average error is {np.mean(abs_error):.3f} degrees")
 #: 
 #: Rather than estimate TWA/TWS, perhaps it is better to estimate TWD/TWS (true wind direction and speed).  TWD is a physical property of the **world**, and while it varies with time, it does not depend on the boat.  So for example, some boats tack a lot and others very rarely.  Some boat have great drivers that keep a consistant TWA and others vary a lot.  Estimating TWA requires a filtering process that can be robust to these differences.  TWD depends only on the physics of wind in the world.
 #: 
-#: TWA is then computed from TWD by subtracting HDG. And this explains why TWA can lead AWA. TWA will react immeadiately as HDG changes. 
+#: TWA is then computed from TWD by subtracting HDG. And this explains why TWA can lead AWA. TWA will react immeadiately as HDG changes.
 
 #### Cell #23 Type: module #####################################################
 
@@ -353,7 +356,7 @@ c.quick_plot(df.index, (df.rtwd-m, twd_from_twa-m),
 #: 1. Measure the error in this prediction.
 #: 1. Update TWD/TWS to reduce this error. 
 #: 
-#: The updates in the final step can be "large" ensuring that error are small, or the updates can be small.  By keeping the changes in the final step small the filter produces a smooth version of TWD/TWS.   
+#: The updates in the final step can be "large" ensuring that error are small, or the updates can be small.  By keeping the changes in the final step small the filter produces a smooth version of TWD/TWS.
 
 #### Cell #25 Type: markdown ###################################################
 
@@ -417,7 +420,8 @@ def estimate_true_wind_helper(epsilon, aws, awa, hdg, spd, tws, twd, variation, 
     variation = np.radians(variation)
 
     for i in range(1, len(aws)):
-        twa = twd[i-1] - (rhdg[i] + variation)
+        # Compute residuals from the prediction and observation
+        twa = twd[i-1] - (rhdg[i] + variation)  # Boat relative angle.
         c = np.cos(twa)
         s = np.sin(twa)
         # The forward predictions
@@ -567,7 +571,7 @@ c.quick_plot(wdf.index, (wdf.awa, wdf.rtwa, wdf.rtwd-180, wdf.rhdg-180),
 #: A simple approach to remove these "hitches" is to smooth out TWD (by decreasing epsilon). 
 #: 
 #: - The shifts are long time scale phenomena, sometimes taking 50-100 seconds.  The increase in "smoothing" would need to be radical.
-#: - This might be acceptable if the TWD is not varying much,  but it would miss (smooth out) changes that are likely important. 
+#: - This might be acceptable if the TWD is not varying much,  but it would miss (smooth out) changes that are likely important.
 
 #### Cell #34 Type: module #####################################################
 
@@ -676,7 +680,7 @@ c.quick_plot(wdf.index, (wdf.rcog, wdf.rhdg), "cog hdg".split())
 #: 
 #: The required changes to the filter are minimal. 
 #: 
-#: Once again, we move everything to boat coordinates (with boat north pointing to the bow).  In the new calculation, the boats speed is SOG, but the course is not necessarily zero degrees.  Instead the course is `COG - (HDG - variation)`  (e.g. if the true heading was equal to COG then the course would be zero).  But more typically the COG is not along the direction of HDG, and so there is slip.  This slip is used to compute the prediction of AW from TW.
+#: Once again, we move everything to boat coordinates (with boat north pointing to the bow).  In the new calculation, the boats speed is SOG, but the course is not necessarily zero degrees.  Instead the course is `COG - (HDG - variation)`  (e.g. if the true heading was equal to COG then the course would be zero).  But more typically the COG is not along the direction of HDG.  COG causes the boat to slip away from the wind; on port tack the COG is larger than HDG (the boat slips to starboard) and on starboard tack COG is smaller than HDG (the boat slips to port). Current can have an arbitrary affect on COG vs. HDG.
 #: 
 #: Since COG, SOG, and HDG are sensors, they are constants W.R.T. so the updated equations remain the same.
 
@@ -805,15 +809,10 @@ plt.legend("scawa rtwd".split() + "ptwd_raw ptwd_corrected".split())
 
 #### Cell #42 Type: module #####################################################
 
-plt.figure()
-plt.plot(deps)
-
-#### Cell #43 Type: module #####################################################
-
 ss = slice(df.index[0], df.index[-1])
 ss
 
-#### Cell #44 Type: markdown ###################################################
+#### Cell #43 Type: markdown ###################################################
 
 #: ### Massively better!
 #: 
@@ -825,7 +824,7 @@ ss
 #: 
 #: Note, while we can estimate (or guess) the correct delay, it can be evaluated as well. Below we try multiple delays and plot the results.
 
-#### Cell #45 Type: module #####################################################
+#### Cell #44 Type: module #####################################################
 
 reduce = 1.0
 m = DictClass(df=df, awa_mult=1.0,  aws_mult=1.0,  spd_mult=1.1, 
@@ -838,7 +837,7 @@ c.quick_plot(wdf.index, (wdf.scawa, wdf.rtwd-180))
 rrr = [4, 12, 20]
 for i in rrr:
     # Note, we are using CAWS and CAWA below
-    (twd, tws, res_n, res_e) = estimate_true_wind_helper_leeway(
+    (twd, tws, res_n, res_e, deps) = estimate_true_wind_helper_leeway(
     m.epsilon,
     aws = m.aws_mult * np.asarray(df.caws),
     awa = m.awa_mult * np.asarray(df.cawa) + m.awa_offset,
@@ -860,7 +859,7 @@ plt.legend("scawa rtwd".split() + ["delay_"+str(i) for i in rrr])
 
 
 
-#### Cell #46 Type: markdown ###################################################
+#### Cell #45 Type: markdown ###################################################
 
 #: ## Trying to get better, and failing!
 #: 
@@ -872,7 +871,7 @@ plt.legend("scawa rtwd".split() + ["delay_"+str(i) for i in rrr])
 #: 
 #: I feel there are likely several bugs in this code.
 
-#### Cell #47 Type: module #####################################################
+#### Cell #46 Type: module #####################################################
 
 @jit(nopython=True)
 def estimate_true_wind_helper_leeway_ne(epsilon, aws, awa, hdg, spd, cog, sog, 
@@ -926,7 +925,7 @@ def estimate_true_wind_helper_leeway_ne(epsilon, aws, awa, hdg, spd, cog, sog,
 
     return tw_n, tw_e, res_n, res_e
 
-#### Cell #48 Type: markdown ###################################################
+#### Cell #47 Type: markdown ###################################################
 
 #: ## Bugs? Write a simulator
 #: 
@@ -934,7 +933,7 @@ def estimate_true_wind_helper_leeway_ne(epsilon, aws, awa, hdg, spd, cog, sog,
 #: 
 #: Note the data generated below is *really boring*.
 
-#### Cell #49 Type: module #####################################################
+#### Cell #48 Type: module #####################################################
 
 def make_signal(len, scale, offset):
     "Make a smooth random signal.  Not great,  but it works OK."
@@ -989,7 +988,7 @@ aws = np.sqrt(np.square(aw_te) + np.square(aw_tn))
 # AWA relative to the boat (this is the standard AWA).
 awa = p.sign_angle(awa_tn - (hdg + variation))
 
-#### Cell #50 Type: module #####################################################
+#### Cell #49 Type: module #####################################################
 
 # Let's check that the simulated data is self consistent.  This also foreshadows the estimation filter.
 aw_n = aws * np.cos(np.radians(awa))
@@ -1027,7 +1026,7 @@ print(np.abs(f_aw_n - aw_n).sum())
 c.quick_plot(None, (twd, hdg+variation, cur_ang, cog), "(twd, thdg, cur_ang, cog)".split())
 c.quick_plot(None, (tws, spd, cur_spd), "(tws, spd, cur_spd)".split())
 
-#### Cell #51 Type: markdown ###################################################
+#### Cell #50 Type: markdown ###################################################
 
 #: ### Now for the weirdness
 #: 
@@ -1035,7 +1034,7 @@ c.quick_plot(None, (tws, spd, cur_spd), "(tws, spd, cur_spd)".split())
 #: 
 #: It does not work unless we flip the sign of the side slip correction.
 
-#### Cell #52 Type: module #####################################################
+#### Cell #51 Type: module #####################################################
 
 (ptwd, ptws, res_n, res_e) = estimate_true_wind_helper_leeway(
     0.01, aws, awa, hdg, spd, cog, sog, tws[0], twd[0], variation, 16.0, 0)
@@ -1044,7 +1043,7 @@ print(np.abs(ptwd - twd).sum())
 print(np.abs(ptws - tws).sum())
 c.quick_plot(None, (ptwd, twd, 40*ptws, 40*tws), "ptwd, twd, 40*ptws, 40*tws".split())
 
-#### Cell #53 Type: module #####################################################
+#### Cell #52 Type: module #####################################################
 
 @jit(nopython=True)
 def estimate_true_wind_helper_leeway_flip(epsilon, aws, awa, hdg, spd, cog, sog, 
@@ -1101,7 +1100,7 @@ def estimate_true_wind_helper_leeway_flip(epsilon, aws, awa, hdg, spd, cog, sog,
     return np.degrees(twd), tws, res_n, res_e
 
 
-#### Cell #54 Type: module #####################################################
+#### Cell #53 Type: module #####################################################
 
 (ptwd, ptws, res_n, res_e) = estimate_true_wind_helper_leeway_flip(
     0.01, aws, awa, hdg, spd, cog, sog, tws[0], twd[0], variation, 16.0, 0)
@@ -1109,11 +1108,11 @@ def estimate_true_wind_helper_leeway_flip(epsilon, aws, awa, hdg, spd, cog, sog,
 print(np.abs(ptwd - twd).sum())
 print(np.abs(ptws - tws).sum())
 
-#### Cell #55 Type: module #####################################################
+#### Cell #54 Type: module #####################################################
 
 c.quick_plot(None, (ptwd, twd, 40*ptws, 40*tws), "ptwd, twd, 40*ptws, 40*tws".split())
 
-#### Cell #56 Type: markdown ###################################################
+#### Cell #55 Type: markdown ###################################################
 
 #: ### Dropping this for now!
 #: 
@@ -1126,7 +1125,7 @@ c.quick_plot(None, (ptwd, twd, 40*ptws, 40*tws), "ptwd, twd, 40*ptws, 40*tws".sp
 #: A prize for anyone that can fix this!!
 
 
-#### Cell #57 Type: metadata ###################################################
+#### Cell #56 Type: metadata ###################################################
 
 #: {
 #:   "metadata": {
@@ -1147,11 +1146,11 @@ c.quick_plot(None, (ptwd, twd, 40*ptws, 40*tws), "ptwd, twd, 40*ptws, 40*tws".sp
 #:       "pygments_lexer": "ipython3",
 #:       "version": "3.7.0"
 #:     },
-#:     "timestamp": "2020-06-14T10:49:50.942091-07:00"
+#:     "timestamp": "2020-10-27T20:41:18.018529-07:00"
 #:   },
 #:   "nbformat": 4,
 #:   "nbformat_minor": 2
 #: }
 
-#### Cell #58 Type: finish #####################################################
+#### Cell #57 Type: finish #####################################################
 

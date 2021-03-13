@@ -318,7 +318,6 @@ def tide_data_analysis(tides):
     display(f"Tide drop stats.")
     display_stats(drops)
 
-    
 def tide_print_chart(tp_path, region, pixels=1000):
     ch = region.union(dict(proj=G.PROJ4, pixels=pixels))
     ch = chart.gdal_extract_chart(ch, tp_path, "/tmp/mbtile.tif")
@@ -333,10 +332,9 @@ def tide_print_chart(tp_path, region, pixels=1000):
     ch = chart.draw_chart(ch)
     return ch
 
-
 date = "2020-06-12"
 uw_model = uw.read_live_ocean_model(date)
-region = chart.region_from_marks("nmwnrwn")
+region = chart.region_from_marks([G.mark_position(m) for m in "nmwnrwn"])
 pixels = 1000
 sail_date = "2020-06-13"
 start_time = "11:00:00"

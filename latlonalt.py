@@ -87,8 +87,8 @@ class LatLonAlt(object):
     def from_degrees_minutes_seconds(lat_dms=None, lon_dms=None, alt=None, datetime=None):
         if lat_dms is None or lon_dms is None:
             raise Exception("We do not support LatLonAlt with empty lat or lon.")
-        return LatLonAlt(lat=dms_to_degrees(lat_dms),
-                         lon=dms_to_degrees(lon_dms),
+        return LatLonAlt(lat=dms_to_degrees(*lat_dms),
+                         lon=dms_to_degrees(*lon_dms),
                          alt=alt,
                          datetime=datetime)
 
