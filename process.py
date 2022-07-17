@@ -560,7 +560,7 @@ def convert_named_log_to_gpx_and_pandas_file(named_file, count, trim):
     p_path = pandas_path(pandas_filename)
 
     if os.path.exists(g_path) and os.path.exists(cp_path):
-        G.logger.debug("{named_file}: GPX and Pandas logs exist. Skipping.")
+        G.logger.debug(f"{named_file}: GPX and Pandas logs exist. Skipping.")
         return f"{named_file}: Skipped"
 
     json_path = json_from_named_file(named_file, directory="/tmp")
@@ -577,10 +577,15 @@ def convert_named_log_to_gpx_and_pandas_file(named_file, count, trim):
 
     return f"{named_file}: Processed"
 
-def create_gpx_and_pandas_files(count, trim):
+def create_gpx_and_pandas_files(count, trim, max_workers=4):
     "Examines all named log files and computes GPX/PANDAS if necessary."
     nlogs = named_log_files()
     G.logger.info(f"Found {len(nlogs)} named log files.")
-    with concurrent.futures.ProcessPoolExecutor(max_workers=4) as ex:
-        res = list(ex.map(convert_named_log_to_gpx_and_pandas_file, nlogs, it.cycle([count]), it.cycle([trim])))
+    res = []
+    if max_workers == 1:
+        for nlog in nlogs:
+            res.append(convert_named_log_to_gpx_and_pandas_file(nlog, count, trim))
+    else:
+        with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as ex:
+            res = list(ex.map(convert_named_log_to_gpx_and_pandas_file, nlogs, it.cycle([count]), it.cycle([trim])))
     return res

@@ -1,0 +1,19 @@
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 1
+Is throttled??
+throttled=0x0
+Result of running: pi         556  0.0  0.0   1740   328 ?        S    10:10   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+ERROR 2022-04-16T17:10:17.117Z [actisense-serial] Ignore short command len = 0
+ERROR 2022-04-16T17:10:17.148Z [actisense-serial] DLE followed by unexpected char 00, ignore message
+Is throttled??
+throttled=0x0
+Result of running: pi         556  0.5  0.0   1872   328 ?        S    10:10   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x0
+Result of running: pi         556  0.6  0.0   1872   328 ?        S    10:10   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running

@@ -87,7 +87,7 @@ class RaceAnalysis:
         self.PANDAS_LOGS_DIRECTORY = 'Data/PandasLogs'
 
         # A small log is generally an artifact.
-        self.MIN_LOG_FILE_SIZE = 5000000
+        self.MIN_LOG_FILE_SIZE = 2000000
 
         self.MAP_DIRECTORY = 'Data/Maps'
         self.LOG_INFO_PATH = os.path.join(self.DATA_DIRECTORY, 'log_info.pd')
@@ -173,7 +173,9 @@ class RaceAnalysis:
             k = lla.from_degrees_minutes((47, 35.700), (-122, 28.800)),
             d = lla.from_degrees_minutes((47, 35.933), (-122, 23.267)),
             j = lla.from_degrees_minutes((47, 44.755), (-122, 28.38)),
-            o = lla.from_degrees_minutes((47, 42.600), (-122, 30.450))
+            o = lla.from_degrees_minutes((47, 42.600), (-122, 30.450)),
+            s = lla.from_degrees_minutes((47, 39.720), (-122, 29.790)),
+            z = lla.from_degrees_minutes((47, 44.4), (-122, 29.4))
         )
         self.CYC_MARKS = dict(
             n = lla.from_degrees_minutes((47, 41.064), (-122, 24.679)),

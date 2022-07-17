@@ -1,0 +1,3058 @@
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 1
+FATAL 2021-06-21T00:03:32.470Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 1 baud rate 230400
+FATAL 2021-06-22T05:39:48.991Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 2
+FATAL 2021-06-22T05:39:54.349Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 2 baud rate 230400
+FATAL 2021-06-22T05:39:59.735Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 3
+FATAL 2021-06-22T05:40:05.455Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 3 baud rate 230400
+FATAL 2021-06-22T05:40:10.833Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 4
+FATAL 2021-06-22T05:40:16.151Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 4 baud rate 230400
+FATAL 2021-06-22T05:40:22.027Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 5
+FATAL 2021-06-22T05:40:27.444Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 5 baud rate 230400
+FATAL 2021-06-22T05:40:33.114Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 6
+FATAL 2021-06-22T05:40:38.514Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 6 baud rate 230400
+FATAL 2021-06-22T05:40:44.254Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 7
+FATAL 2021-06-22T05:40:49.633Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 7 baud rate 230400
+FATAL 2021-06-22T05:40:55.344Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 8
+FATAL 2021-06-22T05:41:00.754Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 8 baud rate 230400
+FATAL 2021-06-22T05:41:06.398Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 9
+FATAL 2021-06-22T05:41:11.796Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 9 baud rate 230400
+FATAL 2021-06-22T05:41:17.570Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 10
+FATAL 2021-06-22T05:41:22.932Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 10 baud rate 230400
+FATAL 2021-06-22T05:41:28.616Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 11
+FATAL 2021-06-22T05:41:34.011Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 11 baud rate 230400
+FATAL 2021-06-22T05:41:39.838Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 12
+FATAL 2021-06-22T05:41:45.240Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 12 baud rate 230400
+FATAL 2021-06-22T05:41:51.111Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 13
+FATAL 2021-06-22T05:41:56.507Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 13 baud rate 230400
+FATAL 2021-06-22T05:42:02.261Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 14
+FATAL 2021-06-22T05:42:07.657Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 14 baud rate 230400
+FATAL 2021-06-22T05:42:13.445Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 15
+FATAL 2021-06-22T05:42:18.832Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 15 baud rate 230400
+FATAL 2021-06-22T05:42:24.722Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 16
+FATAL 2021-06-22T05:42:30.111Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 16 baud rate 230400
+FATAL 2021-06-22T05:42:35.841Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 17
+FATAL 2021-06-22T05:42:41.236Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 17 baud rate 230400
+FATAL 2021-06-22T05:42:47.008Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 18
+FATAL 2021-06-22T05:42:52.404Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 18 baud rate 230400
+FATAL 2021-06-22T05:42:58.113Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 19
+FATAL 2021-06-22T05:43:03.492Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 19 baud rate 230400
+FATAL 2021-06-22T05:43:09.413Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 20
+FATAL 2021-06-22T05:43:14.722Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 20 baud rate 230400
+FATAL 2021-06-22T05:43:20.614Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 21
+FATAL 2021-06-22T05:43:26.012Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 21 baud rate 230400
+FATAL 2021-06-22T05:43:31.339Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 22
+FATAL 2021-06-22T05:43:36.952Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 22 baud rate 230400
+FATAL 2021-06-22T05:43:42.345Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 23
+FATAL 2021-06-22T05:43:48.280Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 23 baud rate 230400
+FATAL 2021-06-22T05:43:53.590Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 24
+FATAL 2021-06-22T05:43:59.352Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 24 baud rate 230400
+FATAL 2021-06-22T05:44:04.659Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 25
+FATAL 2021-06-22T05:44:10.352Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 25 baud rate 230400
+FATAL 2021-06-22T05:44:15.754Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 26
+FATAL 2021-06-22T05:44:21.164Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 26 baud rate 230400
+FATAL 2021-06-22T05:44:26.800Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 27
+FATAL 2021-06-22T05:44:32.188Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 27 baud rate 230400
+FATAL 2021-06-22T05:44:37.507Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 28
+FATAL 2021-06-22T05:44:43.170Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 28 baud rate 230400
+FATAL 2021-06-22T05:44:48.573Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 29
+FATAL 2021-06-22T05:44:54.260Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 29 baud rate 230400
+FATAL 2021-06-22T05:44:59.657Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 30
+FATAL 2021-06-22T05:45:05.427Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 30 baud rate 230400
+FATAL 2021-06-22T05:45:10.799Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 31
+FATAL 2021-06-22T05:45:16.239Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 31 baud rate 230400
+FATAL 2021-06-22T05:45:21.633Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 32
+FATAL 2021-06-22T05:45:27.326Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 32 baud rate 230400
+FATAL 2021-06-22T05:45:32.728Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 33
+FATAL 2021-06-22T05:45:38.453Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 33 baud rate 230400
+FATAL 2021-06-22T05:45:43.852Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 34
+FATAL 2021-06-22T05:45:49.547Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 34 baud rate 230400
+FATAL 2021-06-22T05:45:54.946Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 35
+FATAL 2021-06-22T05:46:00.275Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 35 baud rate 230400
+FATAL 2021-06-22T05:46:05.813Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 36
+FATAL 2021-06-22T05:46:11.215Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 36 baud rate 230400
+FATAL 2021-06-22T05:46:16.976Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 37
+FATAL 2021-06-22T05:46:22.375Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 37 baud rate 230400
+FATAL 2021-06-22T05:46:28.171Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 38
+FATAL 2021-06-22T05:46:33.556Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 38 baud rate 230400
+FATAL 2021-06-22T05:46:39.262Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 39
+FATAL 2021-06-22T05:46:44.618Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 39 baud rate 230400
+FATAL 2021-06-22T05:46:50.249Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 40
+FATAL 2021-06-22T05:46:55.626Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 40 baud rate 230400
+FATAL 2021-06-22T05:47:01.371Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 41
+FATAL 2021-06-22T05:47:06.739Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 41 baud rate 230400
+FATAL 2021-06-22T05:47:12.534Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 42
+FATAL 2021-06-22T05:47:17.929Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 42 baud rate 230400
+FATAL 2021-06-22T05:47:23.250Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 43
+FATAL 2021-06-22T05:47:28.830Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 43 baud rate 230400
+FATAL 2021-06-22T05:47:34.218Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 44
+FATAL 2021-06-22T05:47:39.799Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 44 baud rate 230400
+FATAL 2021-06-22T05:47:45.190Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 45
+FATAL 2021-06-22T05:47:50.853Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 45 baud rate 230400
+FATAL 2021-06-22T05:47:56.234Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 46
+FATAL 2021-06-22T05:48:01.807Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 46 baud rate 230400
+FATAL 2021-06-22T05:48:07.170Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 47
+FATAL 2021-06-22T05:48:12.889Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 47 baud rate 230400
+FATAL 2021-06-22T05:48:18.279Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 48
+FATAL 2021-06-22T05:48:23.941Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 48 baud rate 230400
+FATAL 2021-06-22T05:48:29.344Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 49
+FATAL 2021-06-22T05:48:35.121Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 49 baud rate 230400
+FATAL 2021-06-22T05:48:40.517Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 50
+FATAL 2021-06-22T05:48:46.329Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 50 baud rate 230400
+FATAL 2021-06-22T05:48:51.726Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 51
+FATAL 2021-06-22T05:48:57.293Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 51 baud rate 230400
+FATAL 2021-06-22T05:49:02.686Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 52
+FATAL 2021-06-22T05:49:08.336Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 52 baud rate 230400
+FATAL 2021-06-22T05:49:13.668Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 53
+FATAL 2021-06-22T05:49:19.455Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 53 baud rate 230400
+FATAL 2021-06-22T05:49:24.820Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 54
+FATAL 2021-06-22T05:49:30.680Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 54 baud rate 230400
+FATAL 2021-06-22T05:49:36.070Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 55
+FATAL 2021-06-22T05:49:41.664Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 55 baud rate 230400
+FATAL 2021-06-22T05:49:47.021Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 56
+FATAL 2021-06-22T05:49:52.626Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 56 baud rate 230400
+FATAL 2021-06-22T05:49:58.006Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 57
+FATAL 2021-06-22T05:50:03.318Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 57 baud rate 230400
+FATAL 2021-06-22T05:50:08.694Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 58
+FATAL 2021-06-22T05:50:14.044Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 58 baud rate 230400
+FATAL 2021-06-22T05:50:19.562Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 59
+FATAL 2021-06-22T05:50:24.918Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 59 baud rate 230400
+FATAL 2021-06-22T05:50:30.537Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 60
+FATAL 2021-06-22T05:50:35.924Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 60 baud rate 230400
+FATAL 2021-06-22T05:50:41.307Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 61
+FATAL 2021-06-22T05:50:46.694Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 61 baud rate 230400
+FATAL 2021-06-22T05:50:52.152Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 62
+FATAL 2021-06-22T05:50:57.528Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 62 baud rate 230400
+FATAL 2021-06-22T05:51:03.135Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 63
+FATAL 2021-06-22T05:51:08.511Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 63 baud rate 230400
+FATAL 2021-06-22T05:51:14.292Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 64
+FATAL 2021-06-22T05:51:19.673Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 64 baud rate 230400
+FATAL 2021-06-22T05:51:25.315Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 65
+FATAL 2021-06-22T05:51:30.676Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 65 baud rate 230400
+FATAL 2021-06-22T05:51:36.025Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 66
+FATAL 2021-06-22T05:51:41.365Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 66 baud rate 230400
+FATAL 2021-06-22T05:51:46.986Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 67
+FATAL 2021-06-22T05:51:52.364Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 67 baud rate 230400
+FATAL 2021-06-22T05:51:57.788Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 68
+FATAL 2021-06-22T05:52:03.172Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 68 baud rate 230400
+FATAL 2021-06-22T05:52:08.484Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 69
+FATAL 2021-06-22T05:52:13.981Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 69 baud rate 230400
+FATAL 2021-06-22T05:52:19.349Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 70
+FATAL 2021-06-22T05:52:25.060Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 70 baud rate 230400
+FATAL 2021-06-22T05:52:30.440Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 71
+FATAL 2021-06-22T05:52:36.292Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 71 baud rate 230400
+FATAL 2021-06-22T05:52:41.654Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 72
+FATAL 2021-06-22T05:52:47.217Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 72 baud rate 230400
+FATAL 2021-06-22T05:52:52.603Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 73
+FATAL 2021-06-22T05:52:58.065Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 73 baud rate 230400
+FATAL 2021-06-22T05:53:03.431Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 74
+FATAL 2021-06-22T05:53:08.738Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 74 baud rate 230400
+FATAL 2021-06-22T05:53:14.249Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 75
+FATAL 2021-06-22T05:53:19.621Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 75 baud rate 230400
+FATAL 2021-06-22T05:53:25.001Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 76
+FATAL 2021-06-22T05:53:30.384Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 76 baud rate 230400
+FATAL 2021-06-22T05:53:35.827Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 77
+FATAL 2021-06-22T05:53:41.171Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 77 baud rate 230400
+FATAL 2021-06-22T05:53:46.634Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 78
+FATAL 2021-06-22T05:53:52.011Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 78 baud rate 230400
+FATAL 2021-06-22T05:53:57.722Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 79
+FATAL 2021-06-22T05:54:03.105Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 79 baud rate 230400
+FATAL 2021-06-22T05:54:08.662Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 80
+FATAL 2021-06-22T05:54:14.034Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 80 baud rate 230400
+FATAL 2021-06-22T05:54:19.636Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 81
+FATAL 2021-06-22T05:54:25.003Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 81 baud rate 230400
+FATAL 2021-06-22T05:54:30.632Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 82
+FATAL 2021-06-22T05:54:36.009Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 82 baud rate 230400
+FATAL 2021-06-22T05:54:41.654Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 83
+FATAL 2021-06-22T05:54:47.025Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 83 baud rate 230400
+FATAL 2021-06-22T05:54:52.490Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 84
+FATAL 2021-06-22T05:54:57.869Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 84 baud rate 230400
+FATAL 2021-06-22T05:55:03.434Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 85
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+FATAL 2021-06-22T05:55:08.796Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 85 baud rate 230400
+FATAL 2021-06-22T05:55:14.327Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 86
+FATAL 2021-06-22T05:55:19.694Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 86 baud rate 230400
+FATAL 2021-06-22T05:55:25.272Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 87
+FATAL 2021-06-22T05:55:30.654Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 87 baud rate 230400
+FATAL 2021-06-22T05:55:36.358Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 88
+FATAL 2021-06-22T05:55:41.729Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 88 baud rate 230400
+FATAL 2021-06-22T05:55:47.384Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 89
+FATAL 2021-06-22T05:55:52.758Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 89 baud rate 230400
+FATAL 2021-06-22T05:55:58.431Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 90
+FATAL 2021-06-22T05:56:03.799Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 90 baud rate 230400
+FATAL 2021-06-22T05:56:09.182Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 91
+FATAL 2021-06-22T05:56:14.573Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 91 baud rate 230400
+FATAL 2021-06-22T05:56:20.081Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 92
+FATAL 2021-06-22T05:56:25.462Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 92 baud rate 230400
+FATAL 2021-06-22T05:56:31.275Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 93
+FATAL 2021-06-22T05:56:36.654Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 93 baud rate 230400
+FATAL 2021-06-22T05:56:42.151Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 94
+FATAL 2021-06-22T05:56:47.536Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 94 baud rate 230400
+FATAL 2021-06-22T05:56:53.306Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 95
+FATAL 2021-06-22T05:56:58.677Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 95 baud rate 230400
+FATAL 2021-06-22T05:57:04.361Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 96
+FATAL 2021-06-22T05:57:09.746Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 96 baud rate 230400
+FATAL 2021-06-22T05:57:15.100Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 97
+FATAL 2021-06-22T05:57:20.493Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 97 baud rate 230400
+FATAL 2021-06-22T05:57:26.039Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 98
+FATAL 2021-06-22T05:57:31.407Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 98 baud rate 230400
+FATAL 2021-06-22T05:57:36.966Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 99
+FATAL 2021-06-22T05:57:42.367Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 99 baud rate 230400
+FATAL 2021-06-22T05:57:48.020Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 100
+FATAL 2021-06-22T05:57:53.345Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 100 baud rate 230400
+FATAL 2021-06-22T05:57:58.794Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 101
+FATAL 2021-06-22T05:58:04.169Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 101 baud rate 230400
+FATAL 2021-06-22T05:58:09.522Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 102
+FATAL 2021-06-22T05:58:14.892Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 102 baud rate 230400
+FATAL 2021-06-22T05:58:20.264Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 103
+FATAL 2021-06-22T05:58:25.709Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 103 baud rate 230400
+FATAL 2021-06-22T05:58:31.090Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 104
+FATAL 2021-06-22T05:58:36.663Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 104 baud rate 230400
+FATAL 2021-06-22T05:58:42.021Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 105
+FATAL 2021-06-22T05:58:47.778Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 105 baud rate 230400
+FATAL 2021-06-22T05:58:53.170Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 106
+FATAL 2021-06-22T05:58:58.628Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 106 baud rate 230400
+FATAL 2021-06-22T05:59:03.937Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 107
+FATAL 2021-06-22T05:59:09.244Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 107 baud rate 230400
+FATAL 2021-06-22T05:59:14.768Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 108
+FATAL 2021-06-22T05:59:20.060Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 108 baud rate 230400
+FATAL 2021-06-22T05:59:25.560Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 109
+FATAL 2021-06-22T05:59:30.856Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 109 baud rate 230400
+FATAL 2021-06-22T05:59:36.162Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 110
+FATAL 2021-06-22T05:59:41.678Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 110 baud rate 230400
+FATAL 2021-06-22T05:59:47.082Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 111
+FATAL 2021-06-22T05:59:52.529Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 111 baud rate 230400
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+FATAL 2021-06-22T05:59:57.886Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 112
+FATAL 2021-06-22T06:00:03.339Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 112 baud rate 230400
+FATAL 2021-06-22T06:00:08.723Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 113
+FATAL 2021-06-22T06:00:14.112Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 113 baud rate 230400
+FATAL 2021-06-22T06:00:19.477Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 114
+FATAL 2021-06-22T06:00:25.040Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 114 baud rate 230400
+FATAL 2021-06-22T06:00:30.389Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 115
+FATAL 2021-06-22T06:00:35.837Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 115 baud rate 230400
+FATAL 2021-06-22T06:00:41.218Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 116
+FATAL 2021-06-22T06:00:46.688Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 116 baud rate 230400
+FATAL 2021-06-22T06:00:52.041Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 117
+FATAL 2021-06-22T06:00:57.624Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 117 baud rate 230400
+FATAL 2021-06-22T06:01:03.003Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 118
+FATAL 2021-06-22T06:01:08.518Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 118 baud rate 230400
+FATAL 2021-06-22T06:01:13.902Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 119
+FATAL 2021-06-22T06:01:19.366Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 119 baud rate 230400
+FATAL 2021-06-22T06:01:24.725Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 120
+FATAL 2021-06-22T06:01:30.041Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 120 baud rate 230400
+FATAL 2021-06-22T06:01:35.475Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 121
+FATAL 2021-06-22T06:01:40.861Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 121 baud rate 230400
+FATAL 2021-06-22T06:01:46.207Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 122
+FATAL 2021-06-22T06:01:51.591Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 122 baud rate 230400
+FATAL 2021-06-22T06:01:57.150Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 123
+FATAL 2021-06-22T06:02:02.531Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 123 baud rate 230400
+FATAL 2021-06-22T06:02:08.185Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 124
+FATAL 2021-06-22T06:02:13.555Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 124 baud rate 230400
+FATAL 2021-06-22T06:02:19.489Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 125
+FATAL 2021-06-22T06:02:24.871Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 125 baud rate 230400
+FATAL 2021-06-22T06:02:30.265Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 126
+FATAL 2021-06-22T06:02:35.605Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 126 baud rate 230400
+FATAL 2021-06-22T06:02:41.227Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 127
+FATAL 2021-06-22T06:02:46.611Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 127 baud rate 230400
+FATAL 2021-06-22T06:02:52.186Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 128
+FATAL 2021-06-22T06:02:57.558Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 128 baud rate 230400
+FATAL 2021-06-22T06:03:02.863Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 129
+FATAL 2021-06-22T06:03:08.267Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 129 baud rate 230400
+FATAL 2021-06-22T06:03:13.638Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 130
+FATAL 2021-06-22T06:03:19.204Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 130 baud rate 230400
+FATAL 2021-06-22T06:03:24.589Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 131
+FATAL 2021-06-22T06:03:30.134Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 131 baud rate 230400
+FATAL 2021-06-22T06:03:35.521Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 132
+FATAL 2021-06-22T06:03:40.981Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 132 baud rate 230400
+FATAL 2021-06-22T06:03:46.332Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 133
+FATAL 2021-06-22T06:03:51.989Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 133 baud rate 230400
+FATAL 2021-06-22T06:03:57.362Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 134
+FATAL 2021-06-22T06:04:02.979Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 134 baud rate 230400
+FATAL 2021-06-22T06:04:08.376Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 135
+FATAL 2021-06-22T06:04:13.811Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 135 baud rate 230400
+FATAL 2021-06-22T06:04:19.172Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 136
+FATAL 2021-06-22T06:04:24.857Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 136 baud rate 230400
+FATAL 2021-06-22T06:04:30.207Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 137
+FATAL 2021-06-22T06:04:35.621Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 137 baud rate 230400
+FATAL 2021-06-22T06:04:41.002Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 138
+FATAL 2021-06-22T06:04:46.640Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 138 baud rate 230400
+FATAL 2021-06-22T06:04:52.029Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 139
+FATAL 2021-06-22T06:04:57.431Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 139 baud rate 230400
+FATAL 2021-06-22T06:05:02.780Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 140
+FATAL 2021-06-22T06:05:08.441Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 140 baud rate 230400
+FATAL 2021-06-22T06:05:13.821Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 141
+FATAL 2021-06-22T06:05:19.377Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 141 baud rate 230400
+FATAL 2021-06-22T06:05:24.768Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 142
+FATAL 2021-06-22T06:05:30.454Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 142 baud rate 230400
+FATAL 2021-06-22T06:05:35.836Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 143
+FATAL 2021-06-22T06:05:41.581Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 143 baud rate 230400
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+FATAL 2021-06-22T06:05:46.974Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 144
+FATAL 2021-06-22T06:05:52.430Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 144 baud rate 230400
+FATAL 2021-06-22T06:05:57.816Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 145
+FATAL 2021-06-22T06:06:03.525Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 145 baud rate 230400
+FATAL 2021-06-22T06:06:08.891Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 146
+FATAL 2021-06-22T06:06:14.324Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 146 baud rate 230400
+FATAL 2021-06-22T06:06:19.656Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 147
+FATAL 2021-06-22T06:06:25.096Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 147 baud rate 230400
+FATAL 2021-06-22T06:06:30.478Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 148
+FATAL 2021-06-22T06:06:35.937Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 148 baud rate 230400
+FATAL 2021-06-22T06:06:41.294Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 149
+FATAL 2021-06-22T06:06:47.011Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 149 baud rate 230400
+FATAL 2021-06-22T06:06:52.405Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 150
+FATAL 2021-06-22T06:06:57.905Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 150 baud rate 230400
+FATAL 2021-06-22T06:07:03.255Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 151
+FATAL 2021-06-22T06:07:08.658Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 151 baud rate 230400
+FATAL 2021-06-22T06:07:14.035Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 152
+FATAL 2021-06-22T06:07:19.720Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 152 baud rate 230400
+FATAL 2021-06-22T06:07:25.084Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 153
+FATAL 2021-06-22T06:07:30.889Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 153 baud rate 230400
+FATAL 2021-06-22T06:07:36.261Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 154
+FATAL 2021-06-22T06:07:41.710Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 154 baud rate 230400
+FATAL 2021-06-22T06:07:47.117Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 155
+FATAL 2021-06-22T06:07:52.585Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 155 baud rate 230400
+FATAL 2021-06-22T06:07:57.970Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 156
+FATAL 2021-06-22T06:08:03.460Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 156 baud rate 230400
+FATAL 2021-06-22T06:08:08.839Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 157
+FATAL 2021-06-22T06:08:14.562Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 157 baud rate 230400
+FATAL 2021-06-22T06:08:19.945Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 158
+FATAL 2021-06-22T06:08:25.446Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 158 baud rate 230400
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+FATAL 2021-06-22T06:08:30.833Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 159
+FATAL 2021-06-22T06:08:36.325Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 159 baud rate 230400
+FATAL 2021-06-22T06:08:41.693Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 160
+FATAL 2021-06-22T06:08:47.285Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 160 baud rate 230400
+FATAL 2021-06-22T06:08:52.671Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 161
+FATAL 2021-06-22T06:08:58.282Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 161 baud rate 230400
+FATAL 2021-06-22T06:09:03.661Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 162
+FATAL 2021-06-22T06:09:09.178Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 162 baud rate 230400
+FATAL 2021-06-22T06:09:14.562Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 163
+FATAL 2021-06-22T06:09:19.918Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 163 baud rate 230400
+FATAL 2021-06-22T06:09:25.291Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 164
+FATAL 2021-06-22T06:09:30.602Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 164 baud rate 230400
+FATAL 2021-06-22T06:09:35.986Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 165
+FATAL 2021-06-22T06:09:41.571Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 165 baud rate 230400
+FATAL 2021-06-22T06:09:46.952Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 166
+FATAL 2021-06-22T06:09:52.632Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 166 baud rate 230400
+FATAL 2021-06-22T06:09:57.972Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 167
+FATAL 2021-06-22T06:10:03.651Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 167 baud rate 230400
+FATAL 2021-06-22T06:10:09.022Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 168
+FATAL 2021-06-22T06:10:14.645Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 168 baud rate 230400
+FATAL 2021-06-22T06:10:20.033Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 169
+FATAL 2021-06-22T06:10:25.410Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 169 baud rate 230400
+FATAL 2021-06-22T06:10:30.784Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 170
+FATAL 2021-06-22T06:10:36.435Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 170 baud rate 230400
+FATAL 2021-06-22T06:10:41.822Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 171
+FATAL 2021-06-22T06:10:47.452Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 171 baud rate 230400
+FATAL 2021-06-22T06:10:52.835Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running

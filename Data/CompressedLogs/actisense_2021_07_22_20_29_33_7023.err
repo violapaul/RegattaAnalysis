@@ -1,0 +1,1918 @@
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 1
+FATAL 2021-07-23T03:29:35.451Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 1 baud rate 230400
+FATAL 2021-07-23T03:30:29.970Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 2
+FATAL 2021-07-23T03:30:35.307Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 2 baud rate 230400
+FATAL 2021-07-23T03:30:41.075Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 3
+FATAL 2021-07-23T03:30:46.397Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 3 baud rate 230400
+FATAL 2021-07-23T03:30:52.071Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 4
+FATAL 2021-07-23T03:30:56.996Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 4 baud rate 230400
+FATAL 2021-07-23T03:31:02.800Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 5
+FATAL 2021-07-23T03:31:08.158Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 5 baud rate 230400
+FATAL 2021-07-23T03:31:13.551Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 6
+FATAL 2021-07-23T03:31:19.201Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 6 baud rate 230400
+FATAL 2021-07-23T03:31:24.556Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 7
+FATAL 2021-07-23T03:31:29.925Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 7 baud rate 230400
+FATAL 2021-07-23T03:31:35.518Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 8
+FATAL 2021-07-23T03:31:40.923Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 8 baud rate 230400
+FATAL 2021-07-23T03:31:46.871Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Attempt 9
+FATAL 2021-07-23T03:31:52.279Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 9 baud rate 230400
+FATAL 2021-07-23T03:31:57.597Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 10
+FATAL 2021-07-23T03:32:03.336Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 10 baud rate 230400
+FATAL 2021-07-23T03:32:08.699Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 11
+FATAL 2021-07-23T03:32:14.441Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 11 baud rate 230400
+FATAL 2021-07-23T03:32:19.844Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 12
+FATAL 2021-07-23T03:32:25.599Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Attempt 12 baud rate 230400
+FATAL 2021-07-23T03:32:31.004Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 13
+FATAL 2021-07-23T03:32:36.825Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 13 baud rate 230400
+FATAL 2021-07-23T03:32:42.212Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 14
+FATAL 2021-07-23T03:32:47.535Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 14 baud rate 230400
+FATAL 2021-07-23T03:32:53.054Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 15
+FATAL 2021-07-23T03:32:58.423Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 15 baud rate 230400
+FATAL 2021-07-23T03:33:04.381Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Attempt 16
+FATAL 2021-07-23T03:33:09.782Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 16 baud rate 230400
+FATAL 2021-07-23T03:33:15.453Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 17
+FATAL 2021-07-23T03:33:20.850Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 17 baud rate 230400
+FATAL 2021-07-23T03:33:26.169Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 18
+FATAL 2021-07-23T03:33:31.761Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Attempt 18 baud rate 230400
+FATAL 2021-07-23T03:33:37.157Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 19
+FATAL 2021-07-23T03:33:43.117Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 19 baud rate 230400
+FATAL 2021-07-23T03:33:48.511Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 20
+FATAL 2021-07-23T03:33:54.476Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 20 baud rate 230400
+FATAL 2021-07-23T03:33:59.869Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 21
+FATAL 2021-07-23T03:34:05.563Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 21 baud rate 230400
+FATAL 2021-07-23T03:34:10.909Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 22
+FATAL 2021-07-23T03:34:16.279Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 22 baud rate 230400
+FATAL 2021-07-23T03:34:21.848Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 23
+FATAL 2021-07-23T03:34:27.202Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 23 baud rate 230400
+FATAL 2021-07-23T03:34:32.564Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 24
+FATAL 2021-07-23T03:34:38.218Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 24 baud rate 230400
+FATAL 2021-07-23T03:34:43.583Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 25
+FATAL 2021-07-23T03:34:48.900Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 25 baud rate 230400
+FATAL 2021-07-23T03:34:54.481Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 26
+FATAL 2021-07-23T03:34:59.836Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 26 baud rate 230400
+FATAL 2021-07-23T03:35:05.600Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 27
+FATAL 2021-07-23T03:35:10.958Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 27 baud rate 230400
+FATAL 2021-07-23T03:35:16.818Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 28
+FATAL 2021-07-23T03:35:22.172Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 28 baud rate 230400
+FATAL 2021-07-23T03:35:27.527Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 29
+FATAL 2021-07-23T03:35:33.429Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Attempt 29 baud rate 230400
+FATAL 2021-07-23T03:35:38.828Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 30
+FATAL 2021-07-23T03:35:44.473Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+Attempt 30 baud rate 230400
+FATAL 2021-07-23T03:35:49.873Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 31
+FATAL 2021-07-23T03:35:55.551Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 31 baud rate 230400
+FATAL 2021-07-23T03:36:00.942Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 32
+FATAL 2021-07-23T03:36:06.251Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 32 baud rate 230400
+FATAL 2021-07-23T03:36:11.763Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 33
+FATAL 2021-07-23T03:36:17.167Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 33 baud rate 230400
+FATAL 2021-07-23T03:36:22.530Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 34
+FATAL 2021-07-23T03:36:28.044Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 34 baud rate 230400
+Is throttled??
+FATAL 2021-07-23T03:36:33.437Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 35
+FATAL 2021-07-23T03:36:38.757Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 35 baud rate 230400
+FATAL 2021-07-23T03:36:44.254Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 36
+FATAL 2021-07-23T03:36:49.647Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 36 baud rate 230400
+FATAL 2021-07-23T03:36:54.990Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 37
+FATAL 2021-07-23T03:37:00.594Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 37 baud rate 230400
+FATAL 2021-07-23T03:37:05.993Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 38
+FATAL 2021-07-23T03:37:11.370Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 38 baud rate 230400
+FATAL 2021-07-23T03:37:17.145Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 39
+FATAL 2021-07-23T03:37:22.495Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 39 baud rate 230400
+FATAL 2021-07-23T03:37:27.817Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 40
+FATAL 2021-07-23T03:37:33.381Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 40 baud rate 230400
+FATAL 2021-07-23T03:37:38.778Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 41
+FATAL 2021-07-23T03:37:44.581Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 41 baud rate 230400
+FATAL 2021-07-23T03:37:49.978Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 42
+FATAL 2021-07-23T03:37:55.301Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 42 baud rate 230400
+FATAL 2021-07-23T03:38:00.815Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 43
+FATAL 2021-07-23T03:38:06.209Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 43 baud rate 230400
+FATAL 2021-07-23T03:38:11.528Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 44
+FATAL 2021-07-23T03:38:17.191Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 44 baud rate 230400
+FATAL 2021-07-23T03:38:22.592Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 45
+FATAL 2021-07-23T03:38:27.920Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 45 baud rate 230400
+FATAL 2021-07-23T03:38:33.433Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 46
+FATAL 2021-07-23T03:38:38.835Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 46 baud rate 230400
+FATAL 2021-07-23T03:38:44.163Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 47
+FATAL 2021-07-23T03:38:49.876Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 47 baud rate 230400
+FATAL 2021-07-23T03:38:55.273Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 48
+FATAL 2021-07-23T03:39:00.592Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 48 baud rate 230400
+FATAL 2021-07-23T03:39:06.276Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 49
+FATAL 2021-07-23T03:39:11.675Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 49 baud rate 230400
+FATAL 2021-07-23T03:39:17.008Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 50
+FATAL 2021-07-23T03:39:22.515Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 50 baud rate 230400
+FATAL 2021-07-23T03:39:27.898Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 51
+FATAL 2021-07-23T03:39:33.657Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 51 baud rate 230400
+FATAL 2021-07-23T03:39:39.048Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 52
+FATAL 2021-07-23T03:39:44.685Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 52 baud rate 230400
+FATAL 2021-07-23T03:39:50.080Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 53
+FATAL 2021-07-23T03:39:55.406Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 53 baud rate 230400
+FATAL 2021-07-23T03:40:01.010Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 54
+FATAL 2021-07-23T03:40:06.405Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 54 baud rate 230400
+FATAL 2021-07-23T03:40:12.309Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 55
+FATAL 2021-07-23T03:40:17.710Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 55 baud rate 230400
+FATAL 2021-07-23T03:40:23.493Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 56
+FATAL 2021-07-23T03:40:28.847Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 56 baud rate 230400
+FATAL 2021-07-23T03:40:34.169Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 57
+FATAL 2021-07-23T03:40:39.672Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 57 baud rate 230400
+FATAL 2021-07-23T03:40:45.027Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 58
+FATAL 2021-07-23T03:40:50.674Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 58 baud rate 230400
+FATAL 2021-07-23T03:40:56.080Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 59
+FATAL 2021-07-23T03:41:01.398Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 59 baud rate 230400
+FATAL 2021-07-23T03:41:06.915Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 60
+FATAL 2021-07-23T03:41:12.266Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 60 baud rate 230400
+FATAL 2021-07-23T03:41:18.002Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 61
+FATAL 2021-07-23T03:41:23.372Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 61 baud rate 230400
+FATAL 2021-07-23T03:41:28.975Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 62
+FATAL 2021-07-23T03:41:34.369Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running

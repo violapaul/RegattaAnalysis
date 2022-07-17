@@ -303,7 +303,6 @@ chart.quick_plot(None, (df.spd, df.sog))
 # - Current
 # - SPD multiplier
 
-def forward_prediction
 
 
 #### Cell #21 Type: module #####################################################

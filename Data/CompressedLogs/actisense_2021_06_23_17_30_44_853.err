@@ -1,0 +1,8 @@
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 1
+Result of running: pi         564  0.0  0.0   1740   312 ?        S    16:49   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+ERROR 2000-01-01T00:49:41.638Z [actisense-serial] Ignoring message with invalid checksum
+Result of running: pi         564  0.7  0.0   1872   312 ?        S    16:49   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running

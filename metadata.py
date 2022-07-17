@@ -34,10 +34,11 @@ import numbers
 import re
 
 import yaml  # We'll use YAML for our metadata
+import json
+
 import arrow
 import numpy as np
 import pandas as pd
-
 
 # These are libraries written for RegattaAnalysis
 from global_variables import G  # global variables
@@ -152,6 +153,17 @@ def save_metadata(race_records):
     sorted_records = sorted(race_records, key=lambda r: r['date'])
     with open(G.METADATA_PATH, 'w') as yfs:
         save_yaml(sorted_records, yfs)
+
+def save_json(race_records, json_file):
+    """
+    Save a sequence of race records to JSON.
+    """
+    G.logger.info(f"Writing {len(race_records)} records.")    
+    utils.backup_file(G.METADATA_PATH)
+    # For convenience sort the records by date before writing.
+    sorted_records = sorted(race_records, key=lambda r: r['date'])
+    with open(json_file, 'w') as fs:
+        json.dump(sorted_records, fs) 
 
 # A bit of magic here to ensure we have the best loader/dumper.  Specifying this is required when 
 # calling load/dump (below).
@@ -475,7 +487,7 @@ def update_race(updated_race_record):
 
 #: {
 #:   "metadata": {
-#:     "timestamp": "2020-11-22T09:25:43.744449-08:00"
+#:     "timestamp": "2021-03-13T11:44:51.824521-08:00"
 #:   }
 #: }
 

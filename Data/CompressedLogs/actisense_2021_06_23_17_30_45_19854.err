@@ -1,0 +1,7 @@
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 1
+Result of running: pi         571  0.0  0.0   1740   312 ?        S    16:58   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Result of running: pi         571  0.5  0.0   1872   312 ?        S    16:58   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running

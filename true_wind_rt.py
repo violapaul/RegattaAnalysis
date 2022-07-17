@@ -311,9 +311,9 @@ print(f"Average error is {np.mean(abs_error):.3f} degrees")
 #: 
 #: Over a short period of time, the TWA is closely approximated by `TWA = 177 - HDG`, with an average error of about 1.4 degrees.
 #: 
-#: Both the average and graph and the graph show that the HDG and TWA are closely related (the blue and orange curves above).
+#: Both the low average error and the graph show that the HDG and TWA are closely related (the blue and orange curves above).
 #: 
-#: Why is it possible to predict TWA from HDG alone?  It actually makes sense from a physical standpoint: if **TWA = (TWD - HDG)** and **TWD** is roughly constant over a short period of time (1000/10 = 100 seconds). During this period TWD must have been approximately 182 degrees.
+#: Why is it possible to predict TWA from HDG alone?  It actually makes sense from a physical standpoint: if **TWA = (TWD - HDG)** and **TWD** is roughly constant over a short period of time (1000/10 = 100 seconds). During this period TWD must have been approximately 177 degrees.
 #: 
 #: The above framework for computing TWA/TWS is too simplistic.
 #: 
@@ -589,7 +589,7 @@ df['ptws'] = tws
 wdf = df.loc[tacks_slice]    
 
 c.quick_plot(wdf.index, (wdf.awa, wdf.ptwa, wdf.rtwd-180, wdf.ptwd-180),
-                 "sawa twa twd hdg".split())
+                 "sawa twa twd stwd".split())
 
 #### Cell #35 Type: markdown ###################################################
 
@@ -1146,7 +1146,7 @@ c.quick_plot(None, (ptwd, twd, 40*ptws, 40*tws), "ptwd, twd, 40*ptws, 40*tws".sp
 #:       "pygments_lexer": "ipython3",
 #:       "version": "3.7.0"
 #:     },
-#:     "timestamp": "2020-10-27T20:41:18.018529-07:00"
+#:     "timestamp": "2021-04-04T14:11:30.419026-07:00"
 #:   },
 #:   "nbformat": 4,
 #:   "nbformat_minor": 2

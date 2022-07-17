@@ -49,8 +49,7 @@ import utils
 import process as p
 from utils import DictClass
 
-import metadata
-import nbutils
+from latlonalt import LatLonAlt as lla
 
 from nbutils import display_markdown, display
 
@@ -88,7 +87,8 @@ def fetch_live_ocean_model(date_string, background=True, speed='1000k'):
         url = f"{LIVE_OCEAN_BASE}/{directory}/{LIVE_OCEAN_FILE}"
         download_path = path + ".incomplete"
         log_file = "/tmp/wget-log"
-        command = f"(wget {url} -O {download_path} -c -T 10 --limit-rate={speed} -o {log_file}; mv {download_path} {path})"
+        # command = f"(wget {url} -O {download_path} -c -T 10 --limit-rate={speed} -o {log_file}; mv {download_path} {path})"
+        command = f"(curl {url} -o {download_path}; mv {download_path} {path})"
         if background:
             command += "&"
         print(command)
@@ -122,9 +122,7 @@ def read_live_ocean_model(date):
     model.east, model.north = G.MAP(model.lon_rho, model.lat_rho)  # Works great with numpy masked arrays.
     return model
 
-def find_times(uw_model, start, finish):
-    tstart = utils.time_from_string(start)
-    tfinish = utils.time_from_string(finish)
+def find_times(uw_model, tstart, tfinish, extend=True):
     time_indices = []
     for i, tstamp in enumerate(uw_model.ocean_time):
         t = utils.time_from_timestamp(tstamp)
@@ -132,9 +130,9 @@ def find_times(uw_model, start, finish):
             time_indices.append(i)
     if len(time_indices) == 0:
         return time_indices
-    if time_indices[0] > 0:
+    if extend and time_indices[0] > 0:
         time_indices = [time_indices[0]-1] + time_indices
-    if time_indices[-1] < len(uw_model.ocean_time)-1:
+    if extend and time_indices[-1] < len(uw_model.ocean_time)-1:
         time_indices = time_indices + [time_indices[-1]+1]
     return time_indices, [utils.time_from_timestamp(uw_model.ocean_time[t]) for t in time_indices]
 
@@ -220,15 +218,16 @@ def draw_current(ch, uw_model, time_index, location=(2700, 737), plot_wind=False
                 head_width=100, length_includes_head=True, color='red')
 
     # Threshlold to display arrow in red.
-    theta = (1.0 / G.MS_2_KNOTS) * scale  # above 0.5 knots in red
+    theta = (1.0 / G.MS_2_KNOTS) * scale  # above 1.0 knots in red
     m1 = land(mask, np.sqrt(np.square(u) + np.square(v)) >= theta)
-    shaft_width = 0.004
+    shaft_width = 0.0015
+    qscale = 2.0
     ch.ax.quiver(uw_model.east[m1], uw_model.north[m1], u[m1], v[m1], 
-                 angles='xy', scale_units='xy', scale=1, color='red', width=shaft_width)
+                 angles='xy', scale_units='xy', scale=qscale, color='red', width=shaft_width)
 
     m2 = land(mask, np.sqrt(np.square(u) + np.square(v)) < theta)
     ch.ax.quiver(uw_model.east[m2], uw_model.north[m2], u[m2], v[m2], 
-                 angles='xy', scale_units='xy', scale=1, color='blue', width=shaft_width)
+                 angles='xy', scale_units='xy', scale=qscale, color='blue', width=shaft_width)
 
     if plot_wind:
         shaft_width = 0.002
@@ -256,7 +255,7 @@ def save_chart(ch, directory="", filetype="pdf"):
     path = os.path.join(directory, filename)
     ch.fig.savefig(path, orientation='portrait', dpi=300)
 
-def create_charts(date, sail_date, start_time, end_time, region, marks=None, plot_wind=False):
+def create_charts(date, start_datetime, finish_datetime, region, marks=None, plot_wind=False, time_extend=True):
     """
     Create a set of current charts from the UW Live Ocean data, for a given day that span
     from the start time to the finish.
@@ -269,7 +268,7 @@ def create_charts(date, sail_date, start_time, end_time, region, marks=None, plo
 
     if fetch_live_ocean_model(date):
         uw_model = read_live_ocean_model(date)
-        time_indices, times  = find_times(uw_model, f"{sail_date} {start_time}", f"{sail_date} {end_time}")
+        time_indices, times  = find_times(uw_model, start_datetime, finish_datetime, extend=time_extend)
         ch_list = [display_currents(uw_model, region, t, plot_wind=plot_wind) for t in time_indices]
         for ch in ch_list:
             if marks is not None:
@@ -278,7 +277,6 @@ def create_charts(date, sail_date, start_time, end_time, region, marks=None, plo
     else:
         display("Wait for model file to fetch!")
         return None
-
 
 def region_from_df(df, lat_border=0.2, lon_border=0.3):
     """
@@ -298,16 +296,20 @@ def region_from_df(df, lat_border=0.2, lon_border=0.3):
                      lon_max=lon_max, lon_min=lon_min)
 
 
+
+
+
+
 #### Cell #5 Type: module ######################################################
 
-def show_boat_currents(ch, df, dt_seconds=5, scale=1000, leeway=8, multiplier=1.1):
-    delay = 16
+def show_boat_currents(ch, df, dt_seconds=60, scale=1000, leeway=5, compass_offset=0, multiplier=1.1):
+    delay = 16    # samples
     dt = dt_seconds * G.SAMPLES_PER_SECOND
 
     ch_begin = (ch.datetime + datetime.timedelta(hours=-1)).datetime
     ch_end = (ch.datetime + datetime.timedelta(hours=+1)).datetime
 
-    tdf = df[(df.row_times > ch_begin) &  (df.row_times < ch_end)]
+    tdf = df[(df.row_times > ch_begin) & (df.row_times < ch_end)]
     chart.draw_track(df, ch, color='lightgrey')
     chart.draw_track(tdf, ch, color='olive')    
 
@@ -322,8 +324,8 @@ def show_boat_currents(ch, df, dt_seconds=5, scale=1000, leeway=8, multiplier=1.
     port_hauled = land(mdf.awa < 0, mdf.awa > -120)
     stbd_hauled = land(mdf.awa > 0, mdf.awa < 120)
 
-    thdg[port_hauled] = thdg[port_hauled] + leeway
-    thdg[stbd_hauled] = thdg[stbd_hauled] - leeway    
+    thdg[port_hauled] = compass_offset + thdg[port_hauled] + leeway 
+    thdg[stbd_hauled] = compass_offset + thdg[stbd_hauled] - leeway    
     
     hdg = thdg + df.variation.mean()
 
@@ -356,31 +358,18 @@ def show_boat_currents(ch, df, dt_seconds=5, scale=1000, leeway=8, multiplier=1.
 
 #### Cell #6 Type: notebook ####################################################
 
-# notebook
-
-if False:
-    date = "2020-05-09"
-    uw_model = read_live_ocean_model(date)
-    df, race = race_logs.read_date(date)
-    display(race.title)
-
-    region = region_from_df(df, 0.2, 0.4)
-
-    start_time = df.row_times.iloc[0].strftime("%H:%M:%S")
-    end_time = df.row_times.iloc[-1].strftime("%H:%M:%S")
-
-    ch = chart.plot_chart(df)
-
-    time_indices, times  = find_times(uw_model, f"{date} {start_time}", f"{date} {end_time}")
-
-    ch = display_currents(uw_model, region, time_indices[1]) 
-    show_boat_currents(ch, df, dt_seconds=90, leeway=5, multiplier=1.1)
-
-#### Cell #7 Type: notebook ####################################################
-
 # notebook - plot charts for a day on the water
 
-from latlonalt import LatLonAlt as lla
+FOULWEATHER_BLUFF = dict(
+    start = lla.from_degrees_minutes((47, 48.594), (-122, 28.371)),
+    fwb = lla.from_degrees_minutes((47, 56.850), (-122, 36.075)),
+    scatchet_head = lla(47.908261, -122.43814),
+    pilot_point = lla.from_degrees_minutes((47, 52.8), (-122, 30.5)))
+
+RACE_WEEK = dict(
+    a = lla(48.558397865660154, -122.59793899817099),
+    b = lla(48.7153969326876, -122.71810196439795),
+    c = lla(48.71856817245304, -122.51897475846975))
             
 SAN_JUANS = dict(
     SW = lla(48.192903, -123.199949),
@@ -394,25 +383,58 @@ SCATCHET_HEAD = dict(
     n = G.STYC_MARKS['n']
     )
 
+POSSESSION_PT = dict(
+    sh = lla.from_degrees_minutes((47, 54.070), (-122, 23.012)),
+    j = G.STYC_MARKS['j'],
+    n = G.STYC_MARKS['n']
+    )
+
 WINTER_VASHON = dict(
     nw = lla.from_degrees_minutes((47, 31.033), (-122, 29.154)),
     east = lla.from_degrees_minutes((47, 23.147), (-122, 20.951)),
     south = lla.from_degrees_minutes((47, 19.122), (-122, 33.334))
 )
 
+ROUND_THE_SOUND = dict(
+    n = G.STYC_MARKS['n'],
+    nw = lla.from_degrees_minutes((47, 31.033), (-122, 29.154)),
+    east = lla.from_degrees_minutes((47, 23.147), (-122, 20.951)),
+    south = lla.from_degrees_minutes((47, 19.122), (-122, 33.334)),
+    pt_townsend = lla(48.129727, -122.748464),
+    hat_island = lla(48.025588, -122.329610)
+    )
+
+THREE_TREE_POINT = dict(
+    n = G.STYC_MARKS['n'],
+    s = lla.from_degrees_minutes((47, 39.720), (-122, 29.790)),
+    d = G.STYC_MARKS['d'],
+    opposite_ttp = lla(47.452433868146834, -122.43496184038126)
+)
+
 JIM_DEPUE = [G.STYC_MARKS[m] for m in 'kwjom']
 BLAKELY_ROCKS = [G.STYC_MARKS[m] for m in 'nku']
+THREE_BUOY = [G.STYC_MARKS[m] for m in 'nbzjr']
+JFEST = [G.STYC_MARKS[m] for m in 'mbn']
+FALL_REGATTA = [G.STYC_MARKS[m] for m in 'rwms']
+
+if True:
+    date = "2022-07-09"
+    fetch_live_ocean_model(date)
 
 if True:
     plt.close('all')
-    date = "2021-03-12"
-    sail_date = "2021-03-13"
-    positions = list(SCATCHET_HEAD.values())
-    region = region_from_latlon(positions, 0.1, 0.6)
-    start_time = "10:00:00"
-    end_time = "16:00:00"
-    # Note if the model is not downloaded will return None.  Takes 20 mins.
-    ch_list = create_charts(date, sail_date, start_time, end_time, region, plot_wind=False)
+    # positions = [ROUND_THE_SOUND[k] for k in "n nw east south".split()]
+    # positions = [ROUND_THE_SOUND[k] for k in "n pt_townsend hat_island".split()]
+    # positions = list(FOULWEATHER_BLUFF.values())
+    positions = FALL_REGATTA
+
+    region = region_from_latlon(positions, 0.2, 0.3)
+
+    sdate = "2021-10-16"
+    tstart = utils.time_from_string(sdate + " 10:00")
+    tfinish = utils.time_from_string(sdate + " 17:00")
+
+    ch_list = create_charts(date, tstart, tfinish, region, plot_wind=False)
     if ch_list is not None:
         chart_dir = "/Users/viola/tmp"
         display(f"Saving charts in {chart_dir}")
@@ -421,8 +443,64 @@ if True:
             save_chart(ch, chart_dir, "jpg")
 
             
+df, race = race_logs.read_date(sail_date)
+if True:
+    plt.close('all')
+    start_time = "10:55:00"
+    end_time = "11:05:00"
+    ch_list = create_charts(date, sail_date, start_time, end_time, region, plot_wind=False, time_extend=False)
+    ch = ch_list[0]
+    race_chart = chart.draw_track(df, ch)
+    show_boat_currents(ch, df, leeway=5, multiplier=1.15, compass_offset=-8)
 
+    
+if True:
+    ch_begin = (ch.datetime + datetime.timedelta(hours=-1)).datetime
+    ch_end = (ch.datetime + datetime.timedelta(hours=+1)).datetime
 
+    tdf = df[(df.row_times > ch_begin) & (df.row_times < ch_end)]
+
+    chart.quick_plot(df.index, (df.spd, df.sog), legend="spd sog".split())
+    chart.chart_and_plot(df, df.index, (df.spd, df.sog))
+
+    params = dict(
+        gps_delay = 16,
+        dt = 60 * G.SAMPLES_PER_SECOND,
+        dt_seconds=60,
+        scale=1000,
+        leeway=5,
+        compass_offset=0,
+        multiplier=1.1,
+        variation = df.variation.mean(),
+    )
+
+    trimmed_df = tdf.iloc[:-params.gps_delay : params.dt]
+    ddf = tdf.iloc[params.gps_delay : : params.dt]
+
+    vog_n = trimmed_df.sog * p.north_d(trimmed_df.cog)
+    vog_e = trimmed_df.sog * p.east_d(trimmed_df.cog)
+
+    port_hauled = land(trimmed_df.awa < 0, trimmed_df.awa > -120)
+    stbd_hauled = land(trimmed_df.awa > 0, trimmed_df.awa < 120)
+
+    thdg = trimmed_df.hdg.copy()
+    thdg[port_hauled] = params.compass_offset + thdg[port_hauled] + params.leeway 
+    thdg[stbd_hauled] = params.compass_offset + thdg[stbd_hauled] - params.leeway    
+    
+    hdg = thdg + params.variation
+
+    btv_n = params.multiplier * ddf.spd * p.north_d(hdg)
+    btv_e = params.multiplier * ddf.spd * p.east_d(hdg)
+
+    cur_n = (np.asarray(vog_n) - np.asarray(btv_n))
+    cur_e = (np.asarray(vog_e) - np.asarray(btv_e))
+
+    
+
+    
+
+print(True)
+    
 #### Cell #8 Type: notebook ####################################################
 
 # notebook 

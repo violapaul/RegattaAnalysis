@@ -1,0 +1,94 @@
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 1
+Is throttled??
+throttled=0x0
+Result of running: pi         580  0.0  0.0   1740   312 ?        S    17:57   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x0
+Result of running: pi         580  0.5  0.0   1872   312 ?        S    17:57   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x0
+Result of running: pi         580  0.8  0.0   1872   312 ?        S    17:57   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x0
+Result of running: pi         580  0.8  0.0   1872   312 ?        S    17:57   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x0
+Result of running: pi         580  0.9  0.0   1872   312 ?        S    17:57   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x0
+Result of running: pi         580  0.9  0.0   1872   312 ?        S    17:57   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x0
+Result of running: pi         580  0.8  0.0   1872   312 ?        S    17:57   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x0
+Result of running: pi         580  0.9  0.0   1872   312 ?        S    17:57   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x0
+Result of running: pi         580  1.0  0.0   1872   312 ?        S    17:57   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x0
+Result of running: pi         580  0.9  0.0   1872   312 ?        S    17:57   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x0
+Result of running: pi         580  0.9  0.0   1872   312 ?        S    17:57   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x0
+Result of running: pi         580  1.0  0.0   1872   312 ?        S    17:57   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x0
+Result of running: pi         580  1.0  0.0   1872   312 ?        S    17:57   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+FATAL 2021-08-24T00:57:28.360Z [actisense-serial] Unable to read from NGT1 device
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 1 baud rate 230400
+FATAL 2021-08-24T00:57:33.765Z [actisense-serial] Cannot open NGT-1-A device /dev/ttyUSB0
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 2
+Is throttled??
+throttled=0x0
+Result of running: pi        2989  0.0  0.0   1740   376 ?        S    17:57   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+ERROR 2021-08-24T00:57:41.183Z [actisense-serial] Ignoring N2K message - too short

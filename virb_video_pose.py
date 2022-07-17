@@ -32,9 +32,11 @@ The binary log files are stored using the same name as the pose file (since this
 precise time encoding) and placed in a different directory.
 
 When the log exists, this is stored in vidoe_poses.json as well.
+
 """
 
 import datetime
+import copy
 
 import arrow
 import json
@@ -49,6 +51,7 @@ import numpy as np
 from global_variables import G
 import process as p
 import race_logs
+import metadata
 
 G.init_seattle()
 
@@ -106,6 +109,7 @@ def pandas_basename(file):
 
 
 def get_log_files():
+    "Get all the canboat pandas files (e.g. boat instrument data)."
     log_files = sorted(p.pandas_files())
     res = []
     for i, file in enumerate(log_files):
@@ -130,29 +134,31 @@ def find_neareset(sorted_values, probe):
     return index, sorted_values[index]
 
 
-def find_matching_pose_file(videos, poses):
+def find_pose_files_for_videos(videos, poses):
     """
     For each video, find the pose file that has the closest match in timestamp.  For some
     reason the stamp is often different by up to 30 seconds.  If the match is worse than
     60 seconds, then complain.
     """
     pose_times = sorted([p['ts_ms'] for p in poses])
-
+    videos = copy.deepcopy(videos)
     for video in videos:
         ts = video['ts']
         index, closest_ts = find_neareset(pose_times, ts)
+        pose = poses[index]        
         delta = abs(pose_times[index] - ts)
         if delta < 60:
-            pose = poses[index]
             video.update(pose)
             video['delta_ts'] = delta
         else:
-            G.logger.warning(f"Time delta between video and pose is too large: {delta}")
+            print(video)
+            G.logger.warning(f"Time delta between {video['SourceFile']} and pose {pose['PoseFile']} is too large: {delta}")
+    return videos
 
 
 def find_matching_log_files(videos, logs, max_time_gap_hours=12):
+    logs = copy.deepcopy(logs)
     log_times = sorted([l['ts_ms'] for l in logs])
-
     for video in videos:
         video_timestamp = video['ts_ms']
         ## Find the index to item which is greater
@@ -166,8 +172,7 @@ def find_matching_log_files(videos, logs, max_time_gap_hours=12):
                 log['video_files'] = log.get('video_files', []) + [video]
                 continue
         G.logger.warning(f"No matching log file for video: {video['SourceFile']}. Closest is {delta}.")
-    return [log for log in logs if log.get('video_files')]
-
+    return logs
 
 def pose_file_stats(filename):
     "Return the stats of the pose file: nrows, ncols, duration in ms"
@@ -196,15 +201,13 @@ def spad(val, length=40):
 
 def extract_log_data(logs, df_convert, regenerate=False):
     """
-    Given a set of logs that and assocated pose files, extract key log data and
-    save to a raw binary file.
+    Given a set of logs that and assocated video/pose files, extract key log data and save
+    to a raw binary file.
     """
     for log in logs:
-        print()
-        print()
         G.logger.info(f"Processing log file: {log['LogFile']}")
         df = None
-        for video in log['video_files']:
+        for video in log.get('video_files', []):
             pose_file = video['PoseFile']
             log_file = os.path.join(LOG_DIRECTORY, pose_file)
             G.logger.info(f"Generating {log_file}")
@@ -315,42 +318,98 @@ def fix_video_times(videos, poses, video_sequence_number, first_pose_file):
         if video['SourceFile'].startswith(video_sequence_number):
             print(video)
             print(pose_files[0])
-            video = {**video, **(pose_files.pop(0))}
+            pose = pose_files.pop(0)
+            video = {**video, **pose}
             # fix the createdate
             video['CreateDate'] = pose['pose_date'].format()
         res.append(video)
     return res
-        
+
+
+def find_matching_metadata(log_files, race_metadata):
+    """
+    Join the log files, which with race metadata.  Some logs have no metadata, some
+    metadata has no log file.  Outer join.
+
+    Sort by timestamp.
+    """
+    extra_metadata = []
+    log_files = copy.deepcopy(log_files)
+    md_by_file = {}
+    for record in race_metadata.records:
+        file = record.get('file', None)
+        if file:
+            md_by_file[file] = record
+        else:
+            date = arrow.get(record['date'], 'YYYY-MM-DD', tzinfo='US/Pacific')
+            extra_metadata.append(dict(metadata = record, ts = date.timestamp))
+    for file in log_files:
+        md = md_by_file.get(file['LogFile'], None)
+        if md is not None:
+            file['metadata'] = md
+    return sorted(log_files + extra_metadata, key = lambda x: x['ts'])
+
+
+def json_serialize(obj):
+    """JSON serializer for objects not serializable by default json code"""
+    if isinstance(obj, (datetime.datetime, datetime.date, arrow.arrow.Arrow)):
+        return obj.isoformat()
+    raise TypeError("Type %s not serializable" % type(obj))
+
+
+def file_mtime(path):
+    "Return the file modification time as a datetime."
+    return datetime.datetime.fromtimestamp(os.path.getmtime(path))
+
+def latest_file_time(directory, regex):
+    "Return the latest file mod time of the files in dir matching regex."
+    directory = LOG_DIRECTORY
+    regex = r".*\.bin"
+    matches = [f for f in os.listdir(directory) if re.match(regex, f)]
+    times = sorted([file_mtime(os.path.join(directory, f)) for f in matches])    
+    return times[-1]
 
 def find_video_poses_logs():
     """
-    Read the video metadata file and associate correct pose file.
+    Associate the various data sources.  Google forms (metadata), canboat logs, videos,
+    pose files.
     """
 
     videos = get_video_metadata(VIDEO_FILENAME)
     poses = get_poses(POSE_DIRECTORY)
     logs = get_log_files()
 
-    find_matching_pose_file(videos, poses)
-    videos = fix_video_times(videos, poses, "V118", '2021-03-06T09_24_14.145.bin')    
-    videos_with_pose = [v for v in videos if v.get('PoseFile') is not None]
-
-    logs_with_videos = find_matching_log_files(videos_with_pose, logs)
+    videos_with_poses = find_pose_files_for_videos(videos, poses)
+    # These are one time fixes, matching videos to poses when out of sync.
+    videos_with_poses = fix_video_times(videos_with_poses, poses, "V118", '2021-03-06T09_24_14.145.bin')
+    videos_with_poses = fix_video_times(videos_with_poses, poses, "V119", '2021-03-13T08_51_07.163.bin')
+    res = []
+    for video in videos_with_poses:
+        if video.get('PoseFile') is not None:
+            res.append(video)
+        else:
+            G.logger.warning(f"Video file {video['SourceFile']} is missing pose file.")
+    videos_with_poses = res
+    logs_with_videos = find_matching_log_files(videos_with_poses, logs)
 
     extract_log_data(logs_with_videos, df_convert)
 
-    output_videos = clean_video_keys(videos_with_pose)
+    race_metadata = metadata.read_metadata()
+    logs_with_metadata = find_matching_metadata(logs_with_videos, race_metadata)
+
+    output_videos = clean_video_keys(videos_with_poses)
     res_filename = os.path.join(WEB_DIR, "video_poses_logs.json")
     with open(res_filename, 'w') as fs:
-        json.dump(dict(videos = output_videos, columns = column_dict()), fs, indent=4)
+        json.dump(dict(videos = output_videos, logs=logs_with_metadata, columns = column_dict()),
+                  fs, indent=4, default=json_serialize)
 
 
 def convert_logs(force_recompute=False):
     """
     Process each panda file and construct a javascript friendly binary file.
     """
+    force_recompute = False
     logs = get_log_files()
-    # logs = logs[:2]
 
     for log in logs:
         log_file = log['LogFile']
@@ -371,5 +430,4 @@ def convert_logs(force_recompute=False):
     res_filename = os.path.join(WEB_DIR, "columns.json")
     with open(res_filename, 'w') as fs:
         json.dump(dict(columns = column_dict()), fs, indent=4)
-
 

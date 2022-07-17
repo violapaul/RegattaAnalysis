@@ -88,17 +88,26 @@ def convert_gnss_date_time(gnss_date, gnss_time):
     # canboat time is in a funny format
     date = gnss_date.replace(".", "-")
     time = gnss_time
-    return arrow.get(date + "T" + time)
+    arrow_time = date + "T" + time
+    try:
+        dt = arrow.get(arrow_time)
+        return dt
+    except Exception:
+        G.logger.warning(f"Datetime conversion failed {arrow_time}")
+        return None
 
 
 def gnss_convert(record):
     "Convert to a GNSS record, with lat, lon, alt."
     datetime = convert_gnss_date_time(record['fields']['Date'],
                                       record['fields']['Time'])
-    return dict(timestamp = datetime,
-                lat = float(record['fields']['Latitude']),
-                lon = float(record['fields']['Longitude']),
-                alt = float(record['fields']['Altitude']))
+    if datetime:
+        return dict(timestamp = datetime,
+                    lat = float(record['fields']['Latitude']),
+                    lon = float(record['fields']['Longitude']),
+                    alt = float(record['fields']['Altitude']))
+    else:
+        return None
 
 
 def valid_gnss_record(record, src):
@@ -108,18 +117,23 @@ def valid_gnss_record(record, src):
     has_latlonalt = ('Latitude' in fields) and ('Longitude' in fields) and ('Altitude' in fields)
     return correct_src and has_date_time and has_latlonalt
 
+def map_without_none(func, sequence):
+    for val in sequence:
+        res = func(val)
+        if res:
+            yield res
 
 def lla_records(json_log_path, src=None):
     "Construct a sequence of lat/lon/alt GNSS records from from a JSON log file."
     if src is None:
         src = device_code("Zeus iGPS")
-    return map( gnss_convert,
-                json_records(
-                    # Return online lines which contain GNSS position data.
-                    file_lines(json_log_path, substring_matcher('GNSS Position Data')),
-                    # And a valid gnss record
-                    lambda record: valid_gnss_record(record, src=src),
-                    line_skip=1))
+    return map_without_none( gnss_convert,
+                             json_records(
+                                 # Return online lines which contain GNSS position data.
+                                 file_lines(json_log_path, substring_matcher('GNSS Position Data')),
+                                 # And a valid gnss record
+                                 lambda record: valid_gnss_record(record, src=src),
+                                 line_skip=1))
 
 def lla_to_gpx(lla_records, stop=None):
     "Given a sequence of lat/lon/alt records, create a GPX datastructure."

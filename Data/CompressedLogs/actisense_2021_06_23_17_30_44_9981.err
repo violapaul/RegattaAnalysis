@@ -1,0 +1,8 @@
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 1
+Result of running: pi         565  0.0  0.0   1740   364 ?        S    17:16   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+ERROR 2000-01-01T01:16:21.607Z [actisense-serial] Ignoring N2K message - too short
+Result of running: pi         565  0.5  0.0   1872   364 ?        S    17:16   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running

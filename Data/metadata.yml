@@ -33,10 +33,10 @@ description: CYC PSSC Day 1
 file: 2019-10-18_13:51.pd.gz
 date: '2019-10-18'
 title: Short, at dock.
-description: ''
 begin: 0
 end: -1
 source: loginfo
+description: ''
 ---
 file: 2019-10-19_09:45.pd.gz
 date: '2019-10-19'
@@ -57,10 +57,10 @@ description: Grand Prix Saturday.
 file: 2019-11-07_12:46.pd.gz
 date: '2019-11-07'
 title: Short, at dock.
-description: ''
 begin: 0
 end: -1
 source: loginfo
+description: ''
 ---
 file: 2019-11-16_10:09.pd.gz
 date: '2019-11-16'
@@ -2439,6 +2439,32 @@ begin: 0
 end: -1
 source: logprocess
 ---
+date: '2020-11-03'
+title: Monday social ssil
+purpose: fun
+crew:
+- Sara
+- Paul
+- Peter
+description: 'Beautiful evening sail just after daylight savings time change.  Flat
+  water. Nice wind.  No mistakes. '
+conditions: Gentle
+learnings: 'Very smooth.  Peter drove. Paul on main and pit.  Sheri on jib trim and
+  squirrel.  Sara on bow. '
+warnings: Print two polars tables. Remote app on phone
+wave: flat
+wind:
+- 8
+- 14
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: Mid
+shroud_name: Base
+additional_crew: Sheri
+timestamp: 2020-11-02 18:54:42-08:00
+'Shroud tensions (UP-MID-LOW: sep with hyphens: 29-10-0). Pos low is tension, neg low is circle size in cm).': 37-17-3
+source: gsheet
+---
 date: '2020-11-20'
 title: 'Snowbird #1'
 purpose: race
@@ -2687,28 +2713,1092 @@ begin: 0
 end: -1
 source: logprocess
 ---
-date: '2030-11-03'
-title: Monday social ssil
-purpose: fun
+file: 2021-03-20_10:18.pd.gz
+date: '2021-03-20'
+title: 'SBYC Snowbird #5'
+begin: 0
+end: -1
+source: gsheet
+purpose: race
 crew:
 - Sara
 - Paul
+- Amy
+- Steve
 - Peter
-description: 'Beautiful evening sail just after daylight savings time change.  Flat
-  water. Nice wind.  No mistakes. '
-conditions: Gentle
-learnings: 'Very smooth.  Peter drove. Paul on main and pit.  Sheri on jib trim and
-  squirrel.  Sara on bow. '
-warnings: Print two polars tables. Remote app on phone
+description: "Crazy wind before and after wind but quieted down during race.  Almost
+  didn\u2019t make it by time limit.  NWMNx2"
+performance: 'Ok on speed but not great wind following '
+learnings: Watch for opportunities to gybe around mark.  Watch rounding to stbd on
+  south wind
+warnings: 'Power on to battery '
 wave: flat
+wind:
+- 0
+- 6
+port_pointing: 25-27
+stbd_pointing: 25-27
+settings: Loose
+shroud_name: Light wind
+timestamp: 2021-03-20 21:11:58-07:00
+fluids: Empty Bilge?
+'Shroud tensions (UP-MID-LOW: sep with hyphens: 29-10-0). Pos low is tension, neg low is circle size in cm).': 29-12-0
+---
+date: '2021-03-26'
+title: CYC Three Tree Point
+purpose: race
+crew:
+- Sara
+- Paul
+- Steve
+description: "Beautiful day on water.  I messed everything up.  I didn\u2019t do the
+  spin switch right.  I chose wrong strategy.  I couldn\u2019t handle Paul\u2019s
+  feedback.  \n\nThe boat felt good. At times we had good numbers.  Steve did really
+  well on bow.  Gybes went smooth.  "
+performance: Not great today
+learnings: 'Switching sides of spinnaker is hard.  Ok to not flip but the put halyard
+  on the head and sheets on clew ! '
+wave: flat
+wind:
+- 4
+- 10
+port_pointing: 25-27
+stbd_pointing: 25-27
+settings: Loose
+shroud_name: Light wind
+other: 'Again with south wind boats that went into the magnolia bluff did well.  '
+additional_crew: 'Courtney '
+timestamp: 2021-03-27 18:44:53-07:00
+fluid_comments: Oil check.  A bit below full line
+'Shroud tensions (UP-MID-LOW: sep with hyphens: 29-10-0). Pos low is tension, neg low is circle size in cm).': 27-11-0
+source: gsheet
+---
+file: 2021-03-27_08:58.pd.gz
+date: '2021-03-27'
+title: '2021-03-27'
+begin: 45377
+end: 226603
+source: logprocess
+---
+file: 2021-04-04_16:35.pd.gz
+date: '2021-04-04'
+title: '2021-04-04'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-04-10_10:04.pd.gz
+date: '2021-04-10'
+title: '2021-04-10'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-04-17_10:19.pd.gz
+date: '2021-04-17'
+title: 'PSSR Saturday '
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Steve
+- Peter
+description: '4 races.  SAYF, SAYF, SAXAF, SAYF. Gorgeous day!  Wind was more than
+  expected. 10-15 knots.  Minimal sea state considering it was ebbing. The starts
+  were really tough. We were over early twice. Interesting since we often end up in
+  second row.  '
+conditions: 'Clear skies.  '
+performance: Boat speed good down wind. Needed a bit more upwind. Stayed with other
+  boats but rounding last at windward mark
+learnings: "Know your marks!!  Don\u2019t tack too close to Puff.    Moose went behind
+  us really close on downwind leg and dirtied our air for a second.  Collapsed spin. "
+warnings: 'Velcro port side was problematic '
+wave: 1-2
+wind:
+- 8
+- 14
+settings: Minimal
+shroud_name: 'Light wind adjusted more along way.  Check tomorrow '
+additional_crew: Aden
+timestamp: 2021-04-17 21:07:48-07:00
+fluid_comments: 3/4 tank gas still
+fluids: Empty Bilge?
+---
+file: 2021-04-18_10:24.pd.gz
+date: '2021-04-18'
+title: PSSR Sunday 2021
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Marisa
+- Paul
+- Steve
+- Peter
+description: 'No races.  Wind was very light  but we tuned up with liftoff. '
+performance: 'Ok speed tuning with Lyftoff.  We did better down wind but petty even
+  up wind.  They beat us to the committee boat. '
+learnings: 'Winch handle in water.  Got it back!  '
+wave: glassy
+wind:
+- 0
+- 6
+port_pointing: 20-24
+stbd_pointing: 25-27
+settings: 'Loose for all.  Played with vang.  Vang on in light air down wind.  Used
+  lazy jib sheet very effectively to get more twist on jib to match main.  Al said
+  move car forward on jib to 0 in 2 knots. '
+shroud_name: Light air
+additional_crew: Aden
+timestamp: 2021-04-18 15:27:05-07:00
+fluid_comments: Added more to the toilet gallon
+fluids: Empty Bilge?
+'Shroud tensions (UP-MID-LOW: sep with hyphens: 29-10-0). Pos low is tension, neg low is circle size in cm).': 25-11-00
+---
+file: 2021-04-19_17:44.pd.gz
+date: '2021-04-19'
+title: Ballard Cup Monday
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Amy
+- Steve
+- Peter
+description: 'NMBN. Light wind at start. Pin favored.  Nice port start above the whole
+  fleet crossed to wall. Stayed right for better pressure and centered on the fleet.   Rounded
+  nicely and quick gybe back to the wall.  Everyone caught us near B and in fact Puff
+  came in last but with speed and rounded quick. Creative got tangled up with another
+  boat. They got out of the stew better too. We did beat two j105s by better sailing
+  on last leg.  '
+performance: 'Good with wind. '
+learnings: 'In light wind down to B we should have used some wind to go more east. '
+wave: flat
+wind:
+- 0
+- 6
+settings: 'Loose. '
+shroud_name: Light wind
+other: 'Be less cranky. '
+additional_crew: Sheri
+timestamp: 2021-04-19 22:04:45-07:00
+fluids: Empty Bilge?
+---
+file: 2021-04-21_17:25.pd.gz
+date: '2021-04-21'
+title: '2021-04-21'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-04-23_17:33.pd.gz
+date: '2021-04-23'
+title: '2021-04-23'
+begin: 0
+end: -1
+source: logprocess
+---
+date: '2021-04-24'
+title: 'SYC Tri Island Series 1,to Double Bluff. '
+purpose: race
+crew:
+- Sara
+- Paul
+description: Windy rainy day and we double handed the 35 kn race.  Lousy start but
+  caught up to everyone down wind.   Messy drop too close to Double Bluff. Tacked
+  a lot with others to the point of exhaustion.  Fun day!
+performance: 'Good!  Considering we only had 2 people. '
+warnings: 'Dry everything out and bring back gloves.  '
+wave: 1-2
+wind:
+- 8
+- 14
+port_pointing: 20-24
+stbd_pointing: 25-27
+settings: Tight
+shroud_name: Base
+timestamp: 2021-04-24 20:47:10-07:00
+'Shroud tensions (UP-MID-LOW: sep with hyphens: 29-10-0). Pos low is tension, neg low is circle size in cm).': 35-15-7
+source: gsheet
+---
+file: 2021-04-26_17:33.pd.gz
+date: '2021-04-26'
+title: Styc Monday Ballard Cup
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Amy
+- Steve
+description: 'Nice light wind day.  A lot of boats out there. Corvo still got us.  We
+  might have beat Creative with Al on the boat but we might have been over early.  '
+performance: 'Good speed up and down wind.  '
+learnings: "Two assholes on pit.  Don\u2019t disrupt hoist.  "
+warnings: 'Over ride protection.  Bent stanchion '
+wave: flat
+wind:
+- 4
+- 10
+port_pointing: 20-24
+stbd_pointing: 25-27
+settings: Loose. Active
+shroud_name: Light air
+additional_crew: Aden
+timestamp: 2021-04-26 22:16:52-07:00
+fluids: Empty Bilge?
+'Shroud tensions (UP-MID-LOW: sep with hyphens: 29-10-0). Pos low is tension, neg low is circle size in cm).': 25-12-0
+---
+file: 2021-04-28_17:04.pd.gz
+date: '2021-04-28'
+title: '2021-04-28'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-05-01_08:31.pd.gz
+date: '2021-05-01'
+title: '2021-05-01'
+begin: 2533
+end: 217447
+source: logprocess
+---
+file: 2021-05-02_08:38.pd.gz
+date: '2021-05-02'
+title: '2021-05-02'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-05-03_17:43.pd.gz
+date: '2021-05-03'
+title: STYC Monday
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Amy
+- Steve
+- Peter
+description: Rain cleared just in time for the race.  Course was NBMNEMN
+conditions: 'Easterly wind and westerly current. '
+performance: We won our class!
+learnings: 'My timing was way off on the gybes. '
+warnings: Winch top loose
+wave: flat
+wind:
+- 0
+- 6
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: '6.5 jib halyard took curve out of the bottom '
+shroud_name: 'Alex special '
+other: 'Call to Steve to pull on tack. '
+additional_crew: Aden
+timestamp: 2021-05-03 21:47:28-07:00
+fluid_comments: 'Oil was at max line yesterday '
+'Shroud tensions (UP-MID-LOW: sep with hyphens: 29-10-0). Pos low is tension, neg low is circle size in cm).': 32-15-0
+---
+file: 2021-05-05_17:07.pd.gz
+date: '2021-05-05'
+title: '2021-05-05'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-05-08_08:23.pd.gz
+date: '2021-05-08'
+title: '2021-05-08'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-05-09_12:02.pd.gz
+date: '2021-05-09'
+title: '2021-05-09'
+begin: 0
+end: -1
+source: logprocess
+---
+date: '2021-05-12'
+title: CYC Wednesday
+purpose: race
+crew:
+- Sara
+- Paul
+description: 'Two races.  Rapidly changing conditions.  '
+conditions: We saw over 15 before the first race.   Upped the shrouds.  And then it
+  died to 10 or less for times.  Came up again at times.
+performance: Slow to accelerate in the first start.  But otherwise good.  Downwind
+  was fast.
+learnings: Get on the same page about the timing of the douse.
+warnings: Stanchion.  Keep an eye on the keel
+wave: 1-2
 wind:
 - 8
 - 14
 port_pointing: 28-30
 stbd_pointing: 28-30
-settings: Mid
-shroud_name: Base
-additional_crew: Sheri
-timestamp: 2020-11-02 18:54:42-08:00
-'Shroud tensions (UP-MID-LOW: sep with hyphens: 29-10-0). Pos low is tension, neg low is circle size in cm).': 37-17-3
+settings: We upped the shrouds from base on the water.  And then dropped them.  But
+  it is unclear where we ended up.  Could use more power.
+shroud_name: Mystery
+additional_crew: Regan, Nora, Adam, Courtney, Sara and Paul
+timestamp: 2021-05-13 14:07:25-07:00
 source: gsheet
+---
+file: 2021-05-17_17:41.pd.gz
+date: '2021-05-17'
+title: '2021-05-17'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-05-19_17:07.pd.gz
+date: '2021-05-19'
+title: '2021-05-19'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-05-24_17:42.pd.gz
+date: '2021-05-24'
+title: '2021-05-24'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-05-26_17:15.pd.gz
+date: '2021-05-26'
+title: '2021-05-26'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-06-02_17:31.pd.gz
+date: '2021-06-02'
+title: '2021-06-02'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-06-09_17:40.pd.gz
+date: '2021-06-09'
+title: '2021-06-09'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-06-14_17:41.pd.gz
+date: '2021-06-14'
+title: '2021-06-14'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-06-16_17:25.pd.gz
+date: '2021-06-16'
+title: '2021-06-16'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-06-20_09:13.pd.gz
+date: '2021-06-20'
+title: '2021-06-20'
+begin: 0
+end: -1
+source: logprocess
+---
+date: '2021-06-21'
+title: RaceWeek Day 1
+purpose: race
+crew:
+- Sara
+- Paul
+- Amy
+- Steve
+description: Placing 7, 4, 7
+conditions: Sporty.  In the teens.
+performance: 'Generally well upwind and down. '
+learnings: A few bad roundings cost us.  Try to be more conservative.
+wave: 2-4
+wind:
+- 12
+- 18
+port_pointing: 25-27
+stbd_pointing: 25-27
+settings: Base
+shroud_name: Base
+timestamp: 2021-07-04 13:15:25-07:00
+source: gsheet
+---
+file: 2021-06-22_09:17.pd.gz
+date: '2021-06-22'
+title: RaceWeek Day 2
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Amy
+- Steve
+description: Placing 6, 5, 5
+conditions: Sporty.  In the teens.
+performance: 'Generally well upwind and down. '
+learnings: Need to focus on sailing high mode.
+wave: 2-4
+wind:
+- 12
+- 18
+port_pointing: 25-27
+stbd_pointing: 25-27
+settings: Base
+shroud_name: Base
+timestamp: 2021-07-04 13:15:30-07:00
+---
+file: 2021-06-23_09:32.pd.gz
+date: '2021-06-23'
+title: RaceWeek Day 3
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Amy
+- Steve
+description: Placing 8
+conditions: 'Very light.  '
+performance: 'Generally well upwind and down. '
+wave: 1-2
+wind:
+- 0
+- 6
+port_pointing: 25-27
+stbd_pointing: 25-27
+settings: Light Air
+shroud_name: Base
+timestamp: 2021-07-04 13:15:40-07:00
+---
+date: '2021-06-24'
+title: RaceWeek Day 4
+purpose: race
+crew:
+- Sara
+- Paul
+- Amy
+- Steve
+description: 'Placing 6 '
+conditions: Light.  Tried two races.
+performance: 'Generally well upwind and down. '
+wave: 1-2
+wind:
+- 4
+- 10
+port_pointing: 25-27
+stbd_pointing: 25-27
+settings: Light Wind
+shroud_name: Base
+timestamp: 2021-07-04 13:15:45-07:00
+source: gsheet
+---
+date: '2021-06-25'
+title: RaceWeek Day 5
+purpose: race
+crew:
+- Sara
+- Paul
+- Amy
+- Steve
+description: Placing 7, 2
+conditions: Sporty.  In the teens. At times it looked like it would go lighter...
+  but then it came roaring back.
+performance: 'Generally well upwind and down. '
+learnings: Nice job in trick conditions.
+wave: 2-4
+wind:
+- 12
+- 18
+port_pointing: 25-27
+stbd_pointing: 25-27
+settings: Base
+shroud_name: Base
+timestamp: 2021-07-04 13:15:50-07:00
+source: gsheet
+---
+file: 2021-07-07_17:35.pd.gz
+date: '2021-07-07'
+title: '2021-07-07'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-07-10_10:51.pd.gz
+date: '2021-07-10'
+title: '2021-07-10'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-07-12_17:41.pd.gz
+date: '2021-07-12'
+title: '2021-07-12'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-07-14_17:13.pd.gz
+date: '2021-07-14'
+title: '2021-07-14'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-07-17_18:23.pd.gz
+date: '2021-07-17'
+title: '2021-07-17'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-07-19_17:47.pd.gz
+date: '2021-07-19'
+title: '2021-07-19'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-07-26_17:41.pd.gz
+date: '2021-07-26'
+title: '2021-07-26'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-07-28_17:02.pd.gz
+date: '2021-07-28'
+title: '2021-07-28'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-08-01_10:12.pd.gz
+date: '2021-08-01'
+title: '2021-08-01'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-08-02_17:51.pd.gz
+date: '2021-08-02'
+title: '2021-08-02'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-08-04_17:08.pd.gz
+date: '2021-08-04'
+title: '2021-08-04'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-08-11_17:21.pd.gz
+date: '2021-08-11'
+title: '2021-08-11'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-08-23_17:58.pd.gz
+date: '2021-08-23'
+title: '2021-08-23'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-08-25_17:18.pd.gz
+date: '2021-08-25'
+title: '2021-08-25'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-09-01_17:19.pd.gz
+date: '2021-09-01'
+title: '2021-09-01'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-09-08_17:14.pd.gz
+date: '2021-09-08'
+title: '2021-09-08'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-10-02_08:11.pd.gz
+date: '2021-10-02'
+title: Foul weather Bluff
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Amy
+description: 'Light wind day predicted but we got 3-6 so enough for a race.  We had
+  good position at leward mark but sailed into a hole and creative came from behind
+  and passed us.  '
+conditions: 'Sunny and nice gentle breeze '
+performance: 'Leading the fleet downwind.  Scooped upwind. '
+learnings: 'Watch out ahead!!! Sail around a lull.  '
+warnings: 'Still hoping electrical problem with auto pilot fixed. Top batten on main
+  is too long.  Bad curve and it gets stuck on the back stay in a way the quantum
+  main did not.  '
+wave: flat
+wind:
+- 0
+- 6
+settings: Loose
+shroud_name: 'Never checked but was 25-12 last weekend '
+additional_crew: Chris, claire
+timestamp: 2021-10-02 21:09:08-07:00
+fluid_comments: Checked oil.  1 inch above min
+---
+file: 2021-10-09_10:15.pd.gz
+date: '2021-10-09'
+title: '2021-10-09'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-10-10_10:14.pd.gz
+date: '2021-10-10'
+title: 'PSSC Big Boat '
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Peter
+description: 'Saturday to Sunday race with new North main.  Jack Christiansen came
+  out Saturday when it was super windy but not on Sunday.  Sunday was nice. 4-7knots.  Mild
+  sea state.  We got a 6th and a 2nd place.  The Buchans were racing Panic and won
+  every race they did.  So our 2nd place was like a 1st in the fleet.  '
+conditions: 'Busy.  Lots of boats.  Light wind. Some sprinkles. '
+performance: 'Excellent!   Beat Moose in side by side and we were gaining on Panic. '
+learnings: "We got second place after fouling Liftoff in the start and circling.  Good
+  recovery.  \n\nWe had practiced roll tacks and both Jared and Ruby took the roll
+  very seriously. \n\nArguing about which way to circle in penelty."
+warnings: 'Pins in shrouds need replaced on some turnbuckles. '
+wave: 1-2
+wind:
+- 4
+- 10
+port_pointing: 25-27
+stbd_pointing: 25-27
+settings: "Looose. Went with North\u2019s recommendation.  We forgot the exact number
+  but single digits for the middles.  Might have been the secret"
+shroud_name: North light wind
+additional_crew: Jared, Ruby
+timestamp: 2021-10-11 22:37:46-07:00
+'Shroud tensions (UP-MID-LOW: sep with hyphens: 29-10-0). Pos low is tension, neg low is circle size in cm).': 25-7-0
+---
+date: '2021-10-14'
+title: 'Fall regatta '
+purpose: race
+crew:
+- Sara
+- Paul
+- Steve
+description: 3 races.  NBWMN, NERN, NBMN. Mixed conditions.  5knots to 24 ish. At
+  one point.  We got first in class and second over all.  Great day
+conditions: Mild sea state considering tide flooding and south wind
+performance: "Good!  Beat Creative with Al on the boat 2-1. El Gato was out but no
+  other j105s. It\u2019s was more a phrf race on a good day for a j105. "
+learnings: 'Paul would like more stat input on down wind leg. '
+warnings: 'Block for outhaul '
+wave: 1-2
+wind:
+- 12
+- 18
+port_pointing: 25-27
+stbd_pointing: 28-30
+settings: 'Various '
+shroud_name: New base
+other: 'Fun going around trying to summarize the race. '
+additional_crew: Claire, Antione, Chris
+timestamp: 2021-10-16 19:36:13-07:00
+fluid_comments: Oops forgot to check the bilge.  1/4 tank of gas
+'Shroud tensions (UP-MID-LOW: sep with hyphens: 29-10-0). Pos low is tension, neg low is circle size in cm).': 34-11-2
+source: gsheet
+---
+file: 2021-10-16_10:04.pd.gz
+date: '2021-10-16'
+title: '2021-10-16'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-10-22_12:05.pd.gz
+date: '2021-10-22'
+title: '2021-10-22'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-10-23_10:01.pd.gz
+date: '2021-10-23'
+title: '2021-10-23'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-10-24_10:06.pd.gz
+date: '2021-10-24'
+title: '2021-10-24'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2021-10-31_09:50.pd.gz
+date: '2021-10-31'
+title: '2021-10-31'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-03-05_09:13.pd.gz
+date: '2022-03-05'
+title: CSS Blakey Rock
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Amy
+description: 'Start to N around Blakey Rocks to finish. Beautiful day.  Wind from
+  North 335-38 more persistent than oscillation.  '
+conditions: 'Mix of sun and storm clouds.  Sea state not too bad considering wind
+  over 10 most of the time.  Lots of boats out so both rounding were a bit complex '
+performance: "Pretty well both up wind and down wind promising.  I messed up the start
+  and didn\u2019t get in position.  Too many doing same port approach   Then I messed
+  up ducking Jubi down wind near Blakey Rocks and we got discombobulated.   Took the
+  left on the way back when everyone else went right and caught back up.  Good boat
+  speed when not messing up"
+learnings: "I was uncomfortable gybing toward Jubi but said nothing.  I thought I
+  could cross behind but then didn\u2019t feel like I could manage not to broach and
+  be out of control.  So I called a late gybe.  Amy said someone saiddd no don\u2019t
+  gybe so she delayed and it was messy.   "
+warnings: 'Tell tales not flying.  Engine not starting well. Batteries were low. '
+wave: 1-2
+wind:
+- 8
+- 14
+port_pointing: 20-24
+stbd_pointing: 25-27
+settings: 'Back stay on at 2 plus up to 4ins.  Little cunighham.  Some outhaul '
+shroud_name: 'Base minus a half turn '
+other: Claire was very active on spin trim.  Big motions.  Lots of in and out    We
+  passed Moose with her trimming and Paul on main
+additional_crew: Claire, Chris, Peter Rostas
+timestamp: 2022-03-05 20:43:19-08:00
+fluid_comments: Oil changed last week.  Bilge was pretty empty
+---
+file: 2022-03-19_09:00.pd.gz
+date: '2022-03-19'
+title: 'CSS #2'
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Amy
+description: Today was supposed to be to Scatchet Head and back, but wind was fluky
+  so they set the course to be SKDF (start-Blakely Rocks-Duwamish Head ->finsish.
+conditions: fluky wind from n/s.  We saw 1knot and 18 knots. plenty in the 12-16 range.
+performance: We won! Class 5 = j105 one design start.
+learnings: 'Claire was very active on main.  Gave us a speed edge. When leebowed,
+  don''t give up!  Ease, down, speed up trim on, to get every little bit up.  We also
+  should have cross winched intentionally.  We cross winched sort of by accident when
+  Jared didn''t put it in the self taleer and so we wraped on the high side on a long
+  reaching leg.   Worked well.  '
+warnings: battery was on
+wave: 1-2
+wind:
+- 8
+- 14
+port_pointing: 20-24
+stbd_pointing: 25-27
+settings: loose until wind picked up
+shroud_name: light wind
+other: "The j105s were in class 5 for the Center Sound Series #2.  The weather was
+  surprisingly nice given the forecast with some sun shining through the dark clouds.
+  \ The wind was from the south when the course was set to SKDF, but before the start
+  it shifted northeast so everyone popped their kites right away.  The fleet separated
+  into groups, one going far west toward Bainbridge including Corvo, Insub, and Panic.
+  \ A group stayed east including Moose Unknown, Creative, Liftoff, and Puff.  Jaded
+  crossed over a earlier than the rest.  Peer Gynt stayed in the middle.   The wind
+  started out promising but soon hit a convergence zone so it was a guessing game
+  to determine which way the next best puff would come from.   Kites collapsed, jibs
+  came out, kites when back up, until finally a fresh breeze from the north dominated
+  and most approached Blakely Rocks on spinnaker.  It was a crowded rounding.  Insub
+  was first to round with a good inside position, Peer, More Jubilee, Panic, Jaded
+  and Corvo followed.   After passing the rocks, several j105 tacked to starboard
+  to get clear air, but with so many big boats around it took a while to clear the
+  traffic.   Peer crept up on Insub and was first to round D = Duwamish Head.  It
+  was a fast reach from D to W for the fleet.   Peer stayed out in front until West
+  Point where Insub cut through the shallows (at low tide!)  and gained ground.  The
+  breeze to the right was a bit better and perhaps in hopes of some current relief,
+  Insub went in toward the wall and Peer followed.  After a few tacks, Peer had to
+  duck Insub on port, on the next crossing Peer was just a bit ahead and Insub leebowed.
+  \ Peer fought hard to stay ahead and eventually pulled free in clear air to take
+  the win on the last leg.  Insub took second place, More Jubilee got third.   Congrats
+  to all for a good race!   \nPaul Viola set up RaceQs for this race with the start
+  and finish line, so add you can add your track to the collection.   It's fun to
+  watch the replay."
+additional_crew: Claire, Rudy, Jared
+timestamp: 2022-03-19 21:36:27-07:00
+fluids: Empty Bilge?
+'Shroud tensions (UP-MID-LOW: sep with hyphens: 29-10-0). Pos low is tension, neg low is circle size in cm).': 28-10-0
+---
+file: 2022-04-02_09:05.pd.gz
+date: '2022-04-02'
+title: '2022-04-02'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-04-16_10:10.pd.gz
+date: '2022-04-16'
+title: '2022-04-16'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-04-17_10:14.pd.gz
+date: '2022-04-17'
+title: CYC Spring Regatta 2022
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+- Peter
+description: 'Two days of racing this weekend. Fresh breeze yesterday was way above
+  forecast .  Today light wind.  We were ahead in third race and then they abandoned.  Sadness!  But
+  it was a lovely day out there. '
+conditions: 'Clear skies wind starting from 180 in south around to west then from
+  north 320. '
+performance: 'Slowish all weekend.  Needed bottom cleaning.  '
+learnings: 'Discuss plan if protest called on us.  Yell protest loudly to Moose.  '
+warnings: 'Jib furler was not working well.  Bringing jib down required unwinding
+  it at top. It was up for 6 races/practices.  Not clear how it got fouled. '
+wave: flat
+wind:
+- 4
+- 10
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: 'Light.  Main halyard at 6. Jib a bit loose.  Cars at port=1and 0 stbd.  Should
+  have checked again since not equal '
+shroud_name: Light air
+additional_crew: Peter Colleran, Peter Rostas, Ruby
+timestamp: 2022-04-17 22:28:26-07:00
+fluid_comments: Checked oil.  One centimeter below full
+fluids: Empty Bilge?
+'Shroud tensions (UP-MID-LOW: sep with hyphens: 29-10-0). Pos low is tension, neg low is circle size in cm).': 25-10-0
+---
+file: 2022-04-27_17:27.pd.gz
+date: '2022-04-27'
+title: 'CYC Wednesday '
+begin: 0
+end: -1
+source: gsheet
+purpose: race
+crew:
+- Sara
+- Paul
+description: 'Two races.  SAFAF and SAF. The first was a barber haul reacher.  Second
+  was pretty perfect but got late and near dark. '
+conditions: 'Nice night but some storm clouds around.  Made for interesting choices. '
+performance: 2nd place and first place.   Corvo Jubi Jaded Panic Puff Cyrano Liftoff
+  all out there
+learnings: 'We did gybe set nicely '
+wave: flat
+wind:
+- 4
+- 10
+port_pointing: 28-30
+stbd_pointing: 28-30
+settings: 'Loose to baggy. Baggy outhaul for sure. '
+shroud_name: 'Light air setting '
+additional_crew: 'Claire, Christopher, Clark '
+timestamp: 2022-04-27 23:08:38-07:00
+'Shroud tensions (UP-MID-LOW: sep with hyphens: 29-10-0). Pos low is tension, neg low is circle size in cm).': 25-10-0
+---
+file: 2022-05-01_14:07.pd.gz
+date: '2022-05-01'
+title: '2022-05-01'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-05-02_17:40.pd.gz
+date: '2022-05-02'
+title: '2022-05-02'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-05-04_17:32.pd.gz
+date: '2022-05-04'
+title: '2022-05-04'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-05-09_17:56.pd.gz
+date: '2022-05-09'
+title: '2022-05-09'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-05-11_17:04.pd.gz
+date: '2022-05-11'
+title: '2022-05-11'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-05-14_08:56.pd.gz
+date: '2022-05-14'
+title: '2022-05-14'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-05-16_18:08.pd.gz
+date: '2022-05-16'
+title: '2022-05-16'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-05-23_17:53.pd.gz
+date: '2022-05-23'
+title: '2022-05-23'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-05-25_17:25.pd.gz
+date: '2022-05-25'
+title: '2022-05-25'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-06-04_08:31.pd.gz
+date: '2022-06-04'
+title: '2022-06-04'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-06-06_17:45.pd.gz
+date: '2022-06-06'
+title: '2022-06-06'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-06-08_17:39.pd.gz
+date: '2022-06-08'
+title: '2022-06-08'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-06-13_17:46.pd.gz
+date: '2022-06-13'
+title: '2022-06-13'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-06-15_17:14.pd.gz
+date: '2022-06-15'
+title: '2022-06-15'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-06-27_17:40.pd.gz
+date: '2022-06-27'
+title: '2022-06-27'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-06-29_17:29.pd.gz
+date: '2022-06-29'
+title: '2022-06-29'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-07-06_17:21.pd.gz
+date: '2022-07-06'
+title: '2022-07-06'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-07-09_11:42.pd.gz
+date: '2022-07-09'
+title: '2022-07-09'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-07-11_17:29.pd.gz
+date: '2022-07-11'
+title: '2022-07-11'
+begin: 0
+end: -1
+source: logprocess
+---
+file: 2022-07-13_17:27.pd.gz
+date: '2022-07-13'
+title: '2022-07-13'
+begin: 0
+end: -1
+source: logprocess

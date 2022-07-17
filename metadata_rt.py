@@ -100,12 +100,14 @@ import os
 import copy
 import numbers
 import re
+from datetime import date, datetime
 
 import yaml  # We'll use YAML for our metadata
+import json
+
 import arrow
 import numpy as np
 import pandas as pd
-
 
 # These are libraries written for RegattaAnalysis
 from global_variables import G  # global variables
@@ -284,6 +286,26 @@ def save_metadata(race_records):
     sorted_records = sorted(race_records, key=lambda r: r['date'])
     with open(G.METADATA_PATH, 'w') as yfs:
         save_yaml(sorted_records, yfs)
+
+
+def json_serial(obj):
+    """JSON serializer for objects not serializable by default json code"""
+
+    if isinstance(obj, (datetime, date)):
+        return obj.isoformat()
+    raise TypeError ("Type %s not serializable" % type(obj))
+        
+def save_json(race_records, json_file):
+    """
+    Save a sequence of race records to JSON.
+    """
+    G.logger.info(f"Writing {len(race_records)} records.")    
+    utils.backup_file(G.METADATA_PATH)
+    # For convenience sort the records by date before writing.
+    sorted_records = sorted(race_records, key=lambda r: r['date'])
+    with open(json_file, 'w') as fs:
+        json.dump(sorted_records, fs, indent=4, default=json_serial)
+                  
 
 # A bit of magic here to ensure we have the best loader/dumper.  Specifying this is required when 
 # calling load/dump (below).
@@ -827,7 +849,7 @@ if False:
 #:       "pygments_lexer": "ipython3",
 #:       "version": "3.7.0"
 #:     },
-#:     "timestamp": "2020-11-22T09:23:52.143336-08:00"
+#:     "timestamp": "2021-03-13T11:44:36.206135-08:00"
 #:   },
 #:   "nbformat": 4,
 #:   "nbformat_minor": 2

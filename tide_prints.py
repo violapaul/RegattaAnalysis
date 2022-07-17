@@ -1,6 +1,5 @@
 # Basics
 import os
-import copy
 
 import numpy as np
 import matplotlib
@@ -11,18 +10,21 @@ import cv2
 # These are libraries written for RegattaAnalysis
 from global_variables import G  # global variables
 from latlonalt import LatLonAlt as lla
+
+import chart
+
 import utils
 from utils import DictClass
 
 import race_logs                # load data from races
 
-import nbutils
-from nbutils import display_markdown, display
+from nbutils import display
 
 G.init_seattle()
 
 TIDE_PRINT_DIR = "Data/Currents/TidePrints"
-TIDE_PRINT_FILES = [f"im-{i:03d}.jpg" for i in range(24, 33)]
+TIDE_PRINT_PAGES = range(24, 33)
+TIDE_PRINT_FILES = [f"im-{i:03d}.jpg" for i in TIDE_PRINT_PAGES]
 TIDE_PRINT_PATHS = [os.path.join(TIDE_PRINT_DIR, f) for f in TIDE_PRINT_FILES]
 
 def capture_tide_print_landmarks():
@@ -133,9 +135,6 @@ LANDMARKS = [lla.from_degrees_minutes(lat_dm=(47, 20), lon_dm=(-122, 30)),
              lla.from_degrees_minutes(lat_dm=(47, 40), lon_dm=(-122, 20)),                  
              lla.from_degrees_minutes(lat_dm=(47, 50), lon_dm=(-122, 20))]
 
-TIDE_PRINT_DIR = "Data/Currents/TidePrints"
-TIDE_PRINT_FILES = [f"im-{i:03d}.jpg" for i in range(24, 33)]
-TIDE_PRINT_PATHS = [os.path.join(TIDE_PRINT_DIR, f) for f in TIDE_PRINT_FILES]
 
 # Set of tide print images, and points picked at the intersection of visible lat/lon
 # lines.  The points are in <x, y> or <east, south> (the upper right corner is x=0, y=0,
@@ -258,12 +257,14 @@ def check_points(landmarked_image):
     colors = [matplotlib.cm.autumn(v) for v in np.linspace(0, 1, len(x))]
     ax.scatter(x, y, 300, marker='+', color=colors)
 
+
 def check_points_all(landmarked_image_list):
     print("Close each image in turn, after checking.")
     for pick in landmarked_image_list:
         display(f"Displaying {pick['file']}.  Close plot to proceed to next.")
         check_points(pick)
         plt.show(block=True)
+
 
 def add_homogenous(vecs):
     """
@@ -272,6 +273,7 @@ def add_homogenous(vecs):
     """
     r, c = vecs.shape
     return np.hstack((vecs, np.ones((r, 1))))
+
 
 def estimate_geo_transform(landmarked_image, lat_lon_coordinates):
     """
@@ -309,7 +311,7 @@ def estimate_geo_transform(landmarked_image, lat_lon_coordinates):
 
 # The GTiff formal is GeoTiff, which can embed 
 
-def georeference_image(landmarked_image, landmarks):
+def create_georeference_image(landmarked_image, landmarks):
     li = DictClass(**landmarked_image)
     G.logger.info(f"Procssing {li.file}")
     model = estimate_geo_transform(li, landmarks)
@@ -334,36 +336,23 @@ def georeference_image(landmarked_image, landmarks):
     utils.run_system_command(command)
     return command
 
-if False:
+def create_georeferenced_images():
     for li in LANDMARKED_IMAGES:
-        georeference_image(li, LANDMARKS)
-    
-def example_race(date="2019-11-16"):
-    dfs, races, big_df = race_logs.read_dates([date], race_trim=False)
-    display(races)
-    return dfs[0]
-
-df = example_race("2020-05-09")
-df = example_race("2020-05-18")
-df = example_race("2020-04-28")
-
-import chart
-from chart import extract_region, gdal_extract_chart
+        create_georeference_image(li, LANDMARKS)
 
 
-TP_DIR = "/Users/viola/Python/sailing/Data/Currents/TidePrints"
+def geo_tide_print_path(chart_number):
+    page_number = TIDE_PRINT_PAGES[chart_number]
+    file = f"geo_im-{page_number:03d}.tiff"
+    return os.path.join(TIDE_PRINT_DIR, file)
 
-sara = list(range(0, 9))
 
-for file_num in [30, 31, 32]:
-    n = file_num
-    tp_file = f"geo_im-{n:03d}.tiff"
-    TP_PATH = os.path.join(TP_DIR, tp_file)
-    border = 1.0
-    pixels = 1000
-    region = extract_region(df, border)
+def current_chart(df, chart_number, border=1.0):
+    tp_path = geo_tide_print_path(chart_number)
+    pixels = 3000
+    region = chart.extract_region(df, border)
     ch = region.union(dict(proj=G.PROJ4, border=border, pixels=pixels))
-    ch = chart.gdal_extract_chart(ch, TP_PATH, "/tmp/mbtile.tif")
+    ch = chart.gdal_extract_chart(ch, tp_path, "/tmp/mbtile.tif")
     image = cv2.imread(ch.path)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     ch = ch.union(dict(image=image))
@@ -373,57 +362,17 @@ for file_num in [30, 31, 32]:
 
     ch.ax = ch.fig.add_subplot(111)
     ch = chart.draw_chart(ch)
-    ch.ax.set_title(f"{tp_file} + Sara: {n-24}")
-    # ch = chart.draw_track(df, ch, color='green')
-    # ch = chart.draw_track(tdf, ch, color='red')    
+    ch.ax.set_title(f"Tide Print #{chart_number}")
     ch.fig.tight_layout()
-    ch.fig.savefig(f"tide_print_{n-24}.pdf", orientation='portrait')
-    
 
-chart.plot_chart(df)
+    return ch
 
 
-t1 = arrow.get('2020-05-09 12:00:00.00-07:00').datetime
-t2 = arrow.get('2020-05-09 14:00:00.00-07:00').datetime
+def test():
+    chart_number = 1
+    date = "2020-04-28"
+    dfs, races, big_df = race_logs.read_dates([date], race_trim=False)
+    df = dfs[0]
 
-t1 = arrow.get('2020-05-18 18:00:00.00-07:00').datetime
-t2 = arrow.get('2020-05-18 19:00:00.00-07:00').datetime
-
-tdf = df.loc[(df.row_times > t1) & (df.row_times < t2)]
-
-
-import xmltodict
-
-
-GDAL_SIDECAR = """
-<PAMDataset>
-  <SRS>GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]]</SRS>
-  <GeoTransform> -1.2285634038489967e+02,  4.1828964984150203e-04,  0.0000000000000000e+00,  4.7941536757695253e+01,  0.0000000000000000e+00, -2.7862682847760843e-04</GeoTransform>
-  <Metadata domain="IMAGE_STRUCTURE">
-    <MDI key="COMPRESSION">JPEG</MDI>
-    <MDI key="INTERLEAVE">PIXEL</MDI>
-    <MDI key="SOURCE_COLOR_SPACE">YCbCr</MDI>
-  </Metadata>
-  <Metadata>
-    <MDI key="COMMENT">PFU ScanSnap Manager 01</MDI>
-  </Metadata>
-  <PAMRasterBand band="1">
-    <Metadata domain="IMAGE_STRUCTURE">
-      <MDI key="COMPRESSION">JPEG</MDI>
-    </Metadata>
-  </PAMRasterBand>
-  <PAMRasterBand band="2">
-    <Metadata domain="IMAGE_STRUCTURE">
-      <MDI key="COMPRESSION">JPEG</MDI>
-    </Metadata>
-  </PAMRasterBand>
-  <PAMRasterBand band="3">
-    <Metadata domain="IMAGE_STRUCTURE">
-      <MDI key="COMPRESSION">JPEG</MDI>
-    </Metadata>
-  </PAMRasterBand>
-</PAMDataset>
-"""
-
-xxx = xmltodict.parse(GDAL_SIDECAR)
-xxx['PAMDataset']['GeoTransform']
+    ch = current_chart(df, chart_number)
+    chart.draw_track(df, ch)

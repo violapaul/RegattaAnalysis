@@ -7,7 +7,7 @@ try:
     IPYTHON = IPython.get_ipython()
     IN_NOTEBOOK = IPYTHON.__class__.__name__ == 'ZMQInteractiveShell'
     if IN_NOTEBOOK:
-        IPython.get_ipython().magic("matplotlib notebook")
+        IPython.get_ipython().magic("matplotlib widget")  # notebook??
         import matplotlib.pyplot as plt
         plt.rcParams.update({'figure.max_open_warning': 0})
         plt.rcParams['figure.figsize'] = (6.0, 6.0)

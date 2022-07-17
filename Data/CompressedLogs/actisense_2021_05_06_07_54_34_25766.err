@@ -1,0 +1,17 @@
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 1
+Result of running: pi         566  0.0  0.0   1740   372 ?        S    15:09   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Result of running: pi         566  0.7  0.0   1872   372 ?        S    15:09   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Result of running: pi         566  1.0  0.0   1872   372 ?        S    15:09   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Result of running: pi         566  1.0  0.0   1872   372 ?        S    15:09   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Result of running: pi         566  1.0  0.0   1872   372 ?        S    15:09   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Result of running: pi         566  1.0  0.0   1872   372 ?        S    15:09   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Result of running: pi         566  1.0  0.0   1872   372 ?        S    15:09   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running

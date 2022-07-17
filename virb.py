@@ -35,13 +35,13 @@ if __name__ == "__main__":
     
     if not os.path.exists(virb_path):
         print(f"Virb is not mounted.")
-        sys.exit(1)
+        sys.exit(0)
 
-    if not os.path.exists("/Volumes/Big"):
+    if not os.path.exists("/Volumes/Store"):
         print(f"Big is not mounted.")
-        sys.exit(2)
+        sys.exit(0)
         
-    command = f"rsync -av /Volumes/Virb /Volumes/Big"
+    command = f"rsync -av /Volumes/Virb /Volumes/Store"
     res = utils.run_system_command(command)
     if res != 0:
         print(f"Rsync failed with error code: {res}")
@@ -50,7 +50,7 @@ if __name__ == "__main__":
     res = utils.run_system_command(command)
     if res != 0:
         print(f"Rsync failed with error code: {res}")
-        sys.exit(4)
+        sys.exit(3)
 
     if True:
         print(f"Rsync failed with error code: {res}")

@@ -1,0 +1,17 @@
+Is throttled??
+throttled=0x0
+Result of running: 
+Monitoring and actisense-serial IS NOT running
+Attempt 1
+Is throttled??
+throttled=0x80000
+Result of running: pi         641  0.0  0.0   1740   364 ?        S    20:44   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x80000
+Result of running: pi         641  0.0  0.0   1872   364 ?        S    20:44   0:00 actisense-serial -r /dev/ttyUSB0
+Monitoring and actisense-serial appears to be running
+Is throttled??
+throttled=0x80008
+Signal 15 (TERM) caught by ps (3.3.15).
+ps:ps/display.c:66: please report this bug
